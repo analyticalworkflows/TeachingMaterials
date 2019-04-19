@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  12 APR 2019 15:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.5.22)  19 APR 2019 16:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -486,14 +486,14 @@ Overfull \hbox (26.7252pt too wide) in paragraph at lines 166--168
 arted-[]First-[]Time-[]Git-[]Setup$[] 
  []
 
-[7] [8] [9] <figs/lifecycle.png, id=150, 803.0pt x 331.2375pt>
+[7] [8] [9] <figs/lifecycle.png, id=152, 803.0pt x 331.2375pt>
 File: figs/lifecycle.png Graphic file (type png)
 
 <use figs/lifecycle.png>
 Package pdftex.def Info: figs/lifecycle.png used on input line 213.
 (pdftex.def)             Requested size: 390.0pt x 160.87743pt.
  [10 <./figs/lifecycle.png>]
-<figs/xkcd_git_commit.png, id=161, 396.58162pt x 225.84375pt>
+<figs/xkcd_git_commit.png, id=163, 396.58162pt x 225.84375pt>
 File: figs/xkcd_git_commit.png Graphic file (type png)
 
 <use figs/xkcd_git_commit.png>
@@ -509,7 +509,7 @@ Overfull \hbox (24.0pt too wide) in paragraph at lines 264--271
 [][] 
  []
 
-[13] <figs/datafilenames.jpg, id=186, 370.44153pt x 386.46729pt>
+[13] <figs/datafilenames.jpg, id=188, 370.44153pt x 386.46729pt>
 File: figs/datafilenames.jpg Graphic file (type jpg)
 
 <use figs/datafilenames.jpg>
@@ -530,7 +530,7 @@ Overfull \hbox (10.11292pt too wide) in paragraph at lines 400--401
 [][][][][] 
  []
 
-[18] [19] <figs/git_cheat_sheet.pdf, id=310, 597.50829pt x 845.0471pt>
+[18] [19] <figs/git_cheat_sheet.pdf, id=312, 597.50829pt x 845.0471pt>
 File: figs/git_cheat_sheet.pdf Graphic file (type pdf)
 
 <use figs/git_cheat_sheet.pdf>
@@ -541,7 +541,7 @@ File: figs/git_cheat_sheet.pdf Graphic file (type pdf)
 Package pdftex.def Info: figs/git_cheat_sheet.pdf used on input line 450.
 (pdftex.def)             Requested size: 597.50682pt x 845.04504pt.
 
-<figs/git_cheat_sheet.pdf, id=313, page=1, 597.50829pt x 845.0471pt>
+<figs/git_cheat_sheet.pdf, id=315, page=1, 597.50829pt x 845.0471pt>
 File: figs/git_cheat_sheet.pdf Graphic file (type pdf)
 
 <use figs/git_cheat_sheet.pdf, page 1>
@@ -589,7 +589,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 452.
 Here is how much of TeX's memory you used:
  10012 strings out of 493014
  141952 string characters out of 6133351
- 350136 words of memory out of 5000000
+ 350160 words of memory out of 5000000
  13261 multiletter control sequences out of 15000+600000
  19138 words of font info for 71 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -604,10 +604,10 @@ local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/l
 ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/lo
 cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/loc
 al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on Intro2Git.pdf (21 pages, 1873607 bytes).
+Output written on Intro2Git.pdf (21 pages, 1873783 bytes).
 PDF statistics:
- 393 PDF objects out of 1000 (max. 8388607)
- 346 compressed objects within 4 object streams
+ 395 PDF objects out of 1000 (max. 8388607)
+ 348 compressed objects within 4 object streams
  142 named destinations out of 1000 (max. 500000)
  172 words of extra memory for PDF output out of 10000 (max. 10000000)
 

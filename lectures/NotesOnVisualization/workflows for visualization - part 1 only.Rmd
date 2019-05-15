@@ -1,6 +1,6 @@
 ---
 title: "Workflows for Visualization"
-output: html_document
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}

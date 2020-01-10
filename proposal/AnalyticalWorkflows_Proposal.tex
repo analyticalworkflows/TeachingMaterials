@@ -5,6 +5,10 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{enumitem}
+
+\usepackage{titlesec}
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+
 \usepackage[text={6.5in,8.5in},centering]{geometry}
 \geometry{verbose,a4paper,tmargin=2.4cm,bmargin=2.4cm,lmargin=2.4cm,rmargin=2.4cm}
 
@@ -17,14 +21,14 @@
 \maketitle
 
 \section*{Course Motivation}
-Graduate students are amassing ever larger datasets to ask ever more challenging questions with ever more sophisticated  analytical techniques. To keep pace requires students to straddle empirical, statistical, and theoretical approaches. Many propose dissertation chapters entailing mathematical models and computational simulations.  Many others implicitly work with computational models by using complex datasets which are derived from a mixture of high-throughput automatic observation and statistical modeling, such as climate datasets. These large-scale, multi-faceted, and ever more collaborative approaches lie at the heart of our department's \emph{integrative} approach to biology.  
+Graduate students are amassing ever larger datasets to ask ever more challenging questions with ever more sophisticated  analytical techniques. To keep pace requires students to straddle empirical, statistical, and theoretical approaches. Many propose dissertation chapters entailing mathematical models and computational simulations.  Many others work with complex datasets and statistical models. These large-scale, multi-faceted, and ever more collaborative approaches lie at the heart of our department's \emph{integrative} approach to biology.  
 
-And yet, nowhere in our curriculum are students provided the basic tools and best practices with which to manage this complexity*. Moreover, these basic tools are standard practice in many of the jobs in which our students aim to work.
+And yet, nowhere in our curriculum are students provided the basic tools and best practices with which to manage this complexity*. Moreover, these basic tools are standard practice in many of the career paths that our students are pursuing.
 
-Our course will provide students the tools they need for reproducible research with modern data.  Working with their own data and/or models, students will learn and practice: (re)organizing projects into efficient, reproducible, and easily-modified ``\emph{analytical workflows}''; writing modular, transparent computer code for biology (in the programming language of their choice); tracking and communicating progress and hurdles (issues) to others using stand-alone and cloud-based version control and collaboration software.
+Our course will provide students the tools they need to organize and manage their projects from inception to publication.  Working with their own data and/or models, students will learn and practice: (re)organizing projects into efficient, reproducible, and easily-modified ``\emph{analytical workflows}''; writing modular, transparent computer code for biology (in the programming language of their choice); tracking and communicating progress and hurdles (issues) to others using stand-alone and cloud-based version control and collaboration software.
 
 \begin{quote}
-	*Existing \emph{omics} courses introduce students to specific \emph{analysis pipelines} in particular programming environments, but these courses do not prepare students to contrast and synthesize pipelines into \emph{workflows}, which is required in order to perform reproducible research with complex data. Existing courses are also not of relevant to the many IB students pursuing non-\emph{omic} research.
+	*Existing \emph{omics} courses introduce students to specific \emph{analysis pipelines} in particular programming environments, but do not address issues relating to project management as a whole. Existing courses are also not relevant to the many IB students pursuing non-\emph{omic} research.
 \end{quote}
 
 
@@ -35,8 +39,11 @@ This class will help you with these challenges by practicing the development and
 
 Efficient workflows start at project conception and end only if the project idea is itself a dead end.  Thus, in this class, we'll work to practice (1) refining and articulating project ideas and goals, (2) creating modular and automated analyses, and (3) using best-practices in coding and project management. We'll learn how to use Git, GitHub, \LaTeX\, and Markdown.  The instructors will mostly use \textsf{R} within RStudio, but users of other programming languages and text editors are welcome and encouraged.  You will need either (1) a large unwieldy dataset and an end goal (e.g., reproducing someone else's analysis or visualization) or (2) a dynamical model or simulation (or sufficiently well-developed ideas for one).  The use of other people's data or published models is also encouraged, as needed.
 
+\section*{Course Catalog Description}
+Theory and implementation of efficient, reproducible workflows -- including best-practices in scientific programming, project management, and collaboration --  for computational, analytical, and data-driven research.
+
 \section*{Student Testimonials}
-A preliminary IB599 version of this course was taught by Ben Dalziel (with support from Mark Novak) in the Spring of 2019.  Student eSET scores for this course were 6.0 (vs. the departmental mean of 4.9) and 6.0 (vs. the departmental mean of 5.1) out of 6.0 points possible for ``the course as a whole'' and ``the instructor's contribution'' respectively. The following are excerpts of the feedback that was received via email and the eSET evaluations.
+A preliminary IB599 version of this course was taught by Ben Dalziel (with support from Mark Novak) in the Spring of 2019.  Student eSET scores for this course were 6.0 (versus the departmental median of 4.9) and 6.0 (versus the departmental median of 5.1) out of 6.0 points possible for ``the course as a whole'' and ``the instructor's contribution'' respectively. The following are excerpts of the feedback that was received via email and the eSET evaluations.
 
 \begin{quote}
 \emph{``Ben and Mark helped turn a daunting task that I'd been putting off (my modeling chapter) into a well-organized reality! Five stars.''}
@@ -71,11 +78,20 @@ A preliminary IB599 version of this course was taught by Ben Dalziel (with suppo
 	\emph{Prerequisites}: & Graduate standing, or by instructor permission
 \end{tabular} 
 
-\section*{Course Catalog Description}
-Theory and implementation of efficient, reproducible workflows -- including version control using Git, collaborative issue tracking using GitHub, and research dissemination using \LaTeX\ --  for the management of computational, analytical, and data visualization projects.
+\section*{Learning Outcomes}
+After successful completion of this course, students will be able to:
+\begin{enumerate}
+	\itemsep0em 
+	\item Translate a research plan into explicit and reproducible analytical workflows
+	\item Develop and share complex research projects using a version control system
+	\item Apply best practices in scientific programming to construct reproducible research
+	\item Develop these skills while advancing their dissertation research
+\end{enumerate}
+
 
 \section*{Schedule}
 \begin{enumerate}[label=\bfseries Week \arabic*:,leftmargin=*,labelindent=1em]
+	\itemsep0em 
 	\item Course organization \& Philosophy of workflows
 	\item Student Workflow diagrams \& Project presentations
 	\item Project setup \& Version control (Git)

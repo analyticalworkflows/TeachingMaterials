@@ -1,0 +1,17 @@
+\contentsline {section}{Project structure}{3}{section*.2}
+\contentsline {subsection}{Your Project folder / Respository}{4}{section*.3}
+\contentsline {section}{Working with \texttt {git}}{6}{section*.4}
+\contentsline {subsection}{What is version control?}{6}{section*.5}
+\contentsline {subsection}{git}{6}{section*.6}
+\contentsline {subsection}{Github}{6}{section*.7}
+\contentsline {subsection}{Installing and configuring Git}{7}{section*.8}
+\contentsline {subsection}{Repository setup}{8}{section*.9}
+\contentsline {subsection}{R-Studio and Git GUIs}{9}{section*.10}
+\contentsline {subsection}{Git work flow}{10}{section*.11}
+\contentsline {subsection}{Git resources}{12}{section*.12}
+\contentsline {section}{Coding}{13}{section*.13}
+\contentsline {subsection}{Principle of Modularity}{13}{section*.14}
+\contentsline {subsubsection}{Working directory and directory access}{14}{section*.15}
+\contentsline {subsection}{Code style guides}{16}{section*.16}
+\contentsline {subsection}{Within-script organization}{16}{section*.17}
+\contentsline {subsection}{When writing code, though shalt not...}{20}{section*.18}

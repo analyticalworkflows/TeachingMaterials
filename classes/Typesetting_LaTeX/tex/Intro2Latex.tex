@@ -1,0 +1,98 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+% the above packages are the "base"
+
+\usepackage{hyperref}  % I want this one for the \url{} function.
+
+
+%  You "comment out" lines with the % symbol.
+
+
+\author{Mark Novak}
+\title{This will be my article title.}
+
+
+\begin{document}
+\maketitle
+
+\tableofcontents % If I use \sections then I can auto-generate a table of contents:
+
+\pagebreak
+
+\section{Introduction } \label{sec:intro} % labels allow automatic referencing
+
+You can do all the following without a \LaTeX gui using \url{https://www.overleaf.com}.  For writing one-off equations use LaTeXiT \url{https://www.chachatelier.fr/latexit/}.  To find a symbol:  \url{http://detexify.kirelabs.org/classify.html}.
+
+\subsection*{My un-numbered subsection}
+
+The fundamental principle of calculus entails
+\begin{equation}
+	\label{eqn:calculus}
+	\lim_{{\Delta x} \to 0}\frac{f(a+\Delta x)-f(a)}{\Delta x}.
+\end{equation}
+
+\noindent % if you don't want a particular section to auto-indent
+Calculus rocks because it can do all of the following:
+\begin{itemize} 
+	\item first item
+\end{itemize}
+
+One could also organize all the cools things it can do in a table
+\begin{center}
+\begin{tabular}{l c} % {l c} means the 1st column is left-aligned while the 2nd is centered
+	\label{tab:mytable}
+		Reason & Explanation\\ % the \\ is  a "return/next line"
+		 \hline
+		1 & blah blah blah \\ 
+ 		 \hline
+\end{tabular}
+\end{center}
+
+I can easily reference the section (sect.\ref{sec:intro}), equation (eqn. \ref{eqn:calculus}) and table (Table \ref{tab:mytable}).  Their numbers will auto-generate, which makes it easy to move them around in your paper and adhere to a journal's stylistic preferences.
+
+\section{Figures}
+Note that the position of figures is auto-determined!
+
+% Figures are included like this:
+\begin{figure}
+	\centering
+	\includegraphics[width=0.2\linewidth]{figs/LaTeX_logo.png}
+	\caption{This is the \LaTeX logo.}
+	\label{fig:logo}
+\end{figure}
+
+
+\section{Some other stuff}
+
+Here are a few sketches for equations that might come in handy.
+
+\subsection*{Differential equations}
+The Lotka-Voltera equations are given by
+\begin{align}
+\frac{dx}{dt} 	&=	\alpha x - \beta xy \\
+\frac{dy}{dt}	&=	\gamma xy - \delta y
+\end{align}
+These can be written ``inline'' using (for example): $\dot x = \alpha x - \beta xy$ etc.
+
+\subsection*{Derivations}
+It is nice to typeset the steps of derivations. Pay it forward to folks who are trying to learn these methods, and to yourself when you can't remember the details but have to lecture on it in 5 minutes.
+
+\begin{align}
+N(10) 	&= 	\lambda N(9) 		\\ 		\notag
+		&= 	\lambda^2 N(8) 	\\		\notag
+		&=	\lambda^3 N(7) 	\\		\notag
+		& \dots				\\		\notag
+		&=	\lambda^{10} N(0)	\\		\notag
+\end{align}
+
+
+
+
+
+
+\end{document}

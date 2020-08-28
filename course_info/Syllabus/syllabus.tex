@@ -1,0 +1,216 @@
+\documentclass[10pt]{article}
+
+\usepackage{titlesec}
+\titlespacing\section{0pt}{5pt}{2pt}
+\titlespacing\subsection{0pt}{5pt}{2pt}
+%\setlength{\parindent}{0pt} % remove automatic indentation
+
+
+\usepackage[text={6.5in,8.5in},centering]{geometry}
+\geometry{verbose,a4paper,tmargin=2.4cm,bmargin=2.4cm,lmargin=2.4cm,rmargin=2.4cm}
+
+\usepackage{soul} % for \st{} strike-out
+\usepackage{hyperref} % for activation hyperlinks
+\hypersetup{colorlinks = true, allcolors = blue  }
+
+\usepackage{enumitem}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Syllabus:\\IB 599 ANALYTICAL WORKFLOWS}
+
+\author{}
+\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\maketitle
+\vspace{-50pt}
+
+
+\section*{Course Description}
+	Have you proposed a modeling chapter for your dissertation but need support getting things up and 
+	running?  
+	Are you sitting on a data set ready for analysis and visualization but don't know how or 
+	where to begin?  
+	Maybe you're far along in some series of analyses and feel ``lost in the trees.''
+	
+	This course will help you with these challenges by practicing the development and implementation of 
+	efficient, reproducible \emph{workflows} for your projects.  
+	Every project should (and can) be modular and fully automated, hence reproducible, portable and 
+	easily modified.  
+	Rerunning a model under a different set of parameters should (and can) be as simple as a few 
+	keystrokes. 
+	Regenerating all analyses, figures and tables after finding a typo in your code or dataset should (and 
+	can) be painless.
+	
+	Efficient workflows start at project conception and end only if the project idea is itself a dead end.  
+	Thus, in this course, we'll work to practice 
+	(1) refining and articulating project ideas and goals, 
+	(2) creating modular and automated analyses, and 
+	(3) using best-practices in coding and project management. 
+	We'll learn how to use Git, GitHub, \LaTeX\, and Markdown.  
+	The instructors will mostly use \textsf{R} within RStudio, but users of other programming languages 
+	and text editors are welcome and encouraged.  
+	You will need either 
+	(1) a large unwieldy dataset and an end goal (e.g., reproducing someone else's analysis or 
+	visualization) or 
+	(2) a dynamical model or simulation (or sufficiently well-developed ideas for one).  
+	The use of other people's data or published models is also encouraged, as needed.
+	
+\section*{Prerequisites}
+\noindent
+	Officially, only graduate standing (or  instructor approval).
+	But see  end of \emph{Course Description} for what you should have coming in.
+	
+\section*{Learning Outcomes}
+\noindent
+After successful completion of this course, students will be able to:
+\begin{enumerate}
+	\itemsep0em 
+	\item Translate a research plan into an explicit analytical workflow;
+	\item Apply best practices in scientific programming to construct reproducible research;
+	\item Manage and collaborate on complex research projects using a version control system;
+	\item Apply analytical workflows to advance their dissertation research.
+\end{enumerate}
+	
+\section*{Meeting times and location}
+\noindent
+	Fall 2020, Tuesdays and Thursdays, 10-11:50am\\
+	\emph{100\% remote}\\
+	Zoom ID:  XXXXXXXXXXXXXXX
+
+\section*{Instructor}
+\noindent
+%	Benjamin Dalziel\\
+%	Email: \href{mailto:benjamin.dalziel@oregonstate.edu}{benjamin.dalziel@oregonstate.edu}\\
+%	Phone: 541 737 1979\\
+%	Office: Cordley 5006\\
+	Mark Novak\\
+	Email: \href{mailto:mark.novak@oregonstate.edu}{mark.novak@oregonstate.edu}\\
+	Phone: 541-737-3610\\
+	Zoom:  5613504634 (\emph{differs from regular class Zoom ID})\\
+	Office: \st{Cordley 3006} Home
+
+\section*{Office hours}
+\noindent
+	% I am happy to meet by appointment, or please feel free to call or stop by my office. 
+	I'm more than happy to meet (via Zoom) at any point in the quarter.
+	Please use email to set up an appointment. 
+
+\section*{Course materials}
+\noindent
+All available on \href{https://github.com/analyticalworkflows}{https://github.com/analyticalworkflows}
+
+\section*{Course work}
+This course combines almost 4 hours of weekly instruction and activities for a total of 4.0 credits.
+There will be no exams, tests, or quizzes.
+I will not grade your work because there won't be ``correct'' answers to the problems you will 
+solve.
+In fact, my goal is for you to not have any ``homework'' (besides readings and making progress on your 
+project).
+However, the course \textit{will} require a significant allocation of time for thought and reflection outside 
+of class.
+There \textit{will} also be readings for in-class discussion to be read before class (see Schedule).
+Finally, you will need to complete all assigned in-class work (e.g., challenges and Git commits), ideally 
+by the end of the week in which the topic is covered but definitely before the end of Week 10.
+
+\section*{Evaluation of Student Performance}
+Grading (A-F) will be based on your participation, 
+initial and final project presentations (see rubric on the Github repository), 
+and the completion of the various in-class ``tasks'' assigned throughout the quarter.
+Accommodations for missed classes (e.g., due to fieldwork) are okay in principle, as long as we can 
+identify a path to your having fully participated in the course. 
+Please discuss your specific situation with me during Week 1. 
+Everyone who puts the effort into the class will get a grade that will make them happy (if you, as a 
+graduate student, even still care about grades).
+
+\section*{Collaboration}
+My hope is for you to make a tremendous amount of progress on your chosen (and ideally, 
+thesis-related) project during this course.
+Your work will therefore, almost by definition and necessity, be your own.
+That said, I will \textit{strongly} encourage everyone to work collaboratively in whatever way possible!
+That's because what this course is all about is to provide you with tools.
+Tools have to be learned and practiced.
+They can't be plagiarized, and you won't get anything out of them (or this course) if you try.
+Moreover, there's nothing (I repeat, \textit{nothing}) better for learning to understanding something than 
+to try explain how something works to someone else.
+Therefore, I repeat, I will \textit{strongly} encourage you to collaborate, and will do so throughout the 
+quarter by getting you to work or discuss your work in pairs or teams.
+
+\section*{Schedule}
+\begin{tabular}{cllllc}%{p{0.15\linewidth}p{0.45\linewidth}p{0.4\linewidth}} 
+	\hline\hline
+	Wk  & Day & Date &Topic & To do & Readings\\ 
+	\hline
+	\hline
+	0 &  Th		& 9/24 		& Course organization \& Philosophy of workflows	& c & \\
+	1 & T  		& 9/29 		&  Project setup \& Version control (Git) & d & c\\
+		& Th 	& 10/1 		& Project presentations	 & d & c\\
+	2 &  T 		& 10/6		& b					&  d & c\\
+		&  Th 	& 10/8 		&b&  d & c\\
+	3 &  T		 & 10/13 	& b&  d& c\\
+		&  Th 	& 10/15		& b&  d& c\\
+	4 &  T 		& 10/20		& b& d & c\\
+		&  Th 	& 10/22		& b& d & c\\
+	5 &  T 		& 10/27		& b&  d& c\\
+		&  Th 	& 10/29		& b& d & c\\
+	6 &  T 		& 11/3		& &  \textit{Election day!} \\
+		&  Th	& 11/5		 & b&  d& c\\
+	7 &  T 		& 11/10		& b&  d& c\\
+		&  Th 	& 11/12		& b& d & c\\
+	8 &  T 		& 11/17		& b& d & c\\
+		&  Th 	& 11/19		& b& d & c\\
+	9 &  T 	& 11/24		& b&  d& c\\
+		&  Th 	& 11/26		& \multicolumn{1}{c}{ \textit{Thanksgiving - no class} }& d & c \\
+	10 &  T 	& 12/1		& Project presentations & d & c\\
+	&  Th 	& 12/3		&  Project presentations \& Wrap-up & d& c \\
+	\hline
+	\hline
+\end{tabular}
+
+\pagebreak
+
+\section*{Course Policies}
+
+\subsection*{Equity Justice and Inclusion}
+Oregon State University, and the Department of Integrative Biology, have [a lot of] work to do on 
+improving the level of equity, justice and inclusion in our community. 
+We, the instructors and students in this class, [must] take responsibility for creating an affirming climate 
+for everyone in the course, and especially for those who are underrepresented and marginalized in 
+academia and in our society, because of their race, creed, color, sex, religion, national origin, citizenship 
+status, ancestry, genetic information, pregnancy, marital status, domestic partnership status, familial 
+status, age, body size, education level, disability, veteran status, sexual orientation, and gender identity 
+or expression. 
+If you have concerns or suggestions related to these issues as they pertain to the course, please do not 
+hesitate to contact me and/or the Office for Institutional Diversity 
+(\href{https://diversity.oregonstate.edu/}{https://diversity.oregonstate.edu/}).
+
+\subsection*{Student Conduct}
+Choosing to join the Oregon State University community obligates each member to a code of responsible 
+behavior, which is outlined in the Student Conduct Code  
+(\href{http://oregonstate.edu/studentconduct/}{http://oregonstate.edu/studentconduct/}).
+This Code is based on the assumption that all persons must treat one another with dignity and respect 
+in order for scholarship to thrive.  
+
+\subsection*{Students with Disabilities}
+Accommodations for students with disabilities are determined and approved by Disability Access 
+Services (DAS). 
+If you, as a student, believe you are eligible for accommodations but have not obtained approval, please 
+contact DAS at 541-737-4098 or at 
+\href{http://ds.oregonstate.edu}{http://ds.oregonstate.edu}. 
+DAS notifies students and faculty members of approved academic accommodations and coordinates 
+implementation of those accommodations. 
+While not required, students and faculty members are encouraged to discuss details of the 
+implementation of individual accommodations.
+
+\subsection*{Religious Holidays}
+Oregon State University strives to respect all religious practices. 
+If you have religious holidays that are in conflict with any of the requirements of this class, please see me 
+as soon as you can so that we can make alternative arrangements.
+
+
+\end{document}

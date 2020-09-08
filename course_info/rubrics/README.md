@@ -1,6 +1,6 @@
 # Rubrics
 
-Below you will find the rubrics for the three "formal" presentations you'll be giving this quarter.  (See [Project Proposal](../ProjectProposal), [Project Report](../ProjectReport), and [Project Summary](../ProjectSummary) for further details.)
+Below you will find the rubrics for the three "formal" presentations you'll be giving this quarter.  (See [Project Proposal](../../classes/ProjectProposal), [Project Report](../../classes/ProjectReport), and [Project Summary](../../classes/ProjectSummary) for further details.)
 
 ***
 

@@ -1,10 +1,14 @@
 # Workflow Diagrams
 
 ### Required readings
+- [Shade & Teal 2015](../../readings/pdfs/Shade2015.pdf)
+- [Sandve et al. 2013](../../readings/pdfs/Sandve2013.pdf)
 
 ### To do
 
 ### Class structure
-1. Discussion of "Rules" articles (Shade & Teal 2015, Sandve et al. 2013)
-2. Make Shade & Teal diagrams
-3. LaTeX
+- Paper discussion
+- Create workflow diagrams
+- Exchange diagram w/ partner for feedback (peer editing)
+- Present diagram to class
+- Update diagram

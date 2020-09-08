@@ -11,6 +11,7 @@ _None_
 
 ### Class structure
 We'll dedicate the whole class period to presentations.
+
 **Each presenter** will have **_6 minutes_** to:
 1. summarize your project (i.e. the scientific issue being addresses);
 2. summarize your proposed workflow;

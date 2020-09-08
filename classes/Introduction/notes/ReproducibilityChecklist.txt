@@ -1,0 +1,29 @@
+REPRODUCIBILITY CHECKLIST 
+from Digital Archaelogists
+https://www.nature.com/articles/d41586-020-02462-7?WT.ec_id=NATURE-20200827&utm_source=nature_etoc&utm_medium=email&utm_campaign=20200827&sap-outbound-id=DB42FA0D81A34152E803EDD7EAEB078B6ED175AB
+
+
+Although it’s impossible to guarantee computational reproducibility over time, these strategies can maximize your chances.
+
+Code Workflows based on point-and-click interfaces, such as Excel, are not reproducible. Enshrine your computations and data manipulation in code.
+
+Document Use comments, computational notebooks and README files to explain how your code works, and to define the expected parameters and the computational environment required.
+
+Record Make a note of key parameters, such as the ‘seed’ values used to start a random-number generator. Such records allow you to reproduce runs, track down bugs and follow up on unexpected results.
+
+Test Create a suite of test functions. Use positive and negative control data sets to ensure you get the expected results, and run those tests throughout development to squash bugs as they arise.
+
+Guide Create a master script (for example, a ‘run.sh’ file) that downloads required data sets and variables, executes your workflow and provides an obvious entry point to the code.
+
+Archive GitHub is a popular but impermanent online repository. Archiving services such as Zenodo, Figshare and Software Heritage promise long-term stability.
+
+Track Use version-control tools such as Git to record your project’s history. Note which version you used to create each result.
+
+Package Create ready-to-use computational environments using containerization tools (for example, Docker, Singularity), web services (Code Ocean, Gigantum, Binder) or virtual-environment managers (Conda).
+
+Automate Use continuous-integration services (for example, Travis CI) to automatically test your code over time, and in various computational environments.
+
+Simplify Avoid niche or hard-to-install third-party code libraries that can complicate reuse.
+
+Verify Check your code’s portability by running it in a range of computing environments.
+

@@ -28,20 +28,20 @@ _Click on each topic to see each day's "to-do's" (incl. required readings and ex
 |1 |  T  | 9/29    | [Structuring projects](classes/StructuredProjects) & [Version control (Git)](classes/VersionControl_Git_part_1) |
 |  |  Th | 10/1    | [Project proposals](classes/ProjectProposal) |
 |2 |  T  | 10/6    | [Workflow diagrams](classes/WorkflowDiagrams)  |
-|  |  Th | 10/8    | Implementation & Team troubleshooting |
+|  |  Th | 10/8    | [Implementation & Team troubleshooting](classes/Implementation) |
 |3 |  T  | 10/13   | [Coding best practices](classes/CodingBestPractices) |
-|  |  Th | 10/15   | Implementation & Team troubleshooting |
+|  |  Th | 10/15   | [Implementation & Team troubleshooting](classes/Implementation) |
 |4 |  T  | 10/20   | [Advanced version control (Git)](classes/VersionControl_Git_part_2) |
-|  |  Th | 10/22   | Implementation & Team troubleshooting  |
+|  |  Th | 10/22   | [Implementation & Team troubleshooting](classes/Implementation)  |
 |5 |  T  | 10/27   | [Data visualization](classes/Visualization)  |
-|  |  Th | 10/29   | Implementation & Team troubleshooting |
+|  |  Th | 10/29   | [Implementation & Team troubleshooting](classes/Implementation) |
 |6 |  T  | 11/3    | [Project progress reports](classes/ProjectReport) _(Election day!)_  |
 |  |  Th | 11/5    | [Typesetting with Markdown](classes/Typesetting_Markdown)  |
 |7 |  T  | 11/10   | [Typesetting with LaTeX](classes/Typesetting_LaTeX)  |
-|  |  Th | 11/12   | Implementation & Team troubleshooting |
+|  |  Th | 11/12   | [Implementation & Team troubleshooting](classes/Implementation) |
 |8 |  T  | 11/17   | [Faster computing](classes/FasterComputing)  |
 |  |  Th | 11/19   | [Databases](classes/Databases)  |
-|9 |  T  | 11/24   | Implementation & Team troubleshooting  |
+|9 |  T  | 11/24   | [Implementation & Team troubleshooting](classes/Implementation)  |
 |  |  Th | 11/26   | _Thanksgiving - no class_ |
 |10|  T  | 12/1    | [Project presentations](classes/ProjectSummary) |
 |  |  Th | 12/3    | [Project presentations](classes/ProjectSummary) & [Wrap-up](classes/WrapUp) |

@@ -25,23 +25,23 @@ _Click on each topic to see each day's "to-do's" (incl. required readings and ex
 | Wk |  Day | Date | Topic |
 |:-:|:-----:|:------|:------|
 |0 |  Th | 9/24    | [Course organization & Philosophy of workflows](classes/Introduction) |
-|1 |  T  | 9/29    |  [Structuring projects](classes/Structure) & [Version control (Git)](classes/VersionControl_Git_part_1) |
+|1 |  T  | 9/29    | [Structuring projects](classes/StructuredProjects) & [Version control (Git)](classes/VersionControl_Git_part_1) |
 |  |  Th | 10/1    | [Project proposals](classes/ProjectProposal) |
-|2 |  T  | 10/6    |   |
-|  |  Th | 10/8    |   |
-|3 |  T  | 10/13   |   |
-|  |  Th | 10/15   |   |
-|4 |  T  | 10/20   |   |
-|  |  Th | 10/22   |   |
-|5 |  T  | 10/27   |   |
-|  |  Th | 10/29   |   |
+|2 |  T  | 10/6    | [Workflow diagrams](classes/WorkflowDiagrams)  |
+|  |  Th | 10/8    | Implementation & Team troubleshooting |
+|3 |  T  | 10/13   | [Coding best practices](classes/CodingBestPractices) |
+|  |  Th | 10/15   | Implementation & Team troubleshooting |
+|4 |  T  | 10/20   | [Advanced version control (Git)](classes/VersionControl_Git_part_2) |
+|  |  Th | 10/22   | Implementation & Team troubleshooting  |
+|5 |  T  | 10/27   | [Data visualization](classes/Visualization)  |
+|  |  Th | 10/29   | Implementation & Team troubleshooting |
 |6 |  T  | 11/3    | [Project progress reports](classes/ProjectReport) _(Election day!)_  |
-|  |  Th | 11/5    |   |
-|7 |  T  | 11/10   |   |
-|  |  Th | 11/12   |   |
-|8 |  T  | 11/17   |   |
-|  |  Th | 11/19   |   |
-|9 |  T  | 11/24   |   |
+|  |  Th | 11/5    | [Typesetting with Markdown](classes/Typesetting_Markdown)  |
+|7 |  T  | 11/10   | [Typesetting with LaTeX](classes/Typesetting_LaTeX)  |
+|  |  Th | 11/12   | Implementation & Team troubleshooting |
+|8 |  T  | 11/17   | [Faster computing](classes/FasterComputing)  |
+|  |  Th | 11/19   | [Databases](classes/Databases)  |
+|9 |  T  | 11/24   | Implementation & Team troubleshooting  |
 |  |  Th | 11/26   | _Thanksgiving - no class_ |
-|10|  T  | 12/1    | [Project summaries](classes/ProjectSummary) |
+|10|  T  | 12/1    | [Project presentations](classes/ProjectSummary) |
 |  |  Th | 12/3    | [Project presentations](classes/ProjectSummary) & [Wrap-up](classes/WrapUp) |

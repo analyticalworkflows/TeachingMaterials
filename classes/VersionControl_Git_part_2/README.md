@@ -3,9 +3,9 @@ This class will be about
 - advanced Git features
 - (collaborative) project management using GitHub.
 
-### Required _before class_ readings
+### Required readings (_before class_)
 
-### To do _before class_
+### To do (_before class_)
 
 ### Class structure
 

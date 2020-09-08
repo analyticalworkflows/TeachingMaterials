@@ -1,10 +1,10 @@
 # Workflow Diagrams
 
-### Required readings
+### Required readings (_before class_)
 - [Sandve et al. 2013 Ten Simple Rules for Reproducible Computational Research](../../readings/pdfs/Sandve2013.pdf)
 - [Shade & Teal 2015 Computing Workflows for Biologists: A Roadmap](../../readings/pdfs/Shade2015.pdf)
 
-### To do
+### To do (_before class_)
 
 ### Class structure
 - Paper discussion (~20 min.)

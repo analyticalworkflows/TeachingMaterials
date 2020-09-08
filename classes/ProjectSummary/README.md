@@ -2,10 +2,10 @@
 
 This is it!  You did it!  The end of the quarter is here, so show us what you did!
 
-### Required _before class_ readings
+### Required readings (_before class_)
 _None_
 
-### To do _before class_
+### To do (_before class_)
 - create a new _Issue_ on your GitHub repo page titled _Project summary_.
 - create a slide presentation (PowerPoint, Keynote, whatever) to present (_by sharing your screen_). _No more than **6-8 slides** (including title slide)!_
 

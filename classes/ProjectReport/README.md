@@ -2,10 +2,10 @@
 
 The purpose of these mid-term progress reports is to help you (help each other) make progress on your projects.  More so than any [accountabilibuddy](https://neologisms.rice.edu/index.php?a=term&d=1&t=6534), there's nothing like peer pressure to hold each other accountable!
 
-### Required _before class_ readings
+### Required readings (_before class_)
 _None_
 
-### To do _before class_
+### To do (_before class_)
 - create a new _Issue_ on your GitHub repo page titled _Project report_.
 - create a slide presentation (PowerPoint, Keynote, whatever) to present (_by sharing your screen_). _No more than **5 slides** (including title slide)!_
 

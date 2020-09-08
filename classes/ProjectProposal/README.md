@@ -4,10 +4,10 @@ Our primary goal in this course is for you to develop more efficient research sk
 
 In order for us _and your classmates_ to support and help you, we need to know what your goals are for the quarter.  Hence these "Project Proposals".
 
-### Required _before class_ readings
+### Required readings (_before class_)
 _None_
 
-### To do _before class_
+### To do (_before class_)
 - create a new _Issue_ on your GitHub repo page titled _Project proposal_.
 - create a slide presentation (PowerPoint, Keynote, whatever) to present (_by sharing your screen_).  _No more than **5 slides** (including title slide)!_
 

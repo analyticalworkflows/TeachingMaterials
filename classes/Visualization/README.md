@@ -1,9 +1,9 @@
 # Data Visualization
 
-### Required _before class_ readings
+### Required readings (_before class_)
 _None_
 
-### To do _before class_
+### To do (_before class_)
 
 ### Class structure
 

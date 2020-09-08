@@ -5,7 +5,7 @@ These days -- regardless of the research you're pursuing -- you're going to be u
 ### Required readings (_after class_)
 - [Sholler et al. 2019. Resistance to Adoption of Best Practices.](../../readings/pdfs/Sholler2019.pdf)
 
-### To do _before class_
+### To do (_before class_)
 _Nothing_
 
 ### Class structure

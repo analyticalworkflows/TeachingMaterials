@@ -15,6 +15,9 @@ Most of the [classes](classes/) folders contain LaTeX versions of our lecture no
 ## Questions and comments
 Please contact [mark.novak@oregonstate.edu](mark.novak@oregonstate.edu).
 
+## Broken links
+If you find a broken link, please create an _Issue_ to let us know where it is!
+
 
 ## Schedule
 _Click on each topic to see each day's "to-do's" (incl. required readings and exercises)._

@@ -17,16 +17,17 @@ _Nothing_
 ### Software & account setup
 #### Accounts
 - [GitHub](https://github.com/) (_required_)
-- [Overleaf](https://www.overleaf.com) (_optional_, for LaTeX)
+- Online LaTeX editor, e.g.,[Overleaf](https://www.overleaf.com) (_optional_)
 
 #### Software
 - [Git](https://git-scm.com/downloads) (_required_)
 - [LaTeX](https://www.latex-project.org/get/) (_required_)
+- Stand-alone LaTeX editor, e.g.,[TeXstudio](http://texstudio.sourceforge.net) (_required_ if not using online editor)
 
 #### Other software of potential interest
 - [LaTeXiT](https://www.chachatelier.fr/latexit/) (_stand-alone equation editor_)
 
-### Suggested readings
+### Further readings
 #### Philosophy
 
 #### Getting started resources

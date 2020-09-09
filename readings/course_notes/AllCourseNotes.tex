@@ -1,0 +1,16 @@
+% This script will pull the tex-created pdfs of all specified classe notes together into one pdf container
+
+\documentclass{report}
+\usepackage{pdfpages}
+
+\title{\textbf{Analytical Workflows}\\All course notes strung together}
+
+\begin{document}
+	\maketitle
+	\includepdf[pages=-]{../../classes/VersionControl_Git_part_1/tex/Intro2Git}
+	\includepdf[pages=-]{../../classes/VersionControl_Git_part_1/tex/Intro2Git}
+	
+	
+	
+\end{document}
+

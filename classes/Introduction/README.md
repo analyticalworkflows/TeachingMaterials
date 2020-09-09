@@ -17,7 +17,7 @@ _Nothing_
 ### Software & account setup
 #### Accounts
 - [GitHub](https://github.com/) (_required_)
-- Online LaTeX editor, e.g.,[Overleaf](https://www.overleaf.com) (_optional_)
+- Online LaTeX editor, e.g., [Overleaf](https://www.overleaf.com) (_optional_)
 
 #### Software
 - [Git](https://git-scm.com/downloads) (_required_)

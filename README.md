@@ -10,8 +10,6 @@ The most relevant folders are:
 - [classes](classes/) containing a folder for each course topic;
 - [readings](readings/) containing pdfs of the required and suggested readings.
 
-Most of the [classes](classes/) folders contain LaTeX versions of our lecture notes. You can compile the _tex_ file yourself, or just look for the associated _pdf_ file.
-
 ## Questions and comments
 Please contact [mark.novak@oregonstate.edu](mark.novak@oregonstate.edu).
 

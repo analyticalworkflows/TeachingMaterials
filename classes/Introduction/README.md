@@ -1,5 +1,5 @@
 # Intro & Philosophy
-These days -- regardless of the research you're pursuing -- you're going to be using computers.  With computers come many choices in software (and, increasingly, user accounts).  This course will add several to your list, but at least some of them are fundamentally more of a _tool_ than just another app.
+These days -- regardless of the research you're pursuing -- you're going to be using computers.  With computers come many choices in software (and, increasingly, user accounts).  This course will add several to your list, but at least two of them (Git and LaTeX) are in many ways much more of a tool in your toolbelt than just another app.
 
 
 ### Required readings (_after class_)
@@ -9,23 +9,29 @@ These days -- regardless of the research you're pursuing -- you're going to be u
 _Nothing_
 
 ### Class structure
-- Welcome & Introductory remarks
-- Course philosophy
-- Software & account set-up troubleshooting
-- Pairing up for [accountabilibuddies](https://neologisms.rice.edu/index.php?a=term&d=1&t=6534)
+- Welcome & Course philosophy & Questions (_30-50 min._)
+- _Break_ (_5 min._)
+- Pairing up for [accountabilibuddies](https://neologisms.rice.edu/index.php?a=term&d=1&t=6534) (_~10 min._)
+- Software & account set-up troubleshooting (_remaining time_)
 
 ### Software & account setup
 #### Accounts
-- [GitHub](https://github.com/) (_required_)
-- Online LaTeX editor, e.g., [Overleaf](https://www.overleaf.com) (_optional_)
+- [Github.com](https://github.com/) (_required_)
+- Online LaTeX editor (e.g., [Overleaf](https://www.overleaf.com)) (_optional_)
 
 #### Software
-- [Git](https://git-scm.com/downloads) (_required_)
-- [LaTeX](https://www.latex-project.org/get/) (_required_)
-- Stand-alone LaTeX editor, e.g.,[TeXstudio](http://texstudio.sourceforge.net) (_required_ if not using online editor)
+- [Git](https://git-scm.com/downloads) or [Git for Windows](https://gitforwindows.org/) (_required_)
+- [LaTex](https://www.latex-project.org/get/) (_required_)
+- Stand-alone git GUI (e.g., [Sourcetree](https://www.sourcetreeapp.com)) (_required_ if not using git command line)
+- Stand-alone LaTeX editor (e.g., [TeXstudio](http://texstudio.sourceforge.net)) or a more general editor (e.g., [Atom](https://atom.io)*) (_required_ if not using online editor)
+
+*[suggested Atom packages](AtomConfig.md)
 
 #### Other software of potential interest
+- [Discord](https://discord.com) (_potential Zoom replacement_)
 - [LaTeXiT](https://www.chachatelier.fr/latexit/) (_stand-alone equation editor_)
+- [draw.io](https://app.diagrams.net) (_online workflow diagram app_)
+- [MDpreview](https://markdownlivepreview.com) (_online Markdown previewer_)
 
 ### Further readings
 #### Philosophy
@@ -37,4 +43,3 @@ _Nothing_
 - Reproducible science
 - Efficiency
 - Resistance
-

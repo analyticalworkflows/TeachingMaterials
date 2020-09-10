@@ -3,24 +3,27 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage{graphicx}
 
 % the above packages are the "base"
 
-\usepackage{hyperref}  % I want this one for the \url{} function.
+\usepackage{graphicx}
+\graphicspath{{../figs/}} % set the location of your figures
+
+\usepackage{hyperref} % enable links within pdf
+\hypersetup{colorlinks = true, linkcolor = black, urlcolor = blue}
 
 
 %  You "comment out" lines with the % symbol.
 
 
 \author{Mark Novak}
-\title{This will be my article title.}
+\title{\textbf{This will be my article title.}\\An Intro to \LaTeX}
 
 
 \begin{document}
 \maketitle
 
-\tableofcontents % If I use \sections then I can auto-generate a table of contents:
+\tableofcontents
 
 \pagebreak
 
@@ -38,7 +41,7 @@ The fundamental principle of calculus entails
 
 \noindent % if you don't want a particular section to auto-indent
 Calculus rocks because it can do all of the following:
-\begin{itemize} 
+\begin{itemize}
 	\item first item
 \end{itemize}
 
@@ -48,7 +51,7 @@ One could also organize all the cools things it can do in a table
 	\label{tab:mytable}
 		Reason & Explanation\\ % the \\ is  a "return/next line"
 		 \hline
-		1 & blah blah blah \\ 
+		1 & blah blah blah \\
  		 \hline
 \end{tabular}
 \end{center}

@@ -1,0 +1,285 @@
+% Use only LaTeX2e, calling the article.cls class and 12-point type.
+\RequirePackage{lineno}
+\documentclass[11pt]{article}
+
+\usepackage{amsmath,cases,multirow}
+
+\usepackage{graphicx}
+\graphicspath{{../figs/}} % set the location of your figures
+
+% in-text citation styles
+\usepackage[sort]{natbib}
+\bibpunct[; ]{(}{)}{;}{a}{,}{;}
+
+% To force table caption above table
+\usepackage{float}
+\floatstyle{plaintop}
+\restylefloat{table}
+
+% Citiation count
+\usepackage{totcount}
+\newtotcounter{citnum}
+\def\oldbibitem{} \let\oldbibitem=\bibitem
+\def\bibitem{\stepcounter{citnum}\oldbibitem}
+
+% for lipsum text
+\usepackage{lipsum}
+
+%~~~~~~~~~~~
+% For annotation
+%~~~~~~~~~~~
+% For purposes of highlighting needed numbers
+\newcommand{\redX}{\textcolor{red}{X}}
+
+% For commenting purposes (doesn't work in boxes!)
+\long\def\authornote#1{%
+	\leavevmode\unskip\raisebox{-3.5pt}{\rlap{$\scriptstyle\diamond$}}%
+	\marginpar{\raggedright\hbadness=10000
+		\def\baselinestretch{0.8}\tiny
+		\it #1\par}}
+\newcommand{\MN}[1]{\authornote{MN: #1}}
+% copy the last line and edit with co-author initials
+%~~~~~~~~~~~
+%~~~~~~~~~~~
+
+
+%~~~~~~~~~~~
+% allow cross referencing between files (useful when you have a seperate tex file of supplementary materials)
+%~~~~~~~~~~~
+\usepackage{xr}
+\externaldocument{manuscript_SOM}
+\externaldocument{tables/exampleTable2}
+%~~~~~~~~~~~
+%~~~~~~~~~~~
+
+% Reasonable page setup
+\topmargin 0.0cm
+\oddsidemargin 0.2cm
+\textwidth 16cm
+\textheight 21cm
+\footskip 1.0cm
+\setcounter{secnumdepth}{0}  % don't number sections (stars not needed)
+
+% Environment for the abstract and cover page.
+\newenvironment{ecolettabstract}{\clearpage\section*{Abstract}}{\clearpage}
+\newenvironment{ecolettcover}{\maketitle}{\clearpage}
+\newenvironment{ecolettfigure}[1]{\begin{figure}[#1]\centerline{Figure
+\arabic{figure}\medskip}}{\addtocounter{figure}{1}\end{figure}}
+
+
+%~~~~~~~~~~~
+%~~~~~~~~~~~
+
+% Include your paper's title here
+\title{My awesome title}
+
+
+\author
+{First Last$^1$ \& First\ Last$^{1}$\\\\
+\small{$^1$Department of DisIntegrative Biology, Oregon State University,}\\
+\small{Corvallis, Oregon, 97331 USA}\\
+}
+
+% Include the date command, but leave its argument blank.
+\date{}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%% END OF PREAMBLE %%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\maketitle
+
+% Double-space the manuscript.
+\baselineskip30pt
+
+% ---------------------------------------
+% COVER                                 %
+% ---------------------------------------
+ \begin{ecolettcover}
+
+ \centerline{{\sc Running Title:} Awesome study}
+
+ \bigskip
+
+ \begin{center}
+ \begin{tabular}{ll}
+ \hline
+ \\
+ {\bf Article type}							 & Letter                               \\
+ {\bf Words in abstract}				& XXX                                 \\
+ {\bf Words in manuscript}       	 & XXX                               \\
+ {\bf Number of references}			& \total{citnum}\                 \\
+ {\bf Number of figures}				& X\                                  \\
+ {\bf Number of tables}					& X\                                  \\
+ {\bf Number of boxes}					& X\                                  \\
+ {\bf Corresponding author}		   & First Last                    \\
+ {\bf Phone} 								& (541) 737-XXXX               \\
+ {\bf Fax} 									  & (541)  737-XXXX              \\
+{\bf Email} 								& first.last@oregonstate.edu           \\
+\\
+ \hline
+ \end{tabular}
+ \end{center}
+
+ \end{ecolettcover}
+
+
+
+% ---------------------------------------
+% ABSTRACT                              %
+% ---------------------------------------
+% ELE word limit:
+% 150 for Letters and Methods
+% 200 for Reviews \& Syntheses and Ideas \& Perspectives
+%Currently 160
+\begin{ecolettabstract}
+
+\lipsum[1]
+
+% ELE keyword limit: 10
+\noindent\textbf{Keywords:} \emph{ecology}
+\end{ecolettabstract}
+
+% --------------------------------------------------------------------------------
+% --------------------------------------------------------------------------------
+% SUMMARY OF REMAINING TO-DO'S
+% --------------------------------------------------------------------------------
+% --------------------------------------------------------------------------------
+
+
+%\textbf{Potential reviewers}
+%\begin{itemize}
+% \item
+%\end{itemize}
+
+% -----------------------------------------------------------------------------
+% -----------------------------------------------------------------------------
+% BODY OF THE PAPER
+% -----------------------------------------------------------------------------
+% -----------------------------------------------------------------------------
+\baselineskip30pt
+
+\clearpage
+
+\setpagewiselinenumbers
+\linenumbers
+
+
+
+% -----------------------------------------------------------------------------
+% INTRODUCTION
+% -----------------------------------------------------------------------------
+
+\section{Introduction}
+
+When using natbib, this is how to cite other papers \citep{kopka2004glt}.
+Of course, using natbib, you can also cite \citet{lamport1989ldp} like this.
+
+
+
+
+% -----------------------------------------------------------------------------
+% METHODS
+% -----------------------------------------------------------------------------
+
+\section{Methods}
+\lipsum[66]
+
+\subsection{Study system}
+A subsection is initiated like this.
+\lipsum[75]
+
+
+
+% -----------------------------------------------------------------------------
+% RESULTS
+% -----------------------------------------------------------------------------
+
+\section{Results}
+References a figure by referencing its label (Fig.~\ref{fig:fig1}).
+You can include a table either by making the table within this tex file, or call from a seperate file (e.g., an R-generated table) using the \texttt{input} function.
+As long as it has a label, you can reference your table the same way you reference figures and sections (Table~\ref{tab:table1}).
+
+\input{tables/exampleTable1}
+
+
+
+
+
+% -----------------------------------------------------------------------------
+% DISCUSSION
+% -----------------------------------------------------------------------------
+
+\section{Discussion}
+
+\lipsum[75]
+
+
+
+
+
+% -----------------------------------------------------------------------------
+% ACKNOWLEDGMENTS
+% -----------------------------------------------------------------------------
+\section{Acknowledgments}
+We thank everyone we know
+
+\section{Author contributions}
+Both authors contributed equally.
+
+\section{Code and data availability}
+It's all on GitHub! \emph{url address here}
+
+
+% -----------------------------------------------------------------------------
+% -----------------------------------------------------------------------------
+% REFERENCES
+% -----------------------------------------------------------------------------
+% -----------------------------------------------------------------------------
+\pagebreak
+
+% specify the bibiolography style file (without its file extension)
+\bibliographystyle{biblio/ecology_letters2}
+% specify your bib file (without its file extension)
+\bibliography{biblio/exampleBibliography}
+
+% --------------------------------------------------------------------
+% --------------------------------------------------------------------
+% FIGURES
+% --------------------------------------------------------------------
+% --------------------------------------------------------------------
+
+\clearpage
+
+\section{Figure captions}
+
+\renewcommand{\baselinestretch}{1.0}
+
+% --------------------------------------------------------------------
+\begin{figure}[!h]
+	\caption{
+		\baselineskip30pt
+		 This is my first awesome figure.
+	}
+	\label{fig:fig1}
+\end{figure}
+
+
+% --------------------------------------------------------------------
+
+\clearpage
+
+% --------------------------------------------------------------------
+
+\setcounter{figure}{1}
+
+\clearpage
+\begin{ecolettfigure}{p}
+	\centerline{\includegraphics*[width=0.5\textwidth]{figs/exampleFig.pdf}}
+\end{ecolettfigure}
+
+
+
+\end{document}

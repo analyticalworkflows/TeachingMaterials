@@ -5,6 +5,7 @@
 - [Shade & Teal 2015 Computing Workflows for Biologists: A Roadmap](../../readings/pdfs/Shade2015.pdf)
 
 ### To do (_before class_)
+_Nothing_
 
 ### Class structure
 - Paper discussion (~20 min.)
@@ -14,3 +15,6 @@
 - Present & discuss diagram with class (~4 volunteers) (~20 min.)
 - Reflect & update diagram (~ 5 min.)
 - Wrap-up (5 min.)
+
+### Workflow Diagrams
+You can use whatever software you'd like (e.g., Powerpoint, Keynote), but take a look at [draw.io](https://app.diagrams.net) first to see if you like it.

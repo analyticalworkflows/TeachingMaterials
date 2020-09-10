@@ -17,6 +17,9 @@ pdf-view
 latex-wordcount
 latex-hyperclick
 latex-autocomplete
+linter
+linter-spell
+linter-spell-latex
 
 To configure for LaTeX, go to Atom -> Preferences -> Packages.
 Go to Settings of the latex package and:

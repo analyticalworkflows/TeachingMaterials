@@ -1,6 +1,6 @@
 # Analytical Workflows Teaching Materials
 
-This repo contains the teaching materials for IB599 Analytical Workflows taught at Oregon State University.  
+This repo contains the teaching materials for IB599 Analytical Workflows taught at Oregon State University.
 
 _More precisely, it *will soon* contain the *updated* materials (i.e. this repo is under construction!)._  _Until that time it will primarily contain the materials from 2019, the first and last time this course was run._
 
@@ -11,7 +11,7 @@ The most relevant folders are:
 - [readings](readings/) containing pdfs of the required and suggested readings.
 
 ## Questions and comments
-Please contact [mark.novak@oregonstate.edu](mark.novak@oregonstate.edu).
+Please contact [mark.novak@oregonstate.edu](mailto:mark.novak@oregonstate.edu) (who's teaching the course this Fall 2020) and/or [benjamin.dalziel@oregonstate.edu](mailto:benjamin.dalziel@oregonstate.edu) who co-created the course.  (_Naturally, please send praise to Mark and criticism to Ben._)
 
 ## Broken links
 If you find a broken link, please create an _Issue_ to let us know where it is!
@@ -19,7 +19,7 @@ If you find a broken link, please create an _Issue_ to let us know where it is!
 
 ## Schedule
 _Click on each topic to see each day's "to-do's" (incl. required readings and exercises)._
-	
+
 | Wk |  Day | Date | Topic |
 |:-:|:-----:|:------|:------|
 |0 |  Th | 9/24    | [Course organization & Philosophy of workflows](classes/Introduction) |

@@ -3,7 +3,7 @@
 This class is about adopting a "project mindset" to organizing the folders and files associated with your research.
 
 ### Required readings (_before class_)
-- Lecture notes: [tex/StructuredProjects.pdf](/tex/StructuredProjects.pdf)
+- Lecture notes: [tex/StructuredProjects.pdf](tex/StructuredProjects.pdf)
 
 ### To do (_before class_)
 

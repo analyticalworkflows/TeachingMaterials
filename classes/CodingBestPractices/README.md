@@ -9,6 +9,7 @@
 
 ***
 ### Potential topics
+- What is a "flat" file? (Maybe move to Git or Best Practices class?)
 - Syntax and Grammer
 	- Clear workspace
         - Don’t save workspace

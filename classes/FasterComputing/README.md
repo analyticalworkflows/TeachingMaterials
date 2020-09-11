@@ -8,9 +8,10 @@
 
 ***
 ### Potential topics
-- Clusters
+- High Performance Clusters
+	- Link to OSU's (new) VPN w/ insructions
 	- Job submission (Intro to Unix)
 	- Command-line R (or Mathematica or Matlab)
-- RStudio in the cloud
+- [RStudio in the cloud](https://rstudio-1.cosine.oregonstate.edu)
 - Apply functions in R (tidyverse too?)
 - Parallel computing

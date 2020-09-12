@@ -3,7 +3,7 @@
 This class is about developing better coding practices, ranging from structuring code to writing code to debugging code.
 
 ### Required readings (_before class_)
-- Notes: [tex/StructuredProjects.pdf](tex/CodingBestPractices.pdf)
+- Notes: [tex/CodingBestPractices.pdf](tex/CodingBestPractices.pdf)
 - Writing functions [r4ds-19](https://r4ds.had.co.nz/functions.html#functions)
 
 ### To do (_before class_)

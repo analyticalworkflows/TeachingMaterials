@@ -14,6 +14,11 @@ After finishing-up [Structuring Projects](../StructuredProjects/README.md), we'l
 - setup of your project repository
 - troubleshooting & discussion
 
+### Further readings
+- [Blischak et al. 2016. A Quick Introduction to Version Control with Git and GitHub](../../readings/pdfs/Blischak2016.pdf)
+- [Bryan 2018 Excuse me, do you have a moment to talk about version control?](../../readings/pdfs/Bryan2018.pdf)
+-
+
 ### Additional resources
 - [The Git manual](https://git-scm.com/book/en/v2)
 - [Happy Git with R](https://happygitwithr.com)

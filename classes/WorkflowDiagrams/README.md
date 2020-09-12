@@ -8,13 +8,13 @@
 _Nothing_
 
 ### Class structure
-- Paper discussion (~20 min.)
-- Create workflow diagrams (~30 min.)
-- Break (5 min)
-- Exchange diagram w/ partner for peer editing & feedback (20 min.)
-- Present & discuss diagram with class (~4 volunteers) (~20 min.)
-- Reflect & update diagram (~ 5 min.)
-- Wrap-up (5 min.)
+- Paper discussion (_~20 min._)
+- Create workflow diagrams (_~30 min._)
+- Break (_5 min._)
+- Exchange diagram w/ partner for peer editing & feedback (_20 min._)
+- Present & discuss diagram with class (~4 volunteers) (_~20 min._)
+- Reflect & update diagram (_~5 min._)
+- Wrap-up (_5 min._)
 
 ### Workflow Diagrams
 You can use whatever software you'd like (e.g., Powerpoint, Keynote), but take a look at [draw.io](https://app.diagrams.net) first to see if you like it.

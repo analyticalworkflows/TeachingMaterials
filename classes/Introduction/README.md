@@ -10,7 +10,7 @@ _Nothing_
 
 ### Class structure
 - Welcome & Course philosophy & Questions (_30-50 min._)
-- _~Break~_ (_5 min._)
+- _Break_ (_5 min._)
 - Pairing up for [accountabilibuddies](https://neologisms.rice.edu/index.php?a=term&d=1&t=6534) (_~10 min._)
 - Software & account set-up troubleshooting (_remaining time_)
 

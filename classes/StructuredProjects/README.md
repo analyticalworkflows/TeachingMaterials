@@ -10,7 +10,7 @@ _Nothing_ (but see [Version Control with Git and Github - Part 1](../VersionCont
 
 ### Class structure
 - "Lecture" & discussion (_? min._)
-- _~Break~_ (_5 min._)
+- _Break_ (_5 min._)
 - Self-analysis of your current practices (_~15 min._)
 - (Re)starting your project's organization (_remaining time_)
 

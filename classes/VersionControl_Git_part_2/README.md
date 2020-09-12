@@ -14,7 +14,7 @@ Mix of demonstration, discussion, exercises & project implementation for each to
 	- Diff & Merge
 	- Going back in time
 	- Forks
-- _~Break~_ (_5 min._)
+- _Break_ (_5 min._)
 -  Github
 	- Repo showcase
 	- Issue tracking

@@ -34,11 +34,13 @@ _Nothing_
 - [MDpreview](https://markdownlivepreview.com) (_online Markdown previewer_)
 
 ### Further readings
-#### Philosophy
+- [Hampton et al. 2017 Skills and Knowledge for Data- Intensive Environmental Research](../../readings/pdfs/Hampton2017.pdf)
+- [McKiernan et al. 2016 How open science helps researchers succeed](../../readings/pdfs/McKiernan2016.pdf)
+- 
 
-#### Getting started resources
 
 ***
+
 ### Potential topics
 - Reproducible science
 - Efficiency

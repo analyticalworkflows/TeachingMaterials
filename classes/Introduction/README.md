@@ -10,7 +10,7 @@ _Nothing_
 
 ### Class structure
 - Welcome & Course philosophy & Questions (_30-50 min._)
-- _Break_ (_5 min._)
+- _~Break~_ (_5 min._)
 - Pairing up for [accountabilibuddies](https://neologisms.rice.edu/index.php?a=term&d=1&t=6534) (_~10 min._)
 - Software & account set-up troubleshooting (_remaining time_)
 
@@ -22,7 +22,7 @@ _Nothing_
 #### Software
 - [Git](https://git-scm.com/downloads) or [Git for Windows](https://gitforwindows.org/) (_required_)
 - [LaTex](https://www.latex-project.org/get/) (_required_)
-- Stand-alone git GUI (e.g., [Sourcetree](https://www.sourcetreeapp.com)) (_required_ if not using git command line)
+- Stand-alone Git GUI (e.g., [Sourcetree](https://www.sourcetreeapp.com)) (_required_ if not using command-line)
 - Stand-alone LaTeX editor (e.g., [TeXstudio](http://texstudio.sourceforge.net)) or a more general editor (e.g., [Atom](https://atom.io)*) (_required_ if not using online editor)
 
 *[suggested Atom packages](AtomConfig.md)
@@ -34,14 +34,7 @@ _Nothing_
 - [MDpreview](https://markdownlivepreview.com) (_online Markdown previewer_)
 
 ### Further readings
-- [Hampton et al. 2017 Skills and Knowledge for Data- Intensive Environmental Research](../../readings/pdfs/Hampton2017.pdf)
-- [McKiernan et al. 2016 How open science helps researchers succeed](../../readings/pdfs/McKiernan2016.pdf)
-- 
-
+- [Hampton et al. 2017 Skills and knowledge for data-intensive environmental research.](../../readings/pdfs/Hampton2017.pdf)
+- [McKiernan et al. 2016 How open science helps researchers succeed.](../../readings/pdfs/McKiernan2016.pdf)
 
 ***
-
-### Potential topics
-- Reproducible science
-- Efficiency
-- Resistance

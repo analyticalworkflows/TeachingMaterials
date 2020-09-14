@@ -9,6 +9,8 @@ Prior to start of quarter:
 
 After start of quarter:
 - [ ] Email students' ONID ID's to COSINE to create HPC accounts
+- [ ] Add student' GitHub handles to organization as described [here](https://docs.github.com/en/enterprise/2.16/user/github/setting-up-and-managing-organizations-and-teams/adding-people-to-your-organization).
+  - [ ] Make sure their handles show up in Discussion board repo Issues to enable tagging.
 - [ ] Fork students' repos to Organization
 
 At end of quarter:

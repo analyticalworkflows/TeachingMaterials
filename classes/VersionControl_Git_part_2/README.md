@@ -13,16 +13,17 @@ Mix of demonstration, discussion, exercises & project implementation for each to
 	- Branching
 	- Diff & Merge
 	- Going back in time
-	- Forks
 - _Break_ (_5 min._)
--  Github
-	- Repo showcase
+-  GitHub
 	- Issue tracking
 	- Project boards
-	- Showcasing yourself
+	- Forks
+- Showcase some repos (_remaining time_)
 
 ### Further readings
 - [Chacon & Straub. Pro Git - Git Branching](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)
+- [GitHub manual - Collaboration features](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests) (_forks_, _branches_, _pull requests_, _merge conflicts_, etc.)
+- [GitHub manual - Using Issues & Project boards](https://docs.github.com/en/github/managing-your-work-on-github)
 
 
 ### Showcase repositories

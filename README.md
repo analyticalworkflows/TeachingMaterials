@@ -11,7 +11,7 @@ The most relevant folders are:
 - [readings](readings/) containing pdfs of the required and suggested readings.
 
 ## Questions and comments
-Please contact [mark.novak@oregonstate.edu](mailto:mark.novak@oregonstate.edu) (who's teaching the course this Fall 2020) and/or [benjamin.dalziel@oregonstate.edu](mailto:benjamin.dalziel@oregonstate.edu) (who co-created the course).  _Naturally, please send praise to Mark and criticism to Ben._
+Please contact [mark.novak@oregonstate.edu](mailto:mark.novak@oregonstate.edu) (who's teaching the course this Fall 2020) and/or [benjamin.dalziel@oregonstate.edu](mailto:benjamin.dalziel@oregonstate.edu) (who co-created the course).  _Naturally, please send all 2020 criticism to Ben._
 
 ## Broken links
 If you find a broken link, please create an _Issue_ to let us know where it is!
@@ -23,13 +23,13 @@ _Click on each topic to see each day's "to-do's" (incl. required readings and ex
 | Wk |  Day | Date | Topic |
 |:-:|:-----:|:------|:------|
 |0 |  Th | 9/24    | [Course organization & Philosophy of workflows](classes/Introduction) |
-|1 |  T  | 9/29    | [Structuring projects](classes/StructuredProjects) & [Version control (Git)](classes/VersionControl_Git_part_1) |
+|1 |  T  | 9/29    | [Structuring projects](classes/StructuredProjects) & [Git w/ GitHub - Part 1](classes/VersionControl_Git_part_1) |
 |  |  Th | 10/1    | [Project proposals](classes/ProjectProposal) |
 |2 |  T  | 10/6    | [Workflow diagrams](classes/WorkflowDiagrams)  |
 |  |  Th | 10/8    | [Implementation & Team troubleshooting](classes/Implementation) |
 |3 |  T  | 10/13   | [Coding best practices](classes/CodingBestPractices) |
 |  |  Th | 10/15   | [Implementation & Team troubleshooting](classes/Implementation) |
-|4 |  T  | 10/20   | [Advanced version control (Git)](classes/VersionControl_Git_part_2) |
+|4 |  T  | 10/20   | [Git w/ GitHub - Part 2](classes/VersionControl_Git_part_2) |
 |  |  Th | 10/22   | [Implementation & Team troubleshooting](classes/Implementation)  |
 |5 |  T  | 10/27   | [Data visualization](classes/Visualization)  |
 |  |  Th | 10/29   | [Implementation & Team troubleshooting](classes/Implementation) |

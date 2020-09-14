@@ -2,7 +2,7 @@
 
 There are a number of [Markdown flavours](https://en.wikipedia.org/wiki/Markdown).  Some people even use it to write and typeset their manuscripts (as we will learn to do with LaTeX).  We're only going to learn enough to:
 1) write clear README files for our GitHub repositories, and
-2) knit together code-integrated reports on analyses performed in R.
+2) knit together code-integrated reports on analyses performed in R (for your digital notebook or your _annual_ committee meetings..._hint, hint!_).
 
 ### Required readings (_before class_)
 - [Markdown in 3 minutes](https://github.com/scholmd/scholmd/wiki/Learn-markdown-in-3-minutes)
@@ -18,6 +18,7 @@ _Nothing_
 - Back to your choice of [Implementation & Team troubleshooting](../Implementation/README.md) (_remaining time_)
 
 ### Additional resources
+- [Xie's book: Dynamic Documents with R and knitr](https://yihui.org/knitr/)
 - [Markdown in RStudio](https://rmarkdown.rstudio.com)
 - [Markdown Science Git repo wiki](https://github.com/scholmd/scholmd/wiki)
 - [R Markdown Basics in r4ds](https://r4ds.had.co.nz/r-markdown.html#r-markdown-basics)

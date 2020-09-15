@@ -1,0 +1,234 @@
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+%\usepackage{utopia} %font utopia imported
+
+\usetheme{Berkeley}
+\usecolortheme{default}
+
+%------------------------------------------------------------
+%This block of code defines the information to appear in the
+%Title page
+\title[Analytical Workflows] %optional
+{Analytical Workflows}
+
+\subtitle{IB599}
+
+\author[] % (optional)
+{Mark Novak}
+
+\institute[OSU] % (optional)
+{
+  \inst{}%
+  Dept. of Integrative Biology\\
+  Oregon State University
+%  \and
+%  \inst{2}%
+%  Faculty of Chemistry\\
+%  Very Famous University
+}
+
+\date[Fall2020] % (optional)
+{}
+
+%\logo{\includegraphics[height=1.5cm]{lion-logo.jpg}}
+
+%End of title page configuration block
+%------------------------------------------------------------
+
+
+
+%------------------------------------------------------------
+%The next block of commands puts the table of contents at the 
+%beginning of each section and highlights the current section:
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Overview}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+%------------------------------------------------------------
+
+\hypersetup{pdfpagemode=FullScreen} % This will auto-start the pdf presentation in fullscreen mode
+
+%------------------------------------------------------------
+
+\begin{document}
+
+%The next statement creates the title page.
+\frame{\titlepage}
+
+%---------------------------------------------------------
+%This block of code is for the table of contents after
+%the title page
+\begin{frame}
+    \frametitle{Overview}
+    \tableofcontents
+\end{frame}
+
+%---------------------------------------------------------
+
+\section{Philosophy}
+
+%---------------------------------------------------------
+
+\begin{frame}{Course Principles}
+    
+    \frametitle{Course Principles}
+
+        \begin{block}{Automation}
+            Doing science involves repetition at multiple levels.\\Automation is more efficient and reduces mistakes. 
+        \end{block}
+        
+        \begin{block}{Reproducibility}
+            Science should be reproducible, by others and you.\\Your work must be \emph{readable}, \emph{organized}, and \emph{self-contained}.
+        \end{block}
+        
+        \begin{block}{Correctness}
+            Science's limitations are human. Software can overcome bugs.\\Your science must be bug-free.
+        \end{block}
+
+\end{frame}
+
+\begin{frame}
+
+    \frametitle{Course Principles}
+
+        \begin{block}{Simplicity}
+            Analyses should be as simple as possible.\\Clever and readable are often at odds.
+        \end{block}
+        
+        \begin{block}{Openness}
+            Science is a worldwide endeavour.\\It, and access to it, should be free and equitable.
+        \end{block}
+    
+        \begin{block}{Science as Software Development}
+            Science has no end product, just versions and updates.\\Software developers have developed tools to help.
+        \end{block}
+
+\end{frame}
+
+%---------------------------------------------------------
+\section{Course Outline}
+
+%---------------------------------------------------------
+
+\subsection{Website \& Schedule}
+
+\begin{frame}
+    \frametitle{Website \& Schedule}
+    \url{https://github.com/analyticalworkflows}
+
+\end{frame}
+
+%---------------------------------------------------------
+
+\subsection{Syllabus}
+% On website
+
+%---------------------------------------------------------
+
+\section{Accounts \& Apps}
+
+%---------------------------------------------------------
+
+\begin{frame}
+    \frametitle{What you'll need}
+
+\begin{columns}
+
+\column{0.5\textwidth}
+
+Software
+    \begin{itemize}
+        \item \texttt{Git}
+        \item \LaTeX
+    \end{itemize}
+Accounts
+    \begin{itemize}
+        \item GitHub\footnotemark
+    \end{itemize}
+
+\LaTeX{} editor
+    \begin{itemize}
+        \item TeXstudio, Atom, etc.
+        \item OverLeaf
+    \end{itemize}
+\texttt{Git} GUI
+    \begin{itemize}
+        \item Sourcetree
+    \end{itemize}
+
+\column{0.5\textwidth}
+   \begin{figure}
+    \centering
+    \includegraphics[width = 0.9\textwidth]{figs/phd101212s.png}
+  \end{figure}
+\end{columns}
+\footnotetext[1]{Please send me your username.}
+\end{frame}
+
+%---------------------------------------------------------
+
+\begin{frame}
+    \frametitle{To Zoom or not to Zoom?}
+   \url{https://discord.com} 
+    \begin{figure}
+        \centering
+        \includegraphics[width = 0.9\textwidth]{figs/Discord.png}
+  \end{figure}
+
+\end{frame}
+
+%---------------------------------------------------------
+
+\section{Project Proposals}
+
+%---------------------------------------------------------
+
+\begin{frame}
+    \frametitle{Project Proposals - Lets get started!}
+    
+    \begin{block}{Primary Goal}
+        To develop more efficient research skills. 
+    \end{block}
+    
+    \begin{block}{Secondary Goal}
+        To make significant progress on your thesis.
+    \end{block}
+    
+    \begin{block}{Our belief}
+        We can achieve both in this course!
+    \end{block}
+    
+    \url{https://github.com/analyticalworkflows/TeachingMaterials/classes/ProjectProposal}
+
+\end{frame}
+
+%---------------------------------------------------------
+
+\section{Admission}
+
+%---------------------------------------------------------
+
+\begin{frame}
+    \frametitle{We're all learning...}
+
+    This is my first ever \LaTeX{} Beamer presentation!
+    
+    \bigskip
+    
+    \begin{itemize}
+        \item Be kind to yourself
+        \item Support each other
+    \end{itemize}
+
+
+\end{frame}
+%---------------------------------------------------------
+
+
+\end{document}

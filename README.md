@@ -19,7 +19,7 @@ _Click on each topic to see each day's to-do's (incl. before-class required read
 
 | Wk |  Day | Date | Topic |
 |:-:|:-----:|:------|:------|
-|0 |  Th | 9/24    | [Course organization & Philosophy of workflows](classes/Introduction) |
+|0 |  Th | 9/24    | [Course overview & philosophy](classes/Introduction) |
 |1 |  T  | 9/29    | [Structuring projects](classes/StructuredProjects) & [Git w/ GitHub - Part 1](classes/VersionControl_Git_part_1) |
 |  |  Th | 10/1    | [Project proposals](classes/ProjectProposal) |
 |2 |  T  | 10/6    | [Workflow diagrams](classes/WorkflowDiagrams)  |

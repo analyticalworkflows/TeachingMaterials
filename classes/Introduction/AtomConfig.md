@@ -12,6 +12,7 @@ _use ctrl-shift-m to preview_
 
 
 ## For LaTeX
+- atom-latex
 - latex
 - language-latex
 - pdf-view

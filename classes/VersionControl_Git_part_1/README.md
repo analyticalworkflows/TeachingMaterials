@@ -20,6 +20,7 @@ After finishing-up [Structuring Projects](../StructuredProjects/README.md), we'l
 
 ### Additional resources
 - [The Git manual](https://git-scm.com/book/en/v2)
+- [Duan's Understanding Git conceptually](https://www.sbf5.com/~cduan/technical/git/)
 - [Happy Git with R](https://happygitwithr.com)
 - [Code Academy's Learn Git](https://www.codecademy.com/learn/learn-git)
 - [Atlassian's Git tutorials](https://www.atlassian.com/git/tutorials)

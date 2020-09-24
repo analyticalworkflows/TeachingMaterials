@@ -9,15 +9,16 @@ These days -- regardless of the research you're pursuing -- you're going to be u
 _Nothing_
 
 ### Class structure
-- Welcome & Course Philosophy (_30-50 min._)
-- Pairing up for [accountabilibuddies](https://neologisms.rice.edu/index.php?a=term&d=1&t=6534) (_~5 min._)
+- Welcome & Brief introductions
+- Course philosophy & Overview
+- Pairing up for [accountabilibuddies](https://neologisms.rice.edu/index.php?a=term&d=1&t=6534)
 - _Break_ (_5 min._)
-- Software & account set-up troubleshooting
+- Software & account setup
 - Start creating [Project Proposals](../ProjectProposal) (_remaining time_)
 
 ### Software & account setup
 #### Accounts
-- [Github.com](https://github.com/) (_required_)
+- [GitHub.com](https://github.com/) (_required_)
 - Online LaTeX editor (e.g., [Overleaf](https://www.overleaf.com)) (_optional_)
 
 #### Software

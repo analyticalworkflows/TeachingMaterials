@@ -10,9 +10,11 @@ In this class we'll discuss the basics of Git and GitHub:  _pull_, _create/edit_
 - Create an account on [Github](https://github.com)
 
 ### Class structure
-After finishing-up [Structuring Projects](../StructuredProjects/README.md), we'll take a _5 min._ break then use the remaining time for:
-- setup of your project repository
-- troubleshooting & discussion
+After finishing-up [Structuring Projects](../StructuredProjects/README.md), we'll use the remaining time for:
+- Discussion
+- (Re)starting your project's structure
+- Setup of your project repository
+- Troubleshooting
 
 ### Further readings
 - [Blischak et al. 2016. A Quick Introduction to Version Control with Git and GitHub](../../readings/pdfs/Blischak2016.pdf)

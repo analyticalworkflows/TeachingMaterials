@@ -1,4 +1,4 @@
-# Progress Proposals
+# Project Proposals
 
 Our primary goal in this course is for you to develop more efficient research skills.  An important secondary goal is to have you make significant progress on your thesis!  Our philosophy is that we can achieve both because our primary goal will be best achieved by having you practice new tools while working on your own research (rather than on homework assignments, for example).
 

@@ -3,7 +3,7 @@
 This repo contains the teaching materials for IB599 Analytical Workflows taught at Oregon State University.
 
 The most relevant folders are:
-- [course_info](course_info/) containing grading [rubrics](course_info/rubrics/) and the [course syllabus](course_info/syllabus/);
+- [course_info](course_info/) containing grading [rubrics](course_info/rubrics/) and the [course syllabus](course_info/syllabus/syllabus.pdf);
 - [classes](classes/) containing a folder for each course topic;
 - [readings](readings/) containing pdfs of the required and suggested readings.
 

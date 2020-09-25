@@ -26,12 +26,13 @@ This folder contains more general information and notes relevant to the behind-t
 ***
 
 ### Introduction
-#### 2020Fall
+#### _2020Fall_
 Required entire time period (w/ 5 min. break) but didn't have time for actually doing the app installations or starting on proposals.
 Took 70 min to get to end of class schedule (though could be done more efficiently).
 Probably spent only 5 min. in discussion/answering questions.
 
-#### Post first day (Canvas) announcement text:
+#### _Post first day (Canvas) announcement text:_
+
 Hi everyone,
 
 I probably won't do this regularly down the road, but because of how much information I gave you today I figure it'd be helpful to summarize your to-do's.
@@ -58,6 +59,10 @@ Finally, please email me if you'd like to discuss your project idea before commi
 I think that's it.
 
 -mark
+
+***
+### Before Project Proposal presentations
+Post [What to do with an idea](../classes/ProjectProposal/notes/What_to_do_with_an_idea.md)
 
 ***
 ***

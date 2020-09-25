@@ -1,0 +1,80 @@
+Welcome
+
+About myself
+	X year Assoc. Prof.
+	at OSU for X years
+	Community Ecologist
+		species interactions and food web dynamics
+		mix of theoretical and fieldwork 
+		(streams and marine intertidal & kelp forests)
+
+Quick introductions - name, department, what you study. 
+	Should we do 1 interesting fact about yourself??
+	(Please call on next person by their name in the gallery view)
+
+Any question that you're dying to ask?
+
+Slideshow
+
+~~~~~~~~~~~~~~~~
+
+Automation
+	Bug, new data, many similar datasets, advisor/reviewer suggestions
+	No use of manual drop-down menus/functions or user-input.
+
+Reproducibility
+	You will forget what you did and why you did it.
+	Scientific issue (low reproducibility of experiments)
+		Documentation & annotation
+		Clean & readable code
+		Straightforward & transparent project structure
+		Minimal to no duplication (no file versions)
+		Portable - everything in one place, no outside dependencies
+
+Correctness
+	Writing code for science, not code for software.
+	Software can handle glitches/crashes and manages them, often through user-input.
+	Your science should be mistake-free.
+	Your code should do what it is intended to do, nothing else.
+	Different codes should give the same result.
+
+Simplicity
+	Two-aspects:
+		Readable code (clever vs. readable)
+			Better to err on readable side
+		Plain text files (csv and txt versus xls)
+	
+Openness
+	Open science is better and more efficient science
+	Free, open-source non-proprietary software
+	Social-equity issue
+
+Science as Software development
+	Lots of coding
+		There are tools and workflows to help
+	Within-project automation and beyond
+	Projects rarely truly end.  Their ideas almost never end.
+	Should be able to reuse code for other projects 
+		=> Version control
+
+~~~~~~~~~~~~~~~~
+
+Sandbox
+DiscussionBoard
+TeachingMaterials
+	admin
+	readings
+	classes
+Schedule (brief overview)
+	course_info
+		syllabus
+		rubrics
+Schedule
+	Course overview & Philosophy (README overview)
+	Next week = StructuredProjects & Git (README overview)
+
+~~~~~~~~~~~~~~~~
+
+Slideshow cont.
+
+

@@ -33,25 +33,24 @@
 \section{What is version control?}
 Version control software allows you to save and provide meta-information on any and all changes you make to a set of files and directories.
 It allows you to more easily document changes and the evolution of your files, find and correct bugs that have crept into your code, and revert back to old versions when needed.
-By using version control you'll now what, when and (hopefully) why changes were made.
+By using version control you'll know what, when and (hopefully) why changes were made.
 If you're using the software collaboratively, you'll also know by whom changes were made.
-Backing-up is virtually implicit (though not totally so), especially when you also use a networked (off-site) server as a host for your repository.
+Backing-up is virtually implicit when you also use a networked (off-site) server as a host for your repository.
 
 We'll be using \texttt{Git} as our version control software.
 There are others out there (e.g., \texttt{Subversion}).
-We'll also be using \texttt{Github} as our host.
+We'll be using \texttt{Github} as our host.
 There are others out there (e.g., \texttt{Bitbucket}).
 
 \section{Git}
 \texttt{Git} was developed by Linus Torvalds (the ``Linu'' in Linux).
 Most of its features are accessed by command-line and are intended for large-scale collaborative programming and software development purposes.
 Of course, we'll be using \texttt{Git} for much smaller, specific projects, thus we won't bother with many of these feature.
-We'll also interact with \texttt{Git} using GUIs (graphical user interfaces, e.g., \texttt{R-Studio}) rather than command-line.
+We'll also interact with \texttt{Git} using GUIs (graphical user interfaces, e.g., \texttt{R-Studio}, \texttt{Sourcetree}) rather than command-line.
 
 
 \section{Github}
-\texttt{Git} stores a complete copy of the project on your local machine, including all its history and versions.
-That means that no centralized server is necessary.
+\texttt{Git} stores a complete copy of the project on your local machine, including all its history and versions; no centralized server is necessary.
 However, if you want to collaborate with others, have multiple computers with which you'd like to work, or want to create true back-ups of your project, then you'll also want to use a server on which to host your repository.
 Fortunately, there are a number of free providers.
 
@@ -100,23 +99,23 @@ Indeed, command-line is the default way to interact with \texttt{Git}.\footnote{
 Instead, we're mostly going to make use of the tools made available through \texttt{Github}, starting with the very first step of initiating a repository and getting some minimal information associated with it.
 That is, rather than creating and setting up a repository on our computer by command-line and then connecting it to \texttt{Github}, we'll create and set up the repository on \texttt{Github} and then clone it to our local master folder of projects.
 
-Simply log in to your \texttt{Github} account, click on ``New Repository'', and follow the instructions.
-These should include options for private versus public (pick the latter for this class), initializing with a \texttt{README} file (which you \emph{should} do), and adding a \texttt{.gitignore} file (which you \emph{should} also do).
+Simply login to your \texttt{Github} account, click on ``New Repository'', and follow the instructions.\footnote{When doing so, be sure you're in your own user environment and not inside our Analytical Workflows organization.}
+These should include options for private vs. public (the latter is preferred for this class\footnote{If at all possible, please pick public (for this class) and switch to private afterwards.  Otherwise, please add me as a collaborator so I can see your repo.}), initializing with a \texttt{README.md} file (which you \emph{should} do), and adding a \texttt{.gitignore} file (which you \emph{should} also do).
 
-The \texttt{README} file is the first file that anyone will see when they inspect your repository (assuming it's public).
-It should give an overview of what the project is about and what the various parts of the project structure are.
-We will learn to use Markdown to write and edit README files later in the course, so for now just write some minimally informative text in it without any formatting (e.g., your project title).
+The \texttt{README.md} file in the main repo folder is the first file that anyone will see when they inspect your repository (assuming it's public).
+At minimum, it should give an overview of what the project is about and what the various parts of the project structure are.
+We will learn to use Markdown to write and edit \texttt{README.md} files later in the course, so for now just leave it as is.
 
-The \texttt{.gitignore} file contains a list of all the files that you want \texttt{Git} to ignore (not monitor for changes).
-Selecting \texttt{R} from the dropdown list will auto-fill a bunch of it for you.
-Later in the course, we'll also add the extensions for all the temporary files that \LaTeX produces when compiling.
+The \texttt{.gitignore} file contains a list of all the files that you want \texttt{Git} to ignore (i.e. not monitor for changes).
+Selecting \texttt{R} from the dropdown list will auto-populate a bunch of it for you.
+Later in the course, we'll also add the extensions for all the temporary files that \LaTeX\ produces when compiling.
 
 You should now see a new webpage -- your Repo page -- that shows you what's in your repository.
-For now it contains only the \texttt{.gitignore} and \texttt{README.md} files, the latter of which has its contents displayed.
-As I said earlier, there's a lot of bells-and-whistles at your fingertips here (the most useful of which for collaborative projects is the \texttt{Issues} feature).
+For now it contains only the \texttt{.gitignore} and \texttt{README.md} files, the latter of which has its contents displayed.\footnote{There are actually other files in your folder as well, but their hidden by default.}
+As I said earlier, there are a lot of bells-and-whistles at your fingertips here.
 We'll ignore them for now, but feel free to explore!
 You \emph{could} start dragging-in directories and files into your browswer view to add them to your repository, but we're \emph{not} going to do that.
-Instead, we're going to \texttt{clone} this repository to our local machine, then add our various project sub-folders to it (from your projectfolder) and go from there.
+Instead, we're going to \texttt{clone} this repository to our local machine, then add our various project sub-folders to it (e.g., \texttt{code}, \texttt{data}, and \texttt{results}), and go from there.\footnote{Note that empty folders will not be monitored by \texttt{Git}; they need to contain something.}
 
 To clone the repository, click the green \texttt{Clone or download} button and copy the provided URL.
 There's a few ways to clone your repository to your local machine.
@@ -192,7 +191,7 @@ Clicking on \texttt{History} (top-left) will show you all your past commits.
 
 The final thing to do (not necessarily following each commit) is to \texttt{Push} your commit to \texttt{Github}.
 \texttt{Pull} does the opposite: bringing commits that have been saved to \texttt{Github} (by others, or by you on a different machine) to your local machine.
-To reduce conflicts, \emph{always} pull before you start making edits, commit and push.
+To reduce the likelihood of creating conflicts, \emph{always} pull before you start making edits, commit and push.
 There are of course ways of dealing with conflicts and merging files (that will arise if collaborator(s) are working on the same file, for example), but pulling first will do a lot to avoid unneccessary hassle.\footnote{We'll learn about merging and conflict resolution later in the course.}
 
 So again, our basic recipe is:

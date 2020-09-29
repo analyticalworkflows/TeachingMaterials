@@ -1,0 +1,17 @@
+- Git: extra-work but...
+
+- Repo setup
+	- GitHub
+		- public/private
+		- .gitignore
+	- Demonstrate cloning using GUI (SourceTree) and RStudio (create package)
+	- Create R script (or edit README) to demonstrate:
+		- Staging
+		- Diffs
+		- Commit
+		- Push (Pull)
+
+If extra time
+	- Start adding files (not all at once!  use commits)
+	- Discuss project proposals
+	

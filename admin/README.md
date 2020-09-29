@@ -85,4 +85,11 @@ Took 70 min to get to end of class schedule (though could be done more efficient
 Probably spent only 5 min. in discussion/answering questions.
 
 ***
+
+### Intro2Git
+#### _2020Fall_
+Project structure took ~65 minutes! (I talked too much). Hence Intro2Git was rushed.
+Everyone using either RStudio or SourceTree, hence showed cloning in both (but rushed).
+Didn't leave enough time to talk about Git workflow, or about how to write "informative" commit messages.
+***
 ***

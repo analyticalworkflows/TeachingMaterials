@@ -21,17 +21,10 @@ This folder contains more general information and notes relevant to the behind-t
 
 ***
 ***
-## Class notes
+## Things to Post
 
-***
 
-### Introduction
-#### _2020Fall_
-Required entire time period (w/ 5 min. break) but didn't have time for actually doing the app installations or starting on proposals.
-Took 70 min to get to end of class schedule (though could be done more efficiently).
-Probably spent only 5 min. in discussion/answering questions.
-
-#### _Post first day (Canvas) announcement text:_
+#### _First day:_
 
 Hi everyone,
 
@@ -61,8 +54,35 @@ I think that's it.
 -mark
 
 ***
-### Before Project Proposal presentations
-Post [What to do with an idea](../classes/ProjectProposal/notes/What_to_do_with_an_idea.md)
+
+#### _Week 2 - Before Project Proposal presentations:_
+
+Post text for [What to do with an idea](../classes/ProjectProposal/notes/What_to_do_with_an_idea.md)
+
+
+#### _Week 3 - Before Visualization in Wk 5_
+
+In our upcoming class on _Data Visualization_, I'd like for us to critique (not necessary criticize) published figures from the literature to see what aspects of data visualization can work well and what often doesn't.  As fodder for our discussion, please submit to me a copy of each of the following by the end of week 4 (via email is fine):
+
+1) A figure _that you really like_;
+2) A figure _that you think could present the data (or the main message of the paper) better_.
+
+The figures can be old or new (i.e. it doesn't matter what year they were published), simple or complex, single- or multi-panelled, etc.  The only real requirement is that they depict data or their quantitative summary (i.e. are not conceptual figures or the like).
+
+P.S. Feel free to submit any additional figures to share beyond those two, if you'd like.
+
+***
+***
+
+## Class notes
+
+***
+
+### Introduction
+#### _2020Fall_
+Required entire time period (w/ 5 min. break) but didn't have time for actually doing the app installations or starting on proposals.
+Took 70 min to get to end of class schedule (though could be done more efficiently).
+Probably spent only 5 min. in discussion/answering questions.
 
 ***
 ***

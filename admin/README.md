@@ -91,5 +91,17 @@ Probably spent only 5 min. in discussion/answering questions.
 Project structure took ~65 minutes! (I talked too much). Hence Intro2Git was rushed.
 Everyone using either RStudio or SourceTree, hence showed cloning in both (but rushed).
 Didn't leave enough time to talk about Git workflow, or about how to write "informative" commit messages.
+
+***
+### Project presentations
+#### _2020Fall_
+Technical challenges:
+ - Bandwidth (turning off all videos seemed to help)
+ - "Presentation mode" did not work for anyone.  (Discord stays on main app screen.)  Need to just present in main app screen.
+ - One student had flashing screen (display frequency issue?)
+
+Most students took ~8-9 minutes.
+Need to clarify expectation for "Project goals" to be less about science and more about implementation goals.
+
 ***
 ***

@@ -1,0 +1,41 @@
+Questions/comments about last class?
+Trouble getting repo going / hiccups overcome?
+
+Next class: Workflow diagrams (two readings)
+
+~~~~~~~
+
+Goal for today: help us help you.
+~6 minutes to
+	summarize your background (e.g., prior experiences, reason for being in course);
+	summarize your project (i.e. the scientific issue being addressed);
+	summarize your project goals for the quarter (your coding, not scientific, goals);
+	summarize your anticipated challenges.
+
+Rubric is posted
+	Comments or thoughts on rubric?
+
+~ 3 min for follow-up questions
+
+All observers provide written feedback:
+	Got to person's repo by
+		each repo is forked to our AW organization
+		go to organization home
+		click on parent link
+		click on Issue > ProjectProposal
+
+~~~~~~~
+
+10 presentations @ 6 min each
+
+10 min at start, 5 min at end, 5 min break => 110min - 20 min = 90 min => 9 min each total
+
+½ way = ~45 min => 11:05am break
+
+~~~~~~~
+
+After presentations:
+
+Comments or thoughts on rubric?
+
+Additional questions about Git?

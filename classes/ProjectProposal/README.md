@@ -16,7 +16,7 @@ We'll dedicate the whole class period to presentations.
 
 **Each presenter** will have **_6 minutes_** to:
 1. summarize your background (e.g., prior experiences, reason for being in course);
-2. summarize your project (i.e. the scientific issue being addresses);
+2. summarize your project (i.e. the scientific issue being addressed);
 3. summarize your project goals for the quarter;
 4. summarize your anticipated challenges.
 

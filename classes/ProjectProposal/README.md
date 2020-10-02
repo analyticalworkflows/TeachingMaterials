@@ -8,22 +8,21 @@ In order for us _and your classmates_ to support and help you, we need to know w
 _None_
 
 ### To do (_before class_)
-- Send me a link to your repo.  (I will "fork" it -- make a copy of it -- on our AnalyticalWorkflow organization.)
-- Create a new _Issue_ (on the _forked_ copy of your repo) page titled _Project proposal_.
-- Create a slide presentation (PowerPoint, Keynote, whatever) to present (_by sharing your screen_).  _No more than **5 slides** (including title slide)!_
+- create a new _Issue_ on your GitHub repo page titled _Project proposal_.
+- create a slide presentation (PowerPoint, Keynote, whatever) to present (_by sharing your screen_).  _No more than **5 slides** (including title slide)!_
 
 ### Class structure
 We'll dedicate the whole class period to presentations.
 
 **Each presenter** will have **_6 minutes_** to:
 1. summarize your background (e.g., prior experiences, reason for being in course);
-2. summarize your project (i.e. the scientific issue being addresses);
-3. summarize your project goals for the quarter (your 'coding' rather than scientific goals);
+2. summarize your project (i.e. the scientific issue being addressed);
+3. summarize your project goals for the quarter;
 4. summarize your anticipated challenges.
 
 In putting your presentation together, think hard about your audience and what it is we need to (and don't necessarily need to) know.  Don't shy away from important or useful ideas, but also don't distract us from them.  Communication skills are (increasingly) key to being a successful scientist.<sup id="a1">[1](#f1)</sup>
 
-**All observers** must go to the _forked_ (offspring) copy of the presenter's (parent) repo and add to the _Project proposal_ issue as a comment:
+**All observers** must go to the presenter's GitHub repo and add to the _Project proposal_ issue as a comment:
 1. one (or more) compliments;
 2. a suggestion, of any form (_optional_).
 

@@ -11,8 +11,8 @@ _Nothing_
 - Paper discussion (_~20 min._)
 - Create workflow diagrams (_~30 min._)
 - Break (_5 min._)
-- Exchange diagram w/ partner for peer editing & feedback (_20 min._)
-- Present & discuss diagram with class (~4 volunteers) (_~20 min._)
+- Exchange diagram w/ partner for peer editing & feedback (_10 min._)
+- Present & discuss diagram with class (~4 volunteers) (_~30 min._)
 - Reflect & update diagram (_~5 min._)
 - Wrap-up (_5 min._)
 

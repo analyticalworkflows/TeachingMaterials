@@ -19,6 +19,7 @@ After finishing-up [Structuring Projects](../StructuredProjects/README.md), we'l
 ### Further readings
 - [Blischak et al. 2016. A Quick Introduction to Version Control with Git and GitHub](../../readings/pdfs/Blischak2016.pdf)
 - [Bryan 2018 Excuse me, do you have a moment to talk about version control?](../../readings/pdfs/Bryan2018.pdf)
+- [Chris Beams' How to write a Git commit message](https://chris.beams.io/posts/git-commit/)
 
 ### Additional resources
 - [The Git manual](https://git-scm.com/book/en/v2)

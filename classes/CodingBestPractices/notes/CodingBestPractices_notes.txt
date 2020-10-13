@@ -1,6 +1,8 @@
 Any questions come up since last time?
 
 Check-in on project progress - commits
+	(Be sure to use your own fork, not the fork in the AW organization)
+	(I will delete the AW forks at the end of the course)
 
 Today: Best Practices
 
@@ -52,5 +54,8 @@ Readable code
 
 
 Self-Analysis of current practices (~10 min.)
+
+I will look at your code, so implement best-practices!
+(In the future I might even grade you on it)
 
 Pick issue to (re)start your projects conventions

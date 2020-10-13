@@ -1,0 +1,24 @@
+
+Thoughts or Questions about last time?
+
+Today: 
+- practice using Git & make progress on projects
+	- project set-up
+	- workflow diagram(s)
+	- coding (but not reading or research on analyses, etc., rather: doing)
+- last 10 minutes to check-in with accountabilibuddy
+	- come prepared with accomplishments and goals for next 7 days
+
+Discord
+- Goal is to replicate the in-classroom experience as much as possible
+	comes with potential distractions, but also spontaneous learning opportunities
+- you've got ample opportunity to isolate
+- try stick to Main classroom or Library
+- try to leave video on
+
+Today will inevitably set the stage for subsequent hack-a-thon sessions, so strongly encourage dialogue and discussion.
+Agree as a group that talking is not rude or intrusive!
+
+Since this is our first Hack-a-thon, consider me (and others) like a consultant on your project workflow.
+Because I suspect the remote format is biased against sharing, I may also ask individuals (or pairs) to go to a side-channel and share with me where they're currently at in their thinking.
+

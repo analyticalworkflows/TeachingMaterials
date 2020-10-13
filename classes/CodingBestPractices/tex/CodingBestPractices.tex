@@ -322,9 +322,16 @@ write.csv(out, file=`../output/LV_out.csv')
 
 A key aspect of modularity is defining your own functions.
 Writing your own functions allows you to do many things, but the most important of these are readability (especially of the main code in which the functions are applied), simplifying de-bugging, and reducing the introduction of errors in the first place.
-Functions do that because they allow you to apply the DIY principle: ``don't repeat yourself.''
+Functions do that because they allow you to apply the D.R.Y. principle: 
+``don't repeat yourself.''
 More specifically, almost any set of commands that are repeated in two or more places should be converted to a function.
-Repeated use of copy-paste-tailor makes it extremely difficult (and error and inconsistency prone) to make changes or corrections.\footnote{The DIY principle applies to data and specified arguments and parameters as well.  Every piece of data ought to have a single authoritative representation in your \texttt{data} folder, and any hard-coded parameter values should be defined exactly once to ensure that your entire project uses the same value, as appropriate.}
+Repeated use of copy-paste-tailor makes it extremely difficult (and error and 
+inconsistency prone) to make changes or corrections.\footnote{The D.R.Y. 
+principle applies to data and specified arguments and parameters as well.  
+Every piece of data ought to have a single authoritative representation in 
+your \texttt{data} folder, and any hard-coded parameter values should be 
+defined exactly once to ensure that your entire project uses the same value, 
+as appropriate.}
 
 
 When defining a function, you should provide additional information that describes what the function does (in general terms), what inputs it takes, and what output it returns.

@@ -1,0 +1,51 @@
+Any questions come up since last time?
+
+Check-in on project progress - commits
+
+Today: Best Practices
+
+Writing clean and clear will help others and you.
+	- You will spend most of your time de-bugging rather than writing
+	- Good code is less error-prone
+	- Good code will (eventually) be faster to write
+	- Good code will help you be more creative
+
+Principles: Good code is
+	- hierarchically-modular
+	- readable
+
+Project modularity
+	- Project mindset
+		- data
+			- raw
+			- clean
+			- meta-data
+		- R code
+			- data_prep.R
+			- functions.R (library)
+			- analyses.R
+			- final_figs.R
+		- results
+
+	Absolute vs. relative paths
+		Mac (Unix) vs. Windows (Dos)
+		Is it worth trying this out together?  
+		If so		create .txt file in a data folder
+			 	use read.table() from within a code folder to access it
+
+Start fresh each time
+
+Within-script structure
+	See R/simulateLV.R in Sandbox Repo
+
+Functions
+	Don't-Repeat-Yourself  (not DIY)
+	Unit testing
+
+Readable code
+	Go to https://style.tidyverse.org to highlight the following:
+		- File and Object names
+		- Control flow
+		- Long lines
+
+	RStudio>Code>ReformatCode

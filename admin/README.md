@@ -21,7 +21,7 @@ This folder contains more general information and notes relevant to the behind-t
 
 ***
 ***
-## Things to Post
+# Things to post or do
 
 
 #### _First day:_
@@ -57,7 +57,8 @@ I think that's it.
 
 #### _Week 2 - Before Project Proposal presentations:_
 
-Post text for [What to do with an idea](../classes/ProjectProposal/notes/What_to_do_with_an_idea.md)
+- Post text for [What to do with an idea](../classes/ProjectProposal/notes/What_to_do_with_an_idea.md)
+- Fork everyone's repo to the organization (to enable use of Issue for peer feedback, while not having that feedback be a part of what could end up being a permanent and public repository. (Forks will be deleted at the end of the class).)
 
 
 #### _Week 3 - Before Visualization in Wk 5_
@@ -74,9 +75,8 @@ P.S. Feel free to submit any additional figures to share beyond those two, if yo
 ***
 ***
 
-## Class notes
-
-***
+# Class notes
+Post-class reflections
 
 ### Introduction
 #### _2020Fall_
@@ -84,7 +84,6 @@ Required entire time period (w/ 5 min. break) but didn't have time for actually 
 Took 70 min to get to end of class schedule (though could be done more efficiently).
 Probably spent only 5 min. in discussion/answering questions.
 
-***
 
 ### Intro2Git
 #### _2020Fall_
@@ -92,7 +91,6 @@ Project structure took ~65 minutes! (I talked too much). Hence Intro2Git was rus
 Everyone using either RStudio or SourceTree, hence showed cloning in both (but rushed).
 Didn't leave enough time to talk about Git workflow, or about how to write "informative" commit messages.
 
-***
 ### Project presentations
 #### _2020Fall_
 Technical challenges:
@@ -102,6 +100,20 @@ Technical challenges:
 
 Most students took ~8-9 minutes.
 Need to clarify expectation for "Project goals" to be less about science and more about implementation goals.
+
+### Workflow diagrams
+#### _2020Fall_
+- Planned for ~20 min. of paper discussion (both Sandve and Shade & Teal papers), but (i) felt too short for both (despite mostly quiet students) and (ii) needs more structure (better to pose question and invite response than leaving flow open).
+- Need to discuss details of Shade & Teal diagram (Fig. 1) more explicitly (distinguishing features from flow diagrams in general) to preempt creation of (i) overly general, (ii) unstructured, reticulate, non-hierarchical, non-directional diagrams.
+- Breaking out into pair discussions seemed to go well, but little desire to volunteer sharing diagram in whole group.
+- Consider assigning finishing-up diagrams as homework to be submitted.
+- Consider splitting into two classes (with homework in between) to permit students more time to work on diagrams and then, in class, explain to each other / review each other's diagrams at greater length.
+
+### Coding best Practices
+#### _2020Fall_
+- Felt like a lot of time talking (e.g., took until 11:10 to talk about readability), so consider creating exercises instead.
+- Student request for resources regarding unit-testing.
+
 
 ***
 ***

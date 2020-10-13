@@ -5,6 +5,7 @@ This class is about developing better coding practices, ranging from structuring
 ### Required readings (_before class_)
 - Notes: [tex/CodingBestPractices.pdf](tex/CodingBestPractices.pdf)
 - [Google's R Style Guide](https://google.github.io/styleguide/Rguide.html)
+- [Tidyverse Style Guide](https://style.tidyverse.org)
 
 ### To do (_before class_)
 _Nothing_

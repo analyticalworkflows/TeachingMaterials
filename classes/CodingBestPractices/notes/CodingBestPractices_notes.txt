@@ -49,3 +49,8 @@ Readable code
 		- Long lines
 
 	RStudio>Code>ReformatCode
+
+
+Self-Analysis of current practices (~10 min.)
+
+Pick issue to (re)start your projects conventions

@@ -24,7 +24,7 @@
 \lstset{% setup listings
 	language=R,% set programming language
 	basicstyle=\ttfamily\small,% basic font style
-	keywordstyle=\color{blue},% keyword style
+	keywordstyle=\color{black},% keyword style
 	commentstyle=\color{gray},% comment style
 	numbers=left,% display line numbers on the left side
 	numberstyle=\scriptsize,% use small line numbers
@@ -78,7 +78,7 @@ Can you read -- let alone understand -- any of it?
 Virtually incomprehensible, isn't it?
 Consider what it would be like to try read a whole letter, or even a whole book written in this manner (in English)?
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.8\linewidth]{figs/oma.png}
 \end{figure}
@@ -186,7 +186,10 @@ Nor do you ever want to ``hard-write'' the locations of data and scripts.
 The way to do this is by specifying \emph{relative} rather than \emph{absolute} (full) directory paths.
 For example, assuming your working directory (i.e. the directory you're curently in) is the \texttt{code} directory, rather than specifying the location of your data using its absolute location:
 
-\texttt{read.csv(file=`/Users/marknovak/Git/MyProject/data/data.csv')}
+\texttt{read.csv(file=`/Users/marknovak/Git/MyProject/data/data.csv')}\footnote{In
+ Windows it might look more like \texttt{file=`C:\textbackslash 
+\textbackslash MyDocuments\textbackslash Git\textbackslash 
+MyProject\textbackslash data\textbackslash data.csv'}}
 
 \noindent
 you should instead use the relative path:
@@ -194,13 +197,15 @@ you should instead use the relative path:
 \texttt{read.csv(file=`../data/data.csv')}
 
 \noindent
-The latter takes you up one level (out of \texttt{code} into your main project folder) then into the \texttt{data} folder and to your data file.\footnote{In Windows it might look more like \texttt{file=`C:\textbackslash \textbackslash MyDocuments\textbackslash Git\textbackslash MyProject\textbackslash data\textbackslash data.csv'}}
+The latter takes you up one level (out of \texttt{code} into your main project 
+folder) then into the \texttt{data} folder and to your data file.
 Each repetition of `\texttt{/../}' will move you up one level in the folder structure.
 To pull in (source) your self-defined functions, use
 
 \texttt{source(file=`my\_functions.R')}
 
 \noindent
+since you're already in the \texttt{code} folder.
 \textbf{Note:} Mac (Unix) and Windows (DOS) use forwardslashes and backslashes differently!  Mac uses `\texttt{/../../file.R}' (forwardslashes) while Windows uses `\texttt{\textbackslash..\textbackslash..\textbackslash file.R}' (backslashes).
 
 
@@ -365,7 +370,9 @@ Don't remove these tests after you've confirmed your function works as desired, 
 you may want to re-test again if you make some changes to your function.
 
 That said, notice that the unit test in the above example is a pretty poor one.
-All it does is help you (visiually) ensure that the plot of the new data is different from the original data (and that the function returns meaningful-looking data to begin with).
+All it does is help you (visually) ensure that the plot of the new data is 
+different from the original data (and that the function returns 
+meaningful-looking data to begin with).
 It does have some error-like catches built in, like returning the original data with a warning when \texttt{noise\_model} is mis-specified.
 But what if the standard deviation of the error was specified to be a large enough value that \texttt{out} contains negative values (i.e. non-sensical population sizes)?
 What if there's a bug somewhere that causes the function to silently return \texttt{NA}'s?
@@ -386,15 +393,22 @@ Getting into the habit of doing this for your self-defined functions and even at
 \section{Writing readable code}
 
 There are a lot of summarized sets of recommended best-practices for writing readable code in general, and for \texttt{R} specifically.
-These includes aspects of inline annotation (commenting), object naming conventions (for filenames, function names, and variable names), and syntax and grammar (spacing, indentation, etc.).
+These include aspects of inline annotation (commenting), object naming 
+conventions (for filenames, function names, and variable names), and syntax 
+and grammar (spacing, indentation, etc.).
 
 In regards to inline annotation, it's rare that code is commented enough.
 Believe me, you simply won't remember what certain key lines of code do after even just a few months of working on something else.
 Note, however, that comments which simply recapitulate code aren't useful.
 Instead of \emph{how}, use annotation that explains \emph{what and why}.
 
-For code grammar and filenames (Figs.~\ref{fig:datafilenames} \& \ref{fig:mapMMDDYYYY}), read Google's Style Guide for R (\textbf{required reading}) before returning to continue reading here.
-
+For code grammar and filenames (Figs.~\ref{fig:datafilenames} \& 
+\ref{fig:mapMMDDYYYY}), read the Tidyverse Style Guide and Google's 
+Style Guide amendments to it (\textbf{required reading}) before returning 
+to continue reading here.\footnote{Curiously, I'm pretty sure that Google 
+created their style guide first, but it then got superseded by the Tidyverse 
+guide which Google now refers you to.}
+\url{https://style.tidyverse.org}\\ 
 \url{https://google.github.io/styleguide/Rguide.xml}
 
 \begin{figure}[H]

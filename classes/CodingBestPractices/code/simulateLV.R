@@ -18,18 +18,19 @@ library(deSolve)
 ##############################
 # Define model
 ##############################
-LVmod <- function(Time, State, Pars) {
-	with(as.list(c(State, Pars)), {
-		Ingestion    <- rIng  * Prey * Predator
-		GrowthPrey   <- rGrow * Prey * (1 - Prey/K)
-		MortPredator <- rMort * Predator
-
-		dPrey        <- GrowthPrey - Ingestion
-		dPredator    <- Ingestion * assEff - MortPredator
-
-		return(list(c(dPrey, dPredator)))
-		})
-	}
+LVmod <-
+  function(Time, State, Pars) {
+    with(as.list(c(State, Pars)), {
+      Ingestion    <- rIng  * Prey * Predator
+      GrowthPrey   <- rGrow * Prey * (1 - Prey / K)
+      MortPredator <- rMort * Predator
+      
+      dPrey        <- GrowthPrey - Ingestion
+      dPredator    <- Ingestion * assEff - MortPredator
+      
+      return(list(c(dPrey, dPredator)))
+    })
+}
 
 ##############################
 # Define parameters
@@ -52,6 +53,6 @@ summary(out)
 # Plot and export data
 ##############################
 plot(out)
-write.csv(out, file=`../output/LV_out.csv')
+write.csv(out, file="../output/LV_out.csv")
 
 ##########################################################

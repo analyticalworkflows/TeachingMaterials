@@ -50,7 +50,7 @@ Almost all of what we'll talk about below can be done using a \texttt{Git} GUI a
 
 Up to this point, under the guiding principle of reproducibility, we've implied (if not explicitly stated) that everything associated with your project should be kept in your version control respository.\footnote{It should go without saying that anything private (e.g., passwords) should never be put in a public repository, but be careful not to do that when we start submitting jobs to High Performance Computing clusters!}
 That's not entirely incorrect, but it's also not entirely true.
-For example, \texttt{Git} will throw an overridable warning when you commit large files (currently $\ge 10$mb), and \texttt{GitHub} will throw a fatal error when you try to push very large files (currently $\ge 100$mb).
+For example, \texttt{Git} will throw an overridable warning when you commit large files (currently $\ge 10$mb), and \texttt{GitHub} will throw a fatal error when you try to push very large files (currently $\ge 100$mb)\footnote{If necessary, you could use the Large File Storage extension: \url{https://git-lfs.github.com}}.
 The latter can happen with specialized data files (e.g., GIS shapefiles).
 \texttt{GitHub} also as a limit on the total size of any one repository ($???$mb).
 Sometimes it's therefore necessary to keep some files in a different directory outside of your repository (preferably tracked by \texttt{Dropbox} or similar cloud storage).\footnote{See back to our \texttt{Structured Projects} class.}
@@ -170,7 +170,7 @@ The alternative to consider (especially in collaborative settings) is to merge t
 This pattern reduces the risk of new bugs in the master that may have be introduced by having two sets of parallel changes.
 It also reduces the risk of having to resolve merge conflicts on the master branch, which could affect your collaborator's ongoing efforts.
 The disadvantage of this second merge pattern is that it takes an extra step and results in double the number of merge commits.
-An alternative that solves this problem is \emph{rebasing}, but that comes with other potential challenges.
+An alternative that solves this problem is \emph{rebasing}, but that comes with other potential challenges.\footnote{\url{https://git-scm.com/book/it/v2/Git-Branching-Rebasing}}
 
 When there are no conflicts, \texttt{Git} will simply amalgamate\footnote{fanciest sounding synonym for merge I can think of} the two branches.
 If you're happy with the result (which you certainly should be if you've followed the second merge pattern), then you can delete the feature branch (e.g., \texttt{\$git branch -d \emph{branchname}}).
@@ -221,7 +221,7 @@ You could also have gone the other way:  create the \texttt{Git} repository on y
 You can work on your project from multiple computers by cloning the repository to them.
 (Just remember to commit and push what you're working on on the first computer in order to pull and keep working on it on your second computer.)
 You are the owner of that repository.
-Only you can pull and push to it unless you've granted permission for a collaborator to so\footnote{Go to the repository's \emph{Settings > Manage Access} \texttt{GitHub}}.
+Only you can pull and push to it unless you've granted permission for a collaborator to so\footnote{Go to the repository's \emph{Settings$>$Manage Access} in \texttt{GitHub}.}.
 In fact, whether public or private, you and your permission-granted collaborators are the only one that can do anything to the repository (such as create branches).
 
 Forks are in many ways similar but are different from branches, and serve a different purpose.
@@ -238,34 +238,31 @@ Just as for branches, you issue a Pull Request using the ``Compare and Pull Requ
 \section{Going back in time}
 
 We already talked about how easy it is to use \texttt{diff} to compare back to prior commits, or to compare any two commits in your repository's history.
-But what if you want to go back in time to revert to a previous commit?
+But what if you want to go back in time to revert to one of those previous commits?
 
-\subsection{Undoing the last commit}
-If it's only your last commit that was made in error and you want to undo it, you have a few options:
-
+\subsection{Undoing commit(s)}
+If it's only your last commit that was made in error and you want to undo it, you have a few command-line options using \texttt{reset}\footnote{If you just want to make a small change to the last commit (e.g., you forgot to include a file or had a typo), you can \texttt{amend} the last commit without creating a new commit.
+Note, however, that this is changing history(!), and cannot itself be amended.}.
 To undo the last commit completely, use \texttt{git reset --hard HEAD\^}.
-This rolls back your repository to the previous commit;
-changes not reflected in the commit-before-last will be lost forever.
+Changes that were made after the commit-before-last will be lost forever.
+To undo the last commit but keep your subsequently-changed files in the \emph{unstaged} state, use \texttt{git reset HEAD\^}.
+Changes that were made after the commit-before-last will remain but will be unstaged. To instead keep the changed files in the \emph{staged} state, use \texttt{git reset --soft HEAD\^}.
+To revert to any older commit you'll need its ID number.
+There are many additional options too, including the option to revert just a single file.
+(See \url{https://git-scm.com/docs/git-reset} for more.)
 
-To undo the commit but leave the files in that state but \emph{unstaged}, use \texttt{git reset HEAD\^}.
-This rolls back your repository to the previous commit, with any changes not reflected in the commit-before-last remaining.
-The last commit will be undone and nothing will be staged.
+In \texttt{SourceTree} you can do the same things by right-clicking on the commit you'd like to revert to (not necessarily the commit-before-last) and selecting \texttt{Reset master to this commit}.
+For the latter you'll then be presented with three options: \emph{hard}, \emph{mixed}, or \emph{soft}.
+\emph{hard} will cause all changes that were made after the selected commit to  be lost forever.
+\emph{mixed} (the default) will keep all changed files in the \emph{unstaged} state.
+\emph{soft} will keep all changed files in the \emph{staged} state.
+If it's just the last commit you'd like to undo you can also right-click on the erronous last commit and select \texttt{Reverse commit}.
+This won't delete the erronous commit (as the above options do) but rather will simply create a new commit equivalent to the commit-before-last.
+Note that if there are commits pushed to \texttt{GitHub} (by a collaborator) that you didn't first pull, those commits will ``come back'' the next time you pull.
 
-To undo the last commit but leave the files in that state and \emph{staged}, use \texttt{git reset --soft HEAD\^}.
-This rolls back your repository to the previous commit, with any changes not reflected in the commit-before-last remaining as staged changes.
-
-Finally, if you just want to make a small change to the last commit you made (e.g., you forgot to include a file, had a minor typo somewhere, or want to change the commit message), you can \texttt{amend} the last commit without creating a new commit using \texttt{git commit --amend -m "New commit message"}.
-Be careful though as this is changing history!
-Also, once you push a commit to GitHub, you cannot amend it.
-Doing so will create an error the next time you try and push to GitHub.
-
-
-\subsection{}
-~~~~~~~~~~~~~~
-
-
-
-The last push is your worst case recovery scenario (see Fig.~\ref{fig:gitreset}):  when all else fails, you can always delete your entire local repository and re-clone from GitHub to pick up at the last pushed commit.
+One thing to recognize when you're using \texttt{GitHub}:
+Your last push to \texttt{GitHub} is your final recovery scenario in that you can always delete your entire local repository and re-clone (Fig.~\ref{fig:gitreset}).
+Sometimes you end up messing things up enough to make that the easiest option.
 
 \begin{figure}[h]
 	\centering
@@ -275,28 +272,57 @@ The last push is your worst case recovery scenario (see Fig.~\ref{fig:gitreset})
 \end{figure}
 
 
-\subsubsection{Cherry picking}
-Try out before discussing: branch off old commit, change single file, merge into last commit
+
+\subsection{Recapturing older commits}
+You may at some point realize that you had something in a previous commit that's worth rescuing from the past. But you may not want to discard or go through the trouble of reintegrating all the subsequent work you did, as may be necessary when using \texttt{reset}.
+There are a few workflows that people use to retrieve the past.
+For example, to retrieve specific files or directories from an old commit, use
+\texttt{git checkout \emph{commitID} \emph{filename1} \emph{dir1} \emph{dir2}} then commit, but note that this will overwrite the current copies of the files.
+To retrieve and reuse a whole commit, \emph{checkout} the old commit in question, create a new \emph{branch} off the old commit, then \emph{merge} back into your master commit and resolve the conflicts in the process.
+The processes are equivalent in \texttt{SourceTree} when you right-click on the old commit or files.
+Notice that in the latter method lies an important reason for the \texttt{Git} motto, \emph{commit early, commit often.}
+The more frequently you commit (and the better you are at commiting good ``units'' of change), the more targeted (and cleaner) your strikes to the past can be.
 
 
 
 
 \section{Project Management}
+Everyone has their own ways of managing their life, keeping track of To-Do's, etc.
+Not surprisingly, that's true for research projects as well.
+However, when you're already using \texttt{Git} to keep track of the contents of your project, its tight integration with \texttt{GitHub} enables a few very nice conveniences to keep track of both the project and its management in one place.
+These features are useful not only in collaborative contexts but also when working solo.
+We'll touch on only two of them, and only by means of a barebones introduction.
+Other features include the ability to host project-specific websites\footnote{You can even use \texttt{GitHub} to host your own personal website.} and to create Wiki pages (which you could use as a lab notebook or to create a user manual).
+
 
 \subsection{Issue tracking}
-
-Edit your labels (useful for personel project management too).
-
-By assigning issues or using @mentions and references inside of Issues, others will receive a notifcation (or email, if set up in their notification preferences).
-
-Open vs. closed - how to use search field
-
+By now you've undoubtedly already seen \texttt{GitHub}'s Issue tracking interface.
+The basics are pretty simple.
+Create a short, specific, informative and usefully-unique subject.
+Be concise and clear in your subsequent description of the issue.
+You can use \texttt{Markdown} to format your comment, and use \emph{Preview} to make sure it looks right before posting.
+When your issue is related to a previously-posted issue (even a closed one), link to it using \emph{$\#$issueID}.
+When applicable, tag your issue with a label.
+You can add to or edit the default labels to make them more useful for specific project.
+By assigning issues or using \emph{@mentions} in your comment, others will receive a notifcation (or email, if they're set up to receive them in their notification preferences).
+When you close an issue, it's wise to reference the commit in which the fix was enacted.
+You can always reopen an issue.
+To see all closed issues in the list of issues, simply delete the default contents of the filter search (i.e. delete \emph{``is:open''}).
+If you've already setup a \emph{Project board}, you can also assign the issue to it.
 
 
 \subsection{Project boards}
+There are a number of stand-alone apps that provide so-called Kanban boards for project management.
+The most basic setup entails three columns -- \emph{To do}, \emph{In Progress}, and \emph{Done}.
+When you have a new task that needs doing, you add a card to the \emph{To do} column, then move it over to the next column as your actions on it progress.
 
+In \texttt{GitHub} you can have multiple project boards per repository and use them for anything you'd use stand-alone Kanban app for.
+In my mind the motivation to use \texttt{GitHub}'s project board feature is that
+(1) everything to do with your project is in one place (major downside being it's only online), and that
+(2) they integrate nicely with Issues.
+Assigning an issue to a project board will cause it to appear in the ``To do'' column.
+Closing the issue will move it to the ``Done'' column
+You can set up your project board so that any newly-created issues are automatically added to the ``To do'' column.
 
-\subsection{Other features}
-There's a bunch of other features on GitHub that we won't get into (such as Wiki pages, )
 
 \end{document}

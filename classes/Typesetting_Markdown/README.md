@@ -17,6 +17,11 @@ _Nothing_
 - Create a barebones report using knitR in RStudio using [R Markdown Quick tour](https://rmarkdown.rstudio.com/authoring_quick_tour.html) (_40 min._)
 - Back to your choice of [Implementation & Team troubleshooting](../Implementation/README.md) (_remaining time_)
 
+### Markdown Cheatsheets
+- [Syntax](/rmarkdown-cheatsheet-online.pdf)
+- [RStudio](/rmarkdown-cheatsheet-2.0.pdf)
+- [Guide](/rmarkdown-reference.pdf)
+
 ### Additional resources
 - [Xie's book: Dynamic Documents with R and knitr](https://yihui.org/knitr/)
 - [Markdown in RStudio](https://rmarkdown.rstudio.com)

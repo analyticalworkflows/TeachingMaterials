@@ -68,7 +68,7 @@ In our upcoming class on _Data Visualization_, I'd like for us to critique (not 
 1) A figure _that you really like_;
 2) A figure _that you think could present the data (or the main message of the paper) better_.
 
-The figures can be old or new (i.e. it doesn't matter what year they were published), simple or complex, single- or multi-panelled, etc.  The only real requirement is that they depict data or their quantitative summary (i.e. are not conceptual figures or the like).
+The figures can be old or new (i.e. it doesn't matter what year they were published), simple or complex, single- or multi-paneled, etc.  The only real requirement is that they depict data or their quantitative summary (i.e. are not conceptual figures or the like).
 
 P.S. Feel free to submit any additional figures to share beyond those two, if you'd like.
 

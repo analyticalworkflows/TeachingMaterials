@@ -9,13 +9,13 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## Introduction
 
-Visual analogies often play a key role in research, helping us articulate hypotheses and understand results of hypothesis tests. Yet, while hypothesis testing is a core component of science education, visualization, and, more generally, the acts of perception and imagination that necessarily precede hypothesis testing, do not receive as much attention in our curricula, despite their critical importance. 
+Visual analogies often play a key role in research, helping us articulate hypotheses and understand results of hypothesis tests. Yet, while hypothesis testing is a core component of science education, visualization, and, more generally, the acts of perception and imagination that necessarily precede hypothesis testing, do not receive as much attention in our curricula, despite their critical importance.
 
-For one thing,the basics of making good figures, which are explicitly known and practiced by most successful scientists but rarely formally taught. Indeed, I believe the association between knowing how to make a good figure and being a successful scientist is causal.
+For one thing, the basics of making good figures, which are explicitly known and practiced by most successful scientists, are rarely formally taught. Indeed, I believe the association between knowing how to make a good figure and being a successful scientist is causal.
 
-More generally, as biologists we are often working with complex systems. Visualizing complex systems requires us to bring into focus specific emergent properties of a system, by mapping to a simpler context, and by leaving most things out. In this sense, visualizing complex systems is similar to building mathematical models, indeed visualizing complex systems requires some mathematics, and catalyzes further quantitative analyses.
+More generally, as biologists we are often working with complex systems. Visualizing complex systems requires us to bring into focus specific emergent properties of a system, by mapping to a simpler context, and by leaving most things out. In this sense, visualizing complex systems is similar to building mathematical models. Indeed visualizing complex systems requires some mathematics, and often catalyzes further quantitative analyses.
 
-Here's a cute argument: a huge component of our brains is evolved for spatial reasoning - for instance, to help us find food for ourselves and our families, and not become food for another creature. Think of this like the GPU (graphics processing card) of your brain-computer. It is soooo much more powerful than your abstract processing abilities (could think of this like the CPU of the computer). We can do better science by working on our GPUs...
+Here's a cute argument: a huge component of our brains is evolved for spatial reasoning - for instance, to help us find food and not become food for another creature. Think of this like the GPC (graphics processing card) of your brain-computer. Your internal GPC is so much more powerful than your abstract processing abilities (the CPU of your brain-computer). We can do better science by working better with our GPCs.
 
 
 
@@ -48,126 +48,133 @@ plot(x, y)
 
 Starting a plot from the VERY beginning - (i.e. all defaul elements turned off) - if you want to control everything manually.
 ```{r}
-plot(x, y, 
-     type = "n", #do not even plot the data 
-     #bty = "n",  #box type is "n" means don't draw a box around the plot
-     xaxt = "n", #similarly, don't make an x axis...
+plot(x, y,
+     type = "n", # do not even plot the data
+     #bty = "n",  # box type is "n" means don't draw a box around the plot
+     xaxt = "n", # similarly, don't make an x axis...
      yaxt= "n",  #"... or a y axis"
-     xlab = "",  #and axis labels are blank
-     ylab = ""   
-     ) 
+     xlab = "",  # and axis labels are blank
+     ylab = ""
+     )
 ```
 
 
 
-Before tweaking optional things, there are some minimum standards to take care of. Every figure should have informative axis labels. And these ned to be big enough to be read when the figure appears in a published article. To this end, it can be helpful to control the size of a figure right from the start. If you have not already, spend some time in the help files for `plot()` and `par()`.
+Before tweaking optional things, there are some minimum standards to take care of. Every figure should have informative axis labels. And these need to be large enough to be read when the figure appears in a published article. To this end, it can be helpful to control the size of a figure right from the start. If you have not already, spend some time in the help files for `plot()` and `par()`.
 
 ```{r}
-par(fin = c(4,4))          #figure dimensions (width, height)
-par(mai = c(1,1,1,1))      #plot margins (bottom,left,top,right)
+par(fin = c(4,4))          # figure dimensions (width, height)
+par(mai = c(1,1,1,1))      # plot margins (bottom,left,top,right)
 plot(x, y,
      xlab = "Years since Mastodon reintroduction",
      ylab = "Population size")
 ```
 
-By labelling the axes I have just realized there are y values that make no sense given what y is: population size. This is an example of how disciplined practices in making figures (e.g. always having informative axis labels from the start) can improve the whole scientific process: now we have an opportunity to improve our data stream by figuring out what to do with our negative y values. For our purposes here, let's just remove them:
+By labelling the axes I have just realized there are y values that make no sense given what y is: population size. This is a simplistic example of how disciplined practices in making figures (e.g. always having informative axis labels from the start) can improve the whole scientific process: now we have an opportunity to improve our data stream by figuring out what to do with our negative $y$ values. For our purposes here, let's just remove them:
 ```{r}
 y[y < 0] <- NA
 ```
 
-Now lets start work on minimizing the amount of effort a readers brain has to do to "get" the figure. There are some initial things that apply to every figure that we can do right away. Then in the next section we can look at making specific messages come forward.
+Now lets start work on minimizing the amount of effort a reader's brain has to do to "get" the figure. There are some initial things that apply to every figure that we can do right away. Then in the next section we can look at making specific messages come forward.
 
-Little things can go a long way. Custom tick marks are usually needed to make professional-grade figures. To do that, we need just enough tick labels to orient the reader to the "space" of the plot and help them quickly measure distances; any tickmarks beyond that just become visual noise the reader has to work to filter out. We start by turning off the default axes. Then we add our own, with axis limits hardcoded. 
+Little things can go a long way. Custom tick marks are usually needed to make professional-grade figures. To do that, we need just enough tick labels to orient the reader to the "space" of the plot and help them quickly measure distances; any tickmarks beyond that just become visual noise the reader has to work to filter out. We start by turning off the default axes. Then we add our own, with axis limits hardcoded.
 
-From a reproducibility standpoint, hardcoding is a liability. The alternative is to write code that determines what the best limits should be on the fly, but we will not be distracted by that now.
+From a reproducibility standpoint, hard-coding is a liability. The alternative is to write code that determines what the best limits should be on the fly, but we will not be distracted by that now.
 ```{r}
-par(fin = c(4,4))          
-par(mai = c(1,1,1,1))      
+par(fin = c(4,4))
+par(mai = c(1,1,1,1))
 plot(x, y,
      xlab = "Years since Mastodon reintroduction",
      ylab = "Population size",
      xaxt = "n",
      yaxt = "n",
-     xlim = c(0, 100),    #hardcoded axis limits...
+     xlim = c(0, 100),    # hardcoded axis limits...
      ylim = c(0, 120)
      )
-axis(1, c(0, 50, 100))    #... and tick locations
-axis(2, c(0, 60, 120))
+axis(1, c(0, 50, 100))    # ... and tick locations
+axis(2, c(0, 60, 130))
 ```
 
 
 ### Tune for impact
-Now that we have something that meets minumum formatting requirements we can ask: what are we trying to say with this figure and how can we make that pop? Let us say our main message here is that the Mastodon population is increasing in a predictable way. That would be the first line of a figure legend: "ie Figure 1: Following reintroduciton in 2023, the Mastodon population has increased in a predictable way." This is also the first sentence you would say in a presentation of this slide. The task at hand is to make the visual say that loud and clear. We need a regression line.
+Now that we have something that meets minumum formating requirements we can ask: what are we trying to say with this figure and how can we make that pop? Let us say our main message here is that the Mastodon population is increasing in a predictable way. That would be the first line of a figure legend: "i.e. Figure 1: Following reintroduciton in 2023, the Mastodon population has increased in a predictable way." This is also the first sentence you would say in a presentation of this slide. The task at hand is to make the visual say that loud and clear. We need a regression line.
 
 ```{r}
 fit <- lm(y ~ x)
 ```
 
-We could add this to the figure a number of ways, for example, using the function `abline()` and supplying the fitted model as input
+We could add this to the figure a number of ways, for example, using the function `abline()` and supplying the fitted model as input.
 ```{r}
-par(fin = c(4,4))          
-par(mai = c(1,1,1,1))      
+par(fin = c(4,4))
+par(mai = c(1,1,1,1))
 plot(x, y,
      xlab = "Years since Mastodon reintroduction",
      ylab = "Population size",
      xaxt = "n",
      yaxt = "n",
-     xlim = c(0, 100),  
+     xlim = c(0, 100),
      ylim = c(0, 120)
      )
-axis(1, c(0, 50, 100))   
+axis(1, c(0, 50, 100))
 axis(2, c(0, 60, 120))
 
-abline(fit)                      #quick way to add regression line to an existing plot
+abline(fit) # add linear regression line to an existing plot
 ```
 
-We get a lot more control of how the predictions are displayed if we generate an additional dataset that is the predicitons, then plot that. First generating the predictions
+We get a lot more control of how the predictions are displayed if we generate an additional dataset that is the prediciton, then plot that. For example, using `abline()` causes the fitted line to extend beyond the data, which is not only statistically bad (we are typically interpolating, not extrapolating when fitting a linear regression model), but also doesn't make biological or physical sense (we can't go to negative time since the mastadon reintroduction).
+
+First generate the predictions:
 ```{r}
 npred <- 10
-xpred <- seq(min(x), max(x), length.out = npred)                        #points at which we want to predict 
-ypred <- predict(fit, newdata = data.frame(x = xpred), se.fit = TRUE)   #predicting corresponding y values and se
+xpred <- seq(min(x), # points at which we want to predict
+             max(x), 
+             length.out = npred)
+
+ypred <- predict(fit, # predicting corresponding y values and se
+                 newdata = data.frame(x = xpred), 
+                 se.fit = TRUE)
 ```
 
 
-Now plotting:
+Then plot:
 ```{r}
-par(fin = c(4,4))          
-par(mai = c(1,1,1,1))      
+par(fin = c(4,4))
+par(mai = c(1,1,1,1))
 plot(x, y,
      xlab = "Years since Mastodon reintroduction",
      ylab = "Population size",
      xaxt = "n",
      yaxt = "n",
-     xlim = c(0, 100),    
+     xlim = c(0, 100),
      ylim = c(0, 120)
      )
-axis(1, c(0, 50, 100))   
+axis(1, c(0, 50, 100))
 axis(2, c(0, 60, 120))
 
 lines(xpred, ypred$fit)
 ```
 
-It is often easy to reproduce tidyverse functionality in base R. Let's make our plot look like ggplot 
+This also allows us to make the plot more informative and visually appealing:
 ```{r}
 
 # Original code, modified to not plot the points at first
-par(fin = c(4,4))          
-par(mai = c(1,1,1,1))      
+par(fin = c(4,4))
+par(mai = c(1,1,1,1))
 plot(x, y,
      type = "n",                                     #first plot with points missing
      xlab = "Years since Mastodon reintroduction",
      ylab = "Population size",
      xaxt = "n",
      yaxt = "n",
-     xlim = c(0, 100),    
+     xlim = c(0, 100),
      ylim = c(0, 120)
      )
-axis(1, c(0, 50, 100))   
+axis(1, c(0, 50, 100))
 axis(2, c(0, 60, 120))
 
 # Draw a polygon for the confidence envelope
 xpoly <- c(xpred, rev(xpred))                        #add confidence envelope as bottom layer
-ypoly <- c(ypred$fit + 5 * ypred$se.fit, 
+ypoly <- c(ypred$fit + 5 * ypred$se.fit,
            rev(ypred$fit - 5 * ypred$se.fit))
 
 polygon(x = xpoly, y = ypoly,
@@ -179,31 +186,31 @@ points(x,y)                                          #then data
 lines(xpred, ypred$fit, col = 'white')               #then trendline
 ```
 
-That takes care of our primary messsage: "Mastodon population is increasing in a predictable way." What about secondary messages? Suppose we are interested in what caused the population to grow especially quickly or slowly in some years. Let's use symbol color and shape to highlight points that are outside the confidence envelope. 
+That takes care of our primary messsage: "Mastodon population is increasing in a predictably-linear way." What about secondary messages? Suppose we are interested in what caused the population to grow especially quickly or slowly in some years. We can use symbol color and shape to highlight points that are outside the confidence envelope.
 
-To start with, it will be helpful to have the model prediction and standard error for each observation point, rather than at 10 evenly spaced points as it was before
+To do that we need to have the model prediction and standard error for each observation point, rather than at 10 evenly spaced points as we had before.
 
 ```{r}
 yhat <- predict(fit, newdata = data.frame(x = x), se.fit = T)
 ```
 
-Now let's identify points that are boom and bust years, meaning those above and below the confidence envelope for our fitted model
+Now identify points that are above (boom years) and below (bust years) the confidence envelope.
 ```{r}
 is_boom_year <- y > yhat$fit + 5*yhat$se.fit
 is_bust_year <- y < yhat$fit - 5*yhat$se.fit
 ```
 
-I like the following procedure when working with symbology. First specify size, shape and color as vectors, mapping from data. Then we call plot function. I think this is better than doing the mapping inside the plot function call, because that is hard to read and debug.
+Use symbology to reinforce the message.  To do that we first specify size, shape and color as vectors, mapping from data. Then we call the plot function. It's generally wiser to do this outside rather inside the plot function call because the latter is harder to read and debug.
 
 ```{r}
 
-# Vectors for symbology
-cex <- rep(1, n)        #size
-col <- rep("black", n)  #color
-pch <- rep(21, n)       #shape.  See ?points
+# Default vectors for symbology
+cex <- rep(1, n)        # size
+col <- rep("black", n)  # color
+pch <- rep(21, n)       # shape.  See ?points
 
 
-# Change them to highligh features in data
+# Change to map non-default symbology to data
 cex[is_boom_year || is_bust_year] <- 2
 col[is_boom_year] <- "green"
 col[is_bust_year] <- "red"
@@ -214,14 +221,14 @@ pch[is_bust_year] <- 6
 ```
 
 
-The most important thing is that it pops: do not ever rely on subtle differences in color or shape to get across key results. One way to achieve that is to simultaneously alter multiple features, such as changing shape, color and size together. 
+The most important thing is that it pops: do not rely on subtle differences in color or shape to get across key results. One way to achieve that is to simultaneously alter multiple features, such as changing shape, color and size together (but be careful not to overdo this and create confusion when working with multiple legends, and be sure to remain consistent across figures).
 ```{r}
 
 # Vectors for symbology
-cex <- rep(0.8, n)        #size
-col <- rep("black", n)  #color
-bg <- rep("white", n)        #background color
-pch <- rep(21, n)       #shape.  See ?points
+cex <- rep(0.8, n)      # size
+col <- rep("black", n)  # color
+bg <- rep("white", n)   # background color
+pch <- rep(21, n)       # shape.  See ?points
 
 
 # Change symbology to highligh features in data
@@ -235,24 +242,24 @@ pch[is_bust_year] <- 25
 
 
 # Make plot first without points
-par(fin = c(4,4))          
-par(mai = c(1,1,1,1))      
+par(fin = c(4,4))
+par(mai = c(1,1,1,1))
 plot(x, y,
-     type = "n",                                    
+     type = "n",
      xlab = "Years since Mastodon reintroduction",
      ylab = "Population size",
      xaxt = "n",
      yaxt = "n",
-     xlim = c(0, 100),    
+     xlim = c(0, 100),
      ylim = c(0, 120)
      )
-axis(1, c(0, 50, 100))   
+axis(1, c(0, 50, 100))
 axis(2, c(0, 60, 120))
 
 
-# Draw a polygon for the confidence envelope as bottom layer 
-xpoly <- c(xpred, rev(xpred))                        
-ypoly <- c(ypred$fit + 5 * ypred$se.fit, 
+# Draw a polygon for the confidence envelope as bottom layer
+xpoly <- c(xpred, rev(xpred))
+ypoly <- c(ypred$fit + 5 * ypred$se.fit,
            rev(ypred$fit - 5 * ypred$se.fit))
 
 polygon(x = xpoly, y = ypoly,
@@ -260,27 +267,98 @@ polygon(x = xpoly, y = ypoly,
         col = grey(0.8))
 
 
-#Add trendline
-lines(xpred, ypred$fit, col = 'white')    
+# Add trendline
+lines(xpred, ypred$fit, col = 'white')
+
 
 # Add in the points, with their symbologies pre-specified above (no calculations here)
 points(x,y,
        pch = pch,
        col = col,
        bg = bg,
-       cex = cex)                                          
-
-
-           
+       cex = cex)
 
 ```
 
-Now this figures says: 
+Now this figures says:
 
-1. "Mastodon population is increasing in a predictable way."
-2. "We are going to focus on the years where growth was particularly fast or slow relative to those predictions"
+1. "Mastodon population is increasing in a predictably linear way."
+2. "We are going to focus on the years where growth was particularly fast or slow relative to those predictions."
 
-Future graphs could use the same color scheme and symbology to denote analyses pertaining to the boom and bust years. 
+Other graphs in your paper should use the same color scheme and symbology to denote analyses pertaining to the boom and bust years.
+
+### Final touches
+There are still a few things that might make this figure just a little more visually appealing:
+
+1. The length of the axis tickmarks.
+2. The size of the axis labels relative to the axis titles.
+2. The space between the axis tickmarks and the axis labels
+3. The space between the axis titles and the box.
+4. A solid box (that doesn't have the grey of the confidence overlapping it).
+
+```{r}
+
+# Vectors for symbology
+cex <- rep(0.8, n)      # size
+col <- rep("black", n)  # color
+bg <- rep("white", n)   # background color
+pch <- rep(21, n)       # shape.  See ?points
+
+
+# Change symbology to highligh features in data
+cex[is_boom_year || is_bust_year] <- 1.3
+bg[is_boom_year] <- "seagreen"
+bg[is_bust_year] <- "orange"
+col[is_boom_year] <- "darkgreen"
+col[is_bust_year] <- "red"
+pch[is_boom_year] <- 24
+pch[is_bust_year] <- 25
+
+
+# Make plot first without points
+par(fin = c(4,4),
+    mai = c(1,1,1,1),
+    tcl = -0.3,      # length of tickmarks
+    mgp = c(1.2, 0.3, 0),
+    cex.axis = 0.8) # distance of axis title, axis label, and axis line to box
+plot(x, y,
+     type = "n",
+     xlab = "Years since Mastodon reintroduction",
+     ylab = "Population size",
+     xaxt = "n",
+     yaxt = "n",
+     xlim = c(0, 100),
+     ylim = c(0, 120)
+     )
+axis(1, c(0, 50, 100))
+axis(2, c(0, 60, 120))
+
+# Draw a polygon for the confidence envelope as bottom layer
+xpoly <- c(xpred, rev(xpred))
+ypoly <- c(ypred$fit + 5 * ypred$se.fit,
+           rev(ypred$fit - 5 * ypred$se.fit))
+
+polygon(x = xpoly, y = ypoly,
+        border = NA,
+        col = grey(0.8))
+
+
+# Add trendline
+lines(xpred, ypred$fit, col = 'white')
+
+
+# Add in the points, with their symbologies pre-specified above (no calculations here)
+points(x,y,
+       pch = pch,
+       col = col,
+       bg = bg,
+       cex = cex)
+
+box(lwd = 1) # place a box over the plot
+
+```
+
+
 
 ### Remark
 A corrolary of this approach is that figures should have a small number of clear, concrete messages. For any figure you show your audience, you should be able to explicitely populate a (short) list like the one above ("This figure says:"). Having done that, you can evaluate how efficiently the figure delivers its message. A figure does not have to show every aspect of the data, or even most aspects. Every display element should be critical to the core message. In other words, if you can leave it out with compromising the core message, you should do so. If you are worried you are misleading readers by leaving something out, include a note in the figure legend about what was omitted, and consider including a more complete (less efficient) version of the figure in the supplemental materials.

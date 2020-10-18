@@ -3,6 +3,7 @@ In this class we'll discuss data visualization and the workflow(s) with which to
 
 ### Required readings (_before class_)
 - Notes: [Rmd/visualization_part1.pdf](Rmd/visualization_part1.pdf)
+- [Rolandi et al. 2011. A brief guide to designing effective figures for the scientific paper](../../readings/pdfs/Rolandi2011.pdf)
 
 ### To do (_before class_)
 Please submit (via email) a copy of each of the following:
@@ -17,8 +18,13 @@ The figures can be new or ancient (i.e. it doesn't matter what year they were pu
 - Discussion of figure basics (~50 min.)
 - Discussion of published figures (~40 min.)
 
-### Further reading
--
+### Additional resources
+- [The R Graph Gallery](https://www.r-graph-gallery.com)
+
+### Additional readings
+- Edward Tufte's classic [The Visual Display of Quantitative Information](https://www.edwardtufte.com/tufte/books_vdqi)
+- [Larson et al. 2017. Proving the value of visual design in scientific communication](../../readings/pdfs/Larson2017.pdf)
+
 ***
 ### Potential addtional topics
 - base-R vs. ggplot

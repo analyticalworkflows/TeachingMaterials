@@ -17,13 +17,19 @@ If you find yourself writing papers (or appendices) with more than a few equatio
 - Manuscript template: [manuscript/manuscript.tex](manuscript/manuscript.tex)
 - Creating LaTeX tables in R using Hmisc: [R/ExportTable.R](R/ExportTable.R)
 
-### Additional readings and resources
+### Additional resources
 - [Overleaf knowledge base](https://www.overleaf.com/learn/latex/Main_Page)
 - [OSU Thesis template (Dept. of Mathematics)](https://math.oregonstate.edu/graduate_thesis_templates)
 - [LaTeXiT](https://www.chachatelier.fr/latexit/) for exporting one-off equations to pdf (or other) images
 - [Detexify](http://detexify.kirelabs.org/classify.html) to find a symbol by drawing it!
+- [ESA 2010 LaTeX Workshop](reference/ESA2010-LatexWorkshopExercises.tex)
+- [LaTeX cheatsheat](reference/LaTeX_Cheatsheet.pdf)
+- [Comprehensive list of symbols](reference/LaTeX_full.pdf)
+- [Short Math Guide to LaTeX](reference/LaTeX_short-math-guide.pdf)
+
+### Additional readings
 - [Allesina 2015. Scientific Typesetting](../../readings/pdfs/Allesina2015.pdf)
 
 ***
-### Potential additional topics 
+### Potential additional topics
 - Reference management software (e.g., [BibDesk](https://bibdesk.sourceforge.io))

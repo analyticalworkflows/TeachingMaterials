@@ -7,17 +7,21 @@
 % the above packages are the "base"
 
 \usepackage{graphicx}
-\graphicspath{{../figs/}} % set the location of your figures
+\graphicspath{{figs/}} % set the location of your figures
 
 \usepackage{hyperref} % enable links within pdf
 \hypersetup{colorlinks = true, linkcolor = black, urlcolor = blue}
 
+\usepackage{float} % to fix the position of figures using [H]
+
+% in-text citation styles
+\usepackage[sort]{natbib}
+\bibpunct[; ]{(}{)}{;}{a}{,}{;}
 
 %  You "comment out" lines with the % symbol.
 
-
-\author{Mark Novak}
-\title{\textbf{This will be my article title.}\\An Intro to \LaTeX}
+\author{}
+\title{\textbf{This will be my awesome title.}\\An Intro to \LaTeX}
 
 
 \begin{document}
@@ -27,63 +31,105 @@
 
 \pagebreak
 
-\section{Introduction } \label{sec:intro} % labels allow automatic referencing
 
-You can do all the following without a \LaTeX gui using \url{https://www.overleaf.com}.  For writing one-off equations use LaTeXiT \url{https://www.chachatelier.fr/latexit/}.  To find a symbol:  \url{http://detexify.kirelabs.org/classify.html}.
+\section{Introduction}
+\label{sec:intro} % labels allow automatic referencing
 
-\subsection*{My un-numbered subsection}
+I think it's fair to say that most biologists switch from using word processors (like Microsoft Word or 
+Apple Pages) to \LaTeX\ when they start writing papers containing more than just one or two equations.  I 
+have to admit though, that after using both \LaTeX\ and Pages for a few years (depending on the type of 
+manuscript I was writing), I've now switched entirely to writing manuscripts in \LaTeX\ (when 
+collaborators allow).  It took me a while to get the hang of it, but now I prefer it even when there are no 
+equations involved.
+
+Note that (almost) all the lecture notes for this class were written in \LaTeX\, so take a look at a few of 
+their \texttt{tex} files to learn a few additional tricks.
+
+Note that your \LaTeX\ file is code that gets compiled.
+
+\section{Basics}
+
+\subsection{Document structure}
+What isn't visible here in this pdf document is that the code for every \LaTeX\ document begins with a 
+preamble that sets things up.  
+In the preamble you define the type of document it is, load necessary 
+packages, define any additional functions you might like to have, and provide your author name and the 
+title of the paper.  
+Your actual text is then written after beginning your document  using 
+\verb+\begin{document}+ and is followed at the very end by \verb+\end{document}+.\footnote{Many 
+	other functions use the same  begin $\ldots$ end structure.}
+
+You "comment out" lines with the \% symbol.
+Also, if you look at the raw \texttt{.tex} file behind this pdf, you'll notice that I wrote each sentence on its 
+own line (i.e. with hard-returns between each).
+That's not necessary, but allows \texttt{Git} to distinguish changes on a sentence-specific rather than 
+whole paragraph basis.
+A common alternative is to setup your editor such that all lines are limited to 72 or 80 characters.
+
+
+\subsection{Basic equations}
 
 The fundamental principle of calculus entails
 \begin{equation}
 	\label{eqn:calculus}
-	\lim_{{\Delta x} \to 0}\frac{f(a+\Delta x)-f(a)}{\Delta x}.
+	\lim_{{\Delta t} \to 0}\frac{f(a+\Delta t)-f(a)}{\Delta t}.
 \end{equation}
+Although the typical way of writing a derivative is $\frac{dx}{dt}$, some fields also write it as $\dot{x}$.
 
+\subsection{Lists}
 \noindent % if you don't want a particular section to auto-indent
-Calculus rocks because it can do all of the following:
+Calculus rocks because it can be used to represent all of the following:
 \begin{itemize}
 	\item first item
+	\item second item
 \end{itemize}
+It also rocks because
+\begin{enumerate}
+	\item first item
+	\item second item
+\end{enumerate}
 
-One could also organize all the cools things it can do in a table
+\subsection{Tables}
+One could also organize all the things calculus can be used for in a table:
 \begin{center}
-\begin{tabular}{l c} % {l c} means the 1st column is left-aligned while the 2nd is centered
+\begin{tabular}{lc} % {lc} means the 1st column is left-aligned while the 2nd is centered
+		\hline
+		\hline
+		Reason & Explanation\\  % the \\ is  a "return/next line"
+		\hline
+			1 & blah blah blah \\
+			2 & blah blah blah \\
+		\hline
+		\hline
 	\label{tab:mytable}
-		Reason & Explanation\\ % the \\ is  a "return/next line"
-		 \hline
-		1 & blah blah blah \\
- 		 \hline
 \end{tabular}
 \end{center}
 
-I can easily reference the section (sect.\ref{sec:intro}), equation (eqn. \ref{eqn:calculus}) and table (Table \ref{tab:mytable}).  Their numbers will auto-generate, which makes it easy to move them around in your paper and adhere to a journal's stylistic preferences.
 
-\section{Figures}
-Note that the position of figures is auto-determined!
+\subsection{Within-text referencing}
+I can easily reference the section (sect.\ref{sec:intro}), equation (eqn. \ref{eqn:calculus}) and table (Table \ref{tab:mytable}).
+Their numbers will auto-generate, which makes it easy to move them around in your paper and adhere to 
+a journal's stylistic preferences.
 
-% Figures are included like this:
-\begin{figure}
-	\centering
-	\includegraphics[width=0.2\linewidth]{figs/LaTeX_logo.png}
-	\caption{This is the \LaTeX logo.}
-	\label{fig:logo}
-\end{figure}
+\subsection*{My un-numbered subsection}
+Sections and subsection are numbered by default, but that can be overwritten for a given section, or 
+globally using \verb+\setcounter{secnumdepth}{0}+ in the preamble.
 
 
-\section{Some other stuff}
 
-Here are a few sketches for equations that might come in handy.
+\section{More equations}
 
-\subsection*{Differential equations}
+\subsection*{Using align}
 The Lotka-Voltera equations are given by
 \begin{align}
 \frac{dx}{dt} 	&=	\alpha x - \beta xy \\
 \frac{dy}{dt}	&=	\gamma xy - \delta y
 \end{align}
-These can be written ``inline'' using (for example): $\dot x = \alpha x - \beta xy$ etc.
 
-\subsection*{Derivations}
-It is nice to typeset the steps of derivations. Pay it forward to folks who are trying to learn these methods, and to yourself when you can't remember the details but have to lecture on it in 5 minutes.
+Often it's useful to typeset the steps of derivations. 
+Pay it forward to folks who are trying to learn these 
+methods, and to yourself when you can't remember the details but have to lecture on it in 5 minutes.
+In these cases you don't need to number each line.
 
 \begin{align}
 N(10) 	&= 	\lambda N(9) 		\\ 		\notag
@@ -94,8 +140,51 @@ N(10) 	&= 	\lambda N(9) 		\\ 		\notag
 \end{align}
 
 
+\section{Inserting figures}
+Note that the position of figures is auto-determined (e.g., Fig.~\ref{fig:logo})!
+You can force the position of figures using the \texttt{float} package and then the [H] option for your 
+figure 
+(e.g., Fig.~\ref{fig:miktex}).
+
+% Figures are included like this:
+\begin{figure}
+	\centering
+	\includegraphics[width=0.2\linewidth]{LaTeX_logo.png}
+	\caption{This is the \LaTeX~logo.}
+	\label{fig:logo}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{figs/miktex.png}
+	\caption{Why use \LaTeX\ (source: \url{http://www.pinteric.com/miktex.html})}
+	\label{fig:miktex}
+\end{figure}
 
 
+\section{Intserting external tables}
+It's relatively easy to use the R \texttt{Hmisc} package to generate \LaTeX\ tables (see 
+\texttt{../R/ExportTable.R}) and then import them into your document using \texttt{input}.
+Again, just like figures, their placement in the document is auto-determined.
+If you provided a caption to the tables when generating their tex files in R, it's easy to reference them 
+(Table \ref{tab:data} and \ref{tab:coefs}).
 
+\input{../tables/data}
+\input{../tables/estcoefs}
+
+
+\section{References}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{figs/phd022702s.png}
+	\caption{Reading is fundamental (source: \url{http://phdcomics.com/comics/archive.php?comicid=286})}
+	\label{fig:phdrefs}
+\end{figure}
+
+The \texttt{natbib} package is great for citing references.
+Reformatting for a different journal is as easy as changing the arguments of a function.
+How to cite references and include them in a bibliography is demonstrated in the accompanying 
+\texttt{manuscript.tex} template in the parent folder of these lecture notes.
 
 \end{document}

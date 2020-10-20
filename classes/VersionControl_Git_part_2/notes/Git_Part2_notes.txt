@@ -1,0 +1,51 @@
+Questions about last time?
+
+Don't forget to:
+	- submit figures for visualization class
+	- feedback on rubric (half-way point of quarter is approaching fast!)
+~~~~~~~~~~~
+Branching
+	Follow along demonstration (RStudio)
+		Create 'test' branch
+		Create 'test.R'
+		Inspect Diff
+		Commit 'test.R' file
+		Edit (add & remove) text to 'test.R'
+		Inspect Diff
+		Commit 'test.R' file
+		Switch between 'test' and 'master' and compare contents of Finder (i.e. Explorer)
+
+Merging
+	Follow along demonstration (RStudio & SourceTree)
+		No-conflict merge (no edits to 'master')
+			Merge branch into master
+		Conflict merge
+			Edit 'test.R' in both master and 'test' branch
+			Attempt merge of branch into master
+			Manual edit of conflict
+			Commit edits
+			Push
+	Show history in RStudio
+	[Don't delete branch if reverting later!]
+
+Revert (SourceTree)
+	Reminder of stage then commit
+		Revert uncommitted changes - "Reset to commit"
+	Getting file from old commit	
+		Demonstrate using 'test' branch (Terminal)
+		git checkout commitID dir/filename1
+	Going back to old commit
+		Diff between commits
+		Commit current files
+		Checkout old commit
+		Branch off old commit
+		Merge final master commit into branch
+		Merge merged branch into master
+
+Forks
+Issue tracking
+	Showcase 'Stouffer & Novak'
+Project boards
+	Showcase 'Analytical Workflows'
+
+	

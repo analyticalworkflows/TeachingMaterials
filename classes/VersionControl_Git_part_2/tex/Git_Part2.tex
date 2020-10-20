@@ -97,8 +97,9 @@ Branches are the way to do that in \texttt{Git}.
 In the \texttt{Git} supporting documents, a branch for trying something out (i.e. adding a new feature) is often referred to as the ``\emph{feature branch}.''
 
 Creating a branch is easy.
-In your \texttt{Git} GUI there's probably a button for doing so at the top of the interface\footnote{Unfortunately not in \texttt{RStudio}.}.
-You can also do it within \texttt{GitHub}.
+In your \texttt{Git} GUI there's probably a button for doing so at the top of 
+the interface.
+You can also do it within \texttt{RStudio} and on \texttt{GitHub}.
 To create a branch using command-line, type \texttt{\$git checkout -b \emph{branchname}}.
 \texttt{Git} will not duplicate any of your files, but it will keep track of all changes made within the branch (when you commit them to the branch).
 If you add, edit, or remove files (and commit) while your on your feature branch, those changes will not appear in your master branch (and vice versa).

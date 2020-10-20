@@ -6,17 +6,17 @@ In this class we'll discuss the second-level features of Git (_branch_,_diff_, _
 - [Blischak et al. 2016. A Quick Introduction to Version Control with Git and GitHub](../../readings/pdfs/Blischak2016.pdf)
 
 ### To do (_before class_)
-_Nothing_
+- Create a 'Sandbox' repository for yourself (if you prefer not to try out the following in your project repo.)
 
 ### Class structure
 Mix of demonstration and discussion and exercises for each topic:
-	- Branching (Git)
-	- Diff & Merge (Git)
-	- Pull requests (GitHub)
-	- Going back in time (Git)
-	- Forks (GitHub)
-	- Issue tracking (GitHub)
-	- Project boards (GitHub)
+- Branching (Git)
+- Diff & Merge (Git)
+- Pull requests (GitHub)
+- Going back in time (Git)
+- Forks (GitHub)
+- Issue tracking (GitHub)
+- Project boards (GitHub)
 - Showcase some repos (_remaining time_)
 
 ### Further readings

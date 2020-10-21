@@ -24,6 +24,8 @@ The figures can be new or ancient (i.e. it doesn't matter what year they were pu
 ### Additional readings
 - Edward Tufte's classic [The Visual Display of Quantitative Information](https://www.edwardtufte.com/tufte/books_vdqi)
 - [Larson et al. 2017. Proving the value of visual design in scientific communication](../../readings/pdfs/Larson2017.pdf)
+- [Kelleher et al. 2011. Ten guidelines for effective data visualization in scientific publications](../../readings/pdfs/Kelleher2011.pdf)
+- [Weissgerber et al. 2019. Reveal, Don’t Conceal. Transforming Data Visualization to Improve Transparency](../../readings/pdfs/Weissgerber2019.pdf)
 
 ***
 ### Potential addtional topics

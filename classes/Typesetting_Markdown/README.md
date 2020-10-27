@@ -14,7 +14,7 @@ _Nothing_
 
 ### Class structure
 - Create/format your GitHub READMEs (or data-folder meta-data files) using at least 4 of the elements summarized in [Markdown in 3 minutes](https://github.com/scholmd/scholmd/wiki/Learn-markdown-in-3-minutes) (_40 min._)
-- Create a barebones report using knitR in RStudio using [R Markdown Quick tour](https://rmarkdown.rstudio.com/authoring_quick_tour.html) (_40 min._)
+- Create a barebones report using knitR in RStudio using [R Markdown Quick tour](https://rmarkdown.rstudio.com/authoring_quick_tour.html) or an RStudio R Markdown template (_40 min._)
 - Back to your choice of [Implementation & Team troubleshooting](../Implementation/README.md) (_remaining time_)
 
 ### Markdown Cheatsheets

@@ -1,0 +1,14 @@
+Today: Dual purpose
+	Learn basics of new typesetting language
+	Add to reproducibility of your project
+
+No lecture, just learning by implementation (as described on today's README)
+
+Two sections
+	1. Git-flavored markdown to create READMEs
+		Home readme
+		Data folder readme(s) — summary of data and meta-data
+		Code folder readme — summary of workflow
+		Results folder readme — summary of results
+	2. R-flavored markdown
+		Notebook or Report-writing (w/ code snippets)

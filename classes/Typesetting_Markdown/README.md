@@ -23,9 +23,11 @@ _Nothing_
 - [Guide](/rmarkdown-reference.pdf)
 
 ### Resources
+- [kable](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) for creating Markdown tables in R
+
 Among many options..
-- [https://markdownlivepreview.com](https://markdownlivepreview.com) cut-and-paste-style browser-based markdown renderer
-- [https://stackedit.io](https://stackedit.io) fuller-fledged browser-based markdown editor (analagous to [Overleaf](https://www.overleaf.com) for LaTeX)
+- [https://markdownlivepreview.com](https://markdownlivepreview.com) cut-and-paste-style browser-based Markdown renderer
+- [https://stackedit.io](https://stackedit.io) fuller-fledged browser-based Markdown editor (analagous to [Overleaf](https://www.overleaf.com) for LaTeX)
 
 ### Additional resources
 - [Xie et al. R Markdown The definitive guide](https://bookdown.org/yihui/rmarkdown/)

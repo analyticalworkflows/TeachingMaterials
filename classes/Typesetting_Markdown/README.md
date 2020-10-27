@@ -23,7 +23,8 @@ _Nothing_
 - [Guide](/rmarkdown-reference.pdf)
 
 ### Additional resources
-- [Xie's book: Dynamic Documents with R and knitr](https://yihui.org/knitr/)
+- [Xie et al. R Markdown The definitive guide](https://bookdown.org/yihui/rmarkdown/)
+- [Xie Dynamic Documents with R and knitr](https://yihui.org/knitr/)
 - [Markdown in RStudio](https://rmarkdown.rstudio.com)
 - [Markdown Science Git repo wiki](https://github.com/scholmd/scholmd/wiki)
 - [R Markdown Basics in r4ds](https://r4ds.had.co.nz/r-markdown.html#r-markdown-basics)

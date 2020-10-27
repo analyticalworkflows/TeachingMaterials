@@ -22,6 +22,11 @@ _Nothing_
 - [RStudio](/rmarkdown-cheatsheet-2.0.pdf)
 - [Guide](/rmarkdown-reference.pdf)
 
+### Resources
+Among many options..
+- [https://markdownlivepreview.com](https://markdownlivepreview.com) cut-and-paste-style browser-based markdown renderer
+- [https://stackedit.io](https://stackedit.io) fuller-fledged browser-based markdown editor (analagous to [Overleaf](https://www.overleaf.com) for LaTeX)
+
 ### Additional resources
 - [Xie's book: Dynamic Documents with R and knitr](https://yihui.org/knitr/)
 - [Markdown in RStudio](https://rmarkdown.rstudio.com)

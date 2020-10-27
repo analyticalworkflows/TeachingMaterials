@@ -38,7 +38,14 @@ Among many options..
 - [R Markdown Code chunks in r4ds](https://r4ds.had.co.nz/r-markdown.html#code-chunks)
 - [R Markdown Formats in r4ds](https://r4ds.had.co.nz/r-markdown-formats.html)
 
-***
-### Potential topics
-	Note that non-printed commenting is possible in Markdown using
+### Tips \& tricks
+- Non-printed commenting is possible in Markdown:
 	 [//]: # followed by your comment
+
+- For inserting images into your Git readme:
+```html
+<br />
+<p align="center">
+  <a href="https://github.com/YOUR_REPO-HERE"
+    <img src="DIRECTORY/file_name.png" alt="FILE_NAME" width="IMAGE_WIDTH" height="IMAGE_HEIGHT">
+  </a>

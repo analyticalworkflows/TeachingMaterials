@@ -36,7 +36,7 @@ _Click on each topic to see each day's to-do's (incl. before-class required read
 |  |  Th | 11/12   | [Implementation & Team troubleshooting](classes/Implementation) |
 |8 |  T  | 11/17   | [Faster computing](classes/FasterComputing)  |
 |  |  Th | 11/19   | [Implementation & Team troubleshooting](classes/Implementation)  |
-|9 |  T  | 11/24   | [Databases](classes/Databases) |
+|9 |  T  | 11/24   | [Faster computing - Part 2](classes/FasterComputing) |
 |  |  Th | 11/26   | _Thanksgiving - no class_ |
 |10|  T  | 12/1    | [Project presentations](classes/ProjectSummary) |
 |  |  Th | 12/3    | [Project presentations](classes/ProjectSummary) & [Wrap-up](classes/WrapUp) |

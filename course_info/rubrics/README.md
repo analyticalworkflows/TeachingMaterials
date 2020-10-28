@@ -21,8 +21,8 @@ Below you will find the rubrics for the three "formal" presentations you'll be g
 |---|---|---|---|---|---|---|
 | **_Project structure_** | Repository has clear and clean folder and file organization | | Aspects of project structure are unclear or disorganized; some files are unorganized | | Project structure is unclear and disorganized | Utter chaos |
 | **_Reproducibility_** | Exact workflow can be easily reproduced by someone else, working from repository<sup>1</sup> | | The workflow is reproducible in principle, given enough work and in conversation with the original author | | Workflow mostly only exists within a specific machine and author | Not reproducible |
-| **_Research_** | Solid progress on research relative to proposal plan<sup>2</sup>| | At least one clear example of incremental progress on research relative to initial presentation|  | Little evidence of progress on research relative to initial presentation | None provided |
-| **_Challenges_** | Major challenges (past and anticipated) articulated, evidencing careful reflection and forethought<sup>3</sup>; | | Major and trivial challenges articulated | | Ony trivial challenges articulated, evidencing shallow reflection and forethought | No challenges articulated |
+| **_Research_** | Solid progress on research relative to proposal plan<sup>2</sup> | | At least one clear example of incremental progress on research relative to initial presentation |  | Little evidence of progress on research relative to initial presentation | None provided |
+| **_Challenges_** | Major challenges (past and anticipated) articulated, evidencing careful reflection and forethought<sup>3</sup>; | | Major and trivial challenges articulated | | Only trivial challenges articulated, evidencing shallow reflection and forethought | No challenges articulated |
 | **_Goals_** | Clear (re-evaluated) project goals and benchmarks for achieving them _by the end of the quarter_ | | Goals articulated but unclear | | Goals _and_ benchmarks unclear, too easy, or unachievable | None provided |
 
 <sup>1</sup>Assuming access to private or proprietary data, etc.

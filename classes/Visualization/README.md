@@ -2,7 +2,7 @@
 In this class we'll discuss data visualization and the workflow(s) with which to perform it.  We'll also critique (not criticize) published figures from the published literature to discuss what aspects of data visualization can work well and what often doesn't.
 
 ### Required readings (_before class_)
-- Notes: [Rmd/visualization_part1.pdf](Rmd/visualization_part1.pdf)
+- Notes: [Rmd/visualization_part_1.pdf](Rmd/visualization_part_1.pdf)
 - [Kelleher et al. 2011. Ten guidelines for effective data visualization in scientific publications](../../readings/pdfs/Kelleher2011.pdf)
 - [Weissgerber et al. 2019. Reveal, Don’t Conceal. Transforming Data Visualization to Improve Transparency](../../readings/pdfs/Weissgerber2019.pdf)
 

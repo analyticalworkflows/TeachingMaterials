@@ -7,7 +7,7 @@ If you find yourself writing papers (or appendices) with more than a few equatio
 
 
 ### To do (_before class_)
-- Ensure you either have an account with an online tex editor or have installed a stand-alone editor (see [Introduction](../Introduction)).
+- Ensure you either have an account with an online tex editor or have installed LaTeX and a stand-alone editor (see [Introduction](../Introduction)).
 
 ### Class structure
 - Overview of LaTeX code, structure, and compiling

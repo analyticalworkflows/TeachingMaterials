@@ -6,26 +6,27 @@ In the next two classes, we'll step through a few of the options for faster comp
 
 
 ### Required readings (_before class_)
-## Class 1
+##### Class 1
 - Notes: [Rmd/FasterComputing.pdf](Rmd/FasterComputing.pdf)
-## Class 1
+##### Class 2
 - Notes: [tex/FasterComputing-HPC.pdf](tex/FasterComputing-HPC.pdf)
 
 ### To do (_before class_)
-## Class 1
+##### Class 1
 - Install the following R packages:
 	- microbenchmark
 	- ggplot2
 	- Parallel
 	- doParallel
 	- foreach
-## Class 2
+##### Class 2
+- Install the apps listed below
 - Ensure you can connect to OSU's VPN
-- Install the below-mentioned apps
 
 
 
-### Additional setup required - Class 2
+
+### Additional setup (Class 2)
 We'll be interacting with two servers in Class 2:
 - Cosine's _High Performance Cluster_ (HPC):   `yourONID@submit.hpc.oregonstate.edu`
 - Cosine's _RStudio_ in the cloud: [https://rstudio-1.cosine.oregonstate.edu](https://rstudio-1.cosine.oregonstate.edu)
@@ -40,13 +41,13 @@ You'll need to login to OSU's VPN before you'll be able to connect to OSU's serv
 _Note that OSU has upgraded its VPN to the one linked-to above.  You'll need to upgrade to the new client if you've used the old one before._
 
 ### Class structure
-## Class 1
+##### Class 1
 We'll progress through methods as time allows, alternating between demonstration and your implementation:
 1) Benchmarking
 2) Vectorize it! (using R's apply()-family functions)
 3) Parallelize it! (using R's Parallel package)
 4) Profiling
-## Classs 2
+##### Classs 2
 5) RStudio in the cloud
 6) High Performance Clusters
 	- Command-line (R or Mathematica or Matlab)

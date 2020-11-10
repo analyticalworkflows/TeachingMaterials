@@ -1,0 +1,378 @@
+---
+title: "Faster Computing - Part 1"
+date: "`r format(Sys.time(), '%B %d, %Y')`"
+output: 
+  pdf_document:
+    toc: true
+    toc_depth: 2
+    number_sections: false
+  
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\section{Overview}
+
+Sometimes it's nice to have code that takes a long time to run; it feels like you're working even when you're not!
+But most of the time it's really useful when you can speed up code so that it takes seconds intead of minutes, or minutes instead of hours, or hours instead of days.
+Most of the time faster computing can be achieved by creativity.
+It's therefore wise to take the time to think of how you might achieve the same goal in a different manner, and to search online (e.g., \url{https://stackexchange.com}) for similar problems to see if others have solutions or inspirational ideas.
+If what you're trying to achieve requires a large number of steps, search CRAN (\url{https://cran.r-project.org}) to see if someone has created a package with useful functions.
+These have likely been optimized for efficiency (e.g., by performing computations in \texttt{C++} that are "wrapped" in \texttt{R} code).
+That said, there are many other ways to achieve faster code.
+Today we'll step through a few options, moving from the simplest forms of code efficiency to the use of computer clusters.
+Note that there are a number of additional ways for computing faster that we will not discuss (e.g., using \texttt{Rcpp} to compile your own \texttt{C++} code)
+
+
+
+
+
+\section{Benchmarking}
+The first useful tool for optimizing code is a way to quantitatively measure and compare code performance.
+That's what benchmarking refers to.
+There's a few ways to do it, but here are examples of two simple methods using functions that are built in to base-\texttt{R}, and a third example using the \texttt{microbenchmark} package.
+
+For demonstration purposes, let's consider the task of performing a stochastic simulation of a population that is, on average, growing geometrically.
+That is, given a mean growth rate $\lambda=1.01$ whose year-to-year variation is described by a normal distribution with standard deviation $\sigma^2=0.2$, we wish to simulate
+\begin{align}
+  N_{t+1} & = N_t (\lambda \pm e^{\epsilon})\\
+  \epsilon &\sim \mathcal{N}(0,\sigma^2)
+\end{align}
+for a total of $T=999$ time-steps starting from an initial size population size $N_0=2$.
+We'll use a \texttt{for}-loop to do it and, for convencience, will wrap it into a function with the desired parameter values as defaults.
+
+```{r}
+set.seed(1) # for reproducibility
+geom_growth_base <- function(N0 = 2,
+                             T = 999,
+                             lambda = 1.01,
+                             sigma = 0.2){
+  Nvals <- vector('numeric') # initiate a place to put the values
+  Nvals[1] <- N0
+  for (t in 1:T){
+    Nvals[t+1] <- Nvals[t]*(lambda*exp(rnorm(1,0,sigma)))
+  }
+  return(Nvals)
+}
+
+# Run the simulation
+out <- geom_growth_base()
+# Plot the results
+plot(0:999,
+     out,
+     xlab='Time',
+     ylab='Population size',
+     type='o')
+
+```
+
+Eerily similar to the dynamics of COVID, huh.
+
+Now let's quantify how long it takes our function to run.
+
+
+\subsection{Benchmarking using \texttt{Sys.time()}}
+The simplest way is to ask \texttt{R} what time it is before and after running our function using \texttt{Sys.time()}.
+
+```{r}
+# Default number of time-points
+start_time <- Sys.time()
+  out <- geom_growth_base()
+end_time <- Sys.time()
+
+end_time - start_time
+
+# Repeat with greater number of time-points
+start_time <- Sys.time()
+  out <- geom_growth_base(T=9E5)
+end_time <- Sys.time()
+
+end_time - start_time
+
+# Note that the time won't be exactly the same each time
+start_time <- Sys.time()
+  out <- geom_growth_base(T=9E5)
+end_time <- Sys.time()
+
+end_time - start_time
+```
+Using \texttt{Sys.time()} makes it easy to measure the run-time of any section of code, no matter how long it is, because you don't have to wrap the code in anything.
+
+
+\subsection{Benchmarking using \texttt{system.time()}}
+The function \texttt{system.time()} lets you evaluate the run-time of any expression (function), and provides two additional ways of counting time.
+
+```{r}
+system.time(geom_growth_base(T=9E5))
+```
+\texttt{user} gives the CPU time spent by the R session (i.e. the current process). 
+\texttt{system} gives the CPU time spent by the kernel (the operating system) on behalf of the R session. 
+The kernel CPU time will include time spent opening files, doing input or output, starting other processes, etc. (i.e. operations involving resources shared with other system processes).
+\texttt{elapsed} gives the time as we measured using \texttt{Sys.time()}.
+
+
+
+\subsection{Using the \texttt{microbenchmark} package}
+There are a few benchmarking packages out there (including \texttt{tictoc} and \texttt{rbenchmark}).
+They're similar in that they simplify the task of comparing the speed of multiple functions.
+\texttt{microbenchmark} is nice 'cuz it will evaluate each function repeatedly (default \texttt{neval}=100 times) and return summary statistics.
+It also plays well with \texttt{ggplot} to enable quick visual comparisons.
+
+```{r}
+library(microbenchmark)
+
+comp <- microbenchmark(TS_009 = {geom_growth_base(T=9)},
+                       TS_099 = {geom_growth_base(T=99)},
+                       TS_999 = {geom_growth_base(T=999)})
+comp
+
+library(ggplot2)
+autoplot(comp)
+```
+
+
+\section{Faster \texttt{for}-loops}
+\subsection{Preallocated space}
+Now let's start writing faster code!
+You may be surprised to learn that even \texttt{for}-loops can be made faster with just a tiny adjustment:  pre-specifying the length of the container that will hold the results.
+Let's do that and compare to our old \texttt{for}-loop simulation.
+
+```{r}
+set.seed(1) # for reproducibility
+geom_growth_preallocated <- function(N0 = 2,
+                                     T = 999,
+                                     lambda = 1.01,
+                                     sigma = 0.2){
+  Nvals <- vector('numeric', length = T+1) # here's the only change
+  Nvals[1] <- N0
+  for (i in 1:T){
+    Nvals[i+1] <- Nvals[i]*(lambda*exp(rnorm(1,0,sigma)))
+  }
+  return(Nvals)
+}
+
+# Compare the old and new simulation functions
+comp <- microbenchmark(Old = {geom_growth_base(T=9999)},
+                       New = {geom_growth_preallocated(T=9999)})
+comp
+```
+Preallocating the size of containers -- whether they're vectors, arrays, or lists -- can make a big difference when you're using a \texttt{for}-loop -- or any function -- repeatedly.
+
+\subsection{Progress bar}
+Next we'll learn how to avoid \texttt{for}-loops altogether using vectorization, which is typically much faster.
+But oftentimes, slow \texttt{for}-loops are impossible to avoid given the nature of the problem (like in our population simulation example).
+In such cases it's often nice to know how far along your code is in its computation.
+You could, of course, simply include a \texttt{print()} statement just before the end of the \texttt{for}-loop (e.g., \texttt{print(paste(t, "of", T, "completed"))}), but that will quickly eat up console space unless you also use \texttt{flush.console()}.
+Alternatively, there are a few options for creating progress bars.
+The simplest that does all you really need comes with base-\texttt{R}:
+```{r}
+total <- 10
+pb <- txtProgressBar(min = 0, max = total, style = 3)
+for(i in 1:total){
+   Sys.sleep(0.1)
+   setTxtProgressBar(pb, i) # update progress bar
+}
+close(pb)
+```
+(Note that it's only because of \texttt{knitR} that each iteration of the progress bar is printed.
+It'll remain on a single line in the console.)
+
+
+\section{Vectorize it!}
+As already mentioned, \texttt{for}-loops are slow.
+Learning to avoid them is your best ticket to writing faster (and more compact) code.
+It takes practice though, so we'll start with a simple example.
+
+\subsection{Thinking in vectors}
+Let's say we had population dynamics data, like we simulated above, from which we want to calculate the population's growth rate between each pair of successive years.  
+Using a \texttt{for}-loop, we would do:
+```{r}
+data <- geom_growth_preallocated(T=99999)
+
+start_time <- Sys.time()
+  growth_rates <- vector('numeric', (length(data)-1))
+  for(i in 1:(length(data)-1)){
+    growth_rates[i] <- data[i+1] / data[i]
+  }
+end_time <- Sys.time()
+end_time-start_time
+```
+But what are we actually doing here?
+Instead of looping through all the data points, we could do the same by considering them as comprising nothing more than a vector.
+Because of the way \texttt{R} treats vectors, we could take all data points excepting the first, and divide them by all data points excepting the last:
+```{r}
+start_time <- Sys.time()
+  growth_rates <- data[-1] / data[-length(data)]
+end_time <- Sys.time()
+end_time-start_time
+```
+We've improved the speed of our code by an order of magnitude!
+Granted, writing \texttt{for}-loops is a good way to figure out what you want to do.
+But quite often it's good to consider them more like pseudo-code that helps you think through how to write faster functions using vector-based operations.
+
+
+\subsection{\texttt{apply()}-family functions}
+Base-\texttt{R} has a number of functions for vector-based operations, and there are many more in various packages (e.g., in the TidyVerse).
+We'll touch on the \texttt{apply()}-family here (which includes \texttt{lapply}, \texttt{sapply}, \texttt{mapply} and more).
+The key to successful vector-based operations often lies in figuring out how to write the function in order to "apply" it.
+
+We'll demonstrate by continuing on with our population dynamics example.
+First, let's create a dataset that contains multiple population time-series. 
+```{r}
+n <- 5 # number of time-series to create
+# use replicate() to create n time-series, each in a different matrix column
+dat_array <- replicate(n, geom_growth_preallocated(T=99999))
+colnames(dat_array) <- paste0('Site_', 1:n)
+head(dat_array) 
+```
+Now let's define a vector-based function to calculate growth rates between all time-steps in a time-series, and apply it to each site (i.e. each column):
+```{r}
+calc_growth_rates <- function(x){
+  gr <- x[-1] / x[-length(x)]
+  return(gr)
+}
+system.time({
+  apply(dat_array, 2, calc_growth_rates)
+})
+# margin = 2 means apply to each column
+# margin = 1 means apply to each row
+```
+In order compare to the use of \texttt{lapply}, we'll first convert the data that's currently in an \texttt{array} format (i.e. a matrix) into a \texttt{list} format.
+That is, we'll take each column (i.e. each population time series) and place it in its own list element.
+```{r}
+dat_list <- as.list(as.data.frame(dat_array))
+```
+```{r}
+system.time({
+  growth_rates <- lapply(dat_list, calc_growth_rates)
+})
+lapply(growth_rates, head) # look only at head of each list element
+```
+The nice thing about lists (as opposed to matrices and arrays) is that list elements need not be of the same length (e.g., you could have time-series for different populations that differ in their number of time points).
+Since \texttt{lapply} returns a list, calculating an average growth rate by site is super fast and easy. 
+(No looping required!)
+```{r}
+growth_rate_means <- lapply( lapply(dat_list, calc_growth_rates), 
+                             mean, na.rm = TRUE)
+growth_rate_means
+unlist(growth_rate_means)
+```
+The function \texttt{sapply} is similar to \texttt{lapply} but returns a vector, matrix of array instead of a list.
+```{r}
+sapply( lapply(dat_list, calc_growth_rates), 
+        mean, na.rm = TRUE)
+```
+
+The function \texttt{mapply} is useful when you want to parameterize a function from multiple vectors.
+For example, suppose you have a function that has two parameters and you want to run it through a series of parameter combinations:
+```{r}
+dat_list <- mapply(geom_growth_preallocated, 
+           N0 =c(Site1 = 1.8, Site2 = 2.1), # initiate simul. with diff. N0's
+           T = c(Site1= 4, Site2 = 9)) # initiate simul. with diff. T's
+dat_list
+sapply( lapply(dat_list, calc_growth_rates), mean)
+
+```
+
+
+
+\section{Parallelize it!}
+
+\subsection{Running \texttt{lapply} in parallel}
+
+You can gain speed for vector-based operations by using the analogs of the \texttt{apply()}-family from the \texttt{Parallel} package.
+(There are other packages as well, like \texttt{multidplyr} for the TidyVerse.)
+We'll demonstrate with \texttt{mclapply} ("multicore lapply") , but note that there are others as well (e.g., \texttt{parSapply}).
+(\emph{Windows users:} \texttt{mclapply} may not work for you, so skip it and move on to the next example!)
+
+```{r}
+# Generate a large amount of demonstration data
+n <- 1E8
+data_list <- list("A" = rnorm(n),
+                  "B" = rnorm(n),
+                  "C" = rnorm(n),
+                  "D" = rnorm(n))
+
+# Single core
+system.time( 
+  means <- lapply(data_list, mean)
+)
+```
+Compare that runtime to using \texttt{mclapply} on twice the number of cores:
+```{r}
+library(parallel)
+detectCores()
+cores <- 2 # use as many as you have, if you'd like, 
+           # but note that you'll leave less resources
+           # for the rest of your computer!
+
+# mclapply may not work on a Windows machine!
+system.time(
+  means <- mclapply(data_list, mean, mc.cores = cores)
+)
+unlist(means)
+```
+(Note that running things in parallel will take longer than will non-parallelized functions for trivial problems; it takes a little bit of resources and time to set things up on all cores.)
+
+
+
+\subsection{Running \texttt{for}-loops in parallel}
+When you can't avoid using \texttt{for}-loops, but each round of your loop is independent of the others (or you've got nested loops that are independent), you can use the \texttt{foreach} package which supports a parallelizable operator \texttt{dopar} from the \texttt{doParallel} package.
+```{r}
+library(doParallel)
+library(foreach)
+library(parallel)
+
+detectCores()
+cores <- 2
+cl <- makeCluster(cores) # Create cluster
+registerDoParallel(cl) # Activate clusters 
+system.time({
+  means <- foreach(i = 1:length(data_list), 
+                          .combine = c) %dopar% { 
+                            # replace c with rbind to create a dataframe
+                            mean(data_list[[i]])
+                            }
+})
+stopCluster(cl) # Stop cluster to free up resources
+means
+```
+In this case it's slower even than base \texttt{lapply}, but that's usually an exception.
+Nevertheless, it's important to not assume that running things in parallel will always be faster, especially when you're taking differences in the range of seconds.
+
+
+
+\section{Profiling}
+As you can hopefully sense already, there are many ways to write faster code.
+The more you practice vector-based thinking, the faster, more compact, and -- generally speaking -- easier to read your code will be come (as long as you don't overdo it).
+That said, you also don't want to fall into the trap of wasting time trying to speed up code that doesn't take that long to run in the first place!
+Rather, you want to spend your time optimizing the code that does run slow.
+This is where profiling comes in.
+
+There are a few packages available (e.g., \texttt{lineprof} and \texttt{profvis}), but here we'll only use \texttt{Rprof()} from base-\texttt{R} to identify section of code (components of a function) that are slowing it down.
+To demonstrate, let's create a function that has a few functions nested within it.
+```{r}
+SimCalc_growth_rates <- function(n){
+  N0s <- rlnorm(n)
+  Ts <- round( rnorm(n, 50, 10), 0)
+  data <- mapply(geom_growth_preallocated, 
+                 N0 = N0s,
+                 T = Ts) 
+  growth_rates <- lapply(data, calc_growth_rates)
+  mean_growth_rates <- sapply(growth_rates, mean, na.rm=TRUE)
+  return(mean_growth_rates)
+}
+```
+
+You use \texttt{Rprof()} by initiating it above, and ending it below, your code:
+
+```{r}
+Rprof(line.profiling=TRUE)
+  out <- SimCalc_growth_rates(1000)
+Rprof(NULL)
+
+summaryRprof()
+summaryRprof(lines='show')
+```

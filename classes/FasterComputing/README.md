@@ -32,7 +32,7 @@ We'll be interacting with two servers in Class 2:
 - Cosine's _RStudio_ in the cloud: [https://rstudio-1.cosine.oregonstate.edu](https://rstudio-1.cosine.oregonstate.edu)
 
 For these you'll need to install two (possibly three) more apps:
-1. _CISCO AnyConnect client_ to connect to OSU's VPN (see download and instructions [here]((https://oregonstate.teamdynamix.com/TDClient/1935/Portal/KB/ArticleDet?ID=76790)));
+1. _CISCO AnyConnect client_ to connect to OSU's VPN (see download and instructions [here](https://oregonstate.teamdynamix.com/TDClient/1935/Portal/KB/ArticleDet?ID=76790));
 2. An _sftp_ GUI (e.g., [Cyberduck](https://cyberduck.io));
 3. (_Windows-users only_) An _ssh_ client (see [OSU's recommendations](https://cosine.oregonstate.edu/faqs/software-tools-and-fixes), e.g., [MobaXterm](https://mobaxterm.mobatek.net) which also does _sftp_).
 

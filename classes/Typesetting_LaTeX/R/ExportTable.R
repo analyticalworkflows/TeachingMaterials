@@ -30,7 +30,7 @@ est.coefs
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 latex(
   tab,
-  file = '../tables/data.tex',
+  file = 'tex/tables/data.tex',
   label = 'tab:data', 
   rowname = NULL, 
   na.blank = TRUE,
@@ -44,7 +44,7 @@ latex(
 colnames(est.coefs)[4] <- 'p-value'
 latex(
   est.coefs,
-  file = '../tables/est_coefs.tex',
+  file = 'tex/tables/est_coefs.tex',
   label = 'tab:coefs', 
   rowlabel = 'Parameter',
   rowname = c('a','b'), 

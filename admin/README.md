@@ -72,6 +72,7 @@ The figures can be old or new (i.e. it doesn't matter what year they were publis
 
 P.S. Feel free to submit any additional figures to share beyond those two, if you'd like.
 
+
 ***
 ***
 
@@ -114,6 +115,8 @@ Need to clarify expectation for "Project goals" to be less about science and mor
 - Felt like a lot of time talking (e.g., took until 11:10 to talk about readability), so consider creating exercises instead.
 - Student request for resources regarding unit-testing.
 
+####  Typesetting with LaTex
+- Most people used OverLeaf, so be sure to place all needed files on OverLeaf.
 
 ***
 ***

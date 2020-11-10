@@ -8,6 +8,8 @@ If you find yourself writing papers (or appendices) with more than a few equatio
 
 ### To do (_before class_)
 - Ensure you either have an account with an online tex editor or have installed LaTeX and a stand-alone editor (see [Introduction](../Introduction)).
+- If you haven't already forked the whole class repo: download the contents of this week's class folder (specifically the subfolders [tex](tex), [R](R), and [manuscript](manuscript)) so that you can follow along.
+- If you're using a browser-based LaTeX editor (e.g., Overleaf), create a new project in it and upload the contents of [tex](tex) and [manuscript](manuscript) to it (ensuring that the folder structure is preserved, which may require (re)creating the folders).
 
 ### Class structure
 - Overview of LaTeX code, structure, and compiling

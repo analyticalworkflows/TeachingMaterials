@@ -1,0 +1,15 @@
+What app are you using today?  
+	(Overleaf, TexStudio, TexMaker, Atom,...)
+
+Overview
+	- Writing as coding
+	- Flat/human readable files (benefits of, esp. w/ Git)
+
+Walk though
+	- notes tex file (open side-by-side)
+	- LaTeX table export using Hmisc R-package
+	- manuscript tex file
+
+LaTeX in Markdown (RStudio)
+LaTeXiT for Mac
+Equations in Keynote (Mac)

@@ -41,7 +41,7 @@ _Note that OSU has upgraded its VPN to the one linked-to above.  You'll need to 
 
 ### Class structure
 ##### Class 1
-We'll progress through methods as time allows, alternating between demonstration and your implementation:
+We'll progress through methods as time allows.
 1) Benchmarking
 2) Vectorize it! (using R's apply()-family functions)
 3) Parallelize it! (using R's Parallel package)

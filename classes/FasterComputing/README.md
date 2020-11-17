@@ -13,17 +13,16 @@ In the next two classes, we'll step through a few of the options for faster comp
 
 ### To do (_before class_)
 ##### Class 1
+- Download [Rmd/FasterComputing.Rmd](Rmd/FasterComputing.Rmd) so you can follow along in class
 - Install the following R packages:
 	- microbenchmark
 	- ggplot2
-	- Parallel
+	- parallel
 	- doParallel
 	- foreach
 ##### Class 2
 - Install the apps listed below
 - Ensure you can connect to OSU's VPN
-
-
 
 
 ### Additional setup (Class 2)
@@ -48,10 +47,10 @@ We'll progress through methods as time allows, alternating between demonstration
 3) Parallelize it! (using R's Parallel package)
 4) Profiling
 ##### Classs 2
-5) RStudio in the cloud
+5) RStudio Server Pro
 6) High Performance Clusters
 	- Command-line (R or Mathematica or Matlab)
-	- Job submission (incl. _Introduction to Unix_)
+	- Job submission
 
 
 ### Further readings

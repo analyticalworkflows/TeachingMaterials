@@ -37,7 +37,7 @@ There's a few ways to do it, but here are examples of two simple methods using f
 For demonstration purposes, let's consider the task of performing a stochastic simulation of a population that is, on average, growing geometrically.
 That is, given a mean growth rate $\lambda=1.01$ whose year-to-year variation is described by a normal distribution with standard deviation $\sigma^2=0.2$, we wish to simulate
 \begin{align}
-  N_{t+1} & = N_t (\lambda \pm e^{\epsilon})\\
+  N_{t+1} & = N_t (\lambda e^{\epsilon})\\
   \epsilon &\sim \mathcal{N}(0,\sigma^2)
 \end{align}
 for a total of $T=999$ time-steps starting from an initial size population size $N_0=2$.
@@ -91,7 +91,7 @@ end_time <- Sys.time()
 
 end_time - start_time
 
-# Note that the time won't be exactly the same each time
+# Note that the time won't be exactly the same each time (unless the seed is the same)
 start_time <- Sys.time()
   out <- geom_growth_base(T=9E5)
 end_time <- Sys.time()
@@ -223,7 +223,7 @@ First, let's create a dataset that contains multiple population time-series.
 ```{r}
 n <- 5 # number of time-series to create
 # use replicate() to create n time-series, each in a different matrix column
-dat_array <- replicate(n, geom_growth_preallocated(T=99999))
+dat_array <- replicate(n, geom_growth_preallocated(T=9999))
 colnames(dat_array) <- paste0('Site_', 1:n)
 head(dat_array) 
 ```
@@ -239,7 +239,7 @@ system.time({
 # margin = 2 means apply to each column
 # margin = 1 means apply to each row
 ```
-In order compare to the use of \texttt{lapply}, we'll first convert the data that's currently in an \texttt{array} format (i.e. a matrix) into a \texttt{list} format.
+In order compare what we just did to the use of \texttt{lapply}, we'll first convert the data that's currently in an \texttt{array} format (i.e. a matrix) into a \texttt{list} format.
 That is, we'll take each column (i.e. each population time series) and place it in its own list element.
 ```{r}
 dat_list <- as.list(as.data.frame(dat_array))
@@ -251,18 +251,16 @@ system.time({
 lapply(growth_rates, head) # look only at head of each list element
 ```
 The nice thing about lists (as opposed to matrices and arrays) is that list elements need not be of the same length (e.g., you could have time-series for different populations that differ in their number of time points).
-Since \texttt{lapply} returns a list, calculating an average growth rate by site is super fast and easy. 
+Since \texttt{lapply} returns a list, performing additional computations by site (e.g., calculating an arithmetic mean growth rate) is super fast and easy. 
 (No looping required!)
 ```{r}
-growth_rate_means <- lapply( lapply(dat_list, calc_growth_rates), 
-                             mean, na.rm = TRUE)
+growth_rate_means <- lapply( lapply(dat_list, calc_growth_rates), mean)
 growth_rate_means
 unlist(growth_rate_means)
 ```
-The function \texttt{sapply} is similar to \texttt{lapply} but returns a vector, matrix of array instead of a list.
+The function \texttt{sapply} is similar to \texttt{lapply} but returns a vector, matrix, or array instead of a list.
 ```{r}
-sapply( lapply(dat_list, calc_growth_rates), 
-        mean, na.rm = TRUE)
+sapply( lapply(dat_list, calc_growth_rates), mean)
 ```
 
 The function \texttt{mapply} is useful when you want to parameterize a function from multiple vectors.
@@ -282,7 +280,7 @@ sapply( lapply(dat_list, calc_growth_rates), mean)
 
 \subsection{Running \texttt{lapply} in parallel}
 
-You can gain speed for vector-based operations by using the analogs of the \texttt{apply()}-family from the \texttt{Parallel} package.
+You can gain speed for vector-based operations by using the analogs of the \texttt{apply()}-family from the \texttt{parallel} package.
 (There are other packages as well, like \texttt{multidplyr} for the TidyVerse.)
 We'll demonstrate with \texttt{mclapply} ("multicore lapply") , but note that there are others as well (e.g., \texttt{parSapply}).
 (\emph{Windows users:} \texttt{mclapply} may not work for you, so skip it and move on to the next example!)
@@ -321,9 +319,9 @@ unlist(means)
 \subsection{Running \texttt{for}-loops in parallel}
 When you can't avoid using \texttt{for}-loops, but each round of your loop is independent of the others (or you've got nested loops that are independent), you can use the \texttt{foreach} package which supports a parallelizable operator \texttt{dopar} from the \texttt{doParallel} package.
 ```{r}
-library(doParallel)
-library(foreach)
 library(parallel)
+library(foreach)
+library(doParallel)
 
 detectCores()
 cores <- 2
@@ -340,7 +338,8 @@ stopCluster(cl) # Stop cluster to free up resources
 means
 ```
 In this case it's slower even than base \texttt{lapply}, but that's usually an exception.
-Nevertheless, it's important to not assume that running things in parallel will always be faster, especially when you're taking differences in the range of seconds.
+Nevertheless, it's important to not assume that running things in parallel will always be faster.
+For example, moving lots of data between cores slows things down significantly.
 
 
 
@@ -348,10 +347,10 @@ Nevertheless, it's important to not assume that running things in parallel will 
 As you can hopefully sense already, there are many ways to write faster code.
 The more you practice vector-based thinking, the faster, more compact, and -- generally speaking -- easier to read your code will be come (as long as you don't overdo it).
 That said, you also don't want to fall into the trap of wasting time trying to speed up code that doesn't take that long to run in the first place!
-Rather, you want to spend your time optimizing the code that does run slow.
+Rather, you want to spend your time optimizing the part of your code that actually does slow things down.
 This is where profiling comes in.
 
-There are a few packages available (e.g., \texttt{lineprof} and \texttt{profvis}), but here we'll only use \texttt{Rprof()} from base-\texttt{R} to identify section of code (components of a function) that are slowing it down.
+There are a few packages available (e.g., \texttt{lineprof} and \texttt{profvis}), but here we'll only use \texttt{Rprof()} from base-\texttt{R} to identify sections of code (components of a function) that are slowing it down.
 To demonstrate, let's create a function that has a few functions nested within it.
 ```{r}
 SimCalc_growth_rates <- function(n){
@@ -376,3 +375,5 @@ Rprof(NULL)
 summaryRprof()
 summaryRprof(lines='show')
 ```
+Note that \texttt{Rprof()} is not always able to identify all the components (e.g., when functions aren't named).
+In these instances it'll indicate said function(s) by calling them "Anonymous".

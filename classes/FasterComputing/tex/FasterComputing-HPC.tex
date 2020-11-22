@@ -246,7 +246,8 @@ To submit your job, use the \texttt{qsub} command:
 \\
 
 \noindent
-To confirm that your job is running, type
+There are a few commands with which you can view and confirm that your job is running.
+Each offers different and different amounts of information.
 
 \texttt{[novakm@head mytest]\$} \texttt{qstat -u} \emph{username}
 
@@ -256,6 +257,10 @@ The most common states for a process to be in are ``q'' (qeued), ``r'' (running)
 To see how much of the cluster's resources your jobs are using, type
 
 \texttt{[novakm@head mytest]\$} \texttt{top -u} \emph{username}
+
+\noindent
+For more abbreviated views, use \texttt{ps} (for all of your running processes) or \texttt{jobs} (for all of your current running jobs).
+
 
 \subsection{Job completion and ending a job}
 If you typed-in your correct email address in the submission script, you'll get an email sent to you when it completes successfully or ends in an error.

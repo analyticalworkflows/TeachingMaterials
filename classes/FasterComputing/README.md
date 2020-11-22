@@ -64,3 +64,8 @@ We'll progress through methods as time allows.
 
 ##### Using Cosine's HPC
 - [Cosine's HPC FAQ](https://cosine.oregonstate.edu/faqs/unix-hpc-cluster)
+
+##### Unix resources
+- [UNIX Youtube video - Part 1](https://www.youtube.com/watch?v=BjO1BgeuPhE)
+- [UNIX Youtube video - Part 2](https://www.youtube.com/watch?v=JVBtabkJ4ZE)
+- [UNIX Tutorial](http://www.ee.surrey.ac.uk/Teaching/Unix/unix1.html)

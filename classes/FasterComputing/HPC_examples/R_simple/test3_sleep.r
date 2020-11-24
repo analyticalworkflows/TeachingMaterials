@@ -4,7 +4,7 @@ sqrd <- numeric(length=n)
 for (i in 1:n){
   sqrd[i] <- i^2
   print(sqrd[i])
-  Sys.sleep(10)
+  Sys.sleep(100)
 }
 out <- data.frame('Input'=1:n, 'Output'=sqrd)
 

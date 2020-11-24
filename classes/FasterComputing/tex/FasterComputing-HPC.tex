@@ -53,10 +53,9 @@ with your ``\emph{R} session'' already initiated.\footnote{If you wish to initia
 to run additional code at the same time), click on the blue \emph{R} icon in the top-left corner.}
 You can start typing commands into the console just as you would on your computer.
 Of course, you're unlikely to want to do that as you've probably got your code all written and tested on
-smaller datasets/simulation runs (i.e. are using the server not for writing or debugging, but just to run
-code).
+smaller datasets/simulation runs (i.e. you are using the server not for writing or debugging, but just to run code).
 
-To copy files between your computer and the server, \emph{sftp} into the server.
+To copy files between your computer and the server, \texttt{sftp} into the server.
 In \emph{Cyberduck}:
 \begin{enumerate}
 	\item click on ``\emph{Open Connection}'',
@@ -65,17 +64,17 @@ In \emph{Cyberduck}:
 		 \url{sftp://rstudio-1.cosine.oregonstate.edu}\\
 		 (the default \emph{port 22} should be fine),
 	\item enter your ONID username and password,
-	\item leave SSH Private Key as \emph{None}, and
+	\item leave \emph{SSH Private Key} as ``\emph{None}'', and
 	\item check the \emph{Add to Keychain} box in order to save your credentials.\footnote{The option and label for this check-box may be specific to Macs.}
 \end{enumerate}
-
+\noindent
 You should now be in your \texttt{home} folder (e.g., \texttt{/home/novakm/}).
 Take a moment now to bookmark this connection.
 (In \emph{Cyberduck}, select the \emph{Add Bookmark} option from the drop-down menu.)
 
 In your \texttt{home} folder you should see a folder named \emph{R} and, depending on your settings,
 several ``hidden'' files and directories.\footnote{The filenames of hidden files and directories all start with a period (e.g., \texttt{.bash\_profile}).
-Don't worry if you don't see them as you're rarely if ever needthem.}
+Don't worry if you don't see them as you'll rarely if ever need them.  In fact, you typically don't want to delete them, so be careful if you do see them.}
 Enter the \emph{R} folder and place whatever files you want inside of it by dragging them in.
 Be sure to maintain your project's directory substructure so that all relative links between scripts and data work!
 In fact, you may want (or need) to put much of your whole repository in place (i.e. have your \texttt{data}, \texttt{code}, and \texttt{output} folders and contents all present).
@@ -86,9 +85,9 @@ After you've put your scripts in place, jump back to your browser and you should
 
 \section{High Performance Clusters}
 
-High Performance Clusters (HPCs) consist of many (often hundreds or thousands) of compute servers that are all networked together.
+High Performance Clusters (HPCs) consist of many (often hundreds or thousands) of servers that are all networked together.
 Each server is called a node.
-You can choose to work on only a single node (which will probably still be faster than your computer), or on several nodes.
+You can choose to work on only a single node (which will probably still be faster than your computer), or on several nodes in parallel.
 The point of using several nodes is that you can use them in parallel (just like we did last class when we used own computer's cores in parallel).
 The HPC we'll use today is found at \url{submit.hpc.cosine.oregonstate.edu}.
 
@@ -110,8 +109,8 @@ but it may also look empty.
 Create a folder and copy your scripts into place, again ensuring that your directory structure is correct so that all specified paths will work as in you project's repository.
 
 \subsection{\texttt{ssh} communication and initial \texttt{R} setup}
-Now switch over to your \texttt{s}ecure \texttt{sh}ell (\texttt{ssh}) client (e.g., \emph{MobaXTerm} for Windows users, or\emph{Terminal} for Mac users\footnote{If you want, you can access \emph{Terminal} from within
-\texttt{RStudio}; the tab for it should be in the same window as the console.}).
+Now switch over to your \texttt{s}ecure \texttt{sh}ell (\texttt{ssh}) client (e.g., \emph{MobaXTerm} for Windows users, or \emph{Terminal} for Mac users\footnote{If you want, you can access \emph{Terminal} from within
+\emph{RStudio}; the tab for it should be in the same window as the console.}).
 At the \$ prompt, type in
 
 \texttt{ssh \emph{yourONID}@submit.hpc.cosine.oregonstate.edu}
@@ -123,7 +122,7 @@ You should then see a welcome screen with a new prompt at the bottom of the wind
 \texttt{[novakm@head $\sim$j]\$}
 
 \noindent
-You're likely going to be using \emph{R} a lot, so let's have it load automatically each time you login.
+You're likely going to be using \emph{R} a lot, so let's install it into your user resources automatically so it's available each time you login.
 You can do that by typing the following at the prompt:
 
 \texttt{module initadd R}
@@ -163,21 +162,21 @@ Back at the \texttt{ssh}, use the list (\texttt{ls}) command:
 \texttt{[novakm@head $\sim$j]\$} \texttt{ls}
 
 \noindent
-The \texttt{ls} command will show you all the sub-directories and files within the directory you're currently in (which at this point in time your \texttt{home} directory).
+The \texttt{ls} command will show you all the sub-directories and files within the directory you're currently in (which at this point in time is your \texttt{home} directory).
 You should see the files (or the folder) you uploaded and, if you installed any \emph{R} packages, a folder named \texttt{R\_libs}.
-In order to enter a subdirectory, use the change directory (\texttt{cd}) command followed by the directory you'd like to enter:
+In order to enter a subdirectory, use the change directory (\texttt{cd}) command followed by the name of the directory you'd like to enter:
 
 \texttt{[novakm@head $\sim$j]\$} \texttt{cd} \emph{subdirectory}
 
 \noindent
-You can move through multiple nested dirctories, e.g.,
+You can move down into multiple nested dirctories, e.g.,
 
-\texttt{[novakm@head $\sim$j]\$}  \texttt{cd} \emph{subdirectory/subsubdirectory})
+\texttt{[novakm@head $\sim$j]\$}  \texttt{cd} \emph{subdirectory/subsubdirectory}
 
 \noindent
-and move out any number of directories, e.g.,
+and move out of any number of directories, e.g.,
 
-\texttt{[novakm@head $\sim$j]\$}  \texttt{cd} \emph{../../directory})
+\texttt{[novakm@head $\sim$j]\$}  \texttt{cd} \emph{../../otherdirectory}
 
 \noindent
 just as we did when setting relative paths in \emph{R}.
@@ -198,13 +197,13 @@ The contents won't be rendered very nicely, but the function is nonetheless usef
 
 
 \subsection{\texttt{ssh} job submission}
-When performing analyses on an HPC you (typically) don't do so be entering into the module (e.g., into \texttt{R}, the way we did above when installing \emph{R} packages).
+When performing analyses on an HPC, you (typically) don't do so be entering into the module (e.g., into \emph{R}, the way we did above when installing \emph{R} packages).
 Rather, you use a submission script to submit your code (your ``job'') to the cluster.
 The primary reason for doing that is that the cluster has extensive automated job managment tools which optimize the use of nodes among users and nodes.
 Therefore, when you submit a job, the cluster (typically) determines which of its nodes it will send the job to.
 It's similarly so when your job contains code that performs parallelized computations.
 
-The submission script for an \emph{R} job on our HPC should look like this\footnote{Examples for a \emph{Mathematica} submission and an \emph{R} array submission (distributed over multiple nodes) is provided in the \texttt{HPC\_examples} folder of today's folder.}:
+The submission script for an \emph{R} job on our HPC will look like this\footnote{Examples for a \emph{Mathematica} submission and an \emph{R} array submission (distributed over multiple nodes) is provided in the \texttt{HPC\_examples} folder of today's class folder.}:
 \begin{verbatim}
 	#!/bin/sh
 

@@ -4,6 +4,7 @@ In this class we'll discuss the second-level features of Git (_branch_,_diff_, _
 ### Required readings (_before class_)
 - Notes: [tex/Git_Part2.pdf](tex/Git_Part2.pdf)
 - [Blischak et al. 2016. A Quick Introduction to Version Control with Git and GitHub](../../readings/pdfs/Blischak2016.pdf)
+-
 
 ### To do (_before class_)
 - Create a 'Sandbox' repository for yourself (if you prefer not to try out the following in your project repo.)

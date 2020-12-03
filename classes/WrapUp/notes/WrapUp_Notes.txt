@@ -1,0 +1,66 @@
+~~~~~~~~~~~~~~~
+# Reflections
+~~~~~~~~~~~~~~~
+What was most surprising/interesting to you?
+
+Admission:Often teaching is about 
+	being just 1-step ahead of your students
+		(e.g., Beamer presentation at very start (lots more examples))
+	cut-and-dry extremes rather than gradients
+		be pragmatic in your use / figure out what works
+		your uses will likely change 
+
+Grateful for buy-in 
+	(especially given all sources of stress)
+
+Tremendously satisfying for me to 
+	get to know you
+	learn about awesome projects
+	experience so much interesting science in the making
+	expand my own knowledge (e.g., learn new tricks)
+
+Hack-a-thons next quarter?
+	Happy to organize
+	Leave up Discord channel
+
+~~~~~~~~~~~~~~~
+# For the future
+~~~~~~~~~~~~~~~
+Please fill-out eSet survey!!!
+
+Who should (and shouldn't) take this course?
+	How should they be prepared?
+
+What do you wish you'd known about the course?
+
+What topics should we spend more/less time on?
+	Structuring projects (e.g., more on data)
+	Workflow diagrams
+	Git & GitHub
+	Coding best practices
+	Data visualization
+	Markdown
+	LaTeX
+	Faster computing - vectorization
+	Faster computing - HPC
+
+Should we provide / require problem sets for practice?
+
+Did the order of topics make sense?
+
+Are there additional topics you'd recommend?
+	Databases?
+	Tidyverse?
+
+Good balance between "lectures" / topics and Hackathons?
+
+Are there ways to improve Hackathons?
+ 	Make more efficient, useful, interactive?
+	Joint problem set solving?
+
+Were all the presentations/reports worth your / the class time?
+	What would you change?
+
+Keep/improve the accountabilibuddy system?
+
+If you were teaching the course and were required (by admin) to grade student performance, how would you do it?

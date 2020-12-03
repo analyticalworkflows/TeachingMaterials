@@ -203,7 +203,10 @@ The primary reason for doing that is that the cluster has extensive automated jo
 Therefore, when you submit a job, the cluster (typically) determines which of its nodes it will send the job to.
 It's similarly so when your job contains code that performs parallelized computations.
 
-The submission script for an \emph{R} job on our HPC will look like this\footnote{Examples for a \emph{Mathematica} submission and an \emph{R} array submission (distributed over multiple nodes) is provided in the \texttt{HPC\_examples} folder of today's class folder.}:
+The submission script for an \emph{R} job on our HPC will look like this\footnote{Note that the \# 
+symbols are \emph{not} for commenting-out lines of code.  They're necessary! (The \#\$, for example, 
+denotes a command-line argument to be passed to the job 
+	scheduler.)}:
 \begin{verbatim}
 	#!/bin/sh
 
@@ -231,7 +234,12 @@ The submission script for an \emph{R} job on our HPC will look like this\footnot
 	Rscript test.r
 \end{verbatim}
 
-Copy the above into a text file, edit it as needed (remembering especially to give the job an informative name at the start and change the script it runs at the end), and save the file with an \texttt{.sh} extension (e.g., \texttt{submit.sh}).\footnote{You can give it any name you want, just give it the \texttt{.sh} extension.}
+Copy the above into a text file\footnote{Examples for a \emph{Mathematica} submission and an 
+\emph{R} array submission (distributed over multiple nodes) is provided in the \texttt{HPC\_examples} 
+folder of today's class folder.}, edit it as needed (remembering especially to give the job an informative 
+name at the start and change the script it runs at the end), and save the file with an \texttt{.sh} extension 
+(e.g., \texttt{submit.sh}).\footnote{You can give it any name you want, just give it the \texttt{.sh} 
+extension.}
 Now upload this file into the same directory as the \texttt{test.r} script it calls using your \texttt{sftp} client (e.g., \emph{Cyberduck}).
 Ensure it's in place using your \texttt{ssh} client.
 

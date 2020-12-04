@@ -25,13 +25,16 @@ _Nothing_
 ##### Filenames
 - [File Naming Guidelines - Minnesota Historical Society](https://www.mnhs.org/preserve/records/electronicrecords/erfnaming.php)
 
-##### Writing functions
+##### Mathematica
+- [Mathematica programming practice resources](https://mathematica.stackexchange.com/questions/18/where-can-i-find-examples-of-good-mathematica-programming-practice)
+
+##### Writing functions in R
 - [Grolemund & Wikham - Writing functions (r4ds-19)](https://r4ds.had.co.nz/functions.html#functions)
 
-##### Code style
+##### R Code style
 - [R-bloggers' best practices](https://www.r-bloggers.com/r-code-best-practices/)
 
-##### Debugging
+##### Debugging in R
 - [Wikham's Advanced R - Debugging tools](https://adv-r.hadley.nz/debugging.html)
 - [Wikham's Advanced R - Conditions](https://adv-r.hadley.nz/conditions.html)
 

@@ -57,10 +57,13 @@ We'll progress through methods as time allows.
 ##### Apply functions
 - [DataCamp's tutorial on apply functions](https://www.datacamp.com/community/tutorials/r-tutorial-apply-family)
 
-##### Parallel programming
+##### Parallel programming in R
 - [Peng's R Programming for Data Science - Parallel programming](https://bookdown.org/rdpeng/rprogdatascience/parallel-computation.html)
 - [Parallel package manual](https://stat.ethz.ch/R-manual/R-devel/library/parallel/doc/parallel.pdf)
 - [CRAN Task View: High-Performance and Parallel Computing with R](https://cran.r-project.org/web/views/HighPerformanceComputing.html)
+
+##### Parallel programming in Mathematica
+- [Wolfram Parallel Tools]https://reference.wolfram.com/language/ParallelTools/tutorial/Overview.html
 
 ##### Using Cosine's HPC
 - [Cosine's HPC FAQ](https://cosine.oregonstate.edu/faqs/unix-hpc-cluster)

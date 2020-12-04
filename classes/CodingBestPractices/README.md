@@ -27,6 +27,7 @@ _Nothing_
 
 ##### Mathematica
 - [Mathematica programming practice resources](https://mathematica.stackexchange.com/questions/18/where-can-i-find-examples-of-good-mathematica-programming-practice)
+- [Common new user pitfalls](https://mathematica.stackexchange.com/questions/18393/what-are-the-most-common-pitfalls-awaiting-new-users)
 
 ##### Writing functions in R
 - [Grolemund & Wikham - Writing functions (r4ds-19)](https://r4ds.had.co.nz/functions.html#functions)

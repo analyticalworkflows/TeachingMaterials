@@ -1,0 +1,16 @@
+Scrap GitHub Issue-based feedback on project presentations 
+	(remove from READMEs)
+
+Good for 1st yr MS and 2nd-3rd yr PhDs 
+	(beyond "posing questions" stage; during or after proposal defense).
+
+Require some basic R
+
+Generalize classes to coding beyond R (e.g., Best practices)
+
+Short in-class exercises (think-pair-shares) for _select_ topics 
+	(e.g., Collaborative Git (branching), Faster Computing)
+No required exercises (remain focused on own research projects)
+
+Submit 1-2 sentence proposals / promises on what each will work on to implement newly-learned skill to be completed in subsequent hack-a-thon for subset of topics
+

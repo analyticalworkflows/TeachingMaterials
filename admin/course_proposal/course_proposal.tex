@@ -1,10 +1,14 @@
 \documentclass[10pt]{article}
 \usepackage[latin1]{inputenc}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
+\usepackage{amsmath,amsfonts,amssymb}
 \usepackage{enumitem}
+\usepackage{hyperref}
+\hypersetup{
+	colorlinks=true,
+	linkcolor=blue,
+	filecolor=magenta,      
+	urlcolor=blue,
+}
 \usepackage{soul} % for strike-out
 
 \usepackage{titlesec}
@@ -14,7 +18,7 @@
 \geometry{verbose,a4paper,tmargin=2.4cm,bmargin=2.4cm,lmargin=2.4cm,rmargin=2.4cm}
 
 \author{Mark Novak \& Ben Dalziel}
-\title{\emph{Course Proposal:}  Analytical Workflows\\\emph{\small{(temporarily} IB 599)}}
+\title{\emph{Course Proposal:}\\Analytical Workflows\\\emph{IB 5XX}}
 \date{}
 
 \begin{document}
@@ -22,57 +26,123 @@
 \maketitle
 
 \section*{Course Motivation}
-Graduate students are amassing ever larger datasets to ask ever more challenging questions with ever more sophisticated  statistical techniques. Many propose dissertation chapters entailing mathematical models and computational simulations. To keep pace requires students to straddle empirical, statistical, and theoretical approaches. These large-scale, multi-faceted, and ever more collaborative approaches lie at the heart of our department's \emph{integrative} approach to biology.
+Graduate students are amassing ever larger datasets to ask ever more challenging questions with ever 
+more sophisticated  statistical techniques. 
+Many others propose dissertation chapters entailing computationally demanding simulations or the 
+analysis of parameter-rich mathematical models. 
+Keeping pace in their field often requires students to straddle empirical, statistical and theoretical 
+techniques. 
+These multi-faceted and ever more collaborative approaches lie at the heart of our 
+department's \emph{integrative} approach to biology and have become standard practice in many of the 
+career paths our students pursue.
+And yet, nowhere in our curriculum are students provided the opportunity to learn the skills, basic tools 
+and best practices with which to manage the complexity of their projects.\footnote{See \emph{Related 
+Courses at OSU} below.}
+This poses a non-trivial challenge to our students that is fundamentally distinct from the learning of 
+specific content, methods or platforms.
 
-And yet, nowhere in our curriculum are students provided the basic tools and best practices with which to manage this complexity\footnote{See \emph{Related Courses at OSU} below.}. Moreover, these basic tools are standard practice in many of the career paths our students pursue.
-
-Our course will provide students the tools they need to organize and manage their projects from inception to publication.  Working with their own data and/or models, students will learn and practice: (re)organizing projects into efficient, reproducible, and easily-modified ``\emph{analytical workflows}''; writing modular, transparent computer code for biology (in the programming language of their choice); tracking and communicating progress and hurdles (issues) to others using stand-alone and cloud-based version control and collaboration software.
+Our course provides students the skills and tools they need to organize and manage their projects from 
+inception to publication.  
+Working with their own data or models, students learn and practice: (re)organizing projects into 
+efficient, reproducible and easily-modified ``\emph{analytical workflows}''; 
+writing modular, transparent computer code in the programming language of their choice;
+and tracking and communicating progress and hurdles to others using stand-alone and cloud-based 
+version control and collaboration software.
+Although these have proven to be game-changing for graduate students at all levels, the 
+target audience for this course is students who have substantial data in hand or have an 
+implementable framework for their analyses established (i.e. $2^{nd}$ to $4^{th}$ year Ph.D. and 
+$2^{nd}$ to $5^{th}$ term M.S. students).
 
 \section*{Student-targeted Advertisement}
-Have you proposed a modeling chapter for your dissertation but need support getting things up and running?  Are you sitting on a data set ready for analysis and visualization but don't know how or where to begin?  Maybe you're far along in some series of analyses and feel ``lost in the trees.''
+Have you proposed a modeling chapter for your dissertation but need support getting things up and 
+running?  
+Will you soon be sitting on a complete data set ready for your planned analyses but don't know how or 
+where to begin?
+Maybe you're far along in a series of analyses and feel ``lost in the trees.''
 
-This course will help you with these challenges by practicing the development and implementation of efficient, reproducible \emph{workflows} for your projects.  Every project should (and can) be modular and fully automated, hence reproducible, portable and easily modified.  Rerunning a model under a different set of parameters should (and can) be as simple as a few keystrokes. Regenerating all analyses, figures and tables after finding a typo in your code or dataset should (and can) be painless.
+This course will help you with these challenges by practicing the development and implementation of 
+efficient, reproducible \emph{workflows} for your projects.  
+Every project should (and can) be modular and fully automated, hence reproducible, portable and easily 
+modified.  
+Rerunning an analysis with a different set of parameters should (and can) be as simple as a few 
+keystrokes. 
+Regenerating all figures and tables for your manuscript after finding a typo in your code or dataset 
+should (and can) be painless.
 
-Efficient workflows start at project conception and end only if the project idea is itself a dead end.  Thus, in this course, we'll work to practice (1) refining and articulating project ideas and goals, (2) creating modular and automated analyses, and (3) using best-practices in coding and project management. We'll learn how to use Git, GitHub, \LaTeX\, and Markdown.  The instructors will mostly use \textsf{R} within RStudio, but users of other programming languages and text editors are welcome and encouraged.  You will need either (1) a large unwieldy dataset and an end goal (e.g., reproducing someone else's analysis or visualization) or (2) a dynamical model or simulation (or sufficiently well-developed ideas for one).  The use of other people's data or published models is also encouraged, as needed.
+Efficient workflows start at project conception and end only if the project idea is itself a dead end.  
+Thus, in this course, we'll work to practice 
+(1) refining and articulating project goals and benchmarks, 
+(2) creating modular and automated analyses, and 
+(3) using best practices in coding and project management. 
+We'll learn how to use Git, GitHub, \LaTeX\,, Markdown, and High Performance Clusters.
+The instructors will mostly use \textsf{R} within RStudio, but users of other programming languages and 
+text editors are welcome and encouraged.  
+You will need either 
+(1) a dataset and a visualization or analysis goal, or 
+(2) a model or simulation (or sufficiently well-developed ideas for one).
+The use of other people's data or published models is also encouraged, as needed.
 
 \section*{Course Catalog Description}
-Theory and implementation of efficient, reproducible workflows -- including best-practices in scientific programming, project management, and collaboration --  for computational, analytical, and data-driven biological research.
+Theory and implementation of efficient, reproducible workflows -- including best practices in scientific 
+programming, project management, and collaboration --  for computational, analytical, and data-driven 
+biological research.
 
 \section*{Student Testimonials}
-A preliminary IB599 version of this course was taught by Ben Dalziel (with support from Mark Novak) in the Spring of 2019.  Student eSET scores for this course were 6.0 (versus the departmental median of 4.9) and 6.0 (versus the departmental median of 5.1) out of 6.0 points possible for ``the course as a whole'' and ``the instructor's contribution'' respectively. The following are excerpts of the feedback that was received via email and the eSET evaluations.
+We have taught two prior IB 599 versions of this course: Spring 2019 (2 \emph{cr.}) \& Fall 2020 (4 
+\emph{cr.}).
+Students ranged from $1^{st}$ year M.S. to $5^{th}$ year Ph.D. from across three colleges. 
+Student eSET scores were 6.0 and 6.0 in 2019 and 5.8 and 5.8 in 2020 for ``the course as a whole'' and 
+``the instructor's contribution'' respectively\footnote{By contrast, the department's median scores were 
+4.9 and 5.1 in Spring 2019, and 5.1 and 5.4 in Fall 2020, out of 6.0 points possible.}.
+The following are excerpts of the feedback that was received via email and the eSET evaluations.
 
 \begin{quote}
-	\emph{``I am of the opinion that this Analytical Workflow class is indispensable. Engaging in research comes with a massive deluge of papers, files, data, output, etc, and yet prior to this class I had never before been exposed to organizational ``best practices'' recommendations.''}
+	\emph{I am of the opinion that this Analytical Workflow class is indispensable. Engaging in research 
+	comes with a massive deluge of papers, files, data, output, etc, and yet prior to this class I had never 
+	before been exposed to organizational best practices recommendations.}
 \end{quote}
 \begin{quote}
-	\emph{``After taking the class, [...] I feel empowered to solve issues with my model on my own.''}
+	\emph{I started this course with nothing but raw data and anxiety, and I am leaving with code that 
+		works, a reproducible workflow, and the confidence and resources to press on.}
 \end{quote}
 \begin{quote}
-	\emph{``I'm so happy this class exists, and it was instrumental to much of the progress I've made this term.''}
+	\emph{I'm so happy this class exists, and it was instrumental to much of the progress I've made this 
+	term.}
 \end{quote}
 \begin{quote}
-\emph{``Ben and Mark helped turn a daunting task that I'd been putting off (my modeling chapter) into a well-organized reality! Five stars.''}
+\emph{Ben and Mark helped turn a daunting task that I'd been putting off [...] into a 
+well-organized reality! Five stars.}
 \end{quote}
 \begin{quote}
-	\emph{``This class has been extremely useful for the conceptual organization and technical execution of my research. Thank you for organizing and leading this class!''}
+	\emph{This class has been extremely useful for the conceptual organization and technical execution 
+	of my research. Thank you for organizing and leading this class!}
 \end{quote}
 \begin{quote}
-	\emph{``I really appreciate that you shared your experience and learning process with us (metacognitive reflection! best teaching practices!).''}
+	\emph{Who should take this course?  Anyone working on a project that uses coding or modeling.}
 \end{quote}
 \begin{quote}
-	\emph{``I wasn't experienced in R/Git or savvy about best practices in coding or reproducible workflows. Ben and Mark helped me structure my independent work and provided essential information about programs and best practices in coding.''}
+	\emph{I really appreciate that you shared your experience and learning process with us (metacognitive 
+		reflection! best teaching practices!).}
+\end{quote}
+\begin{quote}
+	\emph{After taking the class, [...] I feel empowered to solve issues with my model on my own.}
+\end{quote}
+\begin{quote}
+	\emph{It was reassuring and encouraging to be able to share feelings and experiences with my 
+	colleagues and have them validated, listen to their counsel, and know that I am not the only one 
+	facing these challenges.}
 \end{quote}
 
 
 \section*{Details}
 \begin{tabular}{rl}
 	\emph{Credits:}	&  4\\
-	\emph{Frequency:} & Annually (starting \st{2021} 2020)\\
-	\emph{Quarter:} & \st{Winter} Fall\\
+	\emph{Frequency:} & Annually\\
+	\emph{Quarter:} & Winter\\
 	\emph{Course times:} &  Tuesday \& Thursday 10:00-11:50am\\
 	\emph{Instructors:} & Mark Novak \& Ben Dalziel (of record alternating annually)\\
 	\emph{Prerequisites}: & Graduate standing, or by instructor permission\\
-	\emph{Location}: & TBD (likely ``remote'')
+	\emph{Enrollment cap}: & 18\\
 \end{tabular}
 
 \section*{Learning Outcomes}
@@ -85,35 +155,63 @@ After successful completion of this course, students will be able to:
 	\item Apply analytical workflows to advance their dissertation research.
 \end{enumerate}
 
+\section*{Course Philosophy}
+Our primary goal in this course is for students to develop more efficient research skills.  
+An important secondary goal is to have students make significant progress on their thesis work.  
+Our philosophy is that students can achieve both because our primary goal is best achieved by having 
+students practice new tools while working on their own research.
+
+\section*{Course Materials}
+For complete access to all teaching materials and learning resources, see\\
+\url{https://github.com/analyticalworkflows/TeachingMaterials}.
 
 \section*{Schedule}
 \begin{enumerate}[label=\bfseries Week \arabic*:,leftmargin=*,labelindent=1em]
 	\itemsep0em
-	\item Course organization \& Philosophy of workflows
-	\item Student workflow diagrams \& Project presentations
-	\item Project setup \& Version control (Git)
-	\item Team troubleshooting
-	\item Collaborative projects, management \& debugging (GitHub)
-	\item Coding best practices \& grammar
-	\item Visualization theory \& workflows
-	\item Writing notes, reports \& papers (\LaTeX, Markdown \& reference management)
-	\item Team troubleshooting
-	\item Project presentations
+	\item Course overview \& Philosophy\\
+				Structuring projects \& Version control with Git
+	\item Project proposals\\
+				Workflow diagrams
+	\item Coding best practices \\
+				Hack-a-thon
+	\item Git w/ GitHub (\emph{Project management \& collaboration})\\
+				Hack-a-thon
+	\item Typesetting with Markdown\\
+				Data visualization
+	\item Project progress presentations\\
+				Hack-a-thon
+	\item Faster computing (\emph{Vectorization \& parallel computing})\\
+				Hack-a-thon
+	\item Faster computing (\emph{High performance computing})\\
+				Hack-a-thon
+	\item Typesetting with \LaTeX\\\
+				Hack-a-thon
+	\item Project presentations\\
+				Project presentations \& Wrap-up
 \end{enumerate}
 
 
-
 \section*{Related courses at OSU}
-OSU's existing \emph{statistics} courses focus exclusivively on data visualization.
-Existing \emph{omics} courses introduce students to specific \emph{analysis pipelines} in particular programming environments, but do not address issues relating to project management as a whole.
+OSU's relevant statistics courses focus exclusively on data visualization.
+Existing omics and informatics courses introduce students to specific analysis 
+pipelines in particular programming environments and do not address issues relating to project 
+management as a whole.
 Existing courses are also not relevant to the many IB students pursuing non-\emph{omic} research.
 
-\noindent
-\textbf{ST 537 - Data Visualization} \emph{E-campus only}\\
-``Perceptual principles for displaying data; critique and improvement of data visualizations; use of color in visualization; principles of tidy data; strategies for data exploration; select special topics. \emph{Prerequisites: ST 512 or ST 517 or ST 552}''
-
+\vspace{1pc}
 \noindent
 \textbf{BB 485/585 - Applied Bioinformatics}\\
- \emph{Prerequisites: BB 314 or BB 314H}''
-``Fundamental concepts needed to understand the software and methods used in bioinformatics. Includes contemporary techniques such as databases, gene and genome annotations, functional annotations, sequence alignment, motif finding, secondary structure prediction, phylogenetic tree construction, high-throughput sequence data, ChIP-Seq peak identification, transcriptome profiling by RNA-Seq, microRNA discovery and target prediction.
+Fundamental concepts needed to understand the software and methods used in bioinformatics. Includes 
+contemporary techniques such as databases, gene and genome annotations, functional annotations, 
+sequence alignment, motif finding, secondary structure prediction, phylogenetic tree construction, 
+high-throughput sequence data, ChIP-Seq peak identification, transcriptome profiling by RNA-Seq, 
+microRNA discovery and target prediction.  \emph{Prerequisites}: BB 314 or BB 314H.
+
+\vspace{1pc}
+\noindent
+\textbf{ST 537 - Data Visualization} \emph{E-campus only}\\
+Perceptual principles for displaying data; critique and improvement of data visualizations; use of color in 
+visualization; principles of tidy data; strategies for data exploration; select special topics. 
+\emph{Prerequisites}: ST 512 or ST 517 or ST 552.
+
 \end{document}

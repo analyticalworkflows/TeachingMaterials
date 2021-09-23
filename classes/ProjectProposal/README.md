@@ -10,7 +10,7 @@ _None_
 ### To do (_before class_)
 - Send me a link to your repo.  (I will "fork" it -- make a copy of it -- on our AnalyticalWorkflow organization.)
 - Create a new _Issue_ (on the _forked_ copy of your repo) page titled _Project proposal_.
-- Create a slide presentation (PowerPoint, Keynote, whatever) to present (_by sharing your screen_).  _No more than **5 slides** (including title slide)!_
+- Create a slide presentation (PowerPoint, Keynote, whatever) to present.  _No more than **5 slides** (including title slide)!_
 
 ### Class structure
 We'll dedicate the whole class period to presentations.

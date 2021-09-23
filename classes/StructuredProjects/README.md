@@ -3,15 +3,16 @@
 This class is about adopting a "project mindset" to organizing the folders and files associated with your research.
 
 ### Required readings (_before class_)
-- Notes: [tex/StructuredProjects.pdf](tex/StructuredProjects.pdf)
+_Nothing_
+<!-- - Notes: [tex/StructuredProjects.pdf](tex/StructuredProjects.pdf) -->
 
 ### To do (_before class_)
 _Nothing_ (but see [Version Control with Git and Github - Part 1](../VersionControl_Git_part_1/README.md))
 
 ### Class structure
-- "Lecture" & discussion (_? min._)
-- _Break_ (_5 min._)
-- Self-analysis of your current project-structure practices (_~15 min._)
+- "Lecture" & discussion (_20 min._)
+- _Break_ (_10 min._)
+- Self-analysis of your current project-structure practices (_~15 min._), goals, and barriers
 - [Version Control with Git and Github - Part 1](../VersionControl_Git_part_1/README.md)
 
 

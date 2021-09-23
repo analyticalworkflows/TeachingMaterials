@@ -25,13 +25,13 @@ _Nothing_
 - [Git](https://git-scm.com/downloads) or [Git for Windows](https://gitforwindows.org/) (_required_)
 - [LaTex](https://www.latex-project.org/get/) (_required_)
 - Stand-alone Git GUI (e.g., [GitHub Desktop](https://desktop.github.com/), [Sourcetree](https://www.sourcetreeapp.com)) (_required_ if not using command-line)
-- Stand-alone LaTeX editor (e.g., [TeXstudio](http://texstudio.sourceforge.net)) or a more general editor (e.g., [Atom](https://atom.io)*) (_required_ if not using online editor)
+- Stand-alone LaTeX editor (e.g., [TeXstudio](http://texstudio.sourceforge.net)), MacTex(http://www.tug.org/mactex/) for Mac, or a more general text editor (e.g., [Atom](https://atom.io)*) (_required_ if not using online editor)
 
 *[suggested Atom packages](AtomConfig.md)
 
 #### Other software of potential interest
-- [Discord](https://discord.com) (_potential Zoom replacement_)
-- [LaTeXiT](https://www.chachatelier.fr/latexit/) (_stand-alone equation editor_)
+<!-- - [Discord](https://discord.com) (_potential Zoom replacement_) -->
+- [LaTeXiT](https://www.chachatelier.fr/latexit/) (_stand-alone equation editor, included with MacTex_)
 - [draw.io](https://app.diagrams.net) (_online workflow diagram app_)
 - [MDpreview](https://markdownlivepreview.com) (_online Markdown previewer_)
 

@@ -8,7 +8,7 @@ The most relevant folders are:
 - [readings](readings/) containing pdfs of the required and suggested readings.
 
 ## Questions and comments
-Please contact [benjamin.dalziel@oregonstate.edu](mailto:benjamin.dalziel@oregonstate.edu) (who's teaching the course this Fall 2021) and/or [mark.novak@oregonstate.edu](mailto:mark.novak@oregonstate.edu) (who co-created the course).  _Naturally, please send all Fall 2021 criticism to Mark._
+Please contact [benjamin.dalziel@oregonstate.edu](mailto:benjamin.dalziel@oregonstate.edu) (who's teaching the course this Fall 2021) and/or [mark.novak@oregonstate.edu](mailto:mark.novak@oregonstate.edu) (who co-created the course).  _Naturally, please send all Fall 2021 criticism to Mark!_
 
 ## Broken links
 If you find a broken link or typo, please create an _Issue_ to let us know where it is!

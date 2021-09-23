@@ -1,6 +1,6 @@
 # Analytical Workflows Teaching Materials
 
-This repo contains the teaching materials for IB516 Analytical Workflows taught at Oregon State University.
+This repo contains the teaching materials for IB 516 Analytical Workflows taught at Oregon State University.
 
 The most relevant folders are:
 - [course_info](course_info/) containing grading [rubrics](course_info/rubrics/) and the [course syllabus](course_info/syllabus/syllabus.pdf);

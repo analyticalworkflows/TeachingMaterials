@@ -11,8 +11,9 @@ _Nothing_
 ### Class structure
 - Welcome & Brief introductions
 - Course philosophy & Overview
-- Pairing up for [accountabilibuddies](https://neologisms.rice.edu/index.php?a=term&d=1&t=6534)
-- _Break_ (_5 min._)
+<!-- - Pairing up for [accountabilibuddies](https://neologisms.rice.edu/index.php?a=term&d=1&t=6534) -->
+- Pairing up for accountabilibuddies
+- _Break_ (_10 min._)
 - Software & account setup
 - Start creating [Project Proposals](../ProjectProposal) (_remaining time_)
 

@@ -24,7 +24,7 @@ _Nothing_
 #### Software
 - [Git](https://git-scm.com/downloads) or [Git for Windows](https://gitforwindows.org/) (_required_)
 - [LaTex](https://www.latex-project.org/get/) (_required_)
-- Stand-alone Git GUI (e.g., [Sourcetree](https://www.sourcetreeapp.com)) (_required_ if not using command-line)
+- Stand-alone Git GUI (e.g., [GitHub Desktop](https://desktop.github.com/), [Sourcetree](https://www.sourcetreeapp.com)) (_required_ if not using command-line)
 - Stand-alone LaTeX editor (e.g., [TeXstudio](http://texstudio.sourceforge.net)) or a more general editor (e.g., [Atom](https://atom.io)*) (_required_ if not using online editor)
 
 *[suggested Atom packages](AtomConfig.md)

@@ -56,39 +56,12 @@ By project mindset, I mean that (almost) everything associated with a given proj
 I do still use a combination of \texttt{Git} and \texttt{Dropbox} to organize my projects based on my plans for projects\footnote{For example, whether I plan to make the entire project publicly available.} and collaboraton needs, but within each of \texttt{Dropbox} and \texttt{Git} I have my project folders organized within a master folder.\footnote{Note that you're asking for trouble if you put a \texttt{Git} folder within your \texttt{Dropbox} or \texttt{GoogleDrive} folder, or vice versa.}
 
 All that said, defining ``a project'' can get difficult (esp. within your thesis work), so a fair bit of forethought is often needed.
-We'll definitely talk about this as a group in class.
-It's not trivial, but becomes quicker with time and seeing what others do.
+We'll definitely talk about this as a group in class. It's not trivial, but becomes quicker with time and seeing what others do.
 
-\begin{ben}
-	\textit{Ben adds:}
-		I also use project mindset to organize my folders.
-		Something I like about project mindset is that it encourages what you might call \emph{deliverables-based} thinking.
-		By identifying and naming the "definitely doing this" projects, I am encouraged to consider my priorities, both within and among projects.
-
-		For each project I am forced to think clearly about what the project is fundamentally about by having to name the folder.
-		Asking "what should this project folder (or Git repo) be called?" (and insisting on an \emph{informative name})\footnote{Naming conventions are something we'll come back to when we talk about good coding practices.}
-		is pretty close to asking "what is this project about?"
-		So a project mindset supports clear thinking.
-
-		I also find that a project mindset promotes better time management.
-		For instance, all my project folders are contained within three superfolders: Active, Complete and Archive.
-		The folders within Complete are named with dates and brief titles of publication.
-		The Active folder contains stuff I am working on right now, that has not "shipped" yet.
-		Archive is for stuff that is on the back-burner.
-
-		In this setup, the project folders within the Active folder - each with a name that reminds me of the objective for that project - becomes a kind of high-level to-do list.
-		The goal is to be able to one day drag those folders from Active to Complete.
-		Crucially, if the Active folder gets too full, I know I will not be able to do succeed in moving project folders because my attention has become too divided.
-		So then I ask myself which are the most important few projects to me, and drag the rest to the Archive folder.
-		It's not that I can't do them later.
-		It is just recognizing that (a) they are not done yet, and (b) they are not the first, second or even third priority.
-		If both (a) and (b) are true, into the Archive folder they go!
-		OK, back to Mark, and the structure of an individual project folder.
-\end{ben}
-
-
-
-
+Project mindset also encourages what you might call \emph{deliverables-based} thinking. By identifying and naming the "definitely doing this" projects, I am encouraged to consider my priorities. For each project I am forced to think clearly about what the project is fundamentally about by having to name the folder. Asking "what should this project folder (or Git repo) be called?" (and insisting on an \emph{informative name})\footnote{Naming conventions are something we'll come back to when we talk about good coding practices.} is pretty close to asking "what is this project about?"
+		
+I also find that a project mindset promotes better time management. For instance, all my project folders are contained within three superfolders: Active, Complete and Archive. The folders within Complete are named with dates and brief titles of publication. The Active folder contains stuff I am working on right now, that has not "shipped" yet. Archive is for stuff that is on the back-burner. In this setup, the project folders within the Active folder - each with a name that reminds me of the objective for that project - becomes a kind of high-level to-do list. The goal is to be able to one day drag those folders from Active to Complete. Crucially, if the Active folder gets too full, I know I will not be able to do succeed in moving project folders because my attention has become too divided. So then I ask myself which are the most important few projects to me, and drag the rest to the Archive folder. It's not that I can't do them later. It is just recognizing that (a) they are not done yet, and (b) they are not the first, second or even third priority. If both (a) and (b) are true, into the Archive folder they go!
+	
 \section{Structuring your Project folder / Repository} \label{projectfolder}
 
 For most projects, within each project folder, I usually have the following sub-folders:
@@ -111,10 +84,6 @@ The contents of \texttt{figs} differs from the rough-and-dirty figures I save in
 Sometimes \texttt{tables} get their own folder.
 Within \texttt{code} I might have an \texttt{R} and a \texttt{Mathematica} folder, as relevant.
 Note that \texttt{data} contains both the untouched original data\footnote{Leaving your original data as untouched as possible is something we'll come back to during Coding Best Practices} and the clearly-identified cleaned or otherwise derived data (for ease of subsequent access).
-
-\begin{ben}
-	\textit{Ben says}: My sub-folder structure is similar, with variations depending on the project and preferences. For example, my reference manager of choice keeps all my pdfs in one place, so instead of having a pdfs folder in each project folder, I have "folders" for each project within my reference manager. Either way, the same goal is achieved: a logical hierarchical structure that makes it easy to find and keep the various pieces of a project. Back to you Mark.
-\end{ben}
 
 Most of the time when using \texttt{Git} you'll have one \emph{repository} associated with each one of your \emph{projects}.  A \emph{repository} is thus synonymous with a \emph{project folder}.  When using \texttt{Git} you'll also have a few other files within the repository: a \texttt{README.md} file and a \texttt{.gitignore} file.  If you're using \texttt{R-Studio} in combination with \texttt{Git} (as we will in this course), then you may also have an \texttt{.Rproj} file in the repository.  It's good practice to have a \texttt{README.md} file in each of the ``important'' folders, describing what in them.
 

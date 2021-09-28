@@ -17,14 +17,14 @@ _Nothing_
   *   What are you going to change about how you structure projects?
 * _Break_ (_10 min._)
 * [Implementation & Team troubleshooting](classes/Implementation) (_45 min._)
- * Catchup / verify:  
-   * Sign up for a Github account
-   * Send user name to benjamin.dalziel@oregonstate.edu
-   * Install Git on your computer
-   * Download a Github GUI such as Github Desktop
- * Prepare for project presentations next class (_20 min._)
-   * Create a public repo for your project on Github, clone it to your computer (or the other way around)
-   * Work on your project presentation
+  * Catchup / verify:  
+    * Sign up for a Github account
+    * Send user name to benjamin.dalziel@oregonstate.edu
+    * Install Git on your computer
+    * Download a Github GUI such as Github Desktop
+  * Prepare for project presentations next class
+    * Create a public repo for your project on Github, clone it to your computer (or the other way around)
+    * Work on your project presentation
 
 
 ### Further reading

@@ -11,7 +11,7 @@ _None_
 - Send me a link to your repo.  (I will "fork" it -- make a copy of it -- on our AnalyticalWorkflow organization.)
 - Create a new _Issue_ (on the _forked_ copy of your repo) page titled _Project proposal_.
 - Create a slide presentation (PowerPoint, Keynote, whatever) to present.  _No more than **5 slides** (including title slide)!_
-- Export slides to pdf, put them in your repo, and sync to Github by **9:50am on Thurday, Sept 30** 
+- Export slides to pdf, put them in your repo, and sync to Github by **9:50am on Thursday, Sept 30** 
 
 
 ### Class structure

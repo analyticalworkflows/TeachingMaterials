@@ -22,10 +22,10 @@ _Click on each topic to see each day's to-do's (incl. before-class required read
 | Wk |  Day | Date | Topic |
 |:-:|:-----:|:------|:------|
 |0 |  Th | 9/23    | [Course overview & philosophy](classes/Introduction) |
-|1 |  T  | 9/28    | [Structuring projects](classes/StructuredProjects) & [Git w/ GitHub - Part 1](classes/VersionControl_Git_part_1) |
+|1 |  T  | 9/28    | [Structuring projects](classes/StructuredProjects) & [Implementation & Team troubleshooting](classes/Implementation) |
 |  |  Th | 9/30    | [Project proposals](classes/ProjectProposal) |
 |2 |  T  | 10/5    | [Workflow diagrams](classes/WorkflowDiagrams)  |
-|  |  Th | 10/7    | [Implementation & Team troubleshooting](classes/Implementation) |
+|  |  Th | 10/7    | [Git w/ GitHub - Part 1](classes/VersionControl_Git_part_1) |
 |3 |  T  | 10/12   | [Coding best practices](classes/CodingBestPractices) |
 |  |  Th | 10/14   | [Implementation & Team troubleshooting](classes/Implementation) |
 |4 |  T  | 10/19   | [Git w/ GitHub - Part 2](classes/VersionControl_Git_part_2) |

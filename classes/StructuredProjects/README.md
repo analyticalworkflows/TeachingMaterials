@@ -23,8 +23,8 @@ _Nothing_
     * Install Git on your computer
     * Download a Github GUI such as Github Desktop
   * Prepare for project presentations next class
-    * Create a public repo for your project on Github, clone it to your computer (or the other way around)
-    * Work on your project presentation
+    * Create a public repo for your project on Github and clone it to your computer
+    * Work on your [Project proposal presentation](classes/ProjectProposal) 
 
 
 ### Further reading

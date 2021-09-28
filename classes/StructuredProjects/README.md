@@ -28,7 +28,7 @@ _Nothing_
 
 
 ### Further reading
-- [Noble 2009. A quick guide to organizing computational biology projects](../../readings/pdfs/Noble2009.pdf) (offers a slightly different approach)
-- [Marwick et al. 2018. Packaging Data Analytical Work Reproducibly Using R (and Friends)](../../readings/pdfs/Marwick2018.pdf) (offers a completely-bundled approach)
+- [Noble 2009. A quick guide to organizing computational biology projects](../../readings/pdfs/Noble2009.pdf) 
+- [Marwick et al. 2018. Packaging Data Analytical Work Reproducibly Using R (and Friends)](../../readings/pdfs/Marwick2018.pdf) 
 
 ***

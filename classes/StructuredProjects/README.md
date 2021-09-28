@@ -7,7 +7,7 @@ _Nothing_
 <!-- - Notes: [tex/StructuredProjects.pdf](tex/StructuredProjects.pdf) -->
 
 ### To do (_before class_)
-_Nothing_ (but see [Version Control with Git and Github - Part 1](../VersionControl_Git_part_1/README.md))
+_Nothing_
 
 ### Class structure
 * "Lecture" & discussion (_20 min._)

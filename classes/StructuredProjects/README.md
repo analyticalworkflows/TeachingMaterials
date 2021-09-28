@@ -10,10 +10,14 @@ _Nothing_
 _Nothing_ (but see [Version Control with Git and Github - Part 1](../VersionControl_Git_part_1/README.md))
 
 ### Class structure
-- "Lecture" & discussion (_20 min._)
-- _Break_ (_10 min._)
-- Self-analysis of your current project-structure practices (_~15 min._), goals, and barriers
-- [Version Control with Git and Github - Part 1](../VersionControl_Git_part_1/README.md)
+* "Lecture" & discussion (_20 min._)
+* Self-analysis of your current project-structure practices (_15 min._), goals, and barriers
+* Report back to group: (_10 min._)
+  *   What did you learn about how to support others in structuring projects? 
+  *   What are you going to change about how you structure projects?
+* _Break_ (_10 min._)
+- [Version Control with Git and Github - Part 1](../VersionControl_Git_part_1/README.md) (_20 min._)
+- Prepare for project presentations (_20 min._)
 
 
 ### Further reading

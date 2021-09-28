@@ -19,3 +19,5 @@ I want to start by getting people's reaction to this value proposition / problem
 1. Organize its files according to the prevailing conventions of your scholarly community
 2. **Maintain a clear separation of data, method, and output**, while unambiguously expressing the relationship between those three
 3. Specify the computational environment that was used for the original analysis.
+
+For us this distills to an organizational approach we call the [Project Mindset](.../.../classes/StructuredProjects/tex/]

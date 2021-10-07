@@ -27,6 +27,7 @@ The figures can be new or ancient (i.e. it doesn't matter what year they were pu
 - [Larson et al. 2017. Proving the value of visual design in scientific communication](../../readings/pdfs/Larson2017.pdf)
 - [Rolandi et al. 2011. A brief guide to designing effective figures for the scientific paper](../../readings/pdfs/Rolandi2011.pdf)
 - [Nunez, Anderton & Renslow. 2018. Optimizing colormaps with consideration for color vision deficiency to enable accurate interpretation of scientific data](../../readings/Nunez2018.pdf)
+- [Crameri et al. 2020. The misuse of colour in science communication](../../readings/pdfs/Crameri2020.pdf)
 
 
 ***

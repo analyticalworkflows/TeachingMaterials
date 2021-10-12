@@ -11,8 +11,9 @@ This class is about developing better coding practices, ranging from structuring
 _Nothing_
 
 ### Class structure
-- "Lecture" & discussion (_? min._)
-- _Break_ (_5 min._)
+- Matters arising (_15 min_)
+- "Lecture" & discussion (_20 min._)
+- _Break_ (_10 min._)
 - Self-analysis of your current practices (_~15 min._)
 - Pick an issue and (re)start your project's best-practice conventions (_remaining time_)
 

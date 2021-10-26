@@ -32,7 +32,7 @@ _Click on each topic to see each day's to-do's (incl. before-class required read
 |  |  Th | 10/21   | [Implementation & Team troubleshooting](classes/Implementation)  |
 |5 |  T  | 10/27   | [Typesetting with Markdown](classes/Typesetting_Markdown) |
 |  |  Th | 10/28   | [Data visualization](classes/Visualization) |
-|6 |  T | 11/2     | [Implementation & Team troubleshooting](classes/Implementation)  |
+|6 |  T | 11/2     | [Implementation & Team troubleshooting](classes/Implementation) (Ben will not be there) |
 |  |  Th  | 11/4   | [Project progress reports](classes/ProjectReport) |
 |7 |  T  | 11/9    | [Typesetting with LaTeX](classes/Typesetting_LaTeX)  |
 |  |  Th | 11/11   | _Veterans Day - no class_ |

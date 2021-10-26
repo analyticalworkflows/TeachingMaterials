@@ -15,7 +15,7 @@ _Nothing_
 ### Class structure
 - Create/format your GitHub READMEs (or data-folder meta-data files) using at least 4 of the elements summarized in [Markdown in 3 minutes](https://github.com/scholmd/scholmd/wiki/Learn-markdown-in-3-minutes) (_40 min._)
 - Create a barebones report using knitR in RStudio using [R Markdown Quick tour](https://rmarkdown.rstudio.com/authoring_quick_tour.html) or an RStudio R Markdown template* (_40 min._ but see note in next bullet)
-- If you are already an experienced RMarkdown user, an alternative exercise is to construct a Jupyter notebook to display equations on Github. A shortcoming of Github markdown is that it cannot display equations using a LaTeX-like language. An example notebook is [here](../Typesetting_Markdown/displaying_equations_on_github/Rendering equations to display in Github.ipynb)
+- If you are already an experienced RMarkdown user, an alternative exercise is to construct a Jupyter notebook to display equations on Github. A shortcoming of Github markdown is that it cannot display equations using a LaTeX-like language. An example notebook is [here](../Typesetting_Markdown/displaying_equations_on_github/)
 - Back to your choice of [Implementation & Team troubleshooting](../Implementation/README.md) (_remaining time_)
 
 

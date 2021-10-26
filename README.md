@@ -32,13 +32,13 @@ _Click on each topic to see each day's to-do's (incl. before-class required read
 |  |  Th | 10/21   | [Implementation & Team troubleshooting](classes/Implementation)  |
 |5 |  T  | 10/27   | [Typesetting with Markdown](classes/Typesetting_Markdown) |
 |  |  Th | 10/28   | [Data visualization](classes/Visualization) |
-|6 |  T  | 11/2    | [Project progress reports](classes/ProjectReport) |
-|  |  Th | 11/4    | [Implementation & Team troubleshooting](classes/Implementation)  |
-|7 |  T  | 11/9   | [Typesetting with LaTeX](classes/Typesetting_LaTeX)  |
+|6 |  T | 11/2     | [Implementation & Team troubleshooting](classes/Implementation)  |
+|  |  Th  | 11/4   | [Project progress reports](classes/ProjectReport) |
+|7 |  T  | 11/9    | [Typesetting with LaTeX](classes/Typesetting_LaTeX)  |
 |  |  Th | 11/11   | _Veterans Day - no class_ |
 |8 |  T  | 11/16   | [Implementation & Team troubleshooting](classes/Implementation) |
 |  |  Th | 11/18   | [Faster computing](classes/FasterComputing)  |
 |9 |  T  | 11/23   | [Implementation & Team troubleshooting](classes/Implementation)  |
 |  |  Th | 11/25   | [Faster computing - Part 2](classes/FasterComputing) |
-|10|  T  | 11/30    | [Project presentations](classes/ProjectSummary) |
+|10|  T  | 11/30   | [Project presentations](classes/ProjectSummary) |
 |  |  Th | 12/2    | [Project presentations](classes/ProjectSummary) & [Wrap-up](classes/WrapUp) |

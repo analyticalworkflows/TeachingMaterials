@@ -30,7 +30,7 @@ _Click on each topic to see each day's to-do's (incl. before-class required read
 |  |  Th | 10/14   | [Implementation & Team troubleshooting](classes/Implementation) |
 |4 |  T  | 10/19   | [Git w/ GitHub - Part 2](classes/VersionControl_Git_part_2) |
 |  |  Th | 10/21   | [Implementation & Team troubleshooting](classes/Implementation)  |
-|5 |  T  | 10/27   | [Typesetting with Markdown](classes/Typesetting_Markdown) |
+|5 |  T  | 10/26   | [Typesetting with Markdown](classes/Typesetting_Markdown) |
 |  |  Th | 10/28   | [Data visualization](classes/Visualization) |
 |6 |  T | 11/2     | [Implementation & Team troubleshooting](classes/Implementation) (Ben will not be there) |
 |  |  Th  | 11/4   | [Project progress reports](classes/ProjectReport) |

@@ -305,4 +305,10 @@ Finally, to close your \texttt{ssh} session, use the \texttt{exit} command.
 		\end{tabular}
 \end{center}
 
+\section{Ben's 2021 thoughts that need to be incorporated}
+Just jotting these down after a quick read through. I also need to double check that these points aren't already covered above. 
+
+-apply may only be marginally faster than a for loop because it still uses R for loops under the hood. It comes at the cost of code that is harder to read and debug. When optimizing, it is important to focus attention on the lines that are slowing you down the most. Often it will be the case that most of the computing cost is in a few lines. The more general point is ``premature optimization is the root of all evil''. Don't try to optimize every line. Never try to develop optimized code from the beginning. 
+
+
 \end{document}

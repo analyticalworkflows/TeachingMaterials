@@ -82,6 +82,7 @@ Some of you might want to set up an editor to be used in git, for example:
 	\texttt{\$ git config --global core.editor atom}
 
 \noindent
+(replacing \texttt{atom} for the name of your editor).
 You can check to ensure that these commands went through and see what other things you might want to configure using
 
 \noindent
@@ -209,12 +210,28 @@ In the top-left corner you'll see a list of the staged files.
 Selecting one of the files will bring its contents up in the window below which highlights the text that has been added (in green) and removed (in red).
 Select all the files you want to commit, stage them, add a commit message to the top-right window, and commit.
 You've now updated your local respository.
-
-How to write good commit messages is a topic unto itself!  For now, the only thing we'll say is that a properly-formed \texttt{Git} commit subject line should always be able to complete the following sentence:  If applied, this commit will \emph{your subject line here}.\footnote{Every commit message must at minimum have a ``subject line''.  In fact, the subject line could be the only thing in your message.  However, you can also write a whole lot more if you'd like, a paragraph even, by adding a blank second line between the subject line and the rest of your message.  For a great post on writing commit messages, see \url{https://chris.beams.io/posts/git-commit/}.}
-
 Clicking on \texttt{History} (top-left) will show you all your past commits.
 
-\textbf{Remember, ``\emph{commit early, commit often}'' and provided concise and informative commit messages (Fig.~\ref{fig:commit_messages}).}
+How to write good commit messages is a topic unto itself!  
+For now, the only things we'll say are 
+\begin{enumerate}
+	\item that a properly-formed \texttt{Git} commit subject line should always 
+	complete the following sentence:  
+``If applied, this commit will \emph{your subject line here...}''\footnote{Every 
+commit 
+message must at minimum have a ``subject line''.  
+In fact, the subject line could be the only thing in your message.  
+However, you can also write a whole lot more if you'd like, a paragraph even, 
+by adding a blank second line between the subject line and the rest of your 
+message.  
+For a great post on writing commit messages, see 
+\url{https://chris.beams.io/posts/git-commit/}.};
+	\item capitalize the first word; and
+	\item don't use a period at the end of the sentence.	
+\end{enumerate} 
+
+\textbf{Remember, ``\emph{commit early, commit often}'' and provided concise 
+and informative commit messages (Fig.~\ref{fig:commit_messages}).}
 
 The final thing to do (not necessarily following each commit) is to \texttt{Push} 
 your commit to \texttt{GitHub}.
@@ -224,8 +241,11 @@ machine.
 To reduce the likelihood of creating conflicts, \emph{always} pull before you start making edits, commit and push.
 There are of course ways of dealing with conflicts and merging files (that will arise if collaborator(s) are working on the same file, for example), but pulling first will do a lot to avoid unneccessary hassle.\footnote{We'll learn about merging and conflict resolution later in the course.}
 
+\
 So again, our basic recipe is:
-\emph{pull, create/edit, stage,commit, push, repeat.}
+\begin{center}
+	\textbf{\emph{pull, create/edit, stage,commit, push, repeat.}}
+\end{center}
 
 \begin{figure}[!h]
 	\centering
@@ -234,7 +254,7 @@ So again, our basic recipe is:
 	\label{fig:commit_messages}
 \end{figure}
 
-
+\clearpage
 
 \includepdf{../reference/git_cheat_sheet.pdf}
 

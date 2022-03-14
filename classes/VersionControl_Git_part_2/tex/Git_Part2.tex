@@ -103,7 +103,11 @@ You can also do it within \texttt{RStudio} and on \texttt{GitHub}.
 To create a branch using command-line, type \texttt{\$git checkout -b \emph{branchname}}.
 \texttt{Git} will not duplicate any of your files, but it will keep track of all changes made within the branch (when you commit them to the branch).
 If you add, edit, or remove files (and commit) while your on your feature branch, those changes will not appear in your master branch (and vice versa).
-Thus, if you were to add a file while in your feature branch and were then to switch back to the master branch (using your \texttt{Git} GUI, RStudio, or \texttt{\$git checkout master}\footnote{Note that the \texttt{-b} used previously was only to create the new branch; you don't use it to switch to an existing branch.}), you wouldn't see that new file your project directory.
+Thus, if you were to add a file while in your feature branch and were then to 
+switch back to the master branch (using your \texttt{Git} GUI, RStudio, or 
+\texttt{\$git checkout master}\footnote{Note that the \texttt{-b} used previously 
+was only to create the new branch; you don't use it to switch to an existing 
+branch.}), you wouldn't see that new file in your project directory.
 
 The best way to think about your \emph{master} branch is the way a software developer would:
 the master branch contains your clean, functioning, usable software (or as close as you are to developing it).
@@ -164,7 +168,7 @@ For command-line, use \texttt{\$git merge \emph{feature branch}} and then commit
 Remember:  If you're working collaboratively, make sure your local copy of the master branch is up-to-date by doing a \emph{Pull} from \texttt{GitHub} before attempting to merge (as you did before creating the feature branch).
 That will help a lot to reduce merge conflicts\footnote{Just like being clear with your collaborator regarding what sections you're working on so that they don't work on the same sections (though this isn't a fundamental problem).}.
 
-Now, something to consider before you merge branches is your merging pattern.
+Something to consider before you merge branches is your ``merging pattern''.
 The most obvious pattern is to merge your feature branch into your master branch.
 That's the quickest, and introduces little risk when you're working solo or when you're adding new files that are unlikely to entail merge conflicts.
 The alternative to consider (especially in collaborative settings) is to merge the master branch into your feature branch, test that everthing works, then merge the updated feature branch back into the master.
@@ -174,7 +178,9 @@ The disadvantage of this second merge pattern is that it takes an extra step and
 An alternative that solves this problem is \emph{rebasing}, but that comes with other potential challenges.\footnote{\url{https://git-scm.com/book/it/v2/Git-Branching-Rebasing}}
 
 When there are no conflicts, \texttt{Git} will simply amalgamate\footnote{fanciest sounding synonym for merge I can think of} the two branches.
-If you're happy with the result (which you certainly should be if you've followed the second merge pattern), then you can delete the feature branch (e.g., \texttt{\$git branch -d \emph{branchname}}).
+If you're happy with the result (which you certainly should be if you've followed 
+the second merge pattern), then you can delete the feature branch (e.g., 
+\texttt{\$git branch -d \emph{branchname}}).  Or just leave it for posterity.
 
 \subsection{Resolving merge conflicts}
 
@@ -211,19 +217,26 @@ Once submitted, a Pull Request initiates a process in which \texttt{GitHub} comp
 
 Note that you can initiate a Pull Request at any point during your coding process, even if all you want to do is share screenshots or general ideas, or when you're stuck and need an additional brain to think about the problem.
 Also, note that you can also continue to commit additional changes and push to the feature branch even after having initiated a Pull Request for it.
-\texttt{GitHub} will show include these additional commits in the Pull Request view, so you can go back-and-forth with your collaborators, commenting and making revisions, until you're ready to merge.
+\texttt{GitHub} will include these additional commits in the Pull Request, 
+so you can go back-and-forth with your collaborators, commenting and making 
+revisions, until you're ready to merge.
 
 
 
 \section{Forks vs. clones \& branches}
 
 Cloning your project is what you did at the very start of this class when you created your repository on \texttt{GitHub}, copied the url link to it, and then provided that link to \texttt{RStudio}, your \texttt{Git GUI}, or \texttt{Git} itself to initiate the copying of everything that was on \texttt{GitHub} onto your hard-drive.
-You could also have gone the other way:  create the \texttt{Git} repository on your hard-drive and then clone it to \texttt{GitHub}.
+You could also have gone the other way:  that is, you could have created the 
+\texttt{Git} repository on your hard-drive and then cloned it to \texttt{GitHub}.
 You can work on your project from multiple computers by cloning the repository to them.
 (Just remember to commit and push what you're working on on the first computer in order to pull and keep working on it on your second computer.)
 You are the owner of that repository.
-Only you can pull and push to it unless you've granted permission for a collaborator to so\footnote{Go to the repository's \emph{Settings$>$Manage Access} in \texttt{GitHub}.}.
-In fact, whether public or private, you and your permission-granted collaborators are the only one that can do anything to the repository (such as create branches).
+Only you can pull and push to it unless you've granted permission for a 
+collaborator to do so\footnote{Go to the repository's \emph{Settings$>$Manage 
+Access} in \texttt{GitHub}.}.
+In fact, whether public or private, you and your permission-granted 
+collaborators are the only ones that can do anything within the repository
+(such as edit files or create branches).
 
 Forks are in many ways similar but are different from branches, and serve a different purpose.
 Anyone can fork a public repository.
@@ -231,7 +244,10 @@ When you fork someone's respository you create a copy of their repository over w
 A reason for doing that might be wanting to contribute to someone else's project (e.g., a consortium of biologists all contributing to the maintenance of a database, or a team of R-package developers).
 Or it might be that you want to use someone's project (or even one of your own old projects) as a starting point for your own new project.
 What forking does is maintain a connection between the parent repository and the  descendent repository (as opposed to simply copying files, the way you would do without \texttt{GitHub}).
-This permits the added convenience of being able to submit Pull Requests between forks, either to offer your improvements or additions to the parent repository, or to pull in added improvements or fixes to bugs that were identified subsequent to your having created the fork.
+This permits the added convenience of being able to submit Pull Requests 
+between forks, either to offer your improvements or additions to the parent 
+repository, or to pull in added improvements or bug fixes that were identified 
+subsequent to your having created the fork.
 Just as for branches, you issue a Pull Request using the ``Compare and Pull Request'' button, but this time you'll compare across forks rather than your internal branches.
 
 
@@ -293,11 +309,15 @@ Not surprisingly, that's true for research projects as well.
 However, when you're already using \texttt{Git} to keep track of the contents of your project, its tight integration with \texttt{GitHub} enables a few very nice conveniences to keep track of both the project and its management in one place.
 These features are useful not only in collaborative contexts but also when working solo.
 We'll touch on only two of them, and only by means of a barebones introduction.
-Other features include the ability to host project-specific websites\footnote{You can even use \texttt{GitHub} to host your own personal website.} and to create Wiki pages (which you could use as a lab notebook or to create a user manual).
+Other features include the ability to host project-specific websites\footnote{You 
+can even use \texttt{GitHub} to host your own website for free!} and to 
+create Wiki pages (which you could use as a lab notebook or to create a user 
+manual).
 
 
 \subsection{Issue tracking}
-By now you've undoubtedly already seen \texttt{GitHub}'s Issue tracking interface.
+By now you've undoubtedly already seen \texttt{GitHub}'s issue tracking 
+interface.
 The basics are pretty simple.
 Create a short, specific, informative and usefully-unique subject.
 Be concise and clear in your subsequent description of the issue.
@@ -317,12 +337,13 @@ There are a number of stand-alone apps that provide so-called Kanban boards for 
 The most basic setup entails three columns -- \emph{To do}, \emph{In Progress}, and \emph{Done}.
 When you have a new task that needs doing, you add a card to the \emph{To do} column, then move it over to the next column as your actions on it progress.
 
-In \texttt{GitHub} you can have multiple project boards per repository and use them for anything you'd use stand-alone Kanban app for.
+In \texttt{GitHub} you can have multiple project boards per repository and use 
+them for anything you'd use a stand-alone Kanban app for.
 In my mind the motivation to use \texttt{GitHub}'s project board feature is that
 (1) everything to do with your project is in one place (major downside being it's only online), and that
 (2) they integrate nicely with Issues.
 Assigning an issue to a project board will cause it to appear in the ``To do'' column.
-Closing the issue will move it to the ``Done'' column
+Closing the issue will move it to the ``Done'' column.
 You can set up your project board so that any newly-created issues are automatically added to the ``To do'' column.
 
 

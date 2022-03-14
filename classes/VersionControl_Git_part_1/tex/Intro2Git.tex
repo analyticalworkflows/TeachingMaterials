@@ -39,7 +39,7 @@ Backing-up is virtually implicit when you also use a networked (off-site) server
 
 We'll be using \texttt{Git} as our version control software.
 There are others out there (e.g., \texttt{Subversion}).
-We'll be using \texttt{Github} as our host.
+We'll be using \texttt{GitHub} as our host.
 There are others out there (e.g., \texttt{Bitbucket}).
 
 \section{Git}
@@ -49,15 +49,18 @@ Of course, we'll be using \texttt{Git} for much smaller, specific projects, thus
 We'll also interact with \texttt{Git} using GUIs (graphical user interfaces, e.g., \texttt{R-Studio}, \texttt{Sourcetree}) rather than command-line.
 
 
-\section{Github}
+\section{GitHub}
 \texttt{Git} stores a complete copy of the project on your local machine, including all its history and versions; no centralized server is necessary.
 However, if you want to collaborate with others, have multiple computers with which you'd like to work, or want to create true back-ups of your project, then you'll also want to use a server on which to host your repository.
 Fortunately, there are a number of free providers.
 
-For \texttt{Git}, the primary options are \texttt{Github} and \texttt{Bitbucket}.\footnote{I suggest creating accounts with both \texttt{Github} and \texttt{Bitbucket}.  I use them for different types of projects, e.g., public verus private, as needed.}
+For \texttt{Git}, the primary options are \texttt{GitHub} and 
+\texttt{Bitbucket}.
 The former is more developed (more bells and whistles), is currently more widely used, and is perhaps a little easier to work with.
 The two don't differ all that much except in one regard:  the number of free versus public repositories.
-While \texttt{Github} has a limit on the number of private repositories, \texttt{Bitbucket} has a limit on the number of collaborative projects (having more than 5 collaborators).
+While \texttt{GitHub} has a limit on the number of private repositories, 
+\texttt{Bitbucket} has a limit on the number of collaborative projects (having 
+more than 5 collaborators).
 (There are perks regarding the number of repositories you can have if you sign up using an academic email address.  See \url{https://help.github.com/en/articles/applying-for-an-educator-or-researcher-discount})
 
 
@@ -96,10 +99,17 @@ For more, or if you're using Windows, see\\
 \section{Repository setup}
 There are command-line methods for doing everything we're going to do below.
 Indeed, command-line is the default way to interact with \texttt{Git}.\footnote{See last page for a cheat sheet.}
-Instead, we're mostly going to make use of the tools made available through \texttt{Github}, starting with the very first step of initiating a repository and getting some minimal information associated with it.
-That is, rather than creating and setting up a repository on our computer by command-line and then connecting it to \texttt{Github}, we'll create and set up the repository on \texttt{Github} and then clone it to our local master folder of projects.
+Instead, we're mostly going to make use of the tools made available through 
+\texttt{GitHub}, starting with the very first step of initiating a repository and 
+getting some minimal information associated with it.
+That is, rather than creating and setting up a repository on our computer by 
+command-line and then connecting it to \texttt{GitHub}, we'll create and set up 
+the repository on \texttt{GitHub} and then clone it to our local master folder of 
+projects.
 
-Simply login to your \texttt{Github} account, click on ``New Repository'', and follow the instructions.\footnote{When doing so, be sure you're in your own user environment and not inside our Analytical Workflows organization.}
+Simply login to your \texttt{GitHub} account, click on ``New Repository'', and 
+follow the instructions.\footnote{When doing so, be sure you're in your own user 
+environment and not inside our Analytical Workflows organization.}
 These should include options for private vs. public (the latter is preferred for this class\footnote{If at all possible, please pick public (for this class) and switch to private afterwards.  Otherwise, please add me as a collaborator so I can see your repo.}), initializing with a \texttt{README.md} file (which you \emph{should} do), and adding a \texttt{.gitignore} file (which you \emph{should} also do).
 
 The \texttt{README.md} file in the main repo folder is the first file that anyone will see when they inspect your repository (assuming it's public).
@@ -111,7 +121,9 @@ Selecting \texttt{R} from the dropdown list will auto-populate a bunch of it for
 Later in the course, we'll also add the extensions for all the temporary files that \LaTeX\ produces when compiling.
 
 You should now see a new webpage -- your Repo page -- that shows you what's in your repository.
-For now it contains only the \texttt{.gitignore} and \texttt{README.md} files, the latter of which has its contents displayed.\footnote{There are actually other files in your folder as well, but their hidden by default.}
+For now it contains only the \texttt{.gitignore} and \texttt{README.md} files, the 
+latter of which has its contents displayed.\footnote{There are actually other files 
+in your folder as well, but they're hidden by default.}
 As I said earlier, there are a lot of bells-and-whistles at your fingertips here.
 We'll ignore them for now, but feel free to explore!
 You \emph{could} start dragging-in directories and files into your browswer view to add them to your repository, but we're \emph{not} going to do that.
@@ -134,13 +146,18 @@ or, if you're primarily going to be using this repository to keep track of an \t
 \section{R-Studio and Git GUIs}
 I use \texttt{Git} for both \texttt{R} and non-\texttt{R} (e.g.,  \texttt{Mathematica})-based projects.
 Only  \texttt{R-Studio} has integrated  \texttt{Git} functionality, so I use a visual  \texttt{Git} GUI client (e.g., \texttt{Sourcetree}) for some projects because I haven't yet bothered to memorize the  \texttt{Git} command-line commands.
-Since most of you are probably using \texttt{R}, it's probably worthwhile to use \texttt{R-Studio}'s \texttt{Git} integration feature.
+Since most of you are probably using \texttt{R}, it's probably worthwhile to start 
+off by using \texttt{R-Studio}'s \texttt{Git} integration feature.
+(Note, however, that \texttt{R-Studio} isn't able to do useful things, like 
+branching, which we'll cover later.  Therefore you'll still benefit from using a 
+\texttt{Git} GUI or learning the commands.)
 
 You'll first need to tell \texttt{R-Studio} that you have \texttt{Git} installed, so go to its Preferences, select \texttt{Git/SVN} and fill in the details: either click on the Help link or go to
 \url{http://r-pkgs.had.co.nz/git.html} to see what to do.
 
 Now create your ``project'' within  \texttt{R-Studio} by selecting ``New Project''.
-Select \texttt{Version Control: Checkout a project from...repository}, select \texttt{Git}, and fill in the details including the URL you got from \texttt{Github}.
+Select \texttt{Version Control: Checkout a project from...repository}, select 
+\texttt{Git}, and fill in the details including the URL you got from \texttt{GitHub}.
 The directory in which you place your repository should be your master folder.
 \texttt{R-Studio} will ``restart'' and then you'll be in your project (as evidenced by its name appearing in the top-right of the interface).
 Clicking on the \texttt{Files} tab will show you what's in the repository (which should, at present, be: \texttt{README.md}, \texttt{.gitignore} and the newly created \texttt{.Rproj} file).
@@ -160,7 +177,8 @@ The standard workflow is thus:
 \begin{enumerate}
 	\item Add or modify some files;
 	\item Stage the new or modified files;
-	\item Commit the changes (moving them from the Staging Area to the ``memory'' of the repository);
+	\item Commit the changed files (moving them from the Staging Area to the 
+	``memory'' of the repository);
 	\item Repeat.
 \end{enumerate}
 
@@ -171,14 +189,20 @@ The standard workflow is thus:
 \end{figure}
 
 Your motto for using \texttt{Git} should be ``\emph{commit early, commit often}''.
-Every time you add or remove something from your project (i.e. a file or a chunk of code), you want to commit those changes.
+Almost every time you add or remove something from your project (i.e. a file or 
+a chunk of code), you want to commit those changes.
 Ideally, each commit should correspond to a ``logical unit'', one that you are able to describe in a few words (e.g., ``Add function to perform resampling'').
 Choosing when to commit is quite important, especially when you're debugging code.
-For example, if you've discovered your code has two bugs then you should commit each one of the fixes seperately, not together.
+For example, if you've discovered your code has two bugs, then you should 
+commit each one of the fixes seperately, not together.
 That way you can undo either fix independently if, for example, you messed up in one of your fixes or your fix created a different bug somewhere else in your code.\footnote{We'll talk about using ``branches'' to reduce the incidence of problems down the road.}
 
-\texttt{Git}-GUIs provide visual interfaces for viewing your files, staging area, and commits.
-Within \texttt{R-Studio} (assuming you have your \texttt{R-Studio} project opened), looking at the \texttt{Git} tab will show you a list of all the files (and directories) that have been changed, removed or added to the project since the last time you committed.
+\texttt{Git} GUIs provide visual interfaces for viewing your files, staging area, 
+and commits.
+Within \texttt{R-Studio} (assuming you have your \texttt{R-Studio} project 
+opened), looking at the \texttt{Git} tab will show you a list of all the files (and 
+directories) that have been changed, removed, or added to the project since the 
+last time you committed.
 Clicking on the check-boxes associated with each file will add them to the staging area.
 Clicking on \texttt{Diff} or \texttt{Commit} will open up a new interface (the staging area).
 In the top-left corner you'll see a list of the staged files.
@@ -192,8 +216,11 @@ Clicking on \texttt{History} (top-left) will show you all your past commits.
 
 \textbf{Remember, ``\emph{commit early, commit often}'' and provided concise and informative commit messages (Fig.~\ref{fig:commit_messages}).}
 
-The final thing to do (not necessarily following each commit) is to \texttt{Push} your commit to \texttt{Github}.
-\texttt{Pull} does the opposite: bringing commits that have been saved to \texttt{Github} (by others, or by you on a different machine) to your local machine.
+The final thing to do (not necessarily following each commit) is to \texttt{Push} 
+your commit to \texttt{GitHub}.
+\texttt{Pull} does the opposite: bringing commits that have been saved to 
+\texttt{GitHub} (by others, or by you on a different machine) to your local 
+machine.
 To reduce the likelihood of creating conflicts, \emph{always} pull before you start making edits, commit and push.
 There are of course ways of dealing with conflicts and merging files (that will arise if collaborator(s) are working on the same file, for example), but pulling first will do a lot to avoid unneccessary hassle.\footnote{We'll learn about merging and conflict resolution later in the course.}
 

@@ -7,7 +7,7 @@ In this class we'll discuss the basics of Git and GitHub:  _pull_, _create/edit_
 
 ### To do (_before class_)
 - Install Git (see [Introduction](../Introduction/README.md))
-- Create an account on [Github](https://github.com)
+- Create an account on [GitHub](https://github.com)
 
 ### Class structure
 After finishing-up [Structuring Projects](../StructuredProjects/README.md), we'll use the remaining time for:

@@ -23,6 +23,7 @@ _Nothing_
 - [Wilson et al. 2014 Best practices for scientific computing](../../readings/pdfs/Wilson2014.pdf)
 - [Wilson et al. 2017 Good enough practices for scientific computing](../../readings/pdfs/Wilson2017.pdf)
 - [Balaban et al. 2021 Ten simple rules for quick and dirty scientific computing](../../readings/pdfs/Balaban2021.pdf)
+- [Filazzola et al. 2022 A call for clean code to effectively communicate science](../../readings/pdfs/Filazzola2022.pdf)
 
 ##### Filenames
 - [File Naming Guidelines - Minnesota Historical Society](https://www.mnhs.org/preserve/records/electronicrecords/erfnaming.php)

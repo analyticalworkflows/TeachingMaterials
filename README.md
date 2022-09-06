@@ -20,7 +20,7 @@ _Click on each topic to see each day's to-do's (incl. before-class required read
 
 **UNDER REVISION FOR FALL 2022 - SOME INFORMATINO BELOW MAY NOT YET BE UP TO DATE**
 
-| Wk |  Day | Date | Topic | Notes |
+| Wk |  Day | Date | Topic | Notes including Mark or Ben's absence |
 |:-:|:-----:|:------|:------|:--------------------|
 |0 |  Th | 9/22    | [Course overview & philosophy](classes/Introduction) |
 |1 |  T  | 9/27    | [Structuring projects](classes/StructuredProjects) |

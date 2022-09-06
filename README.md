@@ -10,7 +10,7 @@ The most relevant folders are:
 - [readings](readings/) containing pdfs of the required and suggested readings.
 
 ## Questions and comments
-Please contact [benjamin.dalziel@oregonstate.edu](mailto:benjamin.dalziel@oregonstate.edu) and/or [mark.novak@oregonstate.edu](mailto:mark.novak@oregonstate.edu) who co-created the course and are co-teaching it this term.
+Please contact [benjamin.dalziel@oregonstate.edu](mailto:benjamin.dalziel@oregonstate.edu) and/or [mark.novak@oregonstate.edu](mailto:mark.novak@oregonstate.edu), who co-created the course, and are co-teaching it this term. _As Ben is the instructor of record this year, naturally you should send all criticism to Mark :)_.
 
 ## Broken links
 If you find a broken link or typo, please create an _Issue_ to let us know where it is!
@@ -23,7 +23,7 @@ _Click on each topic to see each day's to-do's (incl. before-class required read
 | Wk |  Day | Date | Topic | Notes |
 |:-:|:-----:|:------|:------|:--------------------|
 |0 |  Th | 9/22    | [Course overview & philosophy](classes/Introduction) |
-|1 |  T  | 9/27    | [Structuring projects](classes/StructuredProjects) & [Implementation & Team troubleshooting](classes/Implementation) |
+|1 |  T  | 9/27    | [Structuring projects](classes/StructuredProjects) |
 |  |  Th | 9/29    | [Project proposals](classes/ProjectProposal) |
 |2 |  T  | 10/4    | [Workflow diagrams](classes/WorkflowDiagrams)  |
 |  |  Th | 10/6    | [Git w/ GitHub - Part 1](classes/VersionControl_Git_part_1) |
@@ -36,10 +36,10 @@ _Click on each topic to see each day's to-do's (incl. before-class required read
 |6 |  T | 11/1     | [Implementation & Team troubleshooting](classes/Implementation)|
 |  |  Th  | 11/3   | [Project progress reports](classes/ProjectReport) |
 |7 |  T  | 11/8    | [Typesetting with LaTeX](classes/Typesetting_LaTeX)  |
-|  |  Th | 11/10   | _Veterans Day - no class_ |
+|  |  Th | 11/10   | [Implementation & Team troubleshooting](classes/Implementation) |
 |8 |  T  | 11/15   | [Implementation & Team troubleshooting](classes/Implementation) |
 |  |  Th | 11/17   | [Faster computing](classes/FasterComputing)  |
 |9 |  T  | 11/22   | [Faster computing - Part 2](classes/FasterComputing)  |
-|  |  Th | 11/24   | _Thanksgiving - no class_ |
+|  |  Th | 11/24   | [Implementation & Team troubleshooting](classes/Implementation)
 |10|  T  | 11/29   | [Project presentations](classes/ProjectSummary) |
 |  |  Th | 12/1    | [Project presentations](classes/ProjectSummary) & [Wrap-up](classes/WrapUp) |

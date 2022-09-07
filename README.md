@@ -26,7 +26,7 @@ _Click on each topic to see each day's to-do's (incl. before-class required read
 |1 |  T  | 9/27    | [Structuring projects](classes/StructuredProjects) |
 |  |  Th | 9/29    | [Workflow diagrams](classes/WorkflowDiagrams) | Ben will lead
 |2 |  T  | 10/4    | [Project proposals](classes/ProjectProposal) |
-|  |  Th | 10/6    | [Git w/ GitHub - Part 1](classes/VersionControl_Git_part_1) |
+|  |  Th | 10/6    | [Git w/ GitHub - Part 1](classes/VersionControl_Git_part_1) | Mark will lead
 |3 |  T  | 10/11   | [Coding best practices](classes/CodingBestPractices) |
 |  |  Th | 10/13   | [Implementation & Team troubleshooting](classes/Implementation) |
 |4 |  T  | 10/18   | [Git w/ GitHub - Part 2](classes/VersionControl_Git_part_2) |

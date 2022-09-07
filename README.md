@@ -20,13 +20,13 @@ _Click on each topic to see each day's to-do's (incl. before-class required read
 
 **UNDER REVISION FOR FALL 2022 - SOME INFORMATION BELOW MAY NOT YET BE UP TO DATE**
 
-| Wk |  Day | Date | Topic | Notes |
+| Wk |  Day | Date | Topic | Lead |
 |:-:|:-----:|:------|:------|:--------------------|
 |0 |  Th | 9/22    | [Course overview & philosophy](classes/Introduction) |
 |1 |  T  | 9/27    | [Structuring projects](classes/StructuredProjects) |
-|  |  Th | 9/29    | [Workflow diagrams](classes/WorkflowDiagrams) | Ben will lead
+|  |  Th | 9/29    | [Workflow diagrams](classes/WorkflowDiagrams) | Ben
 |2 |  T  | 10/4    | [Project proposals](classes/ProjectProposal) |
-|  |  Th | 10/6    | [Git w/ GitHub - Part 1](classes/VersionControl_Git_part_1) | Mark will lead
+|  |  Th | 10/6    | [Git w/ GitHub - Part 1](classes/VersionControl_Git_part_1) | Mark
 |3 |  T  | 10/11   | [Coding best practices](classes/CodingBestPractices) |
 |  |  Th | 10/13   | [Implementation & Team troubleshooting](classes/Implementation) |
 |4 |  T  | 10/18   | [Git w/ GitHub - Part 2](classes/VersionControl_Git_part_2) |
@@ -35,11 +35,11 @@ _Click on each topic to see each day's to-do's (incl. before-class required read
 |  |  Th | 10/27   | [Data visualization](classes/Visualization) |
 |6 |  T | 11/1     | [Implementation & Team troubleshooting](classes/Implementation)|
 |  |  Th  | 11/3   | [Project progress reports](classes/ProjectReport) |
-|7 |  T  | 11/8    | [Typesetting with LaTeX](classes/Typesetting_LaTeX)  |
-|  |  Th | 11/10   | [Implementation & Team troubleshooting](classes/Implementation) |
+|7 |  T  | 11/8    | [Faster computing](classes/FasterComputing)  | Mark
+|  |  Th | 11/10   | [Faster computing - Part 2](classes/FasterComputing)  | Mark
 |8 |  T  | 11/15   | [Implementation & Team troubleshooting](classes/Implementation) |
-|  |  Th | 11/17   | [Faster computing](classes/FasterComputing)  |
-|9 |  T  | 11/22   | [Faster computing - Part 2](classes/FasterComputing)  |
+|  |  Th | 11/17   | [Typesetting with LaTeX](classes/Typesetting_LaTeX)  |
+|9 |  T  | 11/22   | [Implementation & Team troubleshooting](classes/Implementation) |
 |  |  Th | 11/24   | [Implementation & Team troubleshooting](classes/Implementation)
 |10|  T  | 11/29   | [Project presentations](classes/ProjectSummary) |
 |  |  Th | 12/1    | [Project presentations](classes/ProjectSummary) & [Wrap-up](classes/WrapUp) |

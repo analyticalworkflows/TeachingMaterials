@@ -24,8 +24,8 @@ _Click on each topic to see each day's to-do's (incl. before-class required read
 |:-:|:-----:|:------|:------|:--------------------|
 |0 |  Th | 9/22    | [Course overview & philosophy](classes/Introduction) |
 |1 |  T  | 9/27    | [Structuring projects](classes/StructuredProjects) |
-|  |  Th | 9/29    | [Project proposals](classes/ProjectProposal) |
-|2 |  T  | 10/4    | [Workflow diagrams](classes/WorkflowDiagrams)  |
+|  |  Th | 9/29    | [Workflow diagrams](classes/WorkflowDiagrams) |
+|2 |  T  | 10/4    | [Project proposals](classes/ProjectProposal) |
 |  |  Th | 10/6    | [Git w/ GitHub - Part 1](classes/VersionControl_Git_part_1) |
 |3 |  T  | 10/11   | [Coding best practices](classes/CodingBestPractices) |
 |  |  Th | 10/13   | [Implementation & Team troubleshooting](classes/Implementation) |

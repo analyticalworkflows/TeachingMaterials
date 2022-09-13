@@ -11,8 +11,7 @@ _Nothing_
 ### Class structure
 - Welcome & Brief introductions
 - [Course philosophy & Overview](https://github.com/analyticalworkflows/TeachingMaterials/tree/master/classes/Introduction/tex)
-<!-- - Pairing up for [accountabilibuddies](https://neologisms.rice.edu/index.php?a=term&d=1&t=6534) -->
-- Pairing up for accountabilibuddies
+- Pairing up for [accountabilibuddies](https://neologisms.rice.edu/index.php?a=term&d=1&t=6534)
 - _Break_ (_10 min._)
 - Software & account setup
 - Start creating [Project Proposals](../ProjectProposal) (_remaining time_)

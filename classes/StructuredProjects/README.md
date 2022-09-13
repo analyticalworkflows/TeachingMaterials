@@ -16,7 +16,7 @@ _Nothing_
   *   What did you learn about how to support others in structuring projects?
   *   What are you going to change about how you structure projects?
 * _Break_ (_10 min._)
-* [Implementation & Team troubleshooting](../classes/Implementation) (_45 min._)
+* [Implementation & Team troubleshooting](../Implementation) (_45 min._)
   * Catchup / verify:
     * Sign up for a Github account
     * Send user name to benjamin.dalziel@oregonstate.edu
@@ -24,7 +24,7 @@ _Nothing_
     * Download a Github GUI such as Github Desktop
   * Prepare for project presentations next class
     * Create a public repo for your project on Github and clone it to your computer
-    * Work on your [Project proposal presentation](../classes/ProjectProposal)
+    * Work on your [Project proposal presentation](../ProjectProposal)
 
 
 ### Further reading

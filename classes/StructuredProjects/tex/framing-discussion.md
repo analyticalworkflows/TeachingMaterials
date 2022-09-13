@@ -4,7 +4,7 @@ But instead we have this problem to contend with
 
 ![xkcd cartoon](https://github.com/analyticalworkflows/TeachingMaterials/blob/master/classes/StructuredProjects/tex/figs/xkcd_old_files.png)
 
-I want to start by getting people's reaction to this value proposition / problem statement. Do you buy it? How does this manifest in your work? 
+I want to start by getting people's reaction to this value proposition / problem statement. Do you buy it? How does this manifest in your work?
 
 [disccusion]
 
@@ -20,4 +20,4 @@ I want to start by getting people's reaction to this value proposition / problem
 2. **Maintain a clear separation of data, method, and output**, while unambiguously expressing the relationship between those three
 3. Specify the computational environment that was used for the original analysis.
 
-For us this distills to an organizational approach we call the [Project Mindset](classes/StructuredProjects/tex/StructuredProjects.pdf)
+For us this distills to an organizational approach we call the [Project Mindset](StructuredProjects.pdf)

@@ -19,7 +19,7 @@ _Nothing_
 * [Implementation & Team troubleshooting](../Implementation) (_45 min._)
   * Catchup / verify:
     * Sign up for a Github account
-    * Send user name to benjamin.dalziel@oregonstate.edu
+    * Send user name to us (whoever's the Instructor of Record)
     * Install Git on your computer
     * Download a Github GUI such as Github Desktop
   * Prepare for project presentations next class

@@ -20,4 +20,4 @@ I want to start by getting people's reaction to this value proposition / problem
 2. **Maintain a clear separation of data, method, and output**, while unambiguously expressing the relationship between those three
 3. Specify the computational environment that was used for the original analysis.
 
-For us this distills to an organizational approach we call the [Project Mindset](StructuredProjects.pdf)
+For us this distills to an organizational approach we call the Project Mindset.

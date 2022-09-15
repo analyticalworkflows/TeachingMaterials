@@ -1,8 +1,6 @@
 # Faster Computing
 
-Sometimes it's nice to have code that takes a long time to run; it feels like you're working even when you're not!  But most of the time it's really useful when you can speed up code so that it takes seconds intead of minutes, or minutes instead of hours, or hours instead of days.  Although most of the time faster computing can be achieved by tackling the problem in a more efficient manner, sometimes it can't.
-
-In the next two classes, we'll step through a few of the options for faster computing, moving from the simplest forms of code efficiency to the use of computer clusters.  We'll also touch on ways to quantitatively assess and compare code performance.
+Now that we've learned the basics of parallel computing we're in position to make use of a high performance computing cluster (HPC).  Granted, you can make use of parallel computing on your personal computer too (by computing on two or more of its cores), but HPCs provide many more cores ('nodes') which are typically also individually much faster than your computer.  (Thus, even if you're not running code in parallel, it is often faster to run things on a single node of the cluster -- or in the cloud -- than on your computer.  Plus it frees you up to do other things with your computer!)
 
 
 ### Required readings (_before class_)
@@ -12,21 +10,7 @@ In the next two classes, we'll step through a few of the options for faster comp
 - Notes: [tex/FasterComputing-HPC.pdf](tex/FasterComputing-HPC.pdf)
 
 ### To do (_before class_)
-##### Class 1
-- Download [Rmd/FasterComputing.Rmd](Rmd/FasterComputing.Rmd) so you can follow along in class
-- Install the following R packages:
-	- microbenchmark
-	- ggplot2
-	- parallel
-	- doParallel
-	- foreach
-##### Class 2
-- Install the apps listed below
-- Ensure you can connect to OSU's VPN
-
-
-### Additional setup (Class 2)
-We'll be interacting with two servers in Class 2:
+We'll be interacting with two servers:
 - Cosine's _High Performance Cluster_ (HPC):   `yourONID@submit.hpc.oregonstate.edu`
 - Cosine's _RStudio_ in the cloud: [https://rstudio-1.cosine.oregonstate.edu](https://rstudio-1.cosine.oregonstate.edu)
 
@@ -54,9 +38,6 @@ We'll progress through methods as time allows.
 
 
 ### Further readings
-##### Apply functions
-- [DataCamp's tutorial on apply functions](https://www.datacamp.com/community/tutorials/r-tutorial-apply-family)
-
 ##### Parallel programming in R
 - [Peng's R Programming for Data Science - Parallel programming](https://bookdown.org/rdpeng/rprogdatascience/parallel-computation.html)
 - [Parallel package manual](https://stat.ethz.ch/R-manual/R-devel/library/parallel/doc/parallel.pdf)

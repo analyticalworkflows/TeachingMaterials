@@ -30,8 +30,6 @@ wy <- t(hy)
 
 
 # Empty plot
-par(fin = c(4,4))
-par(mai = c(0.1,0.1,0.1,0.1))
 plot(range(x), range(y),
      type="n",
      xlab="",
@@ -67,8 +65,6 @@ idx <- idx[idx>0]
 
 
 # Empty plot
-par(fin = c(4,4))
-par(mai = c(0.1,0.1,0.1,0.1))
 plot(range(x), range(y),
      type="n",
      xlab="",
@@ -79,12 +75,12 @@ plot(range(x), range(y),
 
 # Draw line segments for each commuting flow
 segments(hx[idx], hy[idx], wx[idx], wy[idx],
-         lwd = edge_width[idx],
-         col = edge_color[idx])
+         lwd = edge_width,
+         col = edge_color)
 
 ```
 
-And here is the whole workflow.
+That's better, but the internal stucture is still obscured by all the "ink" that's being drawn, even after we made it mostly transparent. There are so many lines on top of each other, that tranparency alone isn't enough to let them be distinguished. The next step is to use variable widths and colors to distinguish edges. We are interested in the pattern of the biggest flows, so lets map the flow volume and distance to colors.
 
 ```{r}
 
@@ -110,6 +106,7 @@ standardized_distance[is.na(standardized_distance)] <- 0
 
 
 # Specify red, green, blue and transparency channels for the edge colors
+# as functions of flow volume and distance
 red <- standardized_flow
 green <- standardized_distance
 blue <- 1 - standardized_flow 
@@ -144,3 +141,50 @@ segments(hx[idx], hy[idx], wx[idx], wy[idx],
          col = edge_color[idx])
 
 ```
+
+Look what was hiding in there! As a last step we will make a legend, by applying the same color mapping rules 
+we used on the plot to a grid of flow volumes.
+
+
+```{r}
+legendMinX <- 40
+legendMaxY <- 70
+legendWidth <- 12
+legendHeight <- 40
+legendXResolution <- 8
+legendYResolution <- 10
+maxEdgeWidth <-  18
+minEdgeWidth <- 0.1
+
+legendXSequence <- seq(legendMinX,legendMinX+legendWidth,length.out=legendXResolution)
+legendYSequence <- seq(legendMaxY-legendHeight,legendMaxY,length.out=legendYResolution)
+
+legendStandardizedDistanceSequence <- legendXSequence - min(legendXSequence)
+legendStandardizedDistanceSequence <- legendStandardizedDistanceSequence/max(legendStandardizedDistanceSequence)
+legendStandardizedFlowSequence <- legendYSequence - min(legendYSequence)
+legendStandardizedFlowSequence <- legendStandardizedFlowSequence/max(legendStandardizedFlowSequence)
+
+out <- expand.grid(legendXSequence,legendYSequence)
+legendX <- out[,1]
+legendY <- out[,2]
+
+out <- expand.grid(legendStandardizedDistanceSequence,legendStandardizedFlowSequence)
+legendStandardizedDistance <- out[,1]
+legendStandardizedFlow <- out[,2]
+
+legendRed <- legendStandardizedFlow
+legendGreen <- 1-legendStandardizedDistance
+legendBlue <- 1 - legendStandardizedFlow
+#legendAlpha <- (maxAlpha-minAlpha)*legendStandardizedFlow
+#legendAlpha <- legendAlpha - min(legendAlpha) + minAlpha
+legendAlpha <- 1
+
+legendCol = rgb(legendRed,legendGreen,legendBlue,legendAlpha)
+legendEdgeWidth <- legendStandardizedFlow*maxEdgeWidth + minEdgeWidth
+
+#segments(legendX,legendY,legendX,legendY,col=legendCol,lwd=legendEdgeWidth)
+
+plot(range(legendX),range(legendY),type="n",axes=FALSE,xlab="",ylab="")
+segments(legendX,legendY,legendX,legendY,col=legendCol,lwd=legendEdgeWidth)
+```
+Thicker lines with hotter colors correspond to more flow volume. The long distance flows go from green to yellow as volume increases, while the short distance flows go from blue to red.

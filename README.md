@@ -18,8 +18,6 @@ If you find a broken link or typo, please create an _Issue_ to let us know where
 ## Schedule
 _Click on each topic to see each day's to-do's (incl. before-class required reading and set-up)._
 
-**UNDER REVISION FOR FALL 2022 - SOME INFORMATION BELOW MAY NOT YET BE UP TO DATE**
-
 | Wk |  Day | Date | Topic | Lead |
 |:-:|:-----:|:------|:------|:--------------------|
 |0 |  Th | 9/22    | [Course overview & philosophy](classes/Introduction) | Ben

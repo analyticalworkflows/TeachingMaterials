@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1663624909 "/Users/benjamda/Git/TeachingMaterials/classes/Introduction/tex/Intro_slides.tex" "/Users/benjamda/Git/TeachingMaterials/classes/Introduction/tex/Intro_slides.pdf" "Intro_slides" 1663624910
+["pdflatex"] 1663624909 "/Users/benjamda/Git/TeachingMaterials/classes/Introduction/tex/Intro_slides.tex" "/Users/benjamda/Git/TeachingMaterials/classes/Introduction/tex/Intro_slides.pdf" "Intro_slides" 1663625861
   "/Users/benjamda/Git/TeachingMaterials/classes/Introduction/tex/Intro_slides.aux" 1663624910 5119 3455146ac24f010bf489fc74130cee1c ""
-  "/Users/benjamda/Git/TeachingMaterials/classes/Introduction/tex/Intro_slides.tex" 1663624908 6561 df7ddad589e3eb6042341c60e1ba4b4e ""
+  "/Users/benjamda/Git/TeachingMaterials/classes/Introduction/tex/Intro_slides.tex" 1663625860 6561 df7ddad589e3eb6042341c60e1ba4b4e ""
   "/usr/local/texlive/2015/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -197,16 +197,16 @@
   "Intro_slides.aux" 1663624910 5119 3455146ac24f010bf489fc74130cee1c ""
   "Intro_slides.nav" 1663624910 2813 63a8ebd86b02980a17298129de01e706 ""
   "Intro_slides.out" 1663624910 495 eee5b90a6a71a571962c840e267de77e ""
-  "Intro_slides.tex" 1663624908 6561 df7ddad589e3eb6042341c60e1ba4b4e ""
+  "Intro_slides.tex" 1663625860 6561 df7ddad589e3eb6042341c60e1ba4b4e ""
   "Intro_slides.toc" 1663624910 510 27856f81ddcffd574d17969f17a37970 ""
   "figs/phd101212s.png" 1663610440 83764 b755eba80299aed5c25f24d8d51b9ba0 ""
   (generated)
-  "Intro_slides.snm"
-  "Intro_slides.out"
-  "Intro_slides.aux"
-  "/Users/benjamda/Git/TeachingMaterials/classes/Introduction/tex/Intro_slides.log"
   "Intro_slides.log"
-  "Intro_slides.toc"
+  "/Users/benjamda/Git/TeachingMaterials/classes/Introduction/tex/Intro_slides.log"
+  "Intro_slides.out"
   "/Users/benjamda/Git/TeachingMaterials/classes/Introduction/tex/Intro_slides.pdf"
   "Intro_slides.pdf"
+  "Intro_slides.aux"
+  "Intro_slides.toc"
   "Intro_slides.nav"
+  "Intro_slides.snm"

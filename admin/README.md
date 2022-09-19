@@ -25,7 +25,7 @@ This folder contains more general information and notes relevant to the behind-t
 
 
 
-#### Week 0 email
+#### _Week 0 email_
 
 Hi everyone,
 

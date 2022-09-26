@@ -36,7 +36,7 @@ _Click on each topic to see each day's to-do's (incl. before-class required read
 |7 |  T  | 11/8    | [Faster computing - Part 1](classes/FasterComputing)  | Mark
 |  |  Th | 11/10   | [Implementation & Team troubleshooting](classes/Implementation) |
 |8 |  T  | 11/15   | [Faster computing - Part 2](classes/FasterComputing)  | Mark (Ben away)
-|  |  Th | 11/17   | [Implementation & Team troubleshooting](classes/Implementation) (Ben away) |
+|  |  Th | 11/17   | [Implementation & Team troubleshooting](classes/Implementation) | (Ben away)
 |9 |  T  | 11/22   | [Typesetting with LaTeX](classes/Typesetting_LaTeX)  | Mark
 |  |  Th | 11/24   | [Implementation & Team troubleshooting](classes/Implementation)
 |10|  T  | 11/29   | [Project presentations](classes/ProjectSummary) |

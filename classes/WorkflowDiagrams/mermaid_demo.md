@@ -2,9 +2,10 @@ Test the [mermaid](https://mermaid-js.github.io/mermaid/#/) syntax for making di
 
 ```mermaid
 
-graph TD;
+graph LR;
       A-->B;
       A-->C;
       B-->D;
       C-->D;
+      A-->D;
 ```

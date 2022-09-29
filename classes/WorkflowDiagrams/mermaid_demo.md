@@ -18,4 +18,15 @@ And here is some text after.
 
 Here is a sequence diagram:
 
+```mermaid
+sequenceDiagram
+    participant A as Ayesha
+    participant J as Jill
+    A->>J: Hello Jill, how are you?
+    activate J
+    J->>A: Great!
+    deactivate J
+```
+
+
 

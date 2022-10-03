@@ -18,7 +18,7 @@ After finishing-up [Structuring Projects](../StructuredProjects/README.md), we'l
 - Troubleshooting
 
 ### Exercise during class
-Working as one big group, with the instructor at the blackboard (or diagraming on the classroom computer), the instructor leads in doing the following challenge. **Draw a "box and arrow" diagram of a basic Git / Github workflow that has labels for the `following`: `local project files` on a computer in a `repository`, a `commit`, `push`, `fetch` (optional? `pull`, `branch`, 'fork') ** Then the instructor erases the diagram and each student draws their own (5-10 min). Then students can present their diagrams to the group for discussion, to surface any confusion or differences in interpretation, and to find good alternative ways of thinking about things that may 'click' for different people.
+Working as one big group, with the instructor at the blackboard (or diagraming on the classroom computer), the instructor leads in doing the following challenge. **Draw a "box and arrow" diagram of a basic Git / Github workflow that has labels for the `following`: `local project files` on a computer in a `repository`, a `commit`, `push`, `fetch` (optional? `pull`, `branch`, `fork`) ** Then the instructor erases the diagram and each student draws their own (5-10 min). Then students can present their diagrams to the group for discussion, to surface any confusion or differences in interpretation, and to find good alternative ways of thinking about things that may 'click' for different people.
 
 ### Further readings
 - [Blischak et al. 2016. A Quick Introduction to Version Control with Git and GitHub](../../readings/pdfs/Blischak2016.pdf)

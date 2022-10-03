@@ -11,8 +11,8 @@ In this class we'll discuss the basics of Git and GitHub:  _pull_, _create/edit_
 
 ### Class structure
 After finishing-up [Structuring Projects](../StructuredProjects/README.md), we'll use the remaining time for:
-- Discussion - what is Git? what is Github?
-- Exercise (see next section)
+- Brief discussion (10 min) - what is Git? what is Github?
+- Exercise (30 min - see next section)
 - (Re)starting your project's structure
 - Setup of your project repository
 - Troubleshooting

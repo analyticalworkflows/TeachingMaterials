@@ -6,7 +6,6 @@ The purpose of these mid-term progress reports is to help you (help each other) 
 _None_
 
 ### To do (_before class_)
-- create a new _Issue_ on your GitHub repo page titled _Project report_.
 - create a slide presentation (PowerPoint, Keynote, whatever) to present (_by sharing your screen_). _No more than **5 slides** (including title slide)!_
 
 ### Class structure
@@ -19,9 +18,7 @@ We'll dedicate the whole class period to presentations.
 4. summarize your achieved successes to date;
 5. summarize your main sticking points, failures, and anticipated challenges.
 
-**All observers** must go to the presenter's GitHub repo and add to the _Progress report_ issue as a comment:
-1. one (or more) compliments;
-2. a suggestion, of any form (_optional_).
+**Following each presentation there will be approximately 1 minute for comments from the group, while the next presenter is getting ready. Further feedback can be provided ad hoc during group discussions or outside of class. Acountibilibuddies will also provide each other feedback at the end of class, time allowing.**
 
 ### Rubric
 The rubric with which your presentation will be assessed is [here](../../course_info/rubrics/).

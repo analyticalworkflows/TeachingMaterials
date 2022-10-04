@@ -8,9 +8,9 @@ In order for us _and your classmates_ to support and help you, we need to know w
 _None_
 
 ### To do (_before class_)
-- Create a slide presentation (PowerPoint, Keynote, whatever) to present.  _No more than **5 slides** (including title slide)!_
-- Export slides to pdf, put them in your repo, and sync to Github by **9:50am on Tuesday, Oct 4** 
-- Send a link to your repo to Mark Novak (mark.novak@oregonstate.edu).  (Mark will "fork" it -- make a copy of it -- on our AnalyticalWorkflow organization.)
+- Create a slide presentation.  _No more than **5 slides** (including title slide)!_
+- Export slides to pdf.
+- Send to Mark Novak (mark.novak@oregonstate.edu).
 
 ### Class structure
 We'll dedicate the whole class period to presentations.

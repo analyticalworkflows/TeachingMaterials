@@ -15,20 +15,13 @@ Goal for today: help us help you.
 Rubric is posted
 	Comments or thoughts on rubric?
 
-~ 3 min for follow-up questions
-
-All observers provide written feedback:
-	Got to person's repo by
-		each repo is forked to our AW organization
-		go to organization home
-		click on parent link
-		click on Issue > ProjectProposal
+~ 1 min for follow-up questions
 
 ~~~~~~~
 
-10 presentations @ 6 min each
+11 presentations @ 6 min each
 
-10 min at start, 5 min at end, 5 min break => 110min - 20 min = 90 min => 9 min each total
+10 min at start, 5 min at end, 5 min break => 110min - 20 min = 90 min => 8.5 min each total
 
 ½ way = ~45 min => 11:05am break
 
@@ -36,6 +29,4 @@ All observers provide written feedback:
 
 After presentations:
 
-Comments or thoughts on rubric?
-
-Additional questions about Git?
+Accountabilibuddy discussion at end, time-permitting.

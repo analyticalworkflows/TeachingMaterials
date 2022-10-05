@@ -1,17 +1,26 @@
-- Git: extra-work but...
+- Git and GitHub are not the same!
+	- Discuss what they are
+- Using Git is extra-work, but the benefits are...
 
-- Repo setup
-	- GitHub
+
+- Repo initializing using GitHub (rather than on local)
 		- public/private
+		- README
 		- .gitignore
-	- Demonstrate cloning using GUI (SourceTree) and RStudio (create package)
-	- Create R script (or edit README) to demonstrate:
-		- Staging
-		- Diffs
-		- Commit
-		- Push (Pull)
-
-If extra time
-	- Start adding files (not all at once!  use commits)
-	- Discuss project proposals
+		- license
+- Demonstrate cloning using:
+	- GUI (SourceTree or GitHub Desktop) 
+	- RStudio (create Project)
+- Create R script (or edit README) to demonstrate:
+	- Staging
+	- Diffs
+	- Commit
+	- Push & Pull
+- Editing .gitignore to deal with:
+	- Discussion of large data files
+		- Repo w/ non-Git out-of-directory folders (for big data)
+	- Discussion of public/private combination
+		- Repo w/ private nested repo (for manuscript or data)
+- Start adding files (not all at once!  Use commits)
+- Discuss student-specific issues
 	

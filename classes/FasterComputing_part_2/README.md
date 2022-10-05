@@ -4,10 +4,7 @@ Now that we've learned the basics of parallel computing we're in position to mak
 
 
 ### Required readings (_before class_)
-##### Class 1
-- Notes: [Rmd/FasterComputing.pdf](Rmd/FasterComputing.pdf)
-##### Class 2
-- Notes: [tex/FasterComputing-HPC.pdf](tex/FasterComputing-HPC.pdf)
+- Notes: [tex/FasterComputing-HPC.pdf](tex/FasterComputing_part_2.pdf)
 
 ### To do (_before class_)
 We'll be interacting with two servers:
@@ -24,28 +21,12 @@ You'll need to login to OSU's VPN before you'll be able to connect to OSU's serv
 _Note that OSU has upgraded its VPN to the one linked-to above.  You'll need to upgrade to the new client if you've used the old one before._
 
 ### Class structure
-##### Class 1
-We'll progress through methods as time allows.
-1) Benchmarking
-2) Vectorize it! (using R's apply()-family functions)
-3) Parallelize it! (using R's Parallel package)
-4) Profiling
-##### Classs 2
-5) RStudio Server Pro
-6) High Performance Clusters
+1) RStudio Server Pro
+2) High Performance Clusters
 	- Command-line (R or Mathematica or Matlab)
 	- Job submission
 
-
 ### Further readings
-##### Parallel programming in R
-- [Peng's R Programming for Data Science - Parallel programming](https://bookdown.org/rdpeng/rprogdatascience/parallel-computation.html)
-- [Parallel package manual](https://stat.ethz.ch/R-manual/R-devel/library/parallel/doc/parallel.pdf)
-- [CRAN Task View: High-Performance and Parallel Computing with R](https://cran.r-project.org/web/views/HighPerformanceComputing.html)
-
-##### Parallel programming in Mathematica
-- [Wolfram Parallel Tools]https://reference.wolfram.com/language/ParallelTools/tutorial/Overview.html
-
 ##### Using Cosine's HPC
 - [Cosine's HPC FAQ](https://cosine.oregonstate.edu/faqs/unix-hpc-cluster)
 

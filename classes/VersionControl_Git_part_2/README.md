@@ -24,7 +24,7 @@ Mix of demonstration and discussion and exercises for each topic:
 - [GitHub guides](https://guides.github.com) (_quick-start style_)
 - [GitHub manual - Collaboration features](https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests) (_forks_, _branches_, _pull requests_, _merge conflicts_, etc.)
 - [GitHub manual - Using Issues & Project boards](https://docs.github.com/en/github/managing-your-work-on-github)
-- [Atlassian - Git Rebase](https://www.atlassian.com/git/tutorials/rewriting-history/git-rebase)
+- [How to undo almost anything with Git](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/)
 - [Make your repo DOI-citeable](https://guides.github.com/activities/citable-code/)
 
 

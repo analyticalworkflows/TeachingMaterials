@@ -30,8 +30,8 @@ _Click on each topic to see each day's to-do's (incl. before-class required read
 |4 |  T  | 10/18   | [Git w/ GitHub - Part 2](classes/VersionControl_Git_part_2) | Mark
 |  |  Th | 10/20   | [Implementation & Team troubleshooting](classes/Implementation)  |
 |5 |  T  | 10/25   | [Typesetting with Markdown](classes/Typesetting_Markdown) | Ben
-|  |  Th | 10/27   | [Data visualization](classes/Visualization) | Ben
-|6 |  T | 11/1     | [Implementation & Team troubleshooting](classes/Implementation)|
+|  |  Th | 10/27   | [Implementation & Team troubleshooting](classes/Implementation)| (Ben away)
+|6 |  T | 11/1     | [Data visualization](classes/Visualization) | Ben
 |  |  Th  | 11/3   | [Project progress reports](classes/ProjectReport) |
 |7 |  T  | 11/8    | [Faster computing - Part 1](classes/FasterComputing_part_1)  | Mark
 |  |  Th | 11/10   | [Implementation & Team troubleshooting](classes/Implementation) |

@@ -38,6 +38,6 @@ _Click on each topic to see each day's to-do's (incl. before-class required read
 |8 |  T  | 11/15   | [Faster computing - Part 2](classes/FasterComputing_part_2)  | Mark (Ben away)
 |  |  Th | 11/17   | [Implementation & Team troubleshooting](classes/Implementation) | (Ben away)
 |9 |  T  | 11/22   | [Typesetting with LaTeX](classes/Typesetting_LaTeX)  | Mark
-|  |  Th | 11/24   | [Implementation & Team troubleshooting](classes/Implementation)
+|  |  Th | 11/24   | No class (Thanksgiving)
 |10|  T  | 11/29   | [Project presentations](classes/ProjectSummary) |
 |  |  Th | 12/1    | [Project presentations](classes/ProjectSummary) & [Wrap-up](classes/WrapUp) |

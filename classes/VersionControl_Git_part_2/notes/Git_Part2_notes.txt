@@ -26,14 +26,13 @@ Merging
 			Commit edits
 			Push
 	Show history in RStudio
-	[Don't delete branch if reverting later!]
+	[Don't delete branch if reversing later!]
 
-Revert (SourceTree)
+Undoing commit (SourceTree)
 	Reminder of stage then commit
+		Reverse commit
+		vs.
 		Revert uncommitted changes - "Reset to commit"
-	Getting file from old commit	
-		Demonstrate using 'test' branch (Terminal)
-		git checkout commitID dir/filename1
 	Going back to old commit
 		Diff between commits
 		Commit current files
@@ -41,6 +40,9 @@ Revert (SourceTree)
 		Branch off old commit
 		Merge final master commit into branch
 		Merge merged branch into master
+	Getting specific file from old commit	
+		Demonstrate using 'test' branch (Terminal)
+			git checkout commitID dir/filename1
 
 Forks
 Issue tracking

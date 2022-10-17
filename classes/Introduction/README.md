@@ -33,7 +33,7 @@ _Nothing_
 - [Git](https://git-scm.com/downloads) or [Git for Windows](https://gitforwindows.org/) (_required_)
 - [LaTex](https://www.latex-project.org/get/) (_required_)
 - Stand-alone Git GUI (e.g., [GitHub Desktop](https://desktop.github.com/), [Sourcetree](https://www.sourcetreeapp.com)) (_required_ if not using command-line)
-- General text editor, such as [Visual Studio Code](https://code.visualstudio.com/), or [Atom](https://atom.io) *but Atom is being discontinueed this year
+- General text editor such as [Visual Studio Code](https://code.visualstudio.com/)
 - Stand-alone LaTeX editor (e.g., [TeXstudio](http://texstudio.sourceforge.net)), MacTex(http://www.tug.org/mactex/) for Mac, or use your general text editor if it can be made "Latex-enabled" as Visual Studio Code can 
 
 #### Other software of potential interest

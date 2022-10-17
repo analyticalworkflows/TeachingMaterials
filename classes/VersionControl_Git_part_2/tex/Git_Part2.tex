@@ -484,48 +484,63 @@ the more targeted (and cleaner) your strikes to the past can be.
 
 
 
-\section{Project Management}
+\section{Project Management with \texttt{GitHub}}
 Everyone has their own ways of managing their life, keeping track of To-Do's, etc.
 Not surprisingly, that's true for research projects as well.
-However, when you're already using \texttt{Git} to keep track of the contents of your project, its tight integration with \texttt{GitHub} enables a few very nice conveniences to keep track of both the project and its management in one place.
+However, when you're already using \texttt{Git} to keep track of the contents of 
+your project, its tight integration with \texttt{GitHub} enables a few nice 
+conveniences to keep track of both the project and its management in one 
+place.
 These features are useful not only in collaborative contexts but also when working solo.
-We'll touch on only two of them, and only by means of a barebones introduction.
-Other features include the ability to host project-specific websites\footnote{You 
-can even use \texttt{GitHub} to host your own website for free!} and to 
-create Wiki pages (which you could use as a lab notebook or to create a user 
-manual).
+We'll touch on only two of them, and only by means of a bare bones 
+introduction.
+Other features include the ability to host project-specific websites
+\unskip
+\footnote{You can even use \texttt{GitHub} to host your own website for free!}
+ and to  create Wiki pages (which you could use as a lab notebook or to create 
+ a user manual).
 
 
 \subsection{Issue tracking}
-By now you've undoubtedly already seen \texttt{GitHub}'s issue tracking 
+By now you've undoubtedly already seen \texttt{GitHub}'s issue-tracking 
 interface.
 The basics are pretty simple.
-Create a short, specific, informative and usefully-unique subject.
+Create a short, specific, informative and usefully-unique subject header.
 Be concise and clear in your subsequent description of the issue.
 You can use \texttt{Markdown} to format your comment, and use \emph{Preview} to make sure it looks right before posting.
 When your issue is related to a previously-posted issue (even a closed one), link to it using \emph{$\#$issueID}.
 When applicable, tag your issue with a label.
 You can add to or edit the default labels to make them more useful for specific project.
-By assigning issues or using \emph{@mentions} in your comment, others will receive a notifcation (or email, if they're set up to receive them in their notification preferences).
+By assigning issues or using \emph{@mentions} in your comment, others will 
+receive a notification
+(or email, if they're set up to receive them in their notification preferences).
 When you close an issue, it's wise to reference the commit in which the fix was enacted.
 You can always reopen an issue.
-To see all closed issues in the list of issues, simply delete the default contents of the filter search (i.e. delete \emph{``is:open''}).
-If you've already setup a \emph{Project board}, you can also assign the issue to it.
+To see all closed issues in the list of issues, 
+simply delete the default contents of the filter search
+(i.e. delete \emph{``is:open''}).
+If you've already setup a \emph{Project board} (see next), 
+you can also assign the issue to it.
 
 
 \subsection{Project boards}
 There are a number of stand-alone apps that provide so-called Kanban boards for project management.
-The most basic setup entails three columns -- \emph{To do}, \emph{In Progress}, and \emph{Done}.
-When you have a new task that needs doing, you add a card to the \emph{To do} column, then move it over to the next column as your actions on it progress.
+The most basic setup entails three columns:
+\emph{To do}, \emph{In Progress}, and \emph{Done}.
+When you have a new task that needs doing, you add a card to the
+\emph{To do} column, 
+then move it over to the next column as your actions on it progress.
 
 In \texttt{GitHub} you can have multiple project boards per repository and use 
 them for anything you'd use a stand-alone Kanban app for.
 In my mind the motivation to use \texttt{GitHub}'s project board feature is that
-(1) everything to do with your project is in one place (major downside being it's only online), and that
-(2) they integrate nicely with Issues.
+(1) everything to do with your project is in one place
+(major downside being it's only online), and that
+(2) it integrates nicely with Issues.
 Assigning an issue to a project board will cause it to appear in the ``To do'' column.
 Closing the issue will move it to the ``Done'' column.
-You can set up your project board so that any newly-created issues are automatically added to the ``To do'' column.
+You can change the settings of your project board so that any newly-created 
+issue is automatically added to the ``To do'' column.
 
 
 \end{document}

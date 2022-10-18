@@ -1,11 +1,8 @@
 Questions about last time?
-
-Don't forget to:
-	- submit figures for visualization class
-	- feedback on rubric (half-way point of quarter is approaching fast!)
 ~~~~~~~~~~~
+Create sandbox repository (GitHub integration optional)
+
 Branching
-	Follow along demonstration
 		Create 'test' branch
 		Create 'test.R'
 		Inspect Diff
@@ -16,7 +13,6 @@ Branching
 		Switch between 'test' and 'master' and compare contents of Finder (i.e. Explorer)
 
 Merging
-	Follow along demonstration (RStudio & SourceTree)
 		No-conflict merge (no edits to 'master')
 			Merge branch into master
 		Conflict merge
@@ -25,14 +21,14 @@ Merging
 			Manual edit of conflict
 			Commit edits
 			Push
-	Show history in RStudio
+		Show history in RStudio
 	[Don't delete branch if reversing later!]
 
-Undoing commit (SourceTree)
+Undoing commit
 	Reminder of stage then commit
-		Reverse commit
-		vs.
-		Revert uncommitted changes - "Reset to commit"
+
+	Reverse vs.	Reset
+
 	Going back to old commit
 		Diff between commits
 		Commit current files
@@ -40,13 +36,16 @@ Undoing commit (SourceTree)
 		Branch off old commit
 		Merge final master commit into branch
 		Merge merged branch into master
+
 	Getting specific file from old commit	
 		Demonstrate using 'test' branch (Terminal)
 			git checkout commitID dir/filename1
 
 Forks
+
 Issue tracking
 	Showcase 'Stouffer & Novak'
+	
 Project boards
 	Showcase 'Analytical Workflows'
 

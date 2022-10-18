@@ -408,22 +408,39 @@ Just as for branches, you issue a Pull Request using the ``Compare and Pull Requ
 
 \section{Going back in time}
 
-We already talked about how easy it is to use \texttt{diff} to compare back to prior commits, or to compare any two commits in your repository's history.
-But what if you want to go back in time to revert to one of those previous commits?
+We've already talked about how easy it is to use \texttt{diff} to compare back to 
+prior commits, or to compare any two commits in your repository's history.
+But what if you want to go back in time to one of those previous commits?
 
-\subsection{Undoing commit(s)}
-If it's only your last commit that had an error in it that you want to undo, 
-you have a few options.
-In your GUI, you can  right-click on the last commit and select \texttt{Reverse 
-commit}.
-This won't delete the erroneous commit (as the following options do) but rather 
-will create a new commit that reverses whatever the last commit did.
-This is a good way to keep a full and clean (and linear) history of your project.
+\subsection{Revert}
+The safest way to undo things is to use \texttt{revert}.  
+This won't delete the erroneous commit(s) but rather 
+will create a new commit that reverses whatever the last commit(s) did.
+This is a good way to keep a full and clean (and linear) history of your branch.
+In command-line, use \texttt{git revert \textit{commitID}}.
+In most GUIs, you should be able to right-click on the commit you want to go 
+back to and select \texttt{Revert} or \texttt{Reverse commit}.
 
+\subsection{Reset}
+The reset function is a more dramatic way to undo commits.
+It is \textit{not} a good idea to use \texttt{reset} if you've already pushed the 
+commits to your remote on \texttt{GitHub}. 
+One reason is that you'll create problem if your collaborator has already pulled 
+and based their work on the commits that \texttt{reset} removed.
+That's because \texttt{reset} erases the removed commits from your local 
+history.
+Another reason is that \texttt{GitHub} will also not play as nice.
+The remote on \texttt{GitHub} will still have those locally-removed commits,
+so your local will end up being \textit{behind} the remote.
+That means that you'll be prompted to pull them back to your local in a never 
+ending loop (unless something else is done
+\unskip
+\footnote{That something is to \textit{force} the remote to reset by using
+	\texttt{git push -f <remote> <branch-name>} when you push after using 
+	\texttt{reset}.}).
 
-There are more dramatic things you can do by command-line using 
-\texttt{reset}:
-To undo the last commit completely, 
+If you're confident that you want to \texttt{reset}, you have a few options:
+Using command-line, to undo the last commit completely, 
 use \texttt{git reset --hard HEAD\^}.
 Changes that were made after the commit-before-last will be lost forever.
 To undo the last commit but keep your subsequently-changed files in the \emph{unstaged} state, use \texttt{git reset HEAD\^}.
@@ -443,20 +460,6 @@ For the latter you'll then be presented with three options:
 \emph{hard} will cause all changes that were made after the selected commit to  be lost forever.
 \emph{mixed} (the default) will keep all changed files in the \emph{unstaged} state.
 \emph{soft} will keep all changed files in the \emph{staged} state.
-Note that if there are commits pushed to \texttt{GitHub} (by a collaborator) that 
-you didn't first pull, those commits will ``come back'' the next time you pull.
-
-One thing to recognize when you're using \texttt{GitHub}:
-Your last push to \texttt{GitHub} is your final recovery scenario in that you can always delete your entire local repository and re-clone (Fig.~\ref{fig:gitreset}).
-Sometimes you end up messing things up enough to make that the easiest option.
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[width=0.5\linewidth]{figs/gitreset.png}
-	\caption{Solving errors in Git (source: \url{https://xkcd.com/1597/})}
-	\label{fig:gitreset}
-\end{figure}
-
 
 
 \subsection{Recapturing older commits}
@@ -481,6 +484,20 @@ The more frequently you commit
 (and the better you are at committing good ``units'' of change), 
 the more targeted (and cleaner) your strikes to the past can be.
 
+
+\subsection{The Nuclear Option}
+One thing to recognize when you're using \texttt{GitHub}:
+Your last push to \texttt{GitHub} is your final recovery scenario in that you can 
+always delete your entire local repository and re-clone (Fig.~\ref{fig:gitreset}).
+Sometimes you end up messing things up enough to make that the easiest 
+option.
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\linewidth]{figs/gitreset.png}
+	\caption{Solving errors in Git (source: \url{https://xkcd.com/1597/})}
+	\label{fig:gitreset}
+\end{figure}
 
 
 

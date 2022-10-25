@@ -20,9 +20,9 @@ _Nothing_
 
 
 ### Markdown Cheatsheets
-- [Syntax](https://github.com/analyticalworkflows/TeachingMaterials/blob/master/classes/Typesetting_Markdown/reference/markdown-cheatsheet-online.pdf)
-- [RStudio](reference/rmarkdown-cheatsheet-2.0.pdf)
-- [Guide](reference/rmarkdown-reference.pdf)
+- [Syntax](./reference/markdown-cheatsheet-online.pdf)
+- [RStudio](./reference/rmarkdown-cheatsheet-2.0.pdf)
+- [Guide](./reference/rmarkdown-reference.pdf)
 
 ### Resources
 - [kable](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) for creating Markdown tables in R

@@ -20,7 +20,7 @@ _Nothing_
 
 
 ### Markdown Cheatsheets
-- [Syntax]([reference/rmarkdown-cheatsheet-online.pdf](https://github.com/analyticalworkflows/TeachingMaterials/blob/master/classes/Typesetting_Markdown/reference/markdown-cheatsheet-online.pdf))
+- [Syntax]([reference/rmarkdown-cheatsheet-online.pdf](https://github.com/analyticalworkflows/TeachingMaterials/blob/master/classes/Typesetting_Markdown/reference/markdown-cheatsheet-online.pdf)
 - [RStudio](reference/rmarkdown-cheatsheet-2.0.pdf)
 - [Guide](reference/rmarkdown-reference.pdf)
 

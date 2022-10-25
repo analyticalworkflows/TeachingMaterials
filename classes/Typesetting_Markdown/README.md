@@ -43,11 +43,3 @@ Among many options..
 ### Tips \& tricks
 - Non-printed commenting is possible in Markdown:
 	 [//]: # followed by your comment
-
-- For inserting images into your Git readme:
-```html
-<br />
-<p align="center">
-  <a href="https://github.com/YOUR_REPO-HERE"
-    <img src="DIRECTORY/file_name.png" alt="FILE_NAME" width="IMAGE_WIDTH" height="IMAGE_HEIGHT">
-  </a>

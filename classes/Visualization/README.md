@@ -21,6 +21,7 @@ The figures can be new or ancient (i.e. it doesn't matter what year they were pu
 
 ### Additional resources
 - [The R Graph Gallery](https://www.r-graph-gallery.com)
+- [Color blindness simulator](https://daltonlens.org/colorblindness-simulator)
 
 ### Additional readings
 - Edward Tufte's classic [The Visual Display of Quantitative Information](https://www.edwardtufte.com/tufte/books_vdqi)

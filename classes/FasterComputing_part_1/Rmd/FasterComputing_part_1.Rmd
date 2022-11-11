@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 \section{Overview}
 
 Sometimes it's nice to have code that takes a long time to run; it feels like you're working even when you're not!
-But most of the time it's really useful when you can speed up code so that it takes seconds intead of minutes, or minutes instead of hours, or hours instead of days.
+But most of the time it's really useful when you can speed up code so that it takes seconds instead of minutes, or minutes instead of hours, or hours instead of days.
 Most of the time faster computing can be achieved by creativity.
 It's therefore wise to take the time to think of how you might achieve the same goal in a different manner, and to search online (e.g., \url{https://stackexchange.com}) for similar problems to see if others have solutions or inspirational ideas.
 If what you're trying to achieve requires a large number of steps, search CRAN (\url{https://cran.r-project.org}) to see if someone has created a package with useful functions.

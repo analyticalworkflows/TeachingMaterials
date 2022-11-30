@@ -20,6 +20,7 @@ The figures can be new or ancient (i.e. it doesn't matter what year they were pu
 - Discussion of published figures (~40 min.)
 
 ### Additional resources
+- [Color Oracle - Design for the Color Impaired](https://colororacle.org/usage.html)
 - [The R Graph Gallery](https://www.r-graph-gallery.com)
 - [Color blindness simulator](https://daltonlens.org/colorblindness-simulator)
 

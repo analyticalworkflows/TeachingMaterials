@@ -30,6 +30,7 @@ _Nothing_
 Among many options..
 - [https://markdownlivepreview.com](https://markdownlivepreview.com) cut-and-paste-style browser-based Markdown renderer
 - [https://stackedit.io](https://stackedit.io) fuller-fledged browser-based Markdown editor (analagous to [Overleaf](https://www.overleaf.com) for LaTeX)
+- [Quarto](https://quarto.org) open-source scientific and technical publishing system
 
 ### Additional resources
 - [Xie et al. R Markdown The definitive guide](https://bookdown.org/yihui/rmarkdown/)

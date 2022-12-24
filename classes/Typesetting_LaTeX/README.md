@@ -2,6 +2,12 @@
 If you find yourself writing papers (or appendices) with more than a few equations, or are creating large or many tables, you're gonna love using LaTeX.  But there are many other reasons to use it too, especially when using Git to version-control your manuscripts.  In this class we'll learn the basics of using LaTeX to write and typeset manuscripts.
 
 
+_"God may be subtle, but he is not malicious."_ - Albert Einstein
+
+_LaTeX, on the other hand, is_ both _ subtle and malicious._ - Russell Ham
+
+
+
 ### Required readings (_before class_)
 - Notes: [tex/Intro2LaTeX.pdf](tex/Intro2Latex.pdf) and associated [tex/Intro2LaTeX.tex](tex/Intro2Latex.tex)
 

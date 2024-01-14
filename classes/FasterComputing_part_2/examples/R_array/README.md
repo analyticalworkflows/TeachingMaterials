@@ -1,4 +1,4 @@
-ARRAY R SUBMISSION EXAMPLE
+ ARRAY R SUBMISSION EXAMPLE
 
 1. Copy the example to your home directory
 

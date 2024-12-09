@@ -7,7 +7,7 @@ This folder contains more general information and notes relevant to the behind-t
 -  Update main README (contact info, etc.)
 -  Update Canvas page
 -  Update Introduction Beamer slides
--  Setup Discord server (if teaching remote)
+-  Clean up Issues
 
 ### After start of quarter:
 - Email students' ONID ID's to COSINE to create HPC accounts
@@ -15,7 +15,7 @@ This folder contains more general information and notes relevant to the behind-t
 - Fork students' repos to Organization
 
 ### At end of quarter:
-- Organize/summarize student feedback
+- Organize/summarize student feedback to GitHub issues
 - Create new "Release" tag for the year
 - Delete students' repo forks
 
@@ -29,18 +29,22 @@ This folder contains more general information and notes relevant to the behind-t
 
 Hi everyone,
 
-Welcome to the first week of Analytical Workflows (IB 516)! Our first meeting is this Thursday 10-11:50am in Kidder 356.
+Welcome to the first week of Analytical Workflows (IB 516)!
 
-Overall, this class is about designing and building good analyses for scientific research. You will work on your own research topic, with the statistical approaches that make sense for your work, in the programming language(s) of your choice. Overarching these specifics are a series of best-practices that make science more effective, reproducible, and ultimately more fun, and this is the topic of the course. It is a topic Mark and I are both passionate about, and best practices are always evolving - we are excited to learn along with you this term.
+Overall, this class is about designing and building good analyses for scientific research. 
+You will work on your own research with whatever scientific approach makes sense for your work and in whatever programming language(s) you choose. 
+Overarching the specifics are a set of best practices that should help make your science more effective, reproducible, and ultimately faster and more fun. 
+These best practices are always evolving and there is always more to be learned.
+I love 'teaching' this class because I get to learn alongside you!
 
 Here are a few notes prior to the first class:
 
-* please bring a laptop if you have one. If you don't have one please let us know so we can provide you one for use during class time
+* This class is BYO-research. Please arrive to the first class of the term knowing which of your thesis chapters / research projects you will work on during the course. If you are unsure, I suggest discussing with your thesis advisor. I am also happy to think through it with you. Whatever chapter/topic you choose, the goal is that you will (by the end of the term) have designed and built an efficient and well-managed workflow for that chapter/project. 
 
-* this class is BYO-research. Please arrive on Thursday knowing which of your thesis chapter(s) / research goal(s) you will work on during the class. If you are unsure, we suggest discussing it with your thesis advisor. Mark and I are also happy to think through it with you. Whatever chapter/topic you choose, our goal is that by the end of the class you have designed and built an efficient and effective analytical workflow for that chapter/topic. 
+* Please bring a laptop if you have one. If you don't have one, please let me know. I'll help you find one for use during class time.
 
-See you on Thursday,ß
-Ben and Mark
+I'm looking forward to working with you this term!
+- mark
 
 
 
@@ -50,26 +54,23 @@ Hi everyone,
 
 I probably won't do this regularly down the road, but because of how much information I gave you today I figure it'd be helpful to summarize your to-do's.
 
-- Apps & Accounts (for Tuesday)
+- Apps & Accounts (for next class)
   - Create a GitHub account (and send me your username)
   - Install Git and LaTex
   - Pick and install a Git GUI
   - Decide whether to use a browser-based or stand-alone text-editor (primarily for LaTex, but also relevant to Markdown), and either create an account or install.
-- Discord
-  - Create account (and install)
-  - I will send-out an invite to join tomorrow (Friday) morning.  You will have 48 hrs to join.  (The invitation will have installation details too.)
-- Readings (for Tuesday)
-  - The paper assigned for today
+
+- Readings (for next class)
+  - The paper assigned for today (if you haven't read it already)
   - My notes for Structured Projects
   - My notes for Git w/ GitHub
   - The "Getting Started w/ Git"
-- Project Proposal (for Thursday)
+
+- Project Proposal (for the class after next)
   - Start planning & putting together your presentation
   - see README for details and additional before-class to-do's
 
 Finally, please email me if you'd like to discuss your project idea before committing to something.
-
-I think that's it.
 
 -mark
 
@@ -92,53 +93,6 @@ The figures can be old or new (i.e. it doesn't matter what year they were publis
 
 P.S. Feel free to submit any additional figures to share beyond those two, if you'd like.
 
-
-***
-***
-
-# Class notes
-Post-class reflections
-
-### Introduction
-#### _2020Fall_
-Required entire time period (w/ 5 min. break) but didn't have time for actually doing the app installations or starting on proposals.
-Took 70 min to get to end of class schedule (though could be done more efficiently).
-Probably spent only 5 min. in discussion/answering questions.
-
-
-### Intro2Git
-#### _2020Fall_
-Project structure took ~65 minutes! (I talked too much). Hence Intro2Git was rushed.
-Everyone using either RStudio or SourceTree, hence showed cloning in both (but rushed).
-Didn't leave enough time to talk about Git workflow, or about how to write "informative" commit messages.
-Spend more time on data (incl. private repo within public repo).
-See also Hart et al. 2016.
-
-### Project presentations
-#### _2020Fall_
-Technical challenges:
- - Bandwidth (turning off all videos seemed to help)
- - "Presentation mode" did not work for anyone.  (Discord stays on main app screen.)  Need to just present in main app screen.
- - One student had flashing screen (display frequency issue?)
-
-Most students took ~8-9 minutes.
-Need to clarify expectation for "Project goals" to be less about science and more about implementation goals.
-
-### Workflow diagrams
-#### _2020Fall_
-- Planned for ~20 min. of paper discussion (both Sandve and Shade & Teal papers), but (i) felt too short for both (despite mostly quiet students) and (ii) needs more structure (better to pose question and invite response than leaving flow open).
-- Need to discuss details of Shade & Teal diagram (Fig. 1) more explicitly (distinguishing features from flow diagrams in general) to preempt creation of (i) overly general, (ii) unstructured, reticulate, non-hierarchical, non-directional diagrams.
-- Breaking out into pair discussions seemed to go well, but little desire to volunteer sharing diagram in whole group.
-- Consider assigning finishing-up diagrams as homework to be submitted.
-- Consider splitting into two classes (with homework in between) to permit students more time to work on diagrams and then, in class, explain to each other / review each other's diagrams at greater length.
-
-### Coding best Practices
-#### _2020Fall_
-- Felt like a lot of time talking (e.g., took until 11:10 to talk about readability), so consider creating exercises instead.
-- Student request for resources regarding unit-testing.
-
-####  Typesetting with LaTex
-- Most people used OverLeaf, so be sure to place all needed files on OverLeaf.
 
 ***
 ***

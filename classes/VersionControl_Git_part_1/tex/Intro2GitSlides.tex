@@ -14,10 +14,10 @@
 
 
 
-\title{Intro to Git and Github\\Part I}
+\title{Intro to Git\\Part I}
 \subtitle{IB 516 Analytical Workflows}
 \author{}
-\date{\today}
+\date{}
 
 \begin{document}
 
@@ -26,7 +26,7 @@
 \section[Outline]{}
 \frame{\tableofcontents}
 
-\section{Introduction to Version Control}
+\section{Introduction to version control with Git}
 
 \frame{
 	\frametitle{What is a version control system?}
@@ -45,12 +45,15 @@
 	\frametitle{In practice}
 	
 	\begin{itemize}
-	\item Revert selected files back to a previous state.
-	\item Revert the entire project back to a previous state.
-	\item Compare changes over time.
-	\item See who last modified something that might be causing a problem, who introduced an issue and when, and more. 
-	\item If you screw things up or lose files, you can easily recover. 
-	\item You get all this for very little effort / overhead (aside from startup costs for learning).
+			\item Avoid appending version/date to filenames.
+			\item Compare changes over time.
+			\item Revert the entire project back to a previous state.
+			\item View or revert selected files back to a previous state.
+			\item See who last modified something that might be causing a problem, 
+			who introduced the bug and when, and more. 
+			\item If you screw things up or lose files, you can easily recover. 
+			\item You get all this for very little effort / overhead (aside from startup 
+			costs for learning).
 	\end{itemize}
 	
 	\ufoot{\tiny{https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control}}
@@ -69,7 +72,7 @@
 }
 
 \frame{
-	\frametitle{Version control in Git: How Git stores data}
+	\frametitle{Version control in Git:\\How Git stores data}
 	
 	\includegraphics[scale = 0.3]{figs/how_git_stores_data}
 	
@@ -85,7 +88,7 @@
 
 
 \frame{
-	\frametitle{Basic lifecyle of work on a file}
+	\frametitle{A file's lifecyle}
 	
 	\includegraphics[scale = 0.3]{figs/lifecycle}
 		
@@ -96,24 +99,29 @@
 }
 
 \frame{
-	\frametitle{Some Git words}
+	\frametitle{Git jargon}
 	
-	repository, commit, push, fetch, merge, pull, local, origin, master, branch, fork
+	\centering
+	repository -- staging -- commit \\
+	local -- remote \\
+	pull -- fetch -- push \\
+	master (main) -- branch (feature branch) -- merge \\
+	origin -- clone -- fork
 
-	
 }
 	
 \frame{
-	\frametitle{Naming commits}
+	\frametitle{Commit messages}
 	
 	\begin{itemize}
-		\item Use the 'imperative mood.' %(e.g. ``finish your homework'')
-        		\item Complete the sentence If this commit is adopted , it will...
+		\item Use the `imperative mood.' %(e.g. ``finish your homework'')
+        		\item Complete the sentence: \\
+        		 \emph{ ``If this commit is adopted , it will...''}
        		\item Capitalize the first word.
 		\item Do not use a period.
 	\end{itemize}
 	
-	
+	\centering
 	\includegraphics[scale = 0.5]{figs/commit_messages} \\
 	
 	\ufoot{\tiny{https://chris.beams.io/posts/git-commit/}}

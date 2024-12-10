@@ -27,6 +27,10 @@ Mix of demonstration and discussion and exercises for each topic:
 - [How to undo almost anything with Git](https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/)
 - [Make your repo DOI-citeable](https://guides.github.com/activities/citable-code/)
 
+### Dealing with large files
+- [Git LFS](https://git-lfs.com) (Large File Storage) allows you to store 1 GB for free
+- [GitHub managing large files](https://docs.github.com/en/repositories/working-with-files/managing-large-files)
+- [BFG Repo-Cleaner](https://rtyley.github.io/bfg-repo-cleaner/)
 
 ### Showcase repositories
 - [Analytical Workflows](https://github.com/analyticalworkflows/TeachingMaterials) (_Yes, the repository you're already in!_)

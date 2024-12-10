@@ -53,8 +53,8 @@ Click on a topic to see the day's to-do's (required before-class reading and set
 |:-:|:-----:|:------|:------|
 |1 | Mon | Jan 6   | _No class_ (Mark at [ASN](https://asnasilomar2025.org))
 |  | Wed | Jan 8   | [Course overview & Philosophy](classes/Introduction) |
-|2 | Mon | Jan 13  | [Git w/ GitHub - Part 1](classes/VersionControl_Git_part_1) | 
-|  | Wed | Jan 15  | [Structuring projects](classes/StructuredProjects) | 
+|2 | Mon | Jan 13  | [Structuring projects](classes/StructuredProjects) | 
+|  | Wed | Jan 15  | [Git w/ GitHub - Part 1](classes/VersionControl_Git_part_1) | 
 |3 | Mon | Jan 20  | _No class_ (Martin Luther King Jr. Day) |
 |  | Wed | Jan 22  | [Implementation & Troubleshooting](classes/Implementation) |
 |4 | Mon | Jan 27  | [Project proposals](classes/ProjectProposal) |

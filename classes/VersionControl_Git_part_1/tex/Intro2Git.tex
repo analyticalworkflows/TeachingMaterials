@@ -42,7 +42,8 @@ By using version control you'll know what,
 when and (hopefully) why changes were made.
 If you're using the software collaboratively, 
 you'll also know by whom changes were made.
-Backing-up is virtually implicit when you also use a networked (off-site) server as a host for your repository.
+Backing-up is virtually implicit when you use a networked (off-site) server as a 
+host for your repository.
 
 We'll be using \texttt{Git} as our version control software.
 There are others out there (e.g., \texttt{Subversion}).
@@ -54,7 +55,7 @@ There are others out there (e.g., \texttt{Bitbucket}).
 Most of its features are accessed by command-line
 \unskip
 \footnote{
-	Except when using the ``Git-light'' that comes with \texttt{GitHub Desktop}!}
+Except when using ``Git-light'' that comes with \texttt{GitHub Desktop}}
 and are intended for large-scale collaborative programming and software development purposes.
 Of course, we'll be using \texttt{Git} for much smaller, specific projects, thus we 
 won't bother with many of these features.
@@ -74,7 +75,7 @@ Fortunately, there are a number of free providers.
 For \texttt{Git}, 
 the primary options are \texttt{GitHub} and \texttt{Bitbucket}.
 The former is more developed (more bells and whistles), 
-is currently more widely used, 
+is more widely used, 
 and is perhaps a little easier to work with.
 At the time of writing,
 the two don't differ all that much except in one regard:  
@@ -82,18 +83,27 @@ the number of free versus public repositories.
 While \texttt{GitHub} has a limit on the number of private repositories, 
 \texttt{Bitbucket} has a limit on the number of collaborative projects
 (having more than 5 collaborators).
-(There are perks regarding the number of repositories you can have if you sign up using an academic email address.  
-See \url{https://help.github.com/en/articles/applying-for-an-educator-or-researcher-discount}.)
+(There are perks regarding the number of repositories you can have if you sign 
+up using an academic email address.
+\unskip
+\footnote{
+See 
+\url{https://help.github.com/en/articles/applying-for-an-educator-or-researcher-discount}.})
 
 
 
 \section{Installing and configuring Git}
 
 If you're using \texttt{GitHub Desktop}, then you're already done;
-a "light" version of \texttt{Git} is bundled into the app.
+a ``light" version of \texttt{Git} is bundled into the app.
+However, \texttt{GitHub Desktop} may not play as nice with \texttt{R Studio}.
+For this and other reasons, I recommend against using it.
+Rather, I recommend you install the full version of \texttt{Git}.
+Instructions for how to do so are linked on the \texttt{README.md} of our very 
+first class.  
 
-If you'd like to install the full version of \texttt{Git} to use per command-line or with a different GUI, then see the \texttt{README.md} of our very first class.  
-After installing the full version there's a little (minimum of) command-line configuration to perform:
+After installing the full version, there's a little (minimum of) command-line 
+configuration to perform.
 On a Mac, open a \texttt{Terminal} window and type in the following:
 
 \noindent
@@ -141,8 +151,8 @@ click on ``New Repository'',
 and follow the instructions.
 \unskip
 \footnote{
-	When doing so, be sure you're in your own user 
-environment and not inside our Analytical Workflows organization.}
+Be sure you're in your own GitHub account environment and not inside our 
+Analytical Workflows organization.}
 These should include options for private vs. public
 (the latter is preferred for this class
 \unskip
@@ -150,37 +160,16 @@ These should include options for private vs. public
 	If at all possible, please pick public (for this class) and switch to private afterwards.  
 	Otherwise, please add me as a collaborator so I can see your repo.}), 
 initializing with a \texttt{README.md} file 
-(which you \emph{should} do), 
+(which you \emph{should} do)
 as well as a \texttt{.gitignore} file 
 (which you \emph{should} also do, 
-choosing your planned programmaing environment
-(e.g., \texttt{R}) from the dropdown menu).
+choosing your planned programming environment
+(e.g., \texttt{R}) from the drop-down menu).
 You don't need to initialize with a license 
 (MIT is a common choice, if you would like to).
 
-\begin{tcolorbox}[breakable, enhanced, before upper={\parindent15pt}]
-	\noindent
-	The \texttt{README.md} file in the main repo folder is the first file that anyone will see when they inspect your repository.
-	At minimum, it should give an overview of what the project is about and what the various parts of the project structure are.
-	The initialized file will simply contain the repository's name as a header.
-	We will learn to use Markdown to write and edit \texttt{README.md} files later in the course, 
-	so for now just leave it as is.
-\end{tcolorbox}
-
-\begin{tcolorbox}[breakable, enhanced, before upper={\parindent15pt}]
-	\noindent
-	The \texttt{.gitignore} file contains a list of all the files that you want \texttt{Git} to ignore
-	(i.e. not monitor for changes).
-	Selecting \texttt{R} from the dropdown list will auto-populate a bunch of it for you, 
-	including files like the \texttt{.Rhistory} file that save session information and the like.
-	You can add additional file and folder names to the \texttt{.gitignore} file as well.
-	You might want to do this to keep your data or manuscript in a different repository but still in the same project folder 
-	(see back to our discussion of structuring projects).
-	Later in the course,
-	we'll add the extensions for all the temporary files that \LaTeX\ produces when compiling.
-\end{tcolorbox}
-
-You should now see a new webpage -- your Repository page -- that shows you what's in your repository.
+You should now see a new webpage -- your Repository page -- that shows you 
+what's in your repository.
 For now it contains only your \texttt{.gitignore} and \texttt{README.md} files, 
 the latter of which has its contents displayed.
 \unskip
@@ -188,6 +177,37 @@ the latter of which has its contents displayed.
 	There will actually be other files in the folder when you clone it to your local computer as well, 
 	but they're hidden by default.  
 	They're files that \texttt{Git} uses for managing the repository.}
+	
+\begin{tcolorbox}[breakable, enhanced, before upper={\parindent15pt}]
+	\noindent
+	The \texttt{README.md} file in the main repo directory is the first file that 
+	anyone will see when they inspect your repository.
+	At minimum, it should give an overview of what the project is about and what 
+	the various sub-directories and main files of the repository are.
+	The README should contain the repository's name as a header.
+	We will learn to use Markdown to write and edit \texttt{README.md} files 
+	later in the course, so for now just leave it as is.
+\end{tcolorbox}
+
+\begin{tcolorbox}[breakable, enhanced, before upper={\parindent15pt}]
+	\noindent
+	The \texttt{.gitignore} file contains a list of all the files that you want \texttt{Git} 
+	to ignore
+	(i.e.~not monitor for changes).
+	Selecting \texttt{R} from the drop-down list will auto-populate a bunch of it for 
+	you, 
+	including files like the \texttt{.Rhistory} file that save session information and 
+	the like.
+	You can add additional file and folder names to the \texttt{.gitignore} file as 
+	well.  (Open and edit it in any text editor.)
+	You might want to do this to keep your data or manuscript in a different 
+	repository but still in the same project folder. 
+	(We'll learn about this when we talk about structuring projects.)
+	Later in the course,
+	we'll also add the extensions for all the temporary files that \LaTeX\ produces 
+	when we compile \texttt{.tex} documents.
+\end{tcolorbox}
+
 As I said earlier, there are a lot of bells-and-whistles at your fingertips here.
 We'll ignore them for now, but feel free to explore!
 You \emph{could} start dragging-in directories and files into your browser view 
@@ -224,7 +244,7 @@ or, if you're primarily going to be using this repository to keep track of an \t
 I use \texttt{Git} for both \texttt{R} and non-\texttt{R} (e.g.,  \texttt{Mathematica})-based projects and for writing manuscripts.
 \texttt{R-Studio} has integrated  \texttt{Git} functionality, 
 so I use a visual \texttt{Git} GUI client
-(e.g., \texttt{Sourcetree}, \texttt{GitHub Desktop}) 
+(e.g., \texttt{Sourcetree}) 
 for the other projects because I haven't yet bothered to memorize the \texttt{Git} command-line commands.
 Since most of you are probably using \texttt{R}, 
 it's probably worthwhile to start off by using \texttt{R-Studio}'s \texttt{Git} integration feature.
@@ -238,6 +258,11 @@ select \texttt{Git/SVN},
 and fill in the details: 
 either click on the \textit{Help} link 
 or go to \url{http://r-pkgs.had.co.nz/git.html} to see what to do.
+(On a PC, the path to the Git executable should be \texttt{C:/Program 
+	Files/Git/cmd/git.exe}.)
+\unskip
+\footnote{Use ``\texttt{where git}'' in \texttt{Terminal} to find \texttt{Git}'s 
+location.}
 
 After that one-time initial setup,
 create your ``project'' within  \texttt{R-Studio} by selecting \textit{``New Project''}.
@@ -245,14 +270,13 @@ Select \texttt{Version Control: Checkout a project from...repository},
 select \texttt{Git}, 
 and fill in the details including the URL you got from \texttt{GitHub}.
 Place your repository wherever you plan to keep all your project folders 
-(see back to our discussion of structuring projects).
+(we'll discuss this more during Structuring Projects).
 \texttt{R-Studio} will ``restart'' and then you'll be in your project
 (as evidenced by its name appearing in the top-right of the interface).
 Clicking on the \texttt{Files} tab will show you what's in the repository/folder
-(which at minimum should now be:
-\texttt{README.md} and \texttt{.gitignore} and a newly created \texttt{.Rproj} file).
-
-You may now create (or move in) all your project sub-folders.
+(which at minimum should now be
+\texttt{README.md}, \texttt{.gitignore} and a newly created \texttt{.Rproj} file).
+You're now ready create (or move in) your project sub-folders, if you want to.
 
 
 
@@ -281,9 +305,10 @@ The standard workflow is thus:
 	\label{fig:lifecycle}
 \end{figure}
 
+\noindent
 Your motto for using \texttt{Git} should be ``\emph{commit early, commit often}''.
 Almost every time you add or remove something from your project
-(i.e. a file or a chunk of code), 
+(i.e. a set of files or an important new feature or chunk of code), 
 you want to commit those changes.
 Ideally, each commit should correspond to a ``logical unit'', 
 one that you are able to describe in a few words
@@ -291,7 +316,7 @@ one that you are able to describe in a few words
 Choosing when to commit is quite important, 
 especially when you're debugging code.
 For example, if you've discovered your code has two bugs, 
-then you should commit each one of the fixes seperately, not together.
+then you should commit each one of the fixes separately, not together.
 That way you can undo either fix independently if, for example, 
 you messed up in one of your fixes or your fix created a different bug somewhere else in your code.
 \unskip
@@ -309,7 +334,7 @@ In the top-left corner you'll see a list of the staged files.
 Selecting one of the files will bring its contents up in the window below which highlights the text that has been added (in green) and removed (in red).
 Select all the files you want to commit, stage them, 
 add a commit message to the top-right window, and commit.
-You've now updated your local respository.
+You've now updated your local repository.
 Clicking on \texttt{History} (top-left) will show you all your past commits.
   
 Every commit message must at minimum have a ``subject line''.
@@ -350,16 +375,17 @@ your commit(s) to \texttt{GitHub}.
 You certainly do \textit{not} need to do this after each commit!
 
 \texttt{Pull} does the opposite of \texttt{Push}: 
-bringing commits that have been pushed to \texttt{GitHub}
+bringing commits that have been pushed to the remote on \texttt{GitHub}
 to your local machine.
-This will happen if you're working collaboratively or on multiple machines.
+You'll need to do this often if you're working collaboratively or on multiple 
+machines.
 \unskip
 \footnote{You can also use \texttt{Fetch} to see if new commits have been pushed to \texttt{GitHub} before actually pulling them to your machine.}
 To reduce the likelihood of creating conflicts,
 \emph{always} pull before you start making edits!
-There are of course ways of dealing with conflicts and merging files
-(that will arise if collaborator(s) are working on the same file, for example), 
-but pulling first will do a lot to avoid unneccessary hassle.
+There are ways of dealing with conflicts and merging files
+(as will arise if collaborator(s) are working on the same file, for example), 
+but pulling first will do a lot to avoid unnecessary hassle.
 \unskip
 \footnote{We'll learn about merging and conflict resolution later in the course.}
 
@@ -367,6 +393,16 @@ but pulling first will do a lot to avoid unneccessary hassle.
 		\begin{center}
 			\textbf{\emph{Pull, create/edit, stage, commit, push, repeat}}
 		\end{center}
+\end{tcolorbox}
+
+\subsection{A quick note on large files}
+We'll discuss this later in the course in Git - Part 2, but for now...
+
+\begin{tcolorbox}[breakable, enhanced, before upper={\parindent15pt}]
+	\begin{center}
+		\textbf{Don't try to add any files that exceed 10 mb in size to your 
+		repository (yet)!}
+	\end{center}
 \end{tcolorbox}
 
 \begin{figure}[!h]

@@ -18,7 +18,7 @@ _Nothing_
 
 ### Class structure
 - Welcome & Brief introductions
-- [Course philosophy & Overview](https://github.com/analyticalworkflows/TeachingMaterials/tree/master/classes/Introduction/tex)
+- [Course philosophy & Overview](../tex/Intro_slides.pdf)
 - Pairing up for [accountabilibuddies](https://neologisms.rice.edu/index.php?a=term&d=1&t=6534)
 - _Break_ (_10 min._)
 - Software & account setup
@@ -31,10 +31,11 @@ _Nothing_
 
 #### Software
 - [Git](https://git-scm.com/downloads) or [Git for Windows](https://gitforwindows.org/) (_required_)
+(On Mac, the easiest installation process is to install [Homebrew](https://brew.sh) first, then use it to install Git.)
 - [LaTex](https://www.latex-project.org/get/) (_required_)
-- Stand-alone Git GUI (e.g., [GitHub Desktop](https://desktop.github.com/), [Sourcetree](https://www.sourcetreeapp.com)) (_required_ if not using command-line)
+- Stand-alone Git GUI (e.g., [Sourcetree](https://www.sourcetreeapp.com)) (_required_ if not using command-line or only RStudio.)
 - General text editor such as [Visual Studio Code](https://code.visualstudio.com/)
-- Stand-alone LaTeX editor (e.g., [TeXstudio](http://texstudio.sourceforge.net)), MacTex(http://www.tug.org/mactex/) for Mac, or use your general text editor if it can be made "Latex-enabled" as Visual Studio Code can 
+- Stand-alone LaTeX editor (e.g., [TeXstudio](http://texstudio.sourceforge.net) for Mac), or use your general text editor if it can be made "Latex-enabled" (as [Visual Studio Code](https://code.visualstudio.com/) can).
 
 #### Other software of potential interest
 <!-- - [Discord](https://discord.com) (_potential Zoom replacement_) -->

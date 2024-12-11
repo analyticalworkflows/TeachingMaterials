@@ -1,8 +1,6 @@
 ##################################################
 # Demonstrate how to export tables in LaTeX format
 ##################################################
-library(Hmisc) # for LaTeX table export
-options(xdvicmd='open')
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~
 # Generate some dummy data
@@ -22,15 +20,35 @@ fit <- lm(y~x) # fit a linear model
 est.coefs <- round(coef(summary(fit)),3)
 est.coefs
 
-# plot(x,y)
-# abline(fit)
 
+### ~~~~~~~~~~~~~~~~~~~~~~~ ###
+### Using Stargazer package ###
+### ~~~~~~~~~~~~~~~~~~~~~~~ ###
+# Many more options than demonstrated available.
+# See https://www.jakeruss.com/cheatsheets/stargazer/
+library(stargazer)
+
+stargazer(tab,
+          out = '../tex/tables/data.tex',
+          label = 'tab:data')
+
+stargazer(est.coefs,
+          out = '../tex/tables/estcoefs.tex',
+          label = 'tab:coefs')
+
+
+### ~~~~~~~~~~~~~~~~~~~ ###
+### Using Hmisc package ###
+### ~~~~~~~~~~~~~~~~~~~ ###
+
+library(Hmisc)
+options(xdvicmd='open')
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # Export the top of the dataset
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 latex(
   tab,
-  file = 'tex/tables/data.tex',
+  file = '../tex/tables/data.tex',
   label = 'tab:data', 
   rowname = NULL, 
   na.blank = TRUE,
@@ -44,7 +62,7 @@ latex(
 colnames(est.coefs)[4] <- 'p-value'
 latex(
   est.coefs,
-  file = 'tex/tables/est_coefs.tex',
+  file = '../tex/tables/est_coefs.tex',
   label = 'tab:coefs', 
   rowlabel = 'Parameter',
   rowname = c('a','b'), 

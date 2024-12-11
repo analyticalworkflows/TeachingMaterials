@@ -23,7 +23,11 @@ _LaTeX, on the other hand, is_ both _ subtle and malicious._ - Russell Ham
 
 ### Additional materials
 - Manuscript template: [manuscript/manuscript.tex](manuscript/manuscript.tex)
-- Creating LaTeX tables in R using Hmisc: [R/ExportTable.R](R/ExportTable.R)
+- Creating LaTeX tables in R using Stargazer or Hmisc packages: [R/ExportTable.R](R/ExportTable.R)
+
+### Useful LaTeX Diff tools
+- [latex-diff](https://3142.nl/latex-diff/) an online diff tool
+- [latexdiff](https://www.overleaf.com/learn/latex/Articles/How_to_use_latexdiff_on_Overleaf) simple command-line tool that comes installed with LaTeX itself
 
 ### Additional resources
 - [Overleaf knowledge base](https://www.overleaf.com/learn/latex/Main_Page)

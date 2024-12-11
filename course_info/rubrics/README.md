@@ -20,16 +20,13 @@ Below you will find the rubrics for the three "formal" presentations you'll be g
 | **Criterion** |  **Excellent** (5) | (4) | **Intermediate** (3)  | (2) | **Needs improvement** (1) | Absent (0) |
 |---|---|---|---|---|---|---|
 | **_Project structure_** | Repository has clear and clean folder and file organization | | Aspects of project structure are unclear or disorganized; some files are unorganized | | Project structure is unclear and disorganized | Utter chaos |
-| **_Reproducibility_** | Exact workflow can be easily reproduced by someone else, working from repository<sup>1</sup> | | The workflow is reproducible in principle, given enough work and in conversation with the original author | | Workflow mostly only exists within a specific machine and author | Not reproducible |
-| **_Research_** | Solid progress on research relative to proposal plan<sup>2</sup> | | At least one clear example of incremental progress on research relative to initial presentation |  | Little evidence of progress on research relative to initial presentation | None provided |
-| **_Challenges_** | Major challenges (past and anticipated) articulated, evidencing careful reflection and forethought<sup>3</sup>; | | Major and trivial challenges articulated | | Only trivial challenges articulated, evidencing shallow reflection and forethought | No challenges articulated |
+| **_Reproducibility_** | Exact workflow can be easily recognized and reproduced by someone else working from repository<sup>1</sup> | | The workflow is reproducible in principle, given enough work and in conversation with the original author | | Workflow mostly only exists within a specific machine and author | Not reproducible |
+| **_Challenges_** | Major challenges (past and anticipated) articulated, evidencing careful reflection and forethought<sup>2</sup> | | Major and trivial challenges articulated | | Only trivial challenges articulated, evidencing shallow reflection and forethought | No challenges articulated |
 | **_Goals_** | Clear (re-evaluated) project goals and benchmarks for achieving them _by the end of the quarter_ | | Goals articulated but unclear | | Goals _and_ benchmarks unclear, too easy, or unachievable | None provided |
 
 <sup>1</sup>Assuming access to private or proprietary data, etc.
 
-<sup>2</sup>Includes progress on project structure (relative to starting point).  No penalty for describing work chasing down dead ends; that's part of the research process.
-
-<sup>3</sup>May include aspects of working with Git, GitHub, etc..  If no challenges were experienced, articulate why.
+<sup>2</sup>May include aspects of working with Git, GitHub, etc..  If no challenges were experienced, articulate why.
 
 
 
@@ -41,12 +38,14 @@ Below you will find the rubrics for the three "formal" presentations you'll be g
 
 | **Criterion** |  **Excellent** (5) | (4) | **Intermediate** (3)  | (2) | **Needs improvement** (1) | Absent (0) |
 |---|---|---|---|---|---|---|
-| **_Reproducibility_** | Exact workflow can be easily reproduced by someone else, working from repository<sup>1</sup>  | | The workflow is reproducible in principle, given enough work and in conversation with the original author | | Workflow mostly only exists within a specific machine and author | None provided |
+| **_Project structure_** | Repository has clear and clean folder and file organization | | Aspects of project structure are unclear or disorganized; some files are unorganized | | Project structure is unclear and disorganized | Utter chaos |
+| **_Reproducibility_** | Exact workflow can be easily recognized and reproduced by someone else working from repository<sup>1</sup>  | | The workflow is reproducible in principle, given enough work and in conversation with the original author | | Workflow mostly only exists within a specific machine and author | None provided |
+| **_Presentation_** | Effective, clear, and appealing slides | | Within slide and time limit; Most visualization best practices followed | | One or more of the following: <ul><li>figures do not follow best practices</li> <li>over time </li><li>over slide limit</li></ul> | None provided |
 | **_Research_** | Significant progress on research relative to proposal plan<sup>2</sup> | | At least one clear example of incremental progress on research relative to initial presentation|  | Little evidence of progress on research relative to initial presentation | None provided |
-| **_Presentation_** | <ul><li>Visualization best practices followed </li> <li> Effective, clear, and appealing slides </li> | | <ul><li> Within slide and time limit </li><li>Most visualization best practices followed</li> | | One or more of the following: <ul><li>figures do not follow best practices</li> <li>over time </li><li>over slide limit</li></ul> | None provided |
 
-<sup>1</sup> No penalty for describing work chasing down dead ends; that's part of the research process.
+<sup>1</sup> Assuming access to private or proprietary data, etc.
 
-<sup>2</sup> Assuming access to private or proprietary data, etc.
+<sup>2</sup> No penalty for describing work chasing down dead ends; that's part of the research process.
+
 
 ***

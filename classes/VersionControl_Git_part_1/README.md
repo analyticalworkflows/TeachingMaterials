@@ -32,3 +32,4 @@ Working as one big group, with the instructor diagraming, the instructor leads i
 - [Code Academy's Learn Git](https://www.codecademy.com/learn/learn-git)
 - [Atlassian's Git tutorials](https://www.atlassian.com/git/tutorials)
 - [Dudler's Git guide](http://rogerdudler.github.io/git-guide/)
+- [SciComp Workshop - Collaborative Coding with GitHub](https://lter.github.io/workshop-github/)

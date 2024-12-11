@@ -72,7 +72,7 @@ Click on a topic to see the day's to-do's (required before-class reading and set
 |10| Mon | Mar 10  | [Project presentations](classes/ProjectSummary) |
 |  | Wed | Mar 12  | [Project presentations](classes/ProjectSummary) & [Wrap-up](classes/WrapUp) |
 
-### Unused material from the past
+### Unscheduled topics
 [Workflow diagrams](classes/WorkflowDiagrams/) | 
 [Regular expressions](classes/RegularExpressions/) | 
 [Visualization](classes/Visualization/)

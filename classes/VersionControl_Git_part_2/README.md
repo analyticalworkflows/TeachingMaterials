@@ -29,8 +29,10 @@ Mix of demonstration and discussion and exercises for each topic:
 
 ### Dealing with large files
 - [Git LFS](https://git-lfs.com) (Large File Storage) allows you to store 1 GB for free
-- [GitHub managing large files](https://docs.github.com/en/repositories/working-with-files/managing-large-files)
-- [BFG Repo-Cleaner](https://rtyley.github.io/bfg-repo-cleaner/)
+- [GitHub manual - Managing large files](https://docs.github.com/en/repositories/working-with-files/managing-large-files)
+- [BFG Repo-Cleaner](https://rtyley.github.io/bfg-repo-cleaner/) for removing files from your repo's history.
+- [Tutorial - Medium](https://medium.com/analytics-vidhya/tutorial-removing-large-files-from-git-78dbf4cf83a) on removing large files
+- [Tutorial - TowardsDataScience](https://towardsdatascience.com/uploading-large-files-to-github-dbef518fa1a) on avoiding error messages
 
 ### Showcase repositories
 - [Analytical Workflows](https://github.com/analyticalworkflows/TeachingMaterials) (_Yes, the repository you're already in!_)

@@ -1,23 +1,23 @@
-########################################################
-# simulateLV.R
-# Simulates the dynamics of a predator and a prey population according to the Lotka-Volterra model.
-# The data produced will subsequently be used to test the performance of several population dynamic model-fitting routines.
-########################################################
-rm(list=ls()) # clear workspace
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Simulate the dynamics of a predator and a prey population according 
+# to the Lotka-Volterra model. The data produced will subsequently 
+# be used to test the performance of several population dynamic 
+# model-fitting routines.
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-##############################
-# Load libraries
-##############################
+# ~~~~~~~~~~~~~~~~~~~
+# Load libraries ----
+# ~~~~~~~~~~~~~~~~~~~
 library(deSolve)
 
-##############################
-# Source files
-##############################
-# None needed
+# ~~~~~~~~~~~~~~~~~~~
+# Load functions ----
+# ~~~~~~~~~~~~~~~~~~~
+# None required
 
-##############################
-# Define model
-##############################
+# ~~~~~~~~~~~~~~~~~
+# Define model ----
+# ~~~~~~~~~~~~~~~~~
 LVmod <-
   function(Time, State, Pars) {
     with(as.list(c(State, Pars)), {
@@ -32,27 +32,28 @@ LVmod <-
     })
 }
 
-##############################
-# Define parameters
-##############################
+# ~~~~~~~~~~~~~~~~~~~~~
+# Define parameters ----
+# ~~~~~~~~~~~~~~~~~~~~~
 pars <- c(rIng   = 0.2,    # /day, rate of ingestion
 	        rGrow  = 1.0,    # /day, prey growth rate
 	        rMort  = 0.2 ,   # /day, predator mortality
 	        assEff = 0.5,    # assimilation efficiency
 	        K      = 10)     # mmol/m3, carrying capacity
 
-##############################
-# Simulate model
-##############################
-yini  <- c(Prey = 1, Predator = 2)
+# ~~~~~~~~~~~~~~~~~~~
+# Simulate model ----
+# ~~~~~~~~~~~~~~~~~~~
+yinit  <- c(Prey = 1, Predator = 2)
 times <- seq(0, 200, by = 1)
-out   <- ode(yini, times, LVmod, pars)
+out   <- ode(yinit, times, LVmod, pars)
 summary(out)
 
-##############################
-# Plot and export data
-##############################
+# ~~~~~~~~~~~~~~~~~
+# Plot results ----
+# ~~~~~~~~~~~~~~~~~
 plot(out)
-write.csv(out, file="../output/LV_out.csv")
 
-##########################################################
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

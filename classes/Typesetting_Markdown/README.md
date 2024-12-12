@@ -2,7 +2,7 @@
 
 There are a number of [Markdown flavours](https://en.wikipedia.org/wiki/Markdown).  Some people even use it to write and typeset their manuscripts (as we will learn to do with LaTeX).  We're only going to learn enough to:
 1) write clear README files for our GitHub repositories, and
-2) knit together code-integrated reports on analyses performed in R (for your digital notebook or your _annual_ committee meetings..._hint, hint!_).
+2) knit together code-integrated reports on analyses performed in R (for your digital notebook or for your (what should be) annual committee meetings..._hint, hint_!).
 
 ### Required readings (_before class_)
 - [Markdown in 3 minutes](https://github.com/scholmd/scholmd/wiki/Learn-markdown-in-3-minutes)
@@ -13,9 +13,10 @@ There are a number of [Markdown flavours](https://en.wikipedia.org/wiki/Markdown
 _Nothing_
 
 ### Class structure
-- Create/format your GitHub READMEs (or data-folder meta-data files) using at least 4 of the elements summarized in [Markdown in 3 minutes](https://github.com/scholmd/scholmd/wiki/Learn-markdown-in-3-minutes) (_40 min._)
-- Create a barebones report using knitR in RStudio using [R Markdown Quick tour](https://rmarkdown.rstudio.com/authoring_quick_tour.html) or an RStudio R Markdown template* (_40 min._ but see note in next bullet)
-- If you are already an experienced RMarkdown user, an alternative exercise is to construct a Jupyter notebook to display equations on Github. A shortcoming of Github markdown is that it cannot display equations using a LaTeX-like language. An example notebook is [here](../Typesetting_Markdown/displaying_equations_on_github/)
+- Create/format your repository's README using at least 4 of the elements summarized in [Markdown in 3 minutes](https://github.com/scholmd/scholmd/wiki/Learn-markdown-in-3-minutes) (_40 min._) 
+  - If your main repository README is already done, use the time to create folder-specific READMEs, such as meta-data READMES for the data in your data directory or a workflow-explaining README in your code directory.
+- Create a barebones R Notebook in RStudio (_40 min._)
+  - Think about what you might want to include in order to use it as a template to use for generating reports for your collaborators.
 - Back to your choice of [Implementation & Team troubleshooting](../Implementation/README.md) (_remaining time_)
 
 
@@ -24,15 +25,21 @@ _Nothing_
 - [RStudio](./reference/rmarkdown-cheatsheet-2.0.pdf)
 - [Guide](./reference/rmarkdown-reference.pdf)
 
-### Resources
-- [kable](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) for creating Markdown tables in R
+### Tips \& tricks
+- Non-printed commenting is possible in Markdown.  Use [//]: # followed by your comment
 
-Among many options..
+### Example READMEs
+- [NovakLab FracFeed Database](https://github.com/marknovak/FracFeed_DB)
+- [Novak Multi-prey Model](https://github.com/marknovak/FR_n-prey-at-a-time)
+
+### Tools
+- [kable](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html) for creating Markdown tables in R
 - [https://markdownlivepreview.com](https://markdownlivepreview.com) cut-and-paste-style browser-based Markdown renderer
 - [https://stackedit.io](https://stackedit.io) fuller-fledged browser-based Markdown editor (analagous to [Overleaf](https://www.overleaf.com) for LaTeX)
 - [Quarto](https://quarto.org) open-source scientific and technical publishing system
 
-### Additional resources
+### Resources
+- [R Markdown Quick tour](https://rmarkdown.rstudio.com/authoring_quick_tour.html)
 - [Xie et al. R Markdown The definitive guide](https://bookdown.org/yihui/rmarkdown/)
 - [Xie Dynamic Documents with R and knitr](https://yihui.org/knitr/)
 - [Markdown in RStudio](https://rmarkdown.rstudio.com)
@@ -41,6 +48,6 @@ Among many options..
 - [R Markdown Code chunks in r4ds](https://r4ds.had.co.nz/r-markdown.html#code-chunks)
 - [R Markdown Formats in r4ds](https://r4ds.had.co.nz/r-markdown-formats.html)
 
-### Tips \& tricks
-- Non-printed commenting is possible in Markdown:
-	 [//]: # followed by your comment
+### R Notebook vs. R Markdown
+From [StackExchange](https://stackoverflow.com/questions/43820483/difference-between-r-markdown-and-r-notebook):
+>Writing an R Notebook document is no different than writing an R Markdown document. The text and code chunk syntax does not differ from what you learned in the R Markdown tutorial. The primary difference is in the interativeness of an R Notebook. Primarily that when executing chunks in an R Markdown document, all the code is sent to the console at once, but in an R Notebook, only one line at a time is sent. This allows execution to stop if a line raises an error.

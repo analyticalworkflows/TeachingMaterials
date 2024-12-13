@@ -8,10 +8,13 @@
 
 \setcounter{secnumdepth}{0}  % don't number sections (stars not needed)
 
+% For making a multi-page box
+\usepackage[most]{tcolorbox}
 
-\title{Faster Computing - Part 2}
+
+\title{High Performance Computing}
 \author{}
-%\date{}
+\date{}
 
 \begin{document}
 \maketitle
@@ -19,165 +22,148 @@
 
 \clearpage
 
-Today we'll be interacting with Cosine's \emph{RStudio Server Pro} and with their \emph{High
-Performance Cluster} (HPC).
-In order to access either of these from off-campus, you'll need to be connected to OSU's Virtual Private
+Today we'll be interacting with one of OSU's \emph{High Performance Computing} clusters.
+HPC clusters consist of many servers (computers) that are all networked together.
+Each server is called a node.
+You can choose to work on only a single node
+(which will probably already be faster than your personal computer)
+or on several nodes at once.
+The point of using several nodes is that you can use them in parallel
+(just like we did last class when we used our own computer's cores in parallel).
+\unskip
+\footnote{Since each node also has many cores, you can also parallelize on each of several parallel nodes, too!}
+The cluster we'll use today is called the Novus HPC cluster \url{https://arcs.oregonstate.edu/novus-cluster} that is maintained by OSU's Advance Research Computing Services.
+
+\section{Tools}
+In order to access the cluster from off-campus, you'll need to be connected to OSU's Virtual Private
 Network (VPN).
 OSU uses the \emph{CISCO AnyConnect} client, so if you haven't already installed it, do so now.
 See download and instructions at
 \url{https://oregonstate.teamdynamix.com/TDClient/1935/Portal/KB/ArticleDet?ID=76790}.
 You'll need to confirm your access privileges using \emph{Duo} and your ONID credentials.
 
-In order to move files between your computer and the servers, you'll
-also need an \texttt{sftp} client, like \url{https://cyberduck.io}.\footnote{File transfer can also be done by
+To move files between your computer and the cluster,
+you'll also need an \texttt{sftp} client, like \url{https://cyberduck.io}.\footnote{File transfer can also be done by
 \texttt{ssh} command-line, but there are no commands to remember with \texttt{sftp}.}
-
-Finally, in order to pass commands to the HPC, you'll need an \texttt{ssh} client.
-Mac users can use \emph{Terminal}, which is built in to the operating system.
+Finally, in order to pass commands to the cluster, you'll need an \texttt{ssh} client.
+Mac users can use \emph{Terminal}, which is built into the operating system.
 Windows users will need to install one (e.g., \url{https://mobaxterm.mobatek.net}, which also does
 \texttt{sftp}).
 
+If you really don't like using the above two methods of interacting with the cluster, you could also use the \texttt{OnDemand} web interface: \url{https://novus.dri.oregonstate.edu/}.
 
 
-\section{RStudio Server Pro}
 
-This one's super simple in that all you have to do is use your browser and ONID credentials to login
-to
 
-\url{https://rstudio-1.cosine.oregonstate.edu}.
+\section{\texttt{sftp} file transfer}
 
-\noindent
-If nothing happens, make sure you're logged into the VPN first.
-Once you're in, you'll be presented with a screen very much like the standard \emph{RStudio} interface
-with your ``\emph{R} session'' already initiated.\footnote{If you wish to initiate additional sessions (e.g.,
-to run additional code at the same time), click on the blue \emph{R} icon in the top-left corner.}
-You can start typing commands into the console just as you would on your computer.
-Of course, you're unlikely to want to do that as you've probably got your code all written and tested on
-smaller datasets/simulation runs (i.e. you are using the server not for writing or debugging, but just to run code).
-
-To copy files between your computer and the server, \texttt{sftp} into the server.
+Open up your \texttt{sftp} client and establish a connection to the Novus cluster using the address:
+\url{sftp://novus.dri.oregonstate.edu}.
 In \emph{Cyberduck}:
 \begin{enumerate}
 	\item click on ``\emph{Open Connection}'',
 	\item select ``\emph{SFTP (Secure File Transfer Protocol)}'',
 	\item type in the Server address:\\
-		 \url{sftp://rstudio-1.cosine.oregonstate.edu}\\
-		 (the default \emph{port 22} should be fine),
+	\url{sftp://novus.dri.oregonstate.edu}\\
+	(the default \emph{port 22} should be fine),
 	\item enter your ONID username and password,
 	\item leave \emph{SSH Private Key} as ``\emph{None}'', and
-	\item check the \emph{Add to Keychain} box in order to save your credentials.\footnote{The option and label for this check-box may be specific to Macs.}
+	\item check the \emph{Add to Keychain} box in order to save your credentials.
+	\unskip\footnote{The option and label for this check-box may be specific to Macs.}
 \end{enumerate}
 \noindent
-You should now be in your \texttt{home} folder (e.g., \texttt{/home/novakm/}).
+You should now be in your \texttt{home} folder (e.g.,~\texttt{/home/novakm/}).
 Take a moment now to bookmark this connection.
 (In \emph{Cyberduck}, select the \emph{Add Bookmark} option from the drop-down menu.)
 
-In your \texttt{home} folder you should see a folder named \emph{R} and, depending on your settings,
-several ``hidden'' files and directories.\footnote{The filenames of hidden files and directories all start with a period (e.g., \texttt{.bash\_profile}).
-Don't worry if you don't see them as you'll rarely if ever need them.  In fact, you typically don't want to delete them, so be careful if you do see them.}
-Enter the \emph{R} folder and place whatever files you want inside of it by dragging them in.
+In your \texttt{home} folder you should see several existing folders (e.g.,~\texttt{ondemand}, \texttt{novus}, \texttt{globus}).
+There are also several ``hidden'' files and directories that you may or may not see depending on your \textit{Cyberduck} settings.
+\unskip
+\footnote{The filenames of hidden files and directories all start with a period (e.g., \texttt{.bash\_profile}).
+Don't worry if you don't see them as you'll rarely if ever need them.  
+In fact, you typically don't want to delete them, so be careful if you do see them.}
+Create a new folder \textbf{inside the \texttt{novus} folder}.
+Call it something informative, like the abbreviated name of your project.
+Open the folder and drag-and-drop your project files inside it.
+\unskip
+\footnote{Rather than using \texttt{sftp}, 
+	you could also use \texttt{ssh} and the command \\
+		\texttt{rsync -avz ./{folder\_name}/ ONID@novus.dri.oregonstate.edu:/home/ONID/{folder\_name}/}
+	to copy from your desktop to the cluster.}
 Be sure to maintain your project's directory substructure so that all relative links between scripts and data work!
-In fact, you may want (or need) to put much of your whole repository in place (i.e. have your \texttt{data}, \texttt{code}, and \texttt{output} folders and contents all present).
+In fact, you may want (or need) to put much of your whole repository in place (i.e.~have your \texttt{data}, \texttt{code}, and \texttt{output} folders and contents all present).
 
-
-After you've put your scripts in place, jump back to your browser and you should be good to go with a whole lot more computational power at your disposal.
-
-
-\section{High Performance Clusters}
-
-High Performance Clusters (HPCs) consist of many servers that are all 
-networked together.
-Each server is called a node.
-You can choose to work on only a single node (which will probably still be faster than your computer), or on several nodes in parallel.
-The point of using several nodes is that you can use them in parallel (just like we did last class when we used own computer's cores in parallel).
-The HPC we'll use today is found at \url{submit.hpc.cosine.oregonstate.edu}.
-
-\subsection{\texttt{sftp} file transfer}
-
-Let's start by using \texttt{sftp} to copy files to the HPC.\footnote{Note that,
-rather than using \texttt{sftp}, you could also use \texttt{ssh} and the command \texttt{cp $\sim$/Desktop/filename $\sim$/filename} to copy from your desktop to the server.}
-After logging in to OSU's VPN, you can go through the same steps as for the \emph{RStudio Server}
-except that the server address is:
-
-\url{sftp://submit.hpc.cosine.oregonstate.edu}.
-
-\noindent
-If the login was successful, you should be in your \texttt{home} folder.
-Again, take a moment to bookmark the connection.
-This \texttt{home} folder will also have a bunch of hidden files (e.g., \texttt{.bash}) that you can ignore if
-they're visible\footnote{You can alter \emph{Cyberduck}'s preferences to hide/show the hidden files.},
-but it may also look empty.
-Create a folder and copy your scripts into place, again ensuring that your directory structure is correct so that all specified paths will work as in you project's repository.
-
-\subsection{\texttt{ssh} communication and initial \texttt{R} setup}
-Now switch over to your \texttt{s}ecure \texttt{sh}ell (\texttt{ssh}) client (e.g., \emph{MobaXTerm} for Windows users, or \emph{Terminal} for Mac users\footnote{If you want, you can access \emph{Terminal} from within
-\emph{RStudio}; the tab for it should be in the same window as the console.}).
+\section{\texttt{ssh} communication and initial \texttt{R} setup}
+Now switch over to your \texttt{s}ecure \texttt{sh}ell (\texttt{ssh}) client (e.g.,~\emph{MobaXTerm} for Windows users, or \emph{Terminal} for Mac users
+\unskip
+\footnote{If you want, you can access \emph{Terminal} from within \emph{RStudio}. 
+	The tab for it should be in the same window as the console.}).
 At the \$ prompt, type in
 
-\texttt{ssh \emph{yourONID}@submit.hpc.cosine.oregonstate.edu}
+\texttt{ssh \emph{yourONID}@novus.dri.oregonstate.edu}
 
 \noindent
-whereupon you'll be prompted for your ONID password.
+whereupon you'll be prompted for your ONID password and possibly also \textit{Duo} confirmation.
 You should then see a welcome screen with a new prompt at the bottom of the window:
 
-\texttt{[novakm@head $\sim$j]\$}
+\texttt{[novakm@submit1 $\sim$]\$}
 
 \noindent
-You're likely going to be using \emph{R} a lot, so let's install it into your user resources automatically so it's available each time you login.
-You can do that by typing the following at the prompt:
+Since we want to run \emph{R}, we'll have to "activate" it using the \texttt{load} command.
+To see what version(s) of \emph{R} are available, and to see all the other tools ("modules") that are available as well, type
 
-\texttt{module initadd R}
+\texttt{module avail}
 
 \noindent
-If you're going to need an \emph{R} package, you'll first need to install it into your home directory.
-First load the \emph{R} module by typing-in
+To load a specific module, for example \emph{R v.4.4.1}, type:
 
- \texttt{module load R}
+\texttt{module load R/4.4.1}
 
  \noindent
- Then launch \emph{R} by typing-in
+ Now launch \emph{R} by typing-in
 
  \texttt{R}
 
  \noindent
- Then type
+ If you're going to need any \emph{R} packages, you'll need to install them into your home directory using
 
- \texttt{install.packages(``\emph{package\_name}'')}
+ \texttt{install.packages("\emph{vector\_of\_package\_names}")}
 
  \noindent
 The first time you run the \texttt{install.packages()} command, you'll be asked if you want to create a personal library.
 Answer by typing in \texttt{y} for yes.
 
 \noindent
-Notice that you're actually in an \emph{R} session.
-You could, therefore, work away as you might on your computer (but without the benefit of writing scripts).\footnote{You can use such command-line interfaces for \emph{Matlab} or \emph{Mathematica} too.
-In fact, there are many, many other  such ``modules''  available on the HPC.
-Just type \texttt{module avail} to see the whole list.}
+Notice that you're actually inside an \emph{R} session! 
+You could, therefore, work away "interactively" as if you were in an R session on your own computer.
+(The downside is that you don't have the benefit of writing scripts or having the ability to create graphics.)
+
 To get out of \emph{R} and back to the \texttt{ssh} prompt, type \texttt{q()} for quit.
+Don't save your workspace!
 
 
-\subsection{\texttt{ssh} navigation}
+\section{\texttt{ssh} navigation}
 Now lets find the files we uploaded using the \texttt{ssh} view of the cluster.
-Back at the \texttt{ssh}, use the list (\texttt{ls}) command:
+Back at the \texttt{ssh} prompt, use the list (\texttt{ls}) command:
 
-\texttt{[novakm@head $\sim$j]\$} \texttt{ls}
+\texttt{[novakm@submit1 $\sim$]\$} \texttt{ls}
 
 \noindent
 The \texttt{ls} command will show you all the sub-directories and files within the directory you're currently in (which at this point in time is your \texttt{home} directory).
 You should see the files (or the folder) you uploaded and, if you installed any \emph{R} packages, a folder named \texttt{R\_libs}.
 In order to enter a subdirectory, use the change directory (\texttt{cd}) command followed by the name of the directory you'd like to enter:
 
-\texttt{[novakm@head $\sim$j]\$} \texttt{cd} \emph{subdirectory}
+\texttt{[novakm@submit1 $\sim$]\$} \texttt{cd} \emph{subdirectory}
 
 \noindent
 You can move down into multiple nested dirctories, e.g.,
 
-\texttt{[novakm@head $\sim$j]\$}  \texttt{cd} \emph{subdirectory/subsubdirectory}
+\texttt{[novakm@submit1 $\sim$]\$}  \texttt{cd} \emph{subdirectory/subsubdirectory}
 
 \noindent
 and move out of any number of directories, e.g.,
 
-\texttt{[novakm@head $\sim$j]\$}  \texttt{cd} \emph{../../otherdirectory}
+\texttt{[novakm@submit1 $\sim$]\$}  \texttt{cd} \emph{../../otherdirectory}
 
 \noindent
 just as we did when setting relative paths in \emph{R}.
@@ -190,120 +176,141 @@ Type the distinguishing letter and tab to continue until you've got the whole na
 Once you're in the directory in which you'd like to be, type \texttt{ls} to confirm all the contents are there as needed.
 If you'd like to take a quick look at the contents of a file, you can use the concatenate (\texttt{cat}) command:
 
-\texttt{[novakm@head $\sim$j]\$} \texttt{cat} \emph{file.r}
+\texttt{[novakm@submit1 \emph{subdirectory}]\$} \texttt{cat} \emph{file.r}
 
 \noindent
 The contents won't be rendered very nicely, but the function is nonetheless useful for confirming the contents of short scripts (such as the \texttt{submit.sh} submission script that we'll talk about below).
 
 
 
-\subsection{\texttt{ssh} job submission}
-When performing analyses on an HPC, you (typically) don't do so be entering into the module (e.g., into \emph{R}, the way we did above when installing \emph{R} packages).
+\section{\texttt{ssh} job submission (non-parallel jobs)}
+When performing analyses on a cluster, you (typically) don't do so be entering into the module 
+(e.g.,~within \emph{R}, the way we did above when installing \emph{R} packages).
 Rather, you use a submission script to submit your code (your ``job'') to the cluster.
-The primary reason for doing that is that the cluster has extensive automated job managment tools which optimize the use of nodes among users and nodes.
+The primary reason for doing that is that the cluster has extensive automated job managment tools which optimize the use of nodes among users.
 Therefore, when you submit a job, the cluster (typically) determines which of its nodes it will send the job to.
 It's similarly so when your job contains code that performs parallelized computations.
 
-The submission script for an \emph{R} job on our HPC will look like this\footnote{Note that the \# 
-symbols are \emph{not} for commenting-out lines of code.  They're necessary! (The \#\$, for example, 
-denotes a command-line argument to be passed to the job 
+\begin{tcolorbox}[breakable, enhanced, before upper={\parindent15pt}]
+	\noindent
+	You can find links to copies of both \texttt{submit\_simple.sh} and a minimalist \texttt{simple.R} that it runs on the \texttt{README} page of today's lesson.
+\end{tcolorbox}
+
+The submission script for a simple (non-parallel) \emph{R} job on our cluster will look like this
+\unskip
+\footnote{
+	Note that the \# symbols are \emph{not} for commenting-out lines of code.  They're necessary!
+	(The \#\$, for example, denotes a command-line argument to be passed to the job 
 	scheduler.)}:
 \begin{verbatim}
-	#!/bin/sh
-
-	# Job name (replace R_simple but leave -N)
-	#$ -N R_simple
-
-	#$ -S /bin/sh
-
-	# Set working directory on all host to
-	# directory where the job was started
-	#$ -cwd
-
-	# Send output to job.log (STDOUT + STDERR)
-	#$ -o job.log
-	#$ -j y
-
-	# Email information (to receive email at process end)
-	#$ -m e
-	#$ -M username@oregonstate.edu
-
-	#Change which version of R you want to load
-	module load R/3.3.1
-
-	# Command to run (replace test.r but leave Rscript)
-	Rscript test.r
+	#!/bin/bash
+	#SBATCH -J simple
+	#SBATCH -o output_%A_%a.txt
+	#SBATCH -e errors_%A_%a.txt
+	
+	#SBATCH --mail-type=ALL
+	#SBATCH --mail-user=ONID@oregonstate.edu
+	
+	#SBATCH --partition=test.q
+	#SBATCH --nodes=1
+	#SBATCH --ntasks-per-node=1
+	#SBATCH --cpus-per-task=1
+	
+	# Load the R Module
+	module load R/4.4.1
+	
+	# Commands to run job
+	Rscript simple.R $SLURM_ARRAY_TASK_ID
 \end{verbatim}
 
-Copy the above into a text file\footnote{Examples for a \emph{Mathematica} submission and an 
-\emph{R} array submission (distributed over multiple nodes) is provided in the \texttt{HPC\_examples} 
-folder of today's class folder.}, edit it as needed (remembering especially to give the job an informative 
-name at the start and change the script it runs at the end), and save the file with an \texttt{.sh} extension 
-(e.g., \texttt{submit.sh}).\footnote{You can give it any name you want, just give it the \texttt{.sh} 
-extension.}
-Now upload this file into the same directory as the \texttt{test.r} script it calls using your \texttt{sftp} client (e.g., \emph{Cyberduck}).
+Copy the above into a text file.
+Edit it as needed.  
+At minimum, you'll want to
+\begin{enumerate}
+	\item rename the \texttt{-J simple} name of the job to give it an informative project-specific name;
+	\item edit your email address; and	
+	\item change the name of the \emph{R} script at the bottom so that the appropriate \emph{R} analysis script is called.
+\end{enumerate}
+Save the file with an \texttt{.sh} extension (e.g.,~\texttt{submit\_simple.sh}).
+Now use your \texttt{sftp} client to upload this submission script into the same directory as the \texttt{simple.R} analysis script that it calls.
 Ensure it's in place using your \texttt{ssh} client.
 
-Let's assume that our \texttt{test.r} analysis script and our \texttt{submit.sh} submission script are located in a directory named \texttt{mytest}.
-Use \texttt{cd} to change into the directory and \texttt{ls} to ensure both your script and your submission script are present.\\
+Let's assume that our analysis script and our submission script are located in a directory named \texttt{mytest}.
+Use \texttt{cd} to change into the directory and \texttt{ls} to ensure both your script and your submission script are present.
+To submit your job, use the \texttt{sbatch} command:
 
-\noindent
-To submit your job, use the \texttt{qsub} command:
-
-\texttt{[novakm@head mytest]\$} \texttt{qsub submit.sh}
+\texttt{[novakm@submit1 mytest]\$} \texttt{sbatch submit\_simple.sh}
 \\
 
-\noindent
-There are a few commands with which you can view and confirm that your job is running.
-Each offers different and different amounts of information.
 
-\texttt{[novakm@head mytest]\$} \texttt{qstat -u} \emph{username}
+\section{Job status, completion, and ending a job}
 
 \noindent
-You'll see the ``state'' of your job in the far right column\footnote{To have a ``live'' view rather than a single snapshot, use \texttt{watch qstat}.  Use command-key period to escape.}.
-The most common states for a process to be in are ``q'' (qeued), ``r'' (running) and ``s'' (suspendend), and ``e'' (error)\footnote{To get more information, use \texttt{qstat -j}.}.
-To see how much of the cluster's resources your jobs are using, type
+You can use \texttt{squeue} to confirm that your jobs has been correctly submitted check on its status
+(i.e.~whether it's already running, is still in the queue to be run, etc.).
+Use
 
-\texttt{[novakm@head mytest]\$} \texttt{top -u} \emph{username}
+\texttt{[novakm@submit1 mytest]\$} \texttt{squeue -u \textit{yourONID}}
 
 \noindent
-For more abbreviated views, use \texttt{ps} (for all of your running processes) or \texttt{jobs} (for all of your current running jobs).
+to see your jobs, and
 
+\texttt{[novakm@submit1 mytest]\$} \texttt{squeue}
 
-\subsection{Job completion and ending a job}
+\noindent
+to see everyone else's too.
+Note that every job has it's own \texttt{JOBID} identifier.
+
+\noindent
+If your job is in the queue waiting to be run, you can use 
+
+\texttt{squeue -j <\emph{JOBID}> --start}
+
+\noindent
+to get an estimate of how long it will be before it starts running.
+
+\begin{tcolorbox}[breakable, enhanced, before upper={\parindent15pt}]
+	\noindent
+	Note that the \texttt{simple.R} job you submitted above will likely run so fast that it won't even be visible in your list of jobs for longer than just a few seconds.  You may therefore want to submit a job that takes longer.  On today's README page, you'll find a link to \texttt{simple\_sleep.R} for that purpose.  Remember to update your submission script.
+\end{tcolorbox}
+
 If you typed-in your correct email address in the submission script, you'll get an email sent to you when it completes successfully or ends in an error.
 A log of your job will also be saved to the output file you specified in your submission script (which can be useful for debugging).
-The log will include output that your script printed to screen (i.e. what would have appeared in your \emph{R} console had you run the script on your computer).
-Use your \texttt{sftp} client to grab all the output your script produced.
+The log will include output that your script printed to screen (i.e.~what would have appeared in your \emph{R} console had you run the script on your computer).
+Use your \texttt{sftp} client to download all the output your script produced.
 
 
-Should you decide that something isn't working right for an active job (e.g., a job is taking far longer than expected, eating up too much of the cluster's resources, or you realize you do in fact have a bug in it), you can end it prematurely using the \texttt{qdel} command:
+Should you decide that something isn't working right for an active job
+(e.g.,~a job is taking far longer than expected, eating up too much of the cluster's resources, or you realize you do in fact have a bug in it), 
+you can end it prematurely using the \texttt{scancel} command:
 \begin{enumerate}
-	\item get its \emph{process ID} (PID) from the left hand column of the \texttt{top -u} view;
-	\item return to the command prompt (using your command key, e.g., Apple key or Windows key, followed by the period key);
-	\item type \texttt{qdel} followed by the process ID.
+	\item get its \emph{JOBID} from the first column of the \texttt{squeue} view;
+	\item type \texttt{scancel} followed by the \emph{JOBID}.
 \end{enumerate}
-If \texttt{qdel} doesn't work, replace \texttt{qdel} with the nuclear option:  \texttt{kill}.
-
 
 Finally, to close your \texttt{ssh} session, use the \texttt{exit} command.
+A list of additional commands is included on the resources page of the Novus cluster (see ``Command line conversions"): 
+\url{https://arcs.oregonstate.edu/novus-cluster}. 
 
 
-\begin{center}
-		\begin{tabular}{ll}
-			\hline
-			\hline
-			\textbf{Command} & \textbf{Action} \\
-			\hline
-			Command-key period & Return to command prompt (end current view)\\
-			\texttt{qstat -u} \emph{username} &  View status of submitted jobs\\
-			\texttt{top -u} \emph{username} & View resource usage by job \\
-			\texttt{qdel} \emph{process id} & Stop and delete a submitted job \\
-			\texttt{kill} \emph{process id} & Stop and delete a submitted job (nuclear option) \\
-			\texttt{exit}  & Close your \texttt{ssh} connection to the HPC\\
-			\hline
-			\hline
-		\end{tabular}
-\end{center}
+\section{Parallel computing}
+
+The jobs we've just run were ``simple'' in the sense that we did not run anything in parallel.
+Rather, there was just a single script of \emph{R} code being run on a single node of the cluster.
+In that sense, all ``simple'' jobs are the same.
+
+Parallelization, on the other hand, can take many forms.
+You might want to run the same script many independent times, each time pulling in a different dataset, for example.
+Or your script might repeat a particular calculation many many independent times internally, as when you're doing sensitivity analyses across a \texttt{for} loop, for example.
+Alternatively, you might have several scripts that take different amounts of time to complete but are interdependent in that they rely on each other's output to proceed.
+As opposed to simple jobs, the number of possible parallel job forms is quite large.
+We'll only touch on examples to demonstrate the first two types.
+
+
+
+
+
+
+
 
 \end{document}

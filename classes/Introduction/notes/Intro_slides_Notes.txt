@@ -68,7 +68,6 @@ Science as Software development
 ~~~~~~~~~~~~~~~~
 
 Sandbox
-DiscussionBoard
 TeachingMaterials
 	admin
 	readings

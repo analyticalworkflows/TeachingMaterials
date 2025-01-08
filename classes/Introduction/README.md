@@ -19,7 +19,7 @@ _Nothing_
 ### Class structure
 - Welcome & Brief introductions
 - [Course philosophy & Overview](../tex/Intro_slides.pdf)
-- Pairing up for [accountabilibuddies](https://neologisms.rice.edu/index.php?a=term&d=1&t=6534)
+- Pairing up for [accountabilibuddies](https://neologisms.rice.edu/word/40996)
 - _Break_ (_10 min._)
 - Software & account setup
 - Start creating [Project Proposals](../ProjectProposal) (_remaining time_)

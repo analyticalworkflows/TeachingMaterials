@@ -1,8 +1,9 @@
-dat<-read.csv('IB599_AW_ClassList.csv', 
-              skip = 1, 
-              stringsAsFactors = FALSE)
+library(readxl)
 
-rand <- sample(dat$NAME)
+dat<-read_xls('classList.xls', 
+              skip = 14)
+
+rand <- sample(dat$'Student Name')
 write.csv(rand,
           'RandomNames.csv',
           row.names=FALSE)
@@ -13,7 +14,7 @@ pairOff <- function(x){
   pairs <- matrix(sample(x),ncol=2)
   return(pairs)
 }
-buddies <- pairOff(dat$NAME)
+buddies <- pairOff(rand)
 
 write.csv(buddies,
           'Accountabilibuddies.csv',

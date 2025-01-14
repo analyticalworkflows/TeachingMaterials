@@ -65,10 +65,10 @@ Click on a topic to see the day's to-do's (required before-class reading and set
 |  | Wed | Feb 12  | [Typesetting with Markdown](classes/Typesetting_Markdown) |
 |7 | Mon | Feb 17  | [Project progress reports](classes/ProjectReport) |
 |  | Wed | Feb 19  | [Faster computing](classes/FasterComputing_part_1)  |
-|8 | Mon | Feb 24  | [Implementation & Troubleshooting](classes/Implementation) |
-|  | Wed | Feb 26  | [High Performance Computing](classes/FasterComputing_part_2)  |
-|9 | Mon | Mar 3   | [Implementation &  Troubleshooting](classes/Implementation) | 
-|  | Wed | Mar 5   | [Typesetting with LaTeX](classes/Typesetting_LaTeX) | 
+|8 | Mon | Feb 24  | [High Performance Computing](classes/FasterComputing_part_2) |
+|  | Wed | Feb 26  | [Implementation &  Troubleshooting](classes/Implementation) |
+|9 | Mon | Mar 3   | [Typesetting with LaTeX](classes/Typesetting_LaTeX) | 
+|  | Wed | Mar 5   | [Implementation &  Troubleshooting](classes/Implementation) (Mark serving on NSF panel) | 
 |10| Mon | Mar 10  | [Project presentations](classes/ProjectSummary) |
 |  | Wed | Mar 12  | [Project presentations](classes/ProjectSummary) & [Wrap-up](classes/WrapUp) |
 

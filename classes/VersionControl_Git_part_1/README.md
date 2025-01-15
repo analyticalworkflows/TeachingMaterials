@@ -10,15 +10,11 @@ In this class we'll discuss the basics of Git and GitHub:  _pull_, _create/edit_
 - Create an account on [GitHub](https://github.com)
 
 ### Class structure
-After finishing-up [Structuring Projects](../StructuredProjects/README.md), we'll use the remaining time for:
-- Brief discussion (_10 min_) - what is Git? what is GitHub?
-- Exercise (_30 min_ - see next section)
+- Overview & discussion of Git (using [lecture slides](tex/Intro2GitSlides.pdf))
 - (Re)starting your project's structure
 - Setup of your project repository
 - Troubleshooting
 
-### Exercise during class
-Working as one big group, with the instructor diagraming, the instructor leads in doing the following challenge. Draw a "box and arrow" diagram of a basic Git / GitHub workflow that has labels for the following: `local project files` on a computer in a `repository`, `stage`, `commit`, `push`, and `pull`. Then the instructor erases the diagram and each student draws their own (_10 min_). Students present their diagrams to the group for discussion to surface any confusion or differences in interpretation and to find good alternative ways of thinking about things that may 'click' for different people.
 
 ### Further readings
 - [Blischak et al. 2016. A Quick Introduction to Version Control with Git and GitHub](../../readings/pdfs/Blischak2016.pdf)

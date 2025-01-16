@@ -77,5 +77,5 @@ Click on a topic to see the day's to-do's (required before-class reading and set
 [Regular expressions](classes/RegularExpressions/) | 
 [Visualization](classes/Visualization/)
 
-
-
+### Potential future topics
+[Relational databases](classes/Databases/)

@@ -56,14 +56,14 @@ Click on a topic to see the day's to-do's (required before-class reading and set
 |2 | Mon | Jan 13  | [Structuring projects](classes/StructuredProjects) | 
 |  | Wed | Jan 15  | [Git w/ GitHub - Part 1](classes/VersionControl_Git_part_1) | 
 |3 | Mon | Jan 20  | _No class_ (Martin Luther King Jr. Day) |
-|  | Wed | Jan 22  | [Implementation & Troubleshooting](classes/Implementation) |
-|4 | Mon | Jan 27  | [Project proposals](classes/ProjectProposal) |
-|  | Wed | Jan 29  | [Coding best practices](classes/CodingBestPractices) |
-|5 | Mon | Feb 3   | [Git w/ GitHub - Part 2](classes/VersionControl_Git_part_2) | 
-|  | Wed | Feb 5   | [Implementation & Troubleshooting](classes/Implementation)  | 
-|6 | Mon | Feb 10  | [Large Language Models](classes/LLMs) |
-|  | Wed | Feb 12  | [Typesetting with Markdown](classes/Typesetting_Markdown) |
-|7 | Mon | Feb 17  | [Project progress reports](classes/ProjectReport) |
+|  | Wed | Jan 22  | [Git w/ GitHub - Part 1 continued](classes/VersionControl_Git_part_1) |
+|4 | Mon | Jan 27  | [Implementation & Troubleshooting](classes/Implementation) (Mark AWOL) |
+|  | Wed | Jan 29  | [Project proposals](classes/ProjectProposal) |
+|5 | Mon | Feb 3   | [Coding best practices](classes/CodingBestPractices) |
+|  | Wed | Feb 5   | [Git w/ GitHub - Part 2](classes/VersionControl_Git_part_2) |
+|6 | Mon | Feb 10  | [Implementation & Troubleshooting](classes/Implementation) |
+|  | Wed | Feb 12  | [Large Language Models](classes/LLMs) |
+|7 | Mon | Feb 17  | [Typesetting with Markdown](classes/Typesetting_Markdown) |
 |  | Wed | Feb 19  | [Faster computing](classes/FasterComputing_part_1)  |
 |8 | Mon | Feb 24  | [High Performance Computing](classes/FasterComputing_part_2) |
 |  | Wed | Feb 26  | [Implementation &  Troubleshooting](classes/Implementation) |
@@ -79,3 +79,6 @@ Click on a topic to see the day's to-do's (required before-class reading and set
 
 ### Potential future topics
 [Relational databases](classes/Databases/)
+
+### Temporarily(?) dropped classes
+[Project progress reports](classes/ProjectReport) 

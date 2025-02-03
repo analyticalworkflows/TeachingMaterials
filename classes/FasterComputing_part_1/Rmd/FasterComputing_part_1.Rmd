@@ -1,6 +1,5 @@
 ---
 title: "Faster Computing - Part 1"
-date: "`r format(Sys.time(), '%B %d, %Y')`"
 output: 
   pdf_document:
     toc: true
@@ -22,7 +21,7 @@ It's therefore wise to take the time to think of how you might achieve the same 
 If what you're trying to achieve requires a large number of steps, search CRAN (\url{https://cran.r-project.org}) to see if someone has created a package with useful functions.
 These have likely been optimized for efficiency (e.g., by performing computations in \texttt{C++} that are "wrapped" in \texttt{R} code).
 That said, there are many other ways to achieve faster code.
-Today we'll step through a few options, moving from the simplest forms of code efficiency to the use of computer clusters.
+In this and the next class, we'll step through a few options, moving from the simplest forms of code efficiency to the use of high performance clusters (HPCs).
 Note that there are a number of additional ways for computing faster that we will not discuss (e.g., using \texttt{Rcpp} to compile your own \texttt{C++} code).
 
 

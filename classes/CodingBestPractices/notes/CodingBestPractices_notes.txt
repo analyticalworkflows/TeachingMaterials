@@ -1,8 +1,14 @@
 Any questions come up since last time?
+	Remaining credential problems? (meet out of class)
 
-Check-in on project progress - commits
-	(Be sure to use your own fork, not the fork in the AW organization)
-	(I will delete the AW forks at the end of the course)
+Check-in on project progress
+	Send me repo url; I will fork it to AW organization
+		Be sure to use your own fork, not the fork in the AW organization
+		(I will delete the AW forks at the end of the course)
+	Commit early, commit often.  "This commit will..."
+
+Next time: Git w/ GitHub Part 2 -- branches, merging, pull requests & forks
+
 
 Today: Best Practices
 
@@ -12,7 +18,15 @@ Writing clean and clear will help others and you.
 	- Good code will (eventually) be faster to write
 	- Good code will help you be more creative
 
-Principles: Good code is
+Principles: 
+	Programming as Language (fluency = translation, dialect, grammar & style)
+	Scripts <--> Essays
+	Sections <--> Paragraphs
+	Line breaks <--> Sentences
+	Parentheses <--> Punctuation
+	Variables <--> Nouns
+
+	Good code is
 	- hierarchically-modular
 	- readable
 
@@ -27,26 +41,28 @@ Project modularity
 			- functions.R (library)
 			- analyses.R
 			- final_figs.R
-		- results
+		- results, figs, tables, tmp
 
-	Absolute vs. relative paths
-		Mac (Unix) vs. Windows (Dos)
-		Is it worth trying this out together?  
-		If so		create .txt file in a data folder
-			 	use read.table() from within a code folder to access it
+	Absolute vs. relative paths & 'source()' function
+		Mac (Unix) / forwardslash vs. Windows (DOS) \ (backslash)
+		Want to try relative paths together?  
+		If so	create .txt file in a data folder
+			use read.table() from within a code folder to access it
 
 Start fresh each time
+	rm(list=ls()), save(*.Rdata), load(), rm()
 
 Within-script structure
-	See R/simulateLV.R in Sandbox Repo
+	See R/simulateLV.R
 
 Functions
-	Don't-Repeat-Yourself  (not DIY)
+	Don't-Repeat-Yourself  (DRY, not DIY)
+		Applies to parameters too!
 	Unit testing
 
 Readable code
 	Go to https://style.tidyverse.org to highlight the following:
-		- File and Object names
+		- File and Object names (Syntax)
 		- Control flow
 		- Long lines
 

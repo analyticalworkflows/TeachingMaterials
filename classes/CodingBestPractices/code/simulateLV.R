@@ -57,3 +57,12 @@ plot(out)
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# =======================================================
+#  ===  Messy example to demonstrate 'Reformat Code' ====
+# =======================================================
+
+LVmod<-function(Time,State,Pars){with(as.list(c(State,Pars)), {
+Ingestion<-rIng*Prey*Predator; GrowthPrey<-rGrow*Prey*(1-Prey/K); MortPredator<-rMort*Predator
+dPrey<-GrowthPrey-Ingestion; dPredator<-Ingestion*assEff-MortPredator
+return(list(c(dPrey,dPredator)))})}

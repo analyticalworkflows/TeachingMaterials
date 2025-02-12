@@ -1,0 +1,7 @@
+# For R (Studio)
+# library(reticulate)
+# py_install("anthropic")
+py_install("pypdf2")
+py_install("langchain")
+py_install("chromadb")
+py_install("tiktoken")

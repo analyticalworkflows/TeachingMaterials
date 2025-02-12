@@ -58,3 +58,6 @@ It's a brave new world out there, so let's talk about it.
 * Image classification
 * Data generation
 * Data imputation and prediction
+
+
+![Layers of AI](images/layers_of_AI.jpg "Layers of AI")

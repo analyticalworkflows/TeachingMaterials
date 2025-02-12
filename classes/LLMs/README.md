@@ -24,11 +24,16 @@ It's a brave new world out there, so let's talk about it.
 * How do they work?
 	* Classification + neural networks + transformers
 
-#### 2. Case Study - Literature classification
-* API keys
+#### 1. Case Study 1 - Code generation
 * Prompt writing
 
-#### 3. Discussion
+#### 2. Case Study 2 - Image generation
+
+#### 4. Case Study 3 - Literature classification
+* API keys
+
+
+#### 5. Discussion
 * I'll assign each of you to represent the perspective of one of the groups in the Bintz et al. paper. 
 *  Considerations
 	* Crutch vs. tool (efficiency, creativity, ...)

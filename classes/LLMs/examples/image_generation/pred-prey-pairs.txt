@@ -1,0 +1,7 @@
+whelk - mussel
+whelk - barnacle
+sea star - whelk
+sea star - mussel
+sea star - barnacle
+barnacle - POM
+mussel - POM

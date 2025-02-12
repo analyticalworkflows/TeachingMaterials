@@ -22,7 +22,7 @@ Large Language Models (LLMs) deal with text specifically.
 
 ### 2. Core LLM Concepts (20 minutes)
 
-Watch 3b1b (https://www.youtube.com/watch?v=wjZofJX0v4M)[https://www.youtube.com/watch?v=wjZofJX0v4M]
+Watch first 20 minutes of 3b1b (https://www.youtube.com/watch?v=wjZofJX0v4M)[https://www.youtube.com/watch?v=wjZofJX0v4M]
 
 #### Tokens and Embeddings
 - Tokens: Basic units of text processing

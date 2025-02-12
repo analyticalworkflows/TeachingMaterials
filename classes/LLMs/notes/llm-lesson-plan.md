@@ -8,8 +8,17 @@
 ### 1. Introduction to LLMs (10 minutes)
 - Brief history of AI development
 - Distinction between Machine Learning and Deep Learning
-  - Machine Learning: Algorithms that learn from data without explicit programming
-  - Deep Learning: Subset of ML using neural networks with multiple layers
+
+Artificial Intelligence (AI) is very a broad term, but generally it deals with intelligent machines.
+
+Machine Learning (ML) is a subfield of AI that specifically focuses on pattern recognition in data.
+Algorithms that learn from data without explicit programming. 
+Once you recognize a pattern, you can apply that pattern to new observations. 
+
+Deep Learning - subset of ML relies on neural networks with many layers.
+Focused on unstructured data, which includes text and images. 
+
+Large Language Models (LLMs) deal with text specifically.
 
 ### 2. Core LLM Concepts (20 minutes)
 

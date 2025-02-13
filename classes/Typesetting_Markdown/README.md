@@ -14,7 +14,7 @@ _Nothing_
 
 ### Class structure
 - Create/format your repository's README using at least 4 of the elements summarized in [Markdown in 3 minutes](https://github.com/scholmd/scholmd/wiki/Learn-markdown-in-3-minutes) (_40 min._) 
-  - If your main repository README is already done, use the time to create folder-specific READMEs, such as meta-data READMES for the data in your data directory or a workflow-explaining README in your code directory.
+  - If your main repository README is already done, use the time to create folder-specific READMEs (such as meta-data READMEs for the data in your data directory or a workflow-explaining README in your code directory).
 - Create a barebones R Notebook in RStudio (_40 min._)
   - Think about what you might want to include in order to use it as a template to use for generating reports for your collaborators.
 - Back to your choice of [Implementation & Team troubleshooting](../Implementation/README.md) (_remaining time_)

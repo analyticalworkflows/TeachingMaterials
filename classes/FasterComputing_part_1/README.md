@@ -6,8 +6,11 @@ In the next two classes, we'll step through a few of the options for faster comp
 
 Here are two other reasons to use high-performance computing clusters (HPCs). First, running code on an HPC cluster frees up your personal machine to do other things (like write papers). Second, sometimes the syntactic hoops you have to jump through to optimize your code for speed can obscure its function, making it more difficult to understand and debug; in these cases it can be more efficient to run un-optimized code on an HPC. Of course, that is no excuse for writing inefficient code per se. If you are going to claim you are keeping code unoptimized for human readability, your code better be beautiful! :)
 
-_[Notice that today's readings are Knitr-produced, combining Markdown, LaTex, and displayed (and run) R code.]_
+We'll do everything in R today, but other languages have equivalent functions and the principles apply regardless.
 
+_As a preview for our upcoming classes on Typesetting, notice that today's readings are Knitr-produced, combining Markdown, LaTex, and displayed (and run) R code._
+
+***
 
 ### Required readings (_before class_)
 - Notes: [Rmd/FasterComputing_part_1.pdf](Rmd/FasterComputing_part_1.pdf)
@@ -24,10 +27,14 @@ _[Notice that today's readings are Knitr-produced, combining Markdown, LaTex, an
 ### Class structure
 We'll progress through methods as time allows.
 1) Benchmarking
-2) Vectorize it! (using R's apply()-family functions)
-3) Parallelize it! (using R's Parallel package)
+2) Vectorize it!
+3) Parallelize it!
 4) Profiling
 
 ### Further readings
 ##### Apply functions
 - [DataCamp's tutorial on apply functions](https://www.datacamp.com/community/tutorials/r-tutorial-apply-family)
+- [Stack Exchange post on for loops vs. apply functions](https://stackoverflow.com/questions/42393658/what-are-the-performance-differences-between-for-loops-and-the-apply-family-of-f)
+- [R Programming for Data Science - apply family functions](https://bookdown.org/rdpeng/rprogdatascience/loop-functions.html)
+
+***

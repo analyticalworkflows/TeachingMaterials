@@ -22,7 +22,9 @@ If what you're trying to achieve requires a large number of steps, search CRAN (
 These have likely been optimized for efficiency (e.g., by performing computations in \texttt{C++} that are "wrapped" in \texttt{R} code).
 That said, there are many other ways to achieve faster code.
 In this and the next class, we'll step through a few options, moving from the simplest forms of code efficiency to the use of high performance clusters (HPCs).
-Note that there are a number of additional ways for computing faster that we will not discuss (e.g., using \texttt{Rcpp} to compile your own \texttt{C++} code).
+Note that each of the things we'll learn about don't need to be used exclusively.
+For example, most analyses will benefit from a mixed used of both \texttt{for} loops and \texttt{apply} functions.
+Finally, note also that there are several additional ways for computing faster that we will not discuss (e.g., using \texttt{Rcpp} to compile your own \texttt{C++} code).
 
 
 
@@ -39,8 +41,8 @@ That is, given a mean growth rate $\lambda=1.01$ whose year-to-year variation is
   N_{t+1} & = N_t (\lambda e^{\epsilon})\\
   \epsilon &\sim \mathcal{N}(0,\sigma^2)
 \end{align}
-for a total of $T=999$ time-steps starting from an initial size population size $N_0=2$.
-We'll use a \texttt{for}-loop to do it and, for convencience, will wrap it into a function with the desired parameter values as defaults.
+for a total of $T=999$ time steps starting from an initial size population size $N_0=2$.
+We'll use a \texttt{for}-loop to do it and, for convenience, will wrap it into a function with the desired parameter values as defaults.
 
 ```{r}
 set.seed(1) # for reproducibility
@@ -77,14 +79,14 @@ The simplest way is to ask \texttt{R} what time it is before and after running o
 We can use \texttt{Sys.time()} for that.
 
 ```{r}
-# Default number of time-points
+# Default number of time points
 start_time <- Sys.time()
   out <- geom_growth_base()
 end_time <- Sys.time()
 
 end_time - start_time
 
-# Repeat with greater number of time-points
+# Repeat with greater number of time points
 start_time <- Sys.time()
   out <- geom_growth_base(T = 9E5)
 end_time <- Sys.time()
@@ -158,15 +160,16 @@ comp <- microbenchmark(Old = {geom_growth_base(T = 9999)},
                        New = {geom_growth_preallocated(T = 9999)})
 comp
 ```
-Pre-allocating the size of containers -- whether they're vectors, arrays, or lists -- can make a big difference when you're using a \texttt{for}-loop -- or any function -- repeatedly.
+Pre-allocating the size of containers -- whether they're vectors, arrays, or lists -- can make a sizeable difference when you're using a \texttt{for}-loop -- or any function -- repeatedly.
 
 \subsection{Progress bar}
-Next we'll learn how to avoid \texttt{for}-loops altogether using vectorization, which is typically much faster.
-But oftentimes, slow \texttt{for}-loops are impossible to avoid given the nature of the problem (like in our population simulation example).
-In such cases it's often nice to know how far along your code is in its computation.
+Next we'll learn how to avoid explicit \texttt{for}-loops altogether using vectorization.
+But oftentimes, \texttt{for}-loops are impossible to avoid given the nature of the problem (like in our population simulation example).
+Other times your code will simply be easier to understand when written in a \texttt{for}-loop.
+In these cases it's often nice to know how far along your code is in its computation.
 You could, of course, simply include a \texttt{print()} statement just before the end of the \texttt{for}-loop (e.g., \texttt{print(paste(t, "of", T, "completed"))}), but that will quickly eat up console space unless you also use \texttt{flush.console()}.
 Alternatively, use a progress bars (for which there are a few alternative options).
-The simplest that does all you really need comes with base-\texttt{R}:
+The simplest progress bar tool that pretty much does all you really need comes with base-\texttt{R}:
 ```{r}
 total <- 10
 pb <- txtProgressBar(min = 0, max = total, style = 3)
@@ -176,13 +179,14 @@ for(i in 1:total){
 }
 close(pb)
 ```
-(Note that it's only because of \texttt{knitR} that each iteration of the progress bar is printed.
+(Note that it's only because of our using \texttt{knitR} to create this document that each iteration of the progress bar is printed.
 It'll remain on a single line in the console.)
 
 
 \section{Vectorize it!}
-As already mentioned, \texttt{for}-loops are typically slow.
-Learning to avoid them is your best ticket to writing faster (and more compact) code.
+As already mentioned, \texttt{for}-loops can be slow.
+Also, the code to implement them can also be less concise than possible.
+Avoiding them is thus often a good way to writing faster (and more compact) code.
 It takes practice though, so we'll start with a simple example.
 
 \subsection{Thinking in vectors}
@@ -201,9 +205,9 @@ end_time <- Sys.time()
 end_time-start_time
 ```
 But what are we actually doing here?
-Instead of looping through all the data points, 
-we could do the same by considering them as comprising nothing more than a vector.
-Because of the way \texttt{R} treats vectors, we could take all data points excepting the first, and divide them by all data points excepting the last:
+Rather than looping through each data point one at a time, 
+we could instead consider the data as a vector.
+Because of the way \texttt{R} treats vectors, we can take all data points excepting the first, and divide them by all data points excepting the last:
 ```{r}
 start_time <- Sys.time()
   growth_rates <- data[-1] / data[-length(data)]
@@ -211,26 +215,28 @@ end_time <- Sys.time()
 end_time-start_time
 ```
 We've improved the speed of our code by an order of magnitude!
-Granted, writing \texttt{for}-loops is a good way to figure out what you want to do,
-but quite often it's good to consider them more like pseudo-code that helps you think through how to write faster functions using vector-based operations.
+
+In general, writing \texttt{for}-loops is a good way to figure out what you want to do.
+But quite often it's good to consider them more like pseudo-code that helps you think through how to write faster functions using vector-based operations.
 
 
 \subsection{\texttt{apply()}-family functions}
 Base-\texttt{R} has a number of functions for vector-based operations, 
 and there are many more in various packages (e.g., in the TidyVerse).
 We'll touch on the \texttt{apply()}-family here (which includes \texttt{lapply}, \texttt{sapply}, \texttt{mapply} and more).
-The key to successful vector-based operations often lies in figuring out how to write the function in order to "apply" it to your data.
+The key to successful vector-based operations often lies in figuring out how to write a given function in order to "apply" it to your data.
 
 We'll demonstrate by continuing on with our population dynamics example.
-First, let's create a dataset that contains multiple population time-series. 
+First, let's create a dataset that contains multiple population time series. 
+(Think of these time series as coming from different locations (sites) in space.)
 ```{r}
-n <- 5 # number of time-series to create
-# use replicate() to create n time-series, each in a different matrix column
+n <- 5 # number of time series to create
+# use replicate() to create n time series, each in a different matrix column
 dat_array <- replicate(n, geom_growth_preallocated(T = 9999))
 colnames(dat_array) <- paste0('Site_', 1:n)
 head(dat_array) 
 ```
-Now let's define a vector-based function to calculate growth rates between all time-steps in a time-series, and apply it to each site (i.e. each column):
+Now let's define a vector-based function to calculate growth rates between all time steps in a time series, and apply it to each site (i.e. each column):
 ```{r}
 calc_growth_rates <- function(x){
   gr <- x[-1] / x[-length(x)]
@@ -239,40 +245,45 @@ calc_growth_rates <- function(x){
 system.time({
   apply(dat_array, 2, calc_growth_rates)
 })
-# margin = 2 means apply to each column
-# margin = 1 means apply to each row
 ```
-In order to compare what we just did to the use of \texttt{lapply}, we'll first convert the data that's currently in an \texttt{array} format (i.e. a matrix) into a \texttt{list} format.
+The 2nd argument of \texttt{apply} is \texttt{margin}.
+\texttt{margin = 2} causes the function to be applied to each column of \texttt{dat\_array}.
+\texttt{margin = 1} causes the function to be applied to each row.
+
+In order to compare what we just did to the use of \texttt{lapply}, we'll first convert the data which is currently in an \texttt{array} format (i.e. a matrix) into a \texttt{list} format.
 That is, we'll take each column (i.e. each population time series) and place it in its own list element.
 ```{r}
 dat_list <- as.list(as.data.frame(dat_array))
 ```
+Now use \texttt{lapply} to apply our function to each list element.
 ```{r}
 system.time({
   growth_rates <- lapply(dat_list, calc_growth_rates)
 })
 lapply(growth_rates, head) # look only at head of each list element
 ```
-The nice thing about lists (as opposed to matrices and arrays) is that list elements need not be of the same length (e.g., you could have time-series for different populations that differ in their number of time points).
+The nice thing about lists (as opposed to matrices and arrays) is that list elements need not be of the same length (e.g., you could have time series for different populations that differ in their number of time points).
 Since \texttt{lapply} returns a list, performing additional computations by site
 (e.g., calculating an arithmetic mean growth rate) is super fast and easy. 
-(No looping required!)
+(No explicit looping required!)
 ```{r}
 growth_rate_means <- lapply( lapply(dat_list, calc_growth_rates), mean)
 growth_rate_means
 unlist(growth_rate_means)
 ```
-The function \texttt{sapply} is similar to \texttt{lapply} but returns a vector, matrix, or array instead of a list.
+
+The function \texttt{sapply} is similar to \texttt{lapply} but can optionally return a vector, matrix, or array instead of just a list.
 ```{r}
 sapply( lapply(dat_list, calc_growth_rates), mean)
 ```
 
 The function \texttt{mapply} is useful when you want to parameterize a function from multiple vectors.
-For example, suppose you have a function that has two parameters and you want to run it through a series of parameter combinations:
+For example, suppose you have a function that has two arguments and you want to run it through a series of argument combinations.
+Going back go our time-series generation function, we could do the following:
 ```{r}
 dat_list <- mapply(geom_growth_preallocated, 
-           N0 =c(Site1 = 1.8, Site2 = 2.1), # initiate simul. with diff. N0's
-           T = c(Site1= 4, Site2 = 9)) # initiate simul. with diff. T's
+                   N0 =c(Site1 = 1.8, Site2 = 2.1), # initiate simul. with diff. N0's
+                   T = c(Site1= 4, Site2 = 9))      # initiate simul. with diff. T's
 dat_list
 sapply( lapply(dat_list, calc_growth_rates), mean)
 
@@ -280,73 +291,61 @@ sapply( lapply(dat_list, calc_growth_rates), mean)
 
 
 
-\section{Parallelize it!}
+\section{Parallel computing}
 
-\subsection{Running \texttt{lapply} in parallel}
+Going back to the dataset in which we have population time series for multiple sites.
+The time points within each time series are dependent on each other; they are not independent in that we needed to run our calculation on the population size at time point \texttt{t} to determine the population size at time point \texttt{t+1}.
+That is, we had to perform our computations in series, one after the other.
 
-You can gain speed for vector-based operations by using the analogs of the \texttt{apply()}-family from the \texttt{parallel} package.
-(There are other packages as well, like \texttt{multidplyr} for the TidyVerse.)
-We'll demonstrate with \texttt{mclapply} ("multicore lapply"), 
-but note that there are others as well (e.g., \texttt{parSapply}).
-(\emph{Windows users:} \texttt{mclapply} may not work for you, so skip it and move on to the next example!)
+The time series themselves are independent of each other.
+We were thereby able to use the \texttt{apply}-family of functions on each of the columns of our data set.
+Similarly, we could have looped over the columns had we wanted to use \texttt{for} a loop.
+That said, whether done with an explicit \texttt{for} loop or done implicitly (under the hood) with an \texttt{apply} function, we're still performing our computations serially.
 
-```{r}
-# Generate a large amount of demonstration data
-n <- 1E8
-data_list <- list("A" = rnorm(n),
-                  "B" = rnorm(n),
-                  "C" = rnorm(n),
-                  "D" = rnorm(n))
+Performing computations serially is not a problem when it doesn't take much time or when you don't have to do it very often.
+But you can often obtain a big boost in speed by doing things in parallel.
+Doing so is pretty easy when the computations can be performed independently of each other.
+(Semi-parallelization is also possible, but we won't get into that.)
 
-# Single core
-system.time( 
-  means <- lapply(data_list, mean)
-)
-```
-Compare that runtime to using \texttt{mclapply} on twice the number of cores:
-```{r}
-library(parallel)
-detectCores()
-cores <- 2 # use as many as you have, if you'd like, 
-           # but note that you'll leave less resources
-           # for the rest of your computer!
+What will we be doing when implementing this parallelization?
+We'll be making use of our computer's processor in a different way by
+spreading our computations over some specified number of the processor's multiple cores.
 
-# mclapply may not work on a Windows machine!
-system.time(
-  means <- mclapply(data_list, mean, mc.cores = cores)
-)
-unlist(means)
-```
-(Note that running things in parallel will take longer than will non-parallelized functions for trivial problems; it takes a little bit of resources and time to set things up on all cores.)
-
-
-
-\subsection{Running \texttt{for}-loops in parallel}
-When you can't avoid using \texttt{for}-loops, but each round of your loop is independent of the others (or you've got nested loops that are independent), you can use the \texttt{foreach} package which supports a parallelizable operator \texttt{dopar} from the \texttt{doParallel} package.
+As an example, we will use the \texttt{foreach} package which supports a parallelizable operator \texttt{dopar} from the \texttt{doParallel} package. 
+(There are several other packages and methods of implementation.)
 ```{r}
 library(parallel)
 library(foreach)
 library(doParallel)
 
-detectCores()
-cores <- 2
-cl <- makeCluster(cores) # Create cluster
-registerDoParallel(cl) # Activate clusters 
+detectCores()            # Find out how many cores your processor has
+cores <- 2               # Specify the number of cores you want to use
+cl <- makeCluster(cores) # Create a cluster with those cores
+registerDoParallel(cl)   # Activate the cluster
 system.time({
-  means <- foreach(i = 1:length(data_list), 
+  means <- foreach(i = 1:length(dat_list), 
                           .combine = c) %dopar% { 
-                            # replace c with rbind to create a dataframe
-                            mean(data_list[[i]])
+                            mean( dat_list[[i]] )
                             }
 })
-stopCluster(cl) # Stop cluster to free up resources
-means
+stopCluster(cl) # Stop cluster
+print(means)
 ```
-In this particular example it's slower even than base \texttt{lapply}, 
+In the above example, we're calculating the average of each element of our data list.
+It looks like we're looping over them in series, but because we've specified two cores, we're actually doing that looping two list elements at a time.
+The more cores you use, the more computations you will perform in parallel.
+(This is where HPC clusters come in handy.  They not only have more powerful processors but also have have many many more cores.  We'll discuss them next class.)
+Note that our data doesn't have to be in the form of a list.
+We could also index across the columns of a data.frame or across different variables (data sets) entirely, so long as we can index them.
+We can also change the format of the results.
+For example, although we used \texttt{c} to concatenate in the above example,
+we could instead have used \texttt{rbind} to create a data.frame.
+
+Granted, this particular example is slower even than base \texttt{lapply}, 
 but that's usually an exception.
 Nevertheless, it's important to not assume that running things in parallel will always be faster!
 For example, moving lots of data between cores slows things down significantly.
-
+also note that it's best not to use all your computer's cores in order to leave some processing power for your operating system, especially when your computations eat up a lot of resources.
 
 
 \section{Profiling}

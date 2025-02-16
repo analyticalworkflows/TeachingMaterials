@@ -1,12 +1,18 @@
 
 n <- 10
-sqrd <- numeric(length=n)
+sqrd <- numeric(length = n)
+
 for (i in 1:n){
+  
   sqrd[i] <- i^2
-  print(sqrd[i])
+  
+  print( sqrd[i] )
+  
   Sys.sleep(100)
 }
-out <- data.frame('Input'=1:n, 'Output'=sqrd)
+
+out <- data.frame('Input' = 1:n, 
+                  'Output' = sqrd)
 
 write.csv(out,
           file = 'MyResults.csv',

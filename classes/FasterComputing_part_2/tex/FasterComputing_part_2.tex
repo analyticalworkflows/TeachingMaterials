@@ -31,8 +31,10 @@ or on several nodes at once.
 The point of using several nodes is that you can use them in parallel
 (just like we did last class when we used our own computer's cores in parallel).
 \unskip
-\footnote{Since each node also has many cores, you can also parallelize on each of several parallel nodes, too!}
+\footnote{Since each node also has many cores, you can also parallelize on each of several parallel nodes too!}
 The cluster we'll use today is called the Novus HPC cluster \url{https://arcs.oregonstate.edu/novus-cluster} that is maintained by OSU's Advance Research Computing Services.
+\unskip
+\footnote{Apparently all of OSU's clusters will soon be joined and managed by the CQLS.}
 
 \section{Tools}
 In order to access the cluster from off-campus, you'll need to be connected to OSU's Virtual Private
@@ -87,9 +89,9 @@ Call it something informative, like the abbreviated name of your project.
 Open the folder and drag-and-drop your project files inside it.
 \unskip
 \footnote{Rather than using \texttt{sftp}, 
-	you could also use \texttt{ssh} and the command \\
-		\texttt{rsync -avz ./{folder\_name}/ ONID@novus.dri.oregonstate.edu:/home/ONID/{folder\_name}/}
-	to copy from your desktop to the cluster.}
+you could also use \texttt{ssh} and the command \\
+\texttt{rsync -avz ./{folder\_name}/ ONID@novus.dri.oregonstate.edu:/home/ONID/{folder\_name}/}
+to copy from your desktop to the cluster.}
 Be sure to maintain your project's directory substructure so that all relative links between scripts and data work!
 In fact, you may want (or need) to put much of your whole repository in place (i.e.~have your \texttt{data}, \texttt{code}, and \texttt{output} folders and contents all present).
 
@@ -109,8 +111,8 @@ You should then see a welcome screen with a new prompt at the bottom of the wind
 \texttt{[novakm@submit1 $\sim$]\$}
 
 \noindent
-Since we want to run \emph{R}, we'll have to "activate" it using the \texttt{load} command.
-To see what version(s) of \emph{R} are available, and to see all the other tools ("modules") that are available as well, type
+Since we want to run \emph{R}, we'll have to ``activate'' it using the \texttt{load} command.
+To see what version(s) of \emph{R} are available, and to see all the other tools (``modules'') that are available as well, type
 
 \texttt{module avail}
 
@@ -127,15 +129,15 @@ To load a specific module, for example \emph{R v.4.4.1}, type:
  \noindent
  If you're going to need any \emph{R} packages, you'll need to install them into your home directory using
 
- \texttt{install.packages("\emph{vector\_of\_package\_names}")}
+ \texttt{install.packages(c("\emph{package1", "package2"}))}
 
  \noindent
 The first time you run the \texttt{install.packages()} command, you'll be asked if you want to create a personal library.
-Answer by typing in \texttt{y} for yes.
+Answer by typing \texttt{y} for yes.
 
 \noindent
 Notice that you're actually inside an \emph{R} session! 
-You could, therefore, work away "interactively" as if you were in an R session on your own computer.
+You could, therefore, work away ``interactively'' as if you were in an R session on your own computer.
 (The downside is that you don't have the benefit of writing scripts or having the ability to create graphics.)
 
 To get out of \emph{R} and back to the \texttt{ssh} prompt, type \texttt{q()} for quit.
@@ -186,9 +188,9 @@ The contents won't be rendered very nicely, but the function is nonetheless usef
 \section{\texttt{ssh} job submission (non-parallel jobs)}
 When performing analyses on a cluster, you (typically) don't do so be entering into the module 
 (e.g.,~within \emph{R}, the way we did above when installing \emph{R} packages).
-Rather, you use a submission script to submit your code (your ``job'') to the cluster.
+Rather, you use a submission script to submit your code to the cluster as a ``job".
 The primary reason for doing that is that the cluster has extensive automated job managment tools which optimize the use of nodes among users.
-Therefore, when you submit a job, the cluster (typically) determines which of its nodes it will send the job to.
+Therefore, when you submit a job, the cluster (typically) determines which of its nodes it will send the job to and when.
 It's similarly so when your job contains code that performs parallelized computations.
 
 \begin{tcolorbox}[breakable, enhanced, before upper={\parindent15pt}]
@@ -246,8 +248,8 @@ To submit your job, use the \texttt{sbatch} command:
 \section{Job status, completion, and ending a job}
 
 \noindent
-You can use \texttt{squeue} to confirm that your jobs has been correctly submitted check on its status
-(i.e.~whether it's already running, is still in the queue to be run, etc.).
+You can use \texttt{squeue} to confirm that your job has been correctly submitted and check on its status
+(i.e.~whether it is already running, is still in the queue, etc.).
 Use
 
 \texttt{[novakm@submit1 mytest]\$} \texttt{squeue -u \textit{yourONID}}
@@ -259,7 +261,7 @@ to see your jobs, and
 
 \noindent
 to see everyone else's too.
-Note that every job has it's own \texttt{JOBID} identifier.
+Note that every job has its own \texttt{JOBID} identifier.
 
 \noindent
 If your job is in the queue waiting to be run, you can use 
@@ -271,12 +273,12 @@ to get an estimate of how long it will be before it starts running.
 
 \begin{tcolorbox}[breakable, enhanced, before upper={\parindent15pt}]
 	\noindent
-	Note that the \texttt{simple.R} job you submitted above will likely run so fast that it won't even be visible in your list of jobs for longer than just a few seconds.  You may therefore want to submit a job that takes longer.  On today's README page, you'll find a link to \texttt{simple\_sleep.R} for that purpose.  Remember to update your submission script.
+	Note that the \texttt{simple.R} job you submitted above will likely run so fast that it won't even be visible in your list of jobs for longer than just a few seconds.  You may therefore want to submit a job that takes longer.  On today's README page, you'll find a link to \texttt{simple\_sleep.R} for that purpose.  Remember to update your submission script so that it runs this \texttt{R} script.
 \end{tcolorbox}
 
-If you typed-in your correct email address in the submission script, you'll get an email sent to you when it completes successfully or ends in an error.
+If you typed in your correct email address in the submission script, you'll get an email when the job completes successfully or ends in an error.
 A log of your job will also be saved to the output file you specified in your submission script (which can be useful for debugging).
-The log will include output that your script printed to screen (i.e.~what would have appeared in your \emph{R} console had you run the script on your computer).
+The log will include output that your script printed to screen (i.e.~what would have appeared in your \texttt{R} console had you run the script on your computer).
 Use your \texttt{sftp} client to download all the output your script produced.
 
 
@@ -289,22 +291,18 @@ you can end it prematurely using the \texttt{scancel} command:
 \end{enumerate}
 
 Finally, to close your \texttt{ssh} session, use the \texttt{exit} command.
-A list of additional commands is included on the resources page of the Novus cluster (see ``Command line conversions"): 
+A list of additional commands is included on the resources page of the Novus cluster (see ``Command line conversions''): 
 \url{https://arcs.oregonstate.edu/novus-cluster}. 
 
 
 \section{Parallel computing}
 
-The jobs we've just run were ``simple'' in the sense that we did not run anything in parallel.
-Rather, there was just a single script of \emph{R} code being run on a single node of the cluster.
-In that sense, all ``simple'' jobs are the same.
-
-Parallelization, on the other hand, can take many forms.
-You might want to run the same script many independent times, each time pulling in a different dataset, for example.
-Or your script might repeat a particular calculation many many independent times internally, as when you're doing sensitivity analyses across a \texttt{for} loop, for example.
-Alternatively, you might have several scripts that take different amounts of time to complete but are interdependent in that they rely on each other's output to proceed.
-As opposed to simple jobs, the number of possible parallel job forms is quite large.
-We'll only touch on examples to demonstrate the first two types.
+Parallelization on a cluster can take many forms.
+You might run the same script many independent times on a different node, each time pulling in a different dataset.
+Or your script might repeat a particular calculation many independent times (just as we did last class we implemented parallelization across our processor's cores), then pull all those calculations back together before proceeding.
+Or you might have several semi-independent scripts that take different amounts of time to complete and are interdependent in that they rely on each other's output to proceed.
+As opposed to serial jobs, the number of possible parallel job forms is quite large.
+We'll only touch on the possibilities with two examples.
 
 
 

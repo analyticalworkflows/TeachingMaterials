@@ -1,6 +1,6 @@
 # Faster Computing Part 2
 
-Now that we've learned the basics of parallel computing we're in position to make use of a high performance computing (HPC) cluster.  HPC clusters provide many more servers (nodes) on which to run things in parallel.  Moreover, each node is also faster than your personal computer.  Thus, even if you're not running code in parallel, it is often faster to run things on a single node of the cluster than on your computer.  (Plus it frees you up to do other things with your computer!)
+Today we will make use of a high performance computing (HPC) cluster.  HPC clusters provide many more servers (nodes) on which to run things in parallel.  Moreover, each node is also faster than your personal computer.  Thus, even if you're not running code in parallel, it is often faster to run things on a single node of the cluster than on your computer.  (Plus it frees you up to do other things with your computer!)
 
 
 ### Required readings (_before class_)
@@ -20,10 +20,14 @@ You'll need to login to OSU's VPN before you'll be able to connect to OSU's serv
   - Interactive computing by command-line
   - Job submission using SLURM
 
-### Example files
+### Demonstration files
+#### Serial
 - [submit_simple.sh](examples/R_simple/submit_simple.sh)
 - [simple.R](examples/R_simple/simple.R)
 - [simple_sleep.R](examples/R_simple/simple_sleep.R)
+
+#### Parallel
+
 
 Additional examples in the [examples](examples/) folder.
 

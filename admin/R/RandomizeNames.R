@@ -1,6 +1,6 @@
 library(readxl)
 
-dat<-read_xls('classList.xls', 
+dat<-read_xls(file.choose(), 
               skip = 14)
 
 rand <- sample(dat$'Student Name')

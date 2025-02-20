@@ -36,7 +36,8 @@ Additional examples in the [examples](examples/) folder.
 - [Novus HPC FAQ](https://arcs.oregonstate.edu/novus-cluster)
 - [ARCS training](https://arcs.oregonstate.edu/training)
 
-#### SLURM
+#### SLURM explanations
+- [Princeton University](https://researchcomputing.princeton.edu/support/knowledge-base/slurm)
 - [University of Georgia Wiki](https://wiki.gacrc.uga.edu/wiki/Running_Jobs_on_Sapelo2)
 - [University of Michigan Guide](https://documentation.its.umich.edu/arc-hpc/slurm-user-guide)
 - [OSU College of Engineering How to](https://it.engineering.oregonstate.edu/hpc/slurm-howto)
@@ -46,7 +47,7 @@ Additional examples in the [examples](examples/) folder.
 - [UNIX Youtube video - Part 2](https://www.youtube.com/watch?v=JVBtabkJ4ZE)
 - [UNIX Tutorial](http://www.ee.surrey.ac.uk/Teaching/Unix/unix1.html)
 
-##### Additional OSU HPCs
+##### Additional OSU HPCs (soon to be partly merged)
 - [College of Engineering](https://it.engineering.oregonstate.edu/hpc)
 - [Center for Quantitative Life Sciences](https://shell.cqls.oregonstate.edu)
 - [College of Earth, Ocean, and Atmospheric Sciences](https://ceoas.oregonstate.edu/computing-about)

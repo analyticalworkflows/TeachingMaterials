@@ -22,7 +22,7 @@
 
 \author{} % insert your name here to have it appear
 
-%\date{} % uncomment to have the date appear
+ %  \date{} % uncomment to have the date appear
 
 
 
@@ -69,12 +69,19 @@ A common alternative is to setup your editor such that all lines are limited to 
 
 \subsection{Basic equations}
 
+\begin{equation}
+	\label{eqn:firstcalculus}
+	\lim_{{\Delta t} \to 0}\frac{f(a+\Delta t)-f(a)}{\Delta t} \, .
+\end{equation}
+
 In calculus, the definition of the derivative is
 \begin{equation}
 	\label{eqn:calculus}
 	\lim_{{\Delta t} \to 0}\frac{f(a+\Delta t)-f(a)}{\Delta t} \, .
 \end{equation}
 Although the typical way of writing a derivative is $\frac{dx}{dt}$, some fields also write it as $\dot{x}$.
+
+This equation (i.e.~Eqn.\ref{eqn:calculus}) is amazing.
 
 
 
@@ -164,7 +171,7 @@ You can force the position of figures using the \texttt{float} package and then 
 % Figures are included like this:
 \begin{figure}
 	\centering
-	\includegraphics[width=0.2\linewidth]{figs/LaTeX_logo.png}
+	\includegraphics[width=0.8\linewidth]{figs/LaTeX_logo.png}
 	\caption{This is the \LaTeX~logo.}
 	\label{fig:logo}
 \end{figure}

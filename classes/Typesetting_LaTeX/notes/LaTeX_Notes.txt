@@ -7,7 +7,7 @@ Overview
 
 Walk though
 	- notes tex file (open side-by-side)
-	- LaTeX table export using Hmisc R-package
+	- LaTeX table export using Stargazer R-package
 	- manuscript tex file
 
 LaTeX in Markdown (RStudio)

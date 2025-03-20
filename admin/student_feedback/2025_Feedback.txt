@@ -1,0 +1,30 @@
+Fully 'flip' a few lessons:
+Add a few self-guided tutorials to be done before class, then use class for application to own data.
+- Coding Best Practices
+- Parallel computing (on own machine)
+- GitHub setup & installation
+
+Combine tutorials with "pick your own adventure" topics on some 'Implementation' days, for topics not covered in class 
+- Regex
+- Workflow diagrams
+
+Non-random assignment of 'Tech-buddies' (in parallel with Accountabilibuddies)
+Paired by
+	Operating sytstem
+	Past experience / skills / confidence
+	Coding language (esp. Matlab)
+
+Structure (part of) 'Implementation' days as tech-buddy days
+
+LLMs 
+- more on prompts
+- smaller tutorial
+
+Up-votes
+- Coding best practices
+	More on Functions, RegExp
+	More visuals on relative links
+
+Down-votes
+- LaTeX
+

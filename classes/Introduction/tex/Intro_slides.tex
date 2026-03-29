@@ -1,5 +1,6 @@
 \documentclass{beamer}
 \usepackage[utf8]{inputenc}
+\usepackage{graphicx}
 
 %\usepackage{utopia} %font utopia imported
 
@@ -80,15 +81,29 @@
         \end{block}
 
         \begin{block}{Reproducibility}
-            Science should be reproducible, by others and you.\\Your work must be \emph{readable}, \emph{organized}, and \emph{self-contained}.
+            Science must be reproducible, by others and you.\\Your work should be \emph{transparent}, \emph{organized}, and \emph{self-contained}.
         \end{block}
 
         \begin{block}{Correctness}
-            Science's limitations are human. \\We must work in ways that protect against 'bugs'.
+            Science is done by humans; mistakes are inevitable. \\We must work in ways that protect against bugs.
         \end{block}
 
         \footnotetext[1]{ See Allesina \& Wilmes 2019}
 
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Not required reading}
+   But good! Currently missing from the Valley library...
+  \end{block}
+   \includegraphics[width=0.5\linewidth]{figs/allesina_and_wilmes.jpeg}
+\end{frame}
+
+\begin{frame}
+  \begin{block}{Further optional reading}
+   Really fun. Lots online: \small\url{{natureofcode.com}}
+  \end{block}
+   \includegraphics[width=1\linewidth]{figs/nature_of_code.png}
 \end{frame}
 
 \begin{frame}
@@ -120,7 +135,7 @@
 
 \begin{frame}
     \frametitle{Website \& Schedule}
-    \small{    \url{https://github.com/analyticalworkflows/TeachingMaterials/} }
+    \small{    \url{github.com/analyticalworkflows/TeachingMaterials} }
 
 \end{frame}
 
@@ -145,15 +160,15 @@
     \item Randomized pairing
     \begin{itemize}
      % \item[] \emph{- via automated Zoom breakout rooms right now}
-      \item[] \emph{- re-randomized week 6}
+      \item[] \emph{- re-randomized each week}
     \end{itemize}
   \end{itemize}
 
 \end{frame}
 
 %---------------------------------------------------------
-
-\section{Accounts \& Apps}
+% Currently unused in accounts and apps vvv
+%--------------------------------------------------------
 
 %---------------------------------------------------------
 %\subsection{Zoom vs. Discord}
@@ -169,44 +184,98 @@
 %\end{frame}
 
 %---------------------------------------------------------
-\subsection{Required}
+% \subsection{Required}
 
-\begin{frame}
-    \frametitle{What you'll need}
+% \begin{frame}
+%     \frametitle{What you'll need}
 
-\begin{columns}
+% \begin{columns}
 
-\column{0.5\textwidth}
+% \column{0.5\textwidth}
 
-Software
-    \begin{itemize}
-        \item \texttt{Git}
-        \item \LaTeX
-    \end{itemize}
-Accounts
-    \begin{itemize}
-        \item GitHub\footnotemark
-    \end{itemize}
+% Software
+%     \begin{itemize}
+%         \item \texttt{Git}
+%         \item \LaTeX
+%     \end{itemize}
+% Accounts
+%     \begin{itemize}
+%         \item GitHub\footnotemark
+%     \end{itemize}
 
-\LaTeX{} editor
-    \begin{itemize}
-        \item Stand-alone\\
-        	{\tiny \emph{TeXstudio, Visual Studio Code,...} \par}
-        \item Online\\
-        	{\tiny \emph{OverLeaf, Papeeria, TeXpage,...} \par}
-    \end{itemize}
-\texttt{Git} GUI 
-	\begin{itemize}
-        \item {\tiny \emph{Sourcetree, R Studio, GitHub Desktop, ...}\par }
-     \end{itemize}
+% \LaTeX{} editor
+%     \begin{itemize}
+%         \item Stand-alone\\
+%         	{\tiny \emph{TeXstudio, Visual Studio Code,...} \par}
+%         \item Online\\
+%         	{\tiny \emph{OverLeaf, Papeeria, TeXpage,...} \par}
+%     \end{itemize}
+% \texttt{Git} GUI 
+% 	\begin{itemize}
+%         \item {\tiny \emph{Sourcetree, R Studio, GitHub Desktop, ...}\par }
+%      \end{itemize}
 
-\column{0.5\textwidth}
-   \begin{figure}
+% \column{0.5\textwidth}
+%    \begin{figure}
+%     \centering
+%     \includegraphics[width = 0.9\textwidth]{figs/phd101212s.png}
+%   \end{figure}
+% \end{columns}
+% \footnotetext[1]{Please send me your username.}
+% \end{frame}
+
+%---------------------------------------------------------
+% Currently unused in accounts and apps ^^^
+%--------------------------------------------------------
+
+\section{Accounts \& Apps}
+
+\begin{frame}{What you'll need}
+
+\begin{columns}[T]
+
+\column{0.52\textwidth}
+
+\scriptsize
+\setlength{\itemsep}{0.3em}
+
+\vspace{0.5em}
+\textbf{Accounts}
+\begin{itemize}
+    \item GitHub\footnotemark
+\end{itemize}
+
+\textbf{Software}
+\begin{itemize}
+    \item An integrated development environment (IDE), such as Visual Studio Code (VS Code), RStudio, etc.
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Git interface}
+\begin{itemize}
+    \item GitHub Desktop, VS Code, RStudio, Sourcetree, etc.
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{\LaTeX{} editor}
+\begin{itemize}
+    \item Stand-alone: TeXstudio, VS Code, etc.
+    \item Online: Overleaf, Papeeria, TeXpage, etc.
+\end{itemize}
+
+\normalsize
+
+\column{0.48\textwidth}
+
+\begin{figure}
     \centering
-    \includegraphics[width = 0.9\textwidth]{figs/phd101212s.png}
-  \end{figure}
+    \includegraphics[width=\textwidth]{figs/phd101212s.png}
+\end{figure}
+
 \end{columns}
-\footnotetext[1]{Please send me your username.}
+
+\footnotetext[1]{Please email me your username.}
+
 \end{frame}
 
 %---------------------------------------------------------
@@ -241,22 +310,20 @@ Let's get started!\\
 \section{Our hope}
 
 %---------------------------------------------------------
-
 \begin{frame}
-    \frametitle{We're all learning...}
-
-    %\bigskip
+    \frametitle{We're all learning}
 
     \begin{itemize}
+        \item Use this course as a workshop for your thesis
+        \item If you lean into the work, you and your peers will benefit
         \item Be kind to yourself
         \item Support each other
     \end{itemize}
 
-	\bigskip
-
-    \begin{block}{Integrity}
-      Doing the right thing, even when no one is watching.
-    \end{block}
+    % \bigskip
+    % \begin{block}{Integrity}
+    %   Doing the right thing, even when no one is watching.
+    % \end{block}
 
 \end{frame}
 %---------------------------------------------------------

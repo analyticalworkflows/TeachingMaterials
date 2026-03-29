@@ -1,13 +1,11 @@
 # Intro & Philosophy
-Overall, this class is about designing and building good analyses for scientific research. You will work on your own research topic, with the statistical approaches that make sense for your work, in the programming language(s) of your choice. Overarching these specifics are a series of best-practices that make science more effective, reproducible, and ultimately more fun, and this is the topic of the course. It is a topic Mark and I are both passionate about, and best practices are always evolving - we are excited to learn along with you this term.
+This class is about designing and building good analyses for scientific research. You will work on your own research topic, with the statistical approaches that make sense for your work, in the programming language(s) of your choice. Overarching these specifics are a series of best-practices that make science more effective, reproducible, and ultimately more fun, and this is the topic of the course. Best practices are always evolving - we are excited to learn along with you this term.
 
 These days -- regardless of the research you're pursuing -- you're going to be using computers.  With computers come many choices in software (and, increasingly, user accounts).  This course will add several to your list, but at least two of them (Git/Github and LaTeX) are in many ways much more of a tool in your toolbelt than just another app. We'll spend part of today making sure everyone has these setup and working on their computer.
 
 _Git_ is a distributed version control system designed to manage projects of any size, with any number of collaborators (or no collaborators). _Github_ is a web-based platform for code hosting, version control and collaboration that works with Git. It lets you work on projects with others (or just with yourself, possibly across multiple machines) from anywhere. 
 
 We will learn Git and Github in part by doing. To wit, the course ``lives'' on Github and we will be regularly interacting with it. It can seem overwhelming to start with, but after a bit of immersion many people start to feel like they would not want to do research without it.
-
-
 
 
 ### Required readings (_after class_)

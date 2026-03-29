@@ -29,7 +29,7 @@ Thus, in this course, we'll work to practice
 (2) creating modular and automated analyses, and
 (3) using best-practices in coding and project management.
 We'll learn how to use Git, GitHub, LaTeX, and Markdown.
-I will mostly use R within RStudio, but users of other programming languages
+Instructors will mostly use R or Python, in VS Code or RStudio, but users of other programming languages
 and text editors are welcome and encouraged.
 You will need either
 (1) a large dataset

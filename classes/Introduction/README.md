@@ -31,8 +31,8 @@ _Nothing_
 - [Git](https://git-scm.com/downloads) or [Git for Windows](https://gitforwindows.org/) (_required_)
 (On Mac, the easiest installation process is to install [Homebrew](https://brew.sh) first, then use it to install Git.)
 - [LaTex](https://www.latex-project.org/get/) (_required_)
-- Stand-alone Git GUI (e.g., [Sourcetree](https://www.sourcetreeapp.com)) (_required_ if not using command-line or only RStudio.)
-- General text editor such as [Visual Studio Code](https://code.visualstudio.com/)
+- Stand-alone Git GUI (e.g., GitHub Desktop, [Sourcetree](https://www.sourcetreeapp.com)) (_required_ if not using command-line, VS Code, or RStudio.)
+- General text editor / integrated develop environment(IDE) such as [Visual Studio Code](https://code.visualstudio.com/)
 - Stand-alone LaTeX editor (e.g., [TeXstudio](http://texstudio.sourceforge.net) for Mac), or use your general text editor if it can be made "Latex-enabled" (as [Visual Studio Code](https://code.visualstudio.com/) can).
 
 #### Other software of potential interest

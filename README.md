@@ -42,35 +42,35 @@ The use of other people's data or published models is acceptable, but working on
 ## Broken links, Questions, Suggestions
 If you find a broken link or typo, please create an _Issue_ to let me know where it is!
 You can also create an _Issue_ to leave feedback, pose questions, or suggest new or alternative materials (e.g., new publications) to include.
-You can also write to me at [mark.novak@oregonstate.edu](mailto:mark.novak@oregonstate.edu).
+You can also write to me at [benjamin.dalziel@oregonstate.edu](mailto:benjamin.dalziel@oregonstate.edu).
 
-## Schedule - Winter 2025
-For Winter 2025, we are meeting on Mondays & Wednesdays 10-11:50am in Kidder Hall 236.
+## Schedule - Spring 2026
+For Spring 2026, we are meeting on Mondays & Wednesdays 10-11:50am in Cordley 2406.
 
 Click on a topic to see the day's to-do's (required before-class reading and set-up).
 
 | Wk |  Day | Date | Topic |
 |:-:|:-----:|:------|:------|
-|1 | Mon | Jan 6   | _No class_ (Mark at [ASN](https://asnasilomar2025.org))
-|  | Wed | Jan 8   | [Course overview & Philosophy](classes/Introduction) |
-|2 | Mon | Jan 13  | [Structuring projects](classes/StructuredProjects) | 
-|  | Wed | Jan 15  | [Git w/ GitHub - Part 1](classes/VersionControl_Git_part_1) | 
-|3 | Mon | Jan 20  | _No class_ (Martin Luther King Jr. Day) |
-|  | Wed | Jan 22  | [Git w/ GitHub - Part 1 continued](classes/VersionControl_Git_part_1) |
-|4 | Mon | Jan 27  | [Implementation & Troubleshooting](classes/Implementation) (Mark AWOL) |
-|  | Wed | Jan 29  | [Project proposals](classes/ProjectProposal) |
-|5 | Mon | Feb 3   | [Coding best practices](classes/CodingBestPractices) |
-|  | Wed | Feb 5   | [Git w/ GitHub - Part 2](classes/VersionControl_Git_part_2) |
-|6 | Mon | Feb 10  | [Implementation & Troubleshooting](classes/Implementation) |
-|  | Wed | Feb 12  | [Large Language Models](classes/LLMs) |
-|7 | Mon | Feb 17  | [Typesetting with Markdown](classes/Typesetting_Markdown) |
-|  | Wed | Feb 19  | [Faster computing](classes/FasterComputing_part_1)  |
-|8 | Mon | Feb 24  | [High Performance Computing](classes/FasterComputing_part_2) |
-|  | Wed | Feb 26  | [Implementation &  Troubleshooting](classes/Implementation) |
-|9 | Mon | Mar 3   | [Typesetting with LaTeX](classes/Typesetting_LaTeX) | 
-|  | Wed | Mar 5   | [Implementation &  Troubleshooting](classes/Implementation) (Mark serving on NSF panel) | 
-|10| Mon | Mar 10  | [Project presentations](classes/ProjectSummary) |
-|  | Wed | Mar 12  | [Project presentations](classes/ProjectSummary) & [Wrap-up](classes/WrapUp) |
+|1 | Mon | Mar 30  | [Course overview & Philosophy](classes/Introduction) |
+|  | Wed | Apr 1   | [Structuring projects](classes/StructuredProjects) |
+|2 | Mon | Apr 6   | [Git w/ GitHub - Part 1](classes/VersionControl_Git_part_1) | 
+|  | Wed | Apr 8   | [Git w/ GitHub - Part 1 continued](classes/VersionControl_Git_part_1) | 
+|3 | Mon | Apr 13  | [Implementation & Troubleshooting](classes/Implementation) |
+|  | Wed | Apr 15  | [Project proposals](classes/ProjectProposal) |
+|4 | Mon | Apr 20  | [Coding best practices](classes/CodingBestPractices) |
+|  | Wed | Apr 22  | [Git w/ GitHub - Part 2](classes/VersionControl_Git_part_2) |
+|5 | Mon | Apr 27  | [Implementation & Troubleshooting](classes/Implementation) |
+|  | Wed | Apr 29  | [Implementation & Troubleshooting](classes/Implementation) |
+|6 | Mon | May 4   | [Large Language Models](classes/LLMs) |
+|  | Wed | May 6   | [Typesetting with Markdown](classes/Typesetting_Markdown) |
+|7 | Mon | May 11  | [Faster computing](classes/FasterComputing_part_1)  |
+|  | Wed | May 13  | [High Performance Computing](classes/FasterComputing_part_2) |
+|8 | Mon | May 18  | [Implementation & Troubleshooting](classes/Implementation) |
+|  | Wed | May 20  | [Typesetting with LaTeX](classes/Typesetting_LaTeX) | 
+|9 | Mon | May 25  | _No class_ (Memorial Day) |
+|  | Wed | May 27  | [Implementation & Troubleshooting](classes/Implementation) |
+|10| Mon | Jun 1   | [Project presentations](classes/ProjectSummary) |
+|  | Wed | Jun 3   | [Project presentations](classes/ProjectSummary) & [Wrap-up](classes/WrapUp) |
 
 ### Unscheduled topics
 [Workflow diagrams](classes/WorkflowDiagrams/) | 

@@ -58,8 +58,8 @@ Click on a topic to see the day's to-do's (required before-class reading and set
 |3 | Mon | Apr 13  | [Implementation & Troubleshooting](classes/Implementation) |
 |  | Wed | Apr 15  | [Project proposals](classes/ProjectProposal) |
 |4 | Mon | Apr 20  | [Coding best practices](classes/CodingBestPractices) |
-|  | Wed | Apr 22  | [Git w/ GitHub - Part 2](classes/VersionControl_Git_part_2) |
-|5 | Mon | Apr 27  | [Implementation & Troubleshooting](classes/Implementation) |
+|  | Wed | Apr 22  | [Implementation & Troubleshooting](classes/Implementation) (Ben absent at OSU Foundation event) |
+|5 | Mon | Apr 27  | [Git w/ GitHub - Part 2](classes/VersionControl_Git_part_2) |
 |  | Wed | Apr 29  | [Implementation & Troubleshooting](classes/Implementation) |
 |6 | Mon | May 4   | [Large Language Models](classes/LLMs) |
 |  | Wed | May 6   | [Typesetting with Markdown](classes/Typesetting_Markdown) |

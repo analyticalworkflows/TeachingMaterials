@@ -14,4 +14,4 @@ Coding is very much a solo enterprise (most of the time).  Group-coding isn't fu
 Depending on how things go (and by mutual agreement), we may move these classes around some, use them to make time for more elaborate discussions of certain topics, or even include additional topics in the quarter as your interests and needs become apparent.
 
 ### Class structure
-Free form(!), except that we'll reserve the last ~10 minutes for accountabilibuddy check-ins.
+Free form(!), except that we may reserve the last ~10 minutes for accountabilibuddy check-ins (depending on the schedule of those).

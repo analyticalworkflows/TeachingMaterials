@@ -8,11 +8,12 @@ This class is about developing better coding practices, ranging from structuring
 - [Tidyverse Style Guide](https://style.tidyverse.org)
 
 ### To do (_before class_)
-_Nothing_
-
+- Make sure you have a development environment that can run R code (e.g. R; RStudio; VS Code).
+- Especially if using VS Code, test that it can run R scripts and produce a plot
+  
 ### Class structure
 - Matters arising + adapt agenda (_15 min_)
-- Coding exercise as a group (_40 min._)
+- [Coding exercise as a group](code/coding_demo_2.R) (_40 min._)
 - _Break_ (_10 min._)
 - Group discussion - assess your current coding practices and goals (_~20 min._)
 - Pick an issue and (re)start your project's best-practice conventions (_remaining time_)

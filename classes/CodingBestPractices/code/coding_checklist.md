@@ -1,6 +1,6 @@
 #### Checklist
 
-As we go we will use the following checklist:
+Some helpful practices in scientific programming, as a checklist:
 
 - [ ] Code runs from a "blank slate." E.g.: ```rm(list = ls())```
 

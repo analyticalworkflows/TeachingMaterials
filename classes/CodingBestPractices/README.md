@@ -11,10 +11,10 @@ This class is about developing better coding practices, ranging from structuring
 _Nothing_
 
 ### Class structure
-- Matters arising (_15 min_)
-- "Lecture" & discussion (_20 min._)
+- Matters arising + adapt agenda (_15 min_)
+- Coding exercise as a group (_40 min._)
 - _Break_ (_10 min._)
-- Self-analysis of your current practices (_~15 min._)
+- Group discussion - assess your current coding practices and goals (_~20 min._)
 - Pick an issue and (re)start your project's best-practice conventions (_remaining time_)
 
 ### Further readings

@@ -5,9 +5,9 @@ Some helpful practices in scientific programming, as a checklist:
 - [ ] Code runs from a "blank slate." E.g.: ```rm(list = ls())```
 
 - [ ] Code has hierarchical structure:
-  - one line / one operation
-  - one block / one step
   - one file / one goal
+  - one block / one step
+  - one line / one operation
 
 - [ ] Comments at top of file and for each block that state their purpose. If lines are well written most won't need comments.
 

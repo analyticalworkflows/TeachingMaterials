@@ -5,6 +5,8 @@
 
 # Clean workspace
 rm(list = ls())
+graphics.off()
+
 
 
 # Load data
@@ -13,6 +15,10 @@ df <- read.csv(filename)
 x <- df$x
 yobs <- df$yobs
 
+
+
+# TEMP
+fit <- glm(yobs ~ x)
 
 # Plot
 quartz()

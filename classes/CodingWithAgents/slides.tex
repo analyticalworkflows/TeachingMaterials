@@ -1,0 +1,60 @@
+\documentclass[aspectratio=169]{beamer}
+
+% Minimal seminar-style Beamer deck
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{tikz}
+
+\usetheme{default}
+\usefonttheme{professionalfonts}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{footline}{}
+
+\definecolor{bg}{RGB}{8,10,13}
+\definecolor{fg}{RGB}{245,247,250}
+\definecolor{muted}{RGB}{145,155,170}
+\definecolor{accent}{RGB}{90,180,255}
+
+\setbeamercolor{background canvas}{bg=bg}
+\setbeamercolor{normal text}{fg=fg}
+\setbeamercolor{frametitle}{fg=fg}
+
+\newcommand{\ruleslide}[2]{%
+\begin{frame}[plain]
+  \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north east, text=accent, font=\Large\bfseries]
+      at ([xshift=-0.65cm,yshift=-0.55cm]current page.north east) {#1};
+    \draw[accent, line width=0.8pt]
+      ([xshift=0.65cm,yshift=-1.05cm]current page.north west) --
+      ([xshift=-0.65cm,yshift=-1.05cm]current page.north east);
+  \end{tikzpicture}
+
+  \vfill
+  \begin{center}
+    {\Huge\bfseries #2}
+  \end{center}
+  \vfill
+\end{frame}
+}
+
+\begin{document}
+
+\begin{frame}[plain]
+  \vfill
+  \begin{center}
+    {\Huge\bfseries Seven rules for writing code\\[0.35em]with an AI agent}
+  \end{center}
+  \vfill
+\end{frame}
+
+\ruleslide{1}{Start with the problem}
+\ruleslide{2}{Make a very specific prompt}
+\ruleslide{3}{Work on one block at a time}
+\ruleslide{4}{Understand every line}
+\ruleslide{5}{Treat coding with an agent as a conversation}
+\ruleslide{6}{Write code that tests the code}
+\ruleslide{7}{Control the style}
+\ruleslide{8}{You are the author}
+
+\end{document}

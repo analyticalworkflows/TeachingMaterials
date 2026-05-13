@@ -64,8 +64,8 @@ Click on a topic to see the day's to-do's (required before-class reading and set
 |6 | Mon | May 4   | [Large Language Models](classes/LLMs) |
 |  | Wed | May 6   | [Typesetting with Markdown](classes/Typesetting_Markdown) |
 |7 | Mon | May 11  | [Faster computing](classes/FasterComputing_part_1)  |
-|  | Wed | May 13  | [High Performance Computing](classes/FasterComputing_part_2) |
-|8 | Mon | May 18  | [Implementation & Troubleshooting](classes/Implementation) |
+|  | Wed | May 13  | [Implementation & Troubleshooting](classes/Implementation) |
+|8 | Mon | May 18  | [High Performance Computing](classes/FasterComputing_part_2) |
 |  | Wed | May 20  | [Typesetting with LaTeX](classes/Typesetting_LaTeX) | 
 |9 | Mon | May 25  | _No class_ (Memorial Day) |
 |  | Wed | May 27  | [Implementation & Troubleshooting](classes/Implementation) |
